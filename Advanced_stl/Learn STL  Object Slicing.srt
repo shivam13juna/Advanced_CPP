@@ -1,0 +1,312 @@
+﻿1
+00:00:05,320 --> 00:00:11,059
+hello everyone today<font color="#CCCCCC"> we will</font><font color="#E5E5E5"> talk</font><font color="#CCCCCC"> about</font>
+
+2
+00:00:08,060 --> 00:00:15,860
+a pitfall in using STL containers
+
+3
+00:00:11,059 --> 00:00:18,980
+it's called object slicing say we have a
+
+4
+00:00:15,860 --> 00:00:19,960
+class<font color="#CCCCCC"> talk</font><font color="#E5E5E5"> under the</font><font color="#CCCCCC"> dock box I don't</font>
+
+5
+00:00:18,980 --> 00:00:23,480
+<font color="#E5E5E5">have a name</font>
+
+6
+00:00:19,960 --> 00:00:26,329
+yellow dock is derived from dog and the
+
+7
+00:00:23,480 --> 00:00:28,579
+yellow<font color="#CCCCCC"> dog does have a name</font><font color="#E5E5E5"> and the</font>
+
+8
+00:00:26,329 --> 00:00:30,739
+yellow dog can be constructed with<font color="#CCCCCC"> the</font>
+
+9
+00:00:28,579 --> 00:00:34,850
+name and<font color="#E5E5E5"> the yellow dog</font><font color="#CCCCCC"> box</font>
+
+10
+00:00:30,739 --> 00:00:38,899
+my name is M<font color="#CCCCCC"> named in the main function</font>
+
+11
+00:00:34,850 --> 00:00:43,399
+I have<font color="#CCCCCC"> a deck of dog D and I create a</font>
+
+12
+00:00:38,899 --> 00:00:47,510
+yellow dog<font color="#CCCCCC"> Y with</font><font color="#E5E5E5"> the name</font><font color="#CCCCCC"> gunner</font><font color="#E5E5E5"> then I</font>
+
+13
+00:00:43,399 --> 00:00:51,230
+<font color="#E5E5E5">called</font><font color="#CCCCCC"> DDOT push front y so Y will be</font>
+
+14
+00:00:47,510 --> 00:00:56,829
+saved<font color="#E5E5E5"> at the front of the deck</font><font color="#CCCCCC"> D so D 0</font>
+
+15
+00:00:51,230 --> 00:00:59,599
+is y then I<font color="#E5E5E5"> call this 0 dot back I'm</font>
+
+16
+00:00:56,829 --> 00:01:05,720
+expecting it to print out<font color="#E5E5E5"> my name is</font>
+
+17
+00:00:59,600 --> 00:01:09,320
+<font color="#E5E5E5">gunner</font><font color="#CCCCCC"> and let's run it it actually</font>
+
+18
+00:01:05,720 --> 00:01:11,500
+print out<font color="#E5E5E5"> I don't</font><font color="#CCCCCC"> have a name</font><font color="#E5E5E5"> so</font><font color="#CCCCCC"> what</font>
+
+19
+00:01:09,320 --> 00:01:15,979
+happened
+
+20
+00:01:11,500 --> 00:01:19,039
+remember D is<font color="#E5E5E5"> a deck</font><font color="#CCCCCC"> of dog so when</font><font color="#E5E5E5"> D</font>
+
+21
+00:01:15,979 --> 00:01:23,600
+push front<font color="#E5E5E5"> why it doesn't actually push</font>
+
+22
+00:01:19,039 --> 00:01:27,110
+<font color="#CCCCCC">Y into the deck D what it does is it</font>
+
+23
+00:01:23,600 --> 00:01:31,788
+take<font color="#E5E5E5"> Y as a parameter and copy construct</font>
+
+24
+00:01:27,110 --> 00:01:36,500
+<font color="#E5E5E5">a dog and then push that new constructed</font>
+
+25
+00:01:31,789 --> 00:01:42,979
+dog into the deck<font color="#CCCCCC"> D so what's get pushed</font>
+
+26
+00:01:36,500 --> 00:01:47,270
+<font color="#E5E5E5">into D is a dot and d0 is a dog this</font>
+
+27
+00:01:42,979 --> 00:01:50,689
+process is<font color="#E5E5E5"> called object</font><font color="#CCCCCC"> slicing what's</font>
+
+28
+00:01:47,270 --> 00:01:57,738
+being<font color="#E5E5E5"> pushed into D is a sliced version</font>
+
+29
+00:01:50,689 --> 00:02:00,889
+of<font color="#CCCCCC"> Y the</font><font color="#E5E5E5"> wise name is</font><font color="#CCCCCC"> slice the web so</font>
+
+30
+00:01:57,739 --> 00:02:04,219
+this result is not we want when<font color="#E5E5E5"> they say</font>
+
+31
+00:02:00,890 --> 00:02:08,840
+<font color="#E5E5E5">push front Y we actually want to</font><font color="#CCCCCC"> save Y</font>
+
+32
+00:02:04,219 --> 00:02:14,329
+into the container<font color="#CCCCCC"> D</font><font color="#E5E5E5"> so how can we do</font>
+
+33
+00:02:08,840 --> 00:02:19,459
+<font color="#E5E5E5">that we can make the</font><font color="#CCCCCC"> tag</font><font color="#E5E5E5"> D a deck of</font>
+
+34
+00:02:14,329 --> 00:02:22,639
+dogs punter instead of dog<font color="#E5E5E5"> and then push</font>
+
+35
+00:02:19,459 --> 00:02:27,670
+front why we push front the edges of<font color="#E5E5E5"> Y</font>
+
+36
+00:02:22,639 --> 00:02:33,260
+and when it bark it use the pointer
+
+37
+00:02:27,670 --> 00:02:35,839
+version of the park and remember there's
+
+38
+00:02:33,260 --> 00:02:41,209
+the<font color="#E5E5E5"> last step we need to make sure that</font>
+
+39
+00:02:35,840 --> 00:02:44,349
+<font color="#CCCCCC">bark function is a virtual function</font><font color="#E5E5E5"> and</font>
+
+40
+00:02:41,209 --> 00:02:44,349
+now let's run it
+
+41
+00:02:44,659 --> 00:02:53,249
+now it has<font color="#E5E5E5"> print out my name is Gunnar</font>
+
+42
+00:02:49,489 --> 00:02:56,219
+so remember when an<font color="#E5E5E5"> object is passed by</font>
+
+43
+00:02:53,249 --> 00:03:00,000
+value object<font color="#CCCCCC"> the</font><font color="#E5E5E5"> slicing might happen</font>
+
+44
+00:02:56,219 --> 00:03:02,638
+<font color="#E5E5E5">because</font><font color="#CCCCCC"> of</font><font color="#E5E5E5"> the static</font><font color="#CCCCCC"> accost</font><font color="#E5E5E5"> if you</font>
+
+45
+00:03:00,000 --> 00:03:06,480
+don't want to the slicing to happen<font color="#E5E5E5"> make</font>
+
+46
+00:03:02,639 --> 00:03:08,969
+sure<font color="#CCCCCC"> to</font><font color="#E5E5E5"> use passing by reference now</font>
+
+47
+00:03:06,480 --> 00:03:11,638
+let's consider if we make the<font color="#CCCCCC"> Bach</font>
+
+48
+00:03:08,969 --> 00:03:15,480
+function a non-virtual function<font color="#E5E5E5"> and you</font>
+
+49
+00:03:11,639 --> 00:03:18,180
+see what<font color="#CCCCCC"> happen it</font><font color="#E5E5E5"> is still print out I</font>
+
+50
+00:03:15,480 --> 00:03:22,619
+don't<font color="#CCCCCC"> have a name so this is a park</font>
+
+51
+00:03:18,180 --> 00:03:26,760
+function from the dog so how does this
+
+52
+00:03:22,620 --> 00:03:30,419
+happen remember<font color="#E5E5E5"> D is a deck</font><font color="#CCCCCC"> of</font><font color="#E5E5E5"> dogs</font>
+
+53
+00:03:26,760 --> 00:03:33,030
+pointer<font color="#E5E5E5"> so when D push front</font><font color="#CCCCCC"> a yellow</font>
+
+54
+00:03:30,419 --> 00:03:36,810
+<font color="#E5E5E5">dogs pointer the static cast still</font>
+
+55
+00:03:33,030 --> 00:03:40,709
+happens but<font color="#CCCCCC"> the trust</font><font color="#E5E5E5"> only happens to</font>
+
+56
+00:03:36,810 --> 00:03:45,030
+the pointer not the yellow<font color="#E5E5E5"> dog itself so</font>
+
+57
+00:03:40,709 --> 00:03:48,930
+d0 is a<font color="#E5E5E5"> tax pointer and it happened to</font>
+
+58
+00:03:45,030 --> 00:03:51,060
+<font color="#CCCCCC">be pointing to a yellow dog but since</font>
+
+59
+00:03:48,930 --> 00:03:54,090
+the bark function is not a virtual
+
+60
+00:03:51,060 --> 00:03:57,419
+<font color="#E5E5E5">function whether d0 is pointing to a dog</font>
+
+61
+00:03:54,090 --> 00:04:01,259
+<font color="#E5E5E5">or yellow dog doesn't</font><font color="#CCCCCC"> matter at all d0</font>
+
+62
+00:03:57,419 --> 00:04:04,970
+<font color="#CCCCCC">is</font><font color="#E5E5E5"> a tox pointer it will invoke</font><font color="#CCCCCC"> the dogs</font>
+
+63
+00:04:01,259 --> 00:04:07,640
+bark function<font color="#E5E5E5"> period</font>
+
+64
+00:04:04,970 --> 00:04:12,710
+object slicing happens in other places
+
+65
+00:04:07,640 --> 00:04:17,358
+<font color="#E5E5E5">too for example</font><font color="#CCCCCC"> if I have</font><font color="#E5E5E5"> a dog D 2</font>
+
+66
+00:04:12,710 --> 00:04:21,140
+<font color="#E5E5E5">equal to Y and in this case D 2 is a dog</font>
+
+67
+00:04:17,358 --> 00:04:24,590
+<font color="#CCCCCC">that is created from Y by</font><font color="#E5E5E5"> slicing some</font>
+
+68
+00:04:21,140 --> 00:04:28,159
+<font color="#E5E5E5">of its members off and another</font><font color="#CCCCCC"> example</font>
+
+69
+00:04:24,590 --> 00:04:35,299
+is for<font color="#E5E5E5"> I have a function tool which</font>
+
+70
+00:04:28,160 --> 00:04:40,550
+takes<font color="#E5E5E5"> dog G as a parameter</font><font color="#CCCCCC"> and in the</font>
+
+71
+00:04:35,300 --> 00:04:43,850
+main function<font color="#CCCCCC"> I call Y and here again</font>
+
+72
+00:04:40,550 --> 00:04:48,410
+why is sliced<font color="#E5E5E5"> to create a dog and then</font>
+
+73
+00:04:43,850 --> 00:04:50,480
+<font color="#E5E5E5">passed to</font><font color="#CCCCCC"> function foo that's</font><font color="#E5E5E5"> all for</font>
+
+74
+00:04:48,410 --> 00:04:52,460
+today<font color="#CCCCCC"> feel free to subscribe</font><font color="#E5E5E5"> to my</font>
+
+75
+00:04:50,480 --> 00:04:55,100
+<font color="#CCCCCC">channel</font><font color="#E5E5E5"> so when I post a new video</font>
+
+76
+00:04:52,460 --> 00:04:57,109
+<font color="#CCCCCC">you'll</font><font color="#E5E5E5"> be updated</font><font color="#CCCCCC"> or you can go</font><font color="#E5E5E5"> to my</font>
+
+77
+00:04:55,100 --> 00:05:00,910
+channels home page and see what<font color="#E5E5E5"> I'm</font>
+
+78
+00:04:57,110 --> 00:05:00,910
+offering<font color="#E5E5E5"> today bye bye</font>
+

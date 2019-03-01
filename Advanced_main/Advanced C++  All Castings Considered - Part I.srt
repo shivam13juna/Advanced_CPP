@@ -1,0 +1,604 @@
+﻿1
+00:00:06,860 --> 00:00:13,250
+hello everyone welcome back to C++
+
+2
+00:00:09,560 --> 00:00:15,610
+advanced today's topic is casting<font color="#CCCCCC"> I</font>
+
+3
+00:00:13,250 --> 00:00:20,680
+don't know about you guys but<font color="#CCCCCC"> for me</font>
+
+4
+00:00:15,610 --> 00:00:25,250
+<font color="#E5E5E5">casting has always been confusing topic</font>
+
+5
+00:00:20,680 --> 00:00:28,880
+now exactly what<font color="#CCCCCC"> is casting</font><font color="#E5E5E5"> C++ is a</font>
+
+6
+00:00:25,250 --> 00:00:32,738
+strongly typed language<font color="#E5E5E5"> so an</font><font color="#CCCCCC"> object can</font>
+
+7
+00:00:28,880 --> 00:00:35,329
+convert it from<font color="#E5E5E5"> one type to</font><font color="#CCCCCC"> another</font>
+
+8
+00:00:32,738 --> 00:00:38,510
+<font color="#CCCCCC">generally speaking and there are two</font>
+
+9
+00:00:35,329 --> 00:00:41,840
+kind of type conversion one is implicit
+
+10
+00:00:38,510 --> 00:00:45,739
+type conversion<font color="#E5E5E5"> another one is explicit</font>
+
+11
+00:00:41,840 --> 00:00:51,500
+type conversion<font color="#E5E5E5"> explicit type of</font>
+
+12
+00:00:45,739 --> 00:00:58,390
+immersion<font color="#CCCCCC"> is also called casting</font><font color="#E5E5E5"> there</font>
+
+13
+00:00:51,500 --> 00:00:58,390
+are full and for<font color="#E5E5E5"> casting operator in C++</font>
+
+14
+00:00:58,629 --> 00:01:10,850
+<font color="#E5E5E5">static cast dynamic cast Const cast and</font>
+
+15
+00:01:04,269 --> 00:01:16,340
+lastly<font color="#E5E5E5"> reinterpret cost let's start with</font>
+
+16
+00:01:10,850 --> 00:01:19,190
+the<font color="#CCCCCC"> study static cost so that</font><font color="#E5E5E5"> your cost</font>
+
+17
+00:01:16,340 --> 00:01:23,270
+can convert an object from one type to
+
+18
+00:01:19,190 --> 00:01:28,190
+<font color="#CCCCCC">another over here I define</font><font color="#E5E5E5"> an integer</font><font color="#CCCCCC"> I</font>
+
+19
+00:01:23,270 --> 00:01:32,630
+equal to nine and<font color="#E5E5E5"> then I</font><font color="#CCCCCC"> cost i</font><font color="#E5E5E5"> from an</font>
+
+20
+00:01:28,190 --> 00:01:35,810
+integer to a float<font color="#E5E5E5"> static cast can work</font>
+
+21
+00:01:32,630 --> 00:01:38,839
+on any<font color="#E5E5E5"> type of type as long as well</font><font color="#CCCCCC"> as</font>
+
+22
+00:01:35,810 --> 00:01:43,700
+the type conversion is defined<font color="#E5E5E5"> for those</font>
+
+23
+00:01:38,840 --> 00:01:48,980
+types here<font color="#E5E5E5"> I create a string Bob and</font>
+
+24
+00:01:43,700 --> 00:01:50,930
+then cast<font color="#E5E5E5"> the string to a dog the</font>
+
+25
+00:01:48,980 --> 00:01:54,410
+condition<font color="#E5E5E5"> for this statement</font><font color="#CCCCCC"> will work</font>
+
+26
+00:01:50,930 --> 00:01:59,080
+is the type conversion is defined for
+
+27
+00:01:54,410 --> 00:01:59,080
+the conversion<font color="#E5E5E5"> from string to dog</font>
+
+28
+00:02:00,040 --> 00:02:05,420
+we've talked about the type conversion
+
+29
+00:02:02,720 --> 00:02:08,600
+in a previous session<font color="#E5E5E5"> so I won't talk</font>
+
+30
+00:02:05,420 --> 00:02:13,540
+<font color="#CCCCCC">about</font><font color="#E5E5E5"> that here so that ticket cost can</font>
+
+31
+00:02:08,600 --> 00:02:16,460
+<font color="#E5E5E5">also work on pointers or reference and</font>
+
+32
+00:02:13,540 --> 00:02:20,470
+<font color="#E5E5E5">for point and reference</font><font color="#CCCCCC"> and</font><font color="#E5E5E5"> it can only</font>
+
+33
+00:02:16,460 --> 00:02:24,080
+cast a<font color="#CCCCCC"> objector from one type to a</font>
+
+34
+00:02:20,470 --> 00:02:26,330
+related<font color="#CCCCCC"> type a little later type that</font>
+
+35
+00:02:24,080 --> 00:02:30,260
+means you can cast<font color="#E5E5E5"> an about an object</font>
+
+36
+00:02:26,330 --> 00:02:33,860
+<font color="#CCCCCC">from a base class</font><font color="#E5E5E5"> down to a derived</font>
+
+37
+00:02:30,260 --> 00:02:38,540
+class or<font color="#CCCCCC"> cast it from a derived class up</font>
+
+38
+00:02:33,860 --> 00:02:41,900
+<font color="#E5E5E5">to</font><font color="#CCCCCC"> a base class</font><font color="#E5E5E5"> in this example my</font>
+
+39
+00:02:38,540 --> 00:02:44,359
+yellow dog is derived from dog and after
+
+40
+00:02:41,900 --> 00:02:50,690
+I create a yellow dog I can Custis a
+
+41
+00:02:44,360 --> 00:02:53,060
+pointer<font color="#E5E5E5"> to a dog's pointer this is</font>
+
+42
+00:02:50,690 --> 00:02:55,970
+<font color="#E5E5E5">static cast now let's look at dynamic</font>
+
+43
+00:02:53,060 --> 00:02:58,970
+<font color="#E5E5E5">cast first I create a yellow dog and</font>
+
+44
+00:02:55,970 --> 00:03:02,930
+then consider<font color="#E5E5E5"> the pointer to a</font><font color="#CCCCCC"> dog's</font>
+
+45
+00:02:58,970 --> 00:03:04,840
+pointer now this is a static<font color="#CCCCCC"> custom even</font>
+
+46
+00:03:02,930 --> 00:03:10,850
+though I'm<font color="#CCCCCC"> not using the study cost</font>
+
+47
+00:03:04,840 --> 00:03:14,950
+operator<font color="#E5E5E5"> then I</font><font color="#CCCCCC"> Custer the</font><font color="#E5E5E5"> docs pointer</font>
+
+48
+00:03:10,850 --> 00:03:18,320
+PD back to yellow dogs<font color="#E5E5E5"> pinpointer py</font>
+
+49
+00:03:14,950 --> 00:03:21,738
+dynamic cast upon only<font color="#E5E5E5"> work on pointers</font>
+
+50
+00:03:18,320 --> 00:03:25,760
+or references<font color="#E5E5E5"> it cannot work on an</font>
+
+51
+00:03:21,739 --> 00:03:29,870
+object and they convert from one<font color="#E5E5E5"> type to</font>
+
+52
+00:03:25,760 --> 00:03:33,250
+<font color="#E5E5E5">a related</font><font color="#CCCCCC"> type</font><font color="#E5E5E5"> and typically it will be</font>
+
+53
+00:03:29,870 --> 00:03:36,580
+used in<font color="#CCCCCC"> ton cast</font><font color="#E5E5E5"> which means it casts a</font>
+
+54
+00:03:33,250 --> 00:03:41,209
+<font color="#E5E5E5">objective from its base class to a</font>
+
+55
+00:03:36,580 --> 00:03:44,510
+derived class in the skins from talk to
+
+56
+00:03:41,209 --> 00:03:48,500
+a yellow talk another difference from
+
+57
+00:03:44,510 --> 00:03:51,709
+<font color="#E5E5E5">the static cast is the dynamic cast in</font>
+
+58
+00:03:48,500 --> 00:03:56,000
+<font color="#E5E5E5">additional to performing the</font><font color="#CCCCCC"> typecasting</font>
+
+59
+00:03:51,709 --> 00:03:58,610
+<font color="#E5E5E5">it also perform a</font><font color="#CCCCCC"> long time type check</font>
+
+60
+00:03:56,000 --> 00:04:02,830
+<font color="#E5E5E5">it will check if</font><font color="#CCCCCC"> the types are</font>
+
+61
+00:03:58,610 --> 00:04:06,210
+compatible<font color="#E5E5E5"> for the casting</font><font color="#CCCCCC"> to succeed</font>
+
+62
+00:04:02,830 --> 00:04:09,970
+in this case it<font color="#E5E5E5"> will check if</font><font color="#CCCCCC"> the PD is</font>
+
+63
+00:04:06,210 --> 00:04:13,990
+pointing to a yellow dog a real yellow
+
+64
+00:04:09,970 --> 00:04:17,350
+dog and not just<font color="#E5E5E5"> a dog</font><font color="#CCCCCC"> and if the</font>
+
+65
+00:04:13,990 --> 00:04:21,579
+<font color="#CCCCCC">casting succeed</font><font color="#E5E5E5"> the py will become PD</font>
+
+66
+00:04:17,350 --> 00:04:28,000
+and if it<font color="#CCCCCC"> failed P Y or equal to</font><font color="#E5E5E5"> zero</font>
+
+67
+00:04:21,579 --> 00:04:30,700
+it's a null point and finally the
+
+68
+00:04:28,000 --> 00:04:34,450
+dynamic cast requires the two types to
+
+69
+00:04:30,700 --> 00:04:37,900
+be polymorphic<font color="#E5E5E5"> which means they have</font>
+
+70
+00:04:34,450 --> 00:04:43,479
+they need to at least<font color="#E5E5E5"> have</font><font color="#CCCCCC"> one</font><font color="#E5E5E5"> virtual</font>
+
+71
+00:04:37,900 --> 00:04:46,359
+<font color="#E5E5E5">function now let's look at the</font><font color="#CCCCCC"> Const</font>
+
+72
+00:04:43,480 --> 00:04:49,510
+<font color="#CCCCCC">caste constant caste is used to cast</font>
+
+73
+00:04:46,360 --> 00:04:52,840
+away<font color="#CCCCCC"> the constant is in the example I</font>
+
+74
+00:04:49,510 --> 00:04:55,300
+have<font color="#CCCCCC"> a constraint as</font><font color="#E5E5E5"> pinpoints</font><font color="#CCCCCC"> to hello</font>
+
+75
+00:04:52,840 --> 00:04:57,580
+world<font color="#CCCCCC"> and the hello world cannot be</font>
+
+76
+00:04:55,300 --> 00:05:02,440
+modified<font color="#E5E5E5"> because it defines to be a</font>
+
+77
+00:04:57,580 --> 00:05:06,219
+constant then I<font color="#E5E5E5"> can use constant cast to</font>
+
+78
+00:05:02,440 --> 00:05:08,580
+custom<font color="#E5E5E5"> way the constant is and then</font>
+
+79
+00:05:06,220 --> 00:05:12,910
+assign the result to a mod for
+
+80
+00:05:08,580 --> 00:05:19,419
+modifiable<font color="#E5E5E5"> child pointer and now the</font>
+
+81
+00:05:12,910 --> 00:05:22,090
+<font color="#E5E5E5">hello world can be changed and like</font>
+
+82
+00:05:19,420 --> 00:05:25,180
+dynamic<font color="#CCCCCC"> casts</font><font color="#E5E5E5"> that the constant cast can</font>
+
+83
+00:05:22,090 --> 00:05:29,799
+only work on pointers or references<font color="#CCCCCC"> it</font>
+
+84
+00:05:25,180 --> 00:05:32,770
+cannot work on the object<font color="#E5E5E5"> itself</font><font color="#CCCCCC"> so if I</font>
+
+85
+00:05:29,800 --> 00:05:37,110
+change<font color="#E5E5E5"> this chart to a char pointer to a</font>
+
+86
+00:05:32,770 --> 00:05:37,109
+char and it doesn't work that<font color="#CCCCCC"> way and</font>
+
+87
+00:05:38,100 --> 00:05:46,030
+<font color="#E5E5E5">unlike the dynamic cast the console cast</font>
+
+88
+00:05:41,500 --> 00:05:49,860
+can only work on same type so both
+
+89
+00:05:46,030 --> 00:05:53,140
+string and modify above are both
+
+90
+00:05:49,860 --> 00:05:55,090
+<font color="#E5E5E5">charters the</font><font color="#CCCCCC"> only difference is one</font><font color="#E5E5E5"> is a</font>
+
+91
+00:05:53,140 --> 00:05:57,289
+<font color="#E5E5E5">constant work</font><font color="#CCCCCC"> and other one is not</font>
+
+92
+00:05:55,090 --> 00:06:00,950
+constant
+
+93
+00:05:57,290 --> 00:06:04,220
+our last<font color="#E5E5E5"> cast operator is a reinterpret</font>
+
+94
+00:06:00,950 --> 00:06:07,460
+cast in this<font color="#E5E5E5"> example I have</font><font color="#CCCCCC"> a</font><font color="#E5E5E5"> P pointer</font>
+
+95
+00:06:04,220 --> 00:06:11,510
+which points to some<font color="#E5E5E5"> edges and then I</font>
+
+96
+00:06:07,460 --> 00:06:15,650
+will<font color="#E5E5E5"> use reinterpret cast to interpret</font>
+
+97
+00:06:11,510 --> 00:06:21,620
+the memory content in that<font color="#E5E5E5"> edges into a</font>
+
+98
+00:06:15,650 --> 00:06:25,370
+dog the reinterpret cast can also work
+
+99
+00:06:21,620 --> 00:06:28,850
+on an only work on pointers or
+
+100
+00:06:25,370 --> 00:06:32,210
+references<font color="#E5E5E5"> it cannot work on the object</font>
+
+101
+00:06:28,850 --> 00:06:34,640
+<font color="#E5E5E5">itself</font><font color="#CCCCCC"> and if you compare to</font><font color="#E5E5E5"> the</font>
+
+102
+00:06:32,210 --> 00:06:38,630
+<font color="#CCCCCC">previous</font><font color="#E5E5E5"> three cast that works on</font>
+
+103
+00:06:34,640 --> 00:06:43,010
+pointers or references<font color="#E5E5E5"> the static cast</font>
+
+104
+00:06:38,630 --> 00:06:47,000
+<font color="#E5E5E5">is working on related type and the</font>
+
+105
+00:06:43,010 --> 00:06:50,870
+dynamic cast<font color="#CCCCCC"> also can work on related</font>
+
+106
+00:06:47,000 --> 00:06:55,640
+type the<font color="#E5E5E5"> Const past can only work on</font>
+
+107
+00:06:50,870 --> 00:07:00,260
+same type and the reinterpret cast<font color="#E5E5E5"> can</font>
+
+108
+00:06:55,640 --> 00:07:02,810
+work on any<font color="#E5E5E5"> type you</font><font color="#CCCCCC"> can cast</font><font color="#E5E5E5"> from one</font>
+
+109
+00:07:00,260 --> 00:07:07,219
+pointer to any other type<font color="#CCCCCC"> of pointer</font>
+
+110
+00:07:02,810 --> 00:07:10,820
+with the reinterpret cast<font color="#CCCCCC"> so this is the</font>
+
+111
+00:07:07,220 --> 00:07:14,510
+most powerful cast<font color="#CCCCCC"> and because it is so</font>
+
+112
+00:07:10,820 --> 00:07:18,830
+powerful<font color="#CCCCCC"> it also gives you a lot of room</font>
+
+113
+00:07:14,510 --> 00:07:23,030
+to<font color="#E5E5E5"> make</font><font color="#CCCCCC"> mistakes</font><font color="#E5E5E5"> that is why you always</font>
+
+114
+00:07:18,830 --> 00:07:26,270
+need<font color="#CCCCCC"> to use extra caution</font><font color="#E5E5E5"> when using the</font>
+
+115
+00:07:23,030 --> 00:07:30,200
+interpret custom typically<font color="#CCCCCC"> new interpret</font>
+
+116
+00:07:26,270 --> 00:07:33,590
+cast is used in<font color="#CCCCCC"> low-level</font><font color="#E5E5E5"> coding because</font>
+
+117
+00:07:30,200 --> 00:07:36,250
+it tends to<font color="#E5E5E5"> generate</font><font color="#CCCCCC"> code that's not</font>
+
+118
+00:07:33,590 --> 00:07:36,250
+<font color="#CCCCCC">potable</font>
+
+119
+00:07:37,540 --> 00:07:43,930
+C++<font color="#E5E5E5"> also inherited that the</font>
+
+120
+00:07:40,480 --> 00:07:48,790
+old-fashioned custom<font color="#CCCCCC"> style from C let's</font>
+
+121
+00:07:43,930 --> 00:07:52,060
+call it as C style casting and CC style
+
+122
+00:07:48,790 --> 00:07:56,010
+casting<font color="#E5E5E5"> has to form one is the seen like</font>
+
+123
+00:07:52,060 --> 00:07:59,260
+custom notation another is<font color="#CCCCCC"> the function</font>
+
+124
+00:07:56,010 --> 00:08:02,440
+functional notation<font color="#E5E5E5"> in this example I</font>
+
+125
+00:07:59,260 --> 00:08:07,539
+<font color="#E5E5E5">have a shot integer a and I cast it into</font>
+
+126
+00:08:02,440 --> 00:08:11,190
+J I and J and the<font color="#E5E5E5"> both format are the</font>
+
+127
+00:08:07,540 --> 00:08:15,630
+same there is no difference between<font color="#CCCCCC"> of a</font>
+
+128
+00:08:11,190 --> 00:08:20,050
+<font color="#CCCCCC">syst</font><font color="#E5E5E5"> I'll casting is really a mixture of</font>
+
+129
+00:08:15,630 --> 00:08:23,590
+static cast<font color="#E5E5E5"> Const cast and reinterpret</font>
+
+130
+00:08:20,050 --> 00:08:27,850
+custom the<font color="#E5E5E5"> only custard it doesn't</font>
+
+131
+00:08:23,590 --> 00:08:30,820
+support<font color="#E5E5E5"> it the dynamic cast so now we</font>
+
+132
+00:08:27,850 --> 00:08:36,159
+have a seat style casting which just
+
+133
+00:08:30,820 --> 00:08:39,840
+does the exact<font color="#E5E5E5"> same thing as</font><font color="#CCCCCC"> 3</font><font color="#E5E5E5"> C++ style</font>
+
+134
+00:08:36,159 --> 00:08:43,780
+cast then<font color="#E5E5E5"> which one should I use</font>
+
+135
+00:08:39,840 --> 00:08:47,340
+in<font color="#E5E5E5"> general the</font><font color="#CCCCCC"> Cystic plus plus style of</font>
+
+136
+00:08:43,780 --> 00:08:51,730
+cast<font color="#E5E5E5"> are preferred over the</font><font color="#CCCCCC"> c style</font>
+
+137
+00:08:47,340 --> 00:08:56,350
+the reasons<font color="#E5E5E5"> are first of all it's easier</font>
+
+138
+00:08:51,730 --> 00:08:58,960
+to identify<font color="#E5E5E5"> in the code by grabbing</font><font color="#CCCCCC"> an</font>
+
+139
+00:08:56,350 --> 00:09:01,480
+underscore cast you can<font color="#CCCCCC"> easily find out</font>
+
+140
+00:08:58,960 --> 00:09:02,940
+all the secrets<font color="#E5E5E5"> pressed style of casting</font>
+
+141
+00:09:01,480 --> 00:09:07,030
+in your code
+
+142
+00:09:02,940 --> 00:09:10,420
+secondly the<font color="#CCCCCC"> C++ style of cast</font><font color="#E5E5E5"> tends to</font>
+
+143
+00:09:07,030 --> 00:09:12,699
+generate less<font color="#CCCCCC"> usage error that is</font>
+
+144
+00:09:10,420 --> 00:09:17,349
+because there<font color="#E5E5E5"> are</font><font color="#CCCCCC"> four different type of</font>
+
+145
+00:09:12,700 --> 00:09:19,990
+<font color="#E5E5E5">cast in C++ and each one have a narrow</font>
+
+146
+00:09:17,350 --> 00:09:26,010
+lead to specify the purpose so that
+
+147
+00:09:19,990 --> 00:09:31,060
+<font color="#CCCCCC">gives you less room to make mistakes and</font>
+
+148
+00:09:26,010 --> 00:09:34,330
+also<font color="#CCCCCC"> C++ style just provide a</font><font color="#E5E5E5"> long time</font>
+
+149
+00:09:31,060 --> 00:09:37,540
+type check capability to check if the
+
+150
+00:09:34,330 --> 00:09:41,610
+types are<font color="#E5E5E5"> compatible for casting so that</font>
+
+151
+00:09:37,540 --> 00:09:41,610
+is also<font color="#E5E5E5"> a powerful tool</font><font color="#CCCCCC"> to use</font>
+

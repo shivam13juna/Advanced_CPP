@@ -1,0 +1,884 @@
+﻿1
+00:00:07,700 --> 00:00:14,280
+hello welcome back<font color="#E5E5E5"> in last session we've</font>
+
+2
+00:00:11,219 --> 00:00:17,580
+covered a different type<font color="#CCCCCC"> of casting</font><font color="#E5E5E5"> in</font>
+
+3
+00:00:14,280 --> 00:00:21,049
+C++ in<font color="#CCCCCC"> this session we'll look</font><font color="#E5E5E5"> at some</font>
+
+4
+00:00:17,580 --> 00:00:24,330
+examples<font color="#E5E5E5"> and come up with the summary</font>
+
+5
+00:00:21,050 --> 00:00:28,020
+let's look at the example with dynamic
+
+6
+00:00:24,330 --> 00:00:32,308
+cast we have a dog which has a virtual
+
+7
+00:00:28,020 --> 00:00:35,699
+destructor remember the dynamic constant
+
+8
+00:00:32,308 --> 00:00:38,998
+requires the types<font color="#E5E5E5"> to be polymorphic so</font>
+
+9
+00:00:35,699 --> 00:00:41,849
+they need<font color="#E5E5E5"> to have at</font><font color="#CCCCCC"> least one virtual</font>
+
+10
+00:00:38,999 --> 00:00:44,670
+function and we<font color="#E5E5E5"> have a yellow dog</font>
+
+11
+00:00:41,850 --> 00:00:49,829
+<font color="#E5E5E5">derived from dark and the yellow dog can</font>
+
+12
+00:00:44,670 --> 00:00:52,889
+<font color="#CCCCCC">bark in main function I first create a</font>
+
+13
+00:00:49,829 --> 00:00:56,519
+<font color="#CCCCCC">new dog</font><font color="#E5E5E5"> and assign</font><font color="#CCCCCC"> it to a dog's pointer</font>
+
+14
+00:00:52,889 --> 00:00:59,909
+<font color="#CCCCCC">PD and sometime later under different</font>
+
+15
+00:00:56,519 --> 00:01:02,789
+<font color="#E5E5E5">context I got a wrong impression that</font>
+
+16
+00:00:59,909 --> 00:01:07,679
+<font color="#E5E5E5">the PD is actually pointing</font><font color="#CCCCCC"> to a yellow</font>
+
+17
+00:01:02,789 --> 00:01:10,890
+dog so<font color="#CCCCCC"> I dynamically cast PD to a yellow</font>
+
+18
+00:01:07,680 --> 00:01:14,910
+ducks pointer P Y which is<font color="#E5E5E5"> obviously a</font>
+
+19
+00:01:10,890 --> 00:01:17,340
+bug<font color="#E5E5E5"> that</font><font color="#CCCCCC"> I introduced then I let</font><font color="#E5E5E5"> py part</font>
+
+20
+00:01:14,910 --> 00:01:21,630
+and for debug purpose I print out the
+
+21
+00:01:17,340 --> 00:01:24,180
+<font color="#CCCCCC">value of py and PD now what will be the</font>
+
+22
+00:01:21,630 --> 00:01:27,619
+output from this program you may want to
+
+23
+00:01:24,180 --> 00:01:33,210
+pause the<font color="#E5E5E5"> video and think</font><font color="#CCCCCC"> about</font><font color="#E5E5E5"> it</font>
+
+24
+00:01:27,620 --> 00:01:38,100
+the output is<font color="#E5E5E5"> wolf it</font><font color="#CCCCCC"> barked</font><font color="#E5E5E5"> and the py</font>
+
+25
+00:01:33,210 --> 00:01:42,089
+is<font color="#CCCCCC"> e 0 and</font><font color="#E5E5E5"> PD is some kind of pointer so</font>
+
+26
+00:01:38,100 --> 00:01:45,509
+what happened in this<font color="#E5E5E5"> code first</font><font color="#CCCCCC"> of</font><font color="#E5E5E5"> all</font>
+
+27
+00:01:42,090 --> 00:01:49,140
+yellow<font color="#E5E5E5"> dog is derived from</font><font color="#CCCCCC"> talk so</font><font color="#E5E5E5"> that</font>
+
+28
+00:01:45,510 --> 00:01:52,850
+means all yellow dogs are talks but not
+
+29
+00:01:49,140 --> 00:01:58,320
+all dogs are yellow dots<font color="#E5E5E5"> so when I</font>
+
+30
+00:01:52,850 --> 00:02:00,720
+<font color="#CCCCCC">Custer a PD</font><font color="#E5E5E5"> and which is a dog - a</font>
+
+31
+00:01:58,320 --> 00:02:05,550
+yellow dog<font color="#CCCCCC"> it's certainly will fail and</font>
+
+32
+00:02:00,720 --> 00:02:10,660
+as a result the<font color="#E5E5E5"> py will become</font><font color="#CCCCCC"> 0</font>
+
+33
+00:02:05,550 --> 00:02:15,430
+as we<font color="#E5E5E5"> seen here and then when py back</font>
+
+34
+00:02:10,660 --> 00:02:19,030
+isn't that<font color="#CCCCCC"> a</font><font color="#E5E5E5"> now access it's actually</font>
+
+35
+00:02:15,430 --> 00:02:22,630
+<font color="#E5E5E5">not because when the compiler cpy to bug</font>
+
+36
+00:02:19,030 --> 00:02:26,950
+it will try<font color="#E5E5E5"> to interpret</font><font color="#CCCCCC"> back function</font>
+
+37
+00:02:22,630 --> 00:02:29,410
+<font color="#CCCCCC">to be a</font><font color="#E5E5E5"> static function and in this</font>
+
+38
+00:02:26,950 --> 00:02:32,470
+example<font color="#E5E5E5"> the</font><font color="#CCCCCC"> Park function didn't access</font>
+
+39
+00:02:29,410 --> 00:02:35,590
+any member of any data member of a
+
+40
+00:02:32,470 --> 00:02:39,460
+yellow dog so it can indeed be treated
+
+41
+00:02:35,590 --> 00:02:42,700
+as a static function so py<font color="#CCCCCC"> pocket is</font>
+
+42
+00:02:39,460 --> 00:02:44,550
+successfully which makes<font color="#E5E5E5"> a perfect cover</font>
+
+43
+00:02:42,700 --> 00:02:49,079
+<font color="#CCCCCC">for my</font><font color="#E5E5E5"> bug</font>
+
+44
+00:02:44,550 --> 00:02:54,570
+now suppose I make the<font color="#CCCCCC"> Park function to</font>
+
+45
+00:02:49,080 --> 00:02:54,570
+access the yellow dogs member data
+
+46
+00:02:59,530 --> 00:03:04,700
+now the compiler can no longer treat<font color="#CCCCCC"> bug</font>
+
+47
+00:03:02,689 --> 00:03:10,159
+function as a state function
+
+48
+00:03:04,700 --> 00:03:12,679
+so when<font color="#E5E5E5"> pew our box it will crash which</font>
+
+49
+00:03:10,159 --> 00:03:15,798
+is a better thing because the the
+
+50
+00:03:12,680 --> 00:03:19,819
+debugger will immediately pointing me to
+
+51
+00:03:15,799 --> 00:03:22,159
+where the bug happened rather rather
+
+52
+00:03:19,819 --> 00:03:25,220
+than before<font color="#CCCCCC"> the bug</font><font color="#E5E5E5"> is completely hidden</font>
+
+53
+00:03:22,159 --> 00:03:31,069
+<font color="#CCCCCC">and</font><font color="#E5E5E5"> I have no idea when</font><font color="#CCCCCC"> the</font><font color="#E5E5E5"> bucket will</font>
+
+54
+00:03:25,220 --> 00:03:35,200
+explode now suppose I am NOT going to
+
+55
+00:03:31,069 --> 00:03:38,750
+use<font color="#CCCCCC"> dynamic cast I use static cast</font>
+
+56
+00:03:35,200 --> 00:03:42,290
+unlike dynamic cast the static cast<font color="#E5E5E5"> will</font>
+
+57
+00:03:38,750 --> 00:03:44,959
+not perform runtime type check so the
+
+58
+00:03:42,290 --> 00:03:47,298
+static cast<font color="#E5E5E5"> off I yell a</font><font color="#CCCCCC"> Doc's pointer</font>
+
+59
+00:03:44,959 --> 00:03:51,919
+to a yellow<font color="#E5E5E5"> ducks pointer will always</font>
+
+60
+00:03:47,299 --> 00:03:56,510
+succeed so py<font color="#CCCCCC"> can will never be a null</font>
+
+61
+00:03:51,919 --> 00:03:58,760
+pointer when py<font color="#E5E5E5"> bug it will access a</font>
+
+62
+00:03:56,510 --> 00:04:01,689
+part of memory<font color="#CCCCCC"> that it doesn't belong to</font>
+
+63
+00:03:58,760 --> 00:04:05,328
+<font color="#E5E5E5">py and that the result is undefined</font>
+
+64
+00:04:01,689 --> 00:04:07,668
+<font color="#CCCCCC">sometime it</font><font color="#E5E5E5"> will crash but most of the</font>
+
+65
+00:04:05,329 --> 00:04:15,349
+time it will run through<font color="#E5E5E5"> and print out</font>
+
+66
+00:04:07,669 --> 00:04:18,590
+of print out<font color="#CCCCCC"> atom number for</font><font color="#E5E5E5"> H so</font><font color="#CCCCCC"> as a</font>
+
+67
+00:04:15,349 --> 00:04:21,589
+result<font color="#E5E5E5"> the bug become more in changed</font>
+
+68
+00:04:18,589 --> 00:04:23,888
+and elusive<font color="#E5E5E5"> this is why we need to be</font>
+
+69
+00:04:21,589 --> 00:04:26,570
+<font color="#E5E5E5">very careful when using</font><font color="#CCCCCC"> cast and</font>
+
+70
+00:04:23,889 --> 00:04:31,520
+apparently static<font color="#E5E5E5"> cast is a more risky</font>
+
+71
+00:04:26,570 --> 00:04:34,340
+<font color="#CCCCCC">to use</font><font color="#E5E5E5"> then dynamic custom the correct</font>
+
+72
+00:04:31,520 --> 00:04:41,030
+way to do it is we<font color="#CCCCCC"> still use dynamic</font>
+
+73
+00:04:34,340 --> 00:04:46,419
+custom and before let me<font color="#E5E5E5"> py to park will</font>
+
+74
+00:04:41,030 --> 00:04:51,219
+check if py is null pointer or not
+
+75
+00:04:46,420 --> 00:04:56,740
+and now it<font color="#E5E5E5"> will</font><font color="#CCCCCC"> work as we expected but</font>
+
+76
+00:04:51,220 --> 00:05:00,850
+can we make<font color="#CCCCCC"> the code</font><font color="#E5E5E5"> better we actually</font>
+
+77
+00:04:56,740 --> 00:05:09,460
+<font color="#CCCCCC">can a better</font><font color="#E5E5E5"> approach for this code is</font>
+
+78
+00:05:00,850 --> 00:05:14,050
+adding a virtual<font color="#CCCCCC"> bulk</font><font color="#E5E5E5"> function for dog</font>
+
+79
+00:05:09,460 --> 00:05:18,250
+<font color="#E5E5E5">and now in the main function</font><font color="#CCCCCC"> instead</font><font color="#E5E5E5"> of</font>
+
+80
+00:05:14,050 --> 00:05:30,520
+using a dynamic<font color="#CCCCCC"> cast with some type know</font>
+
+81
+00:05:18,250 --> 00:05:33,430
+check I can simply call py<font color="#E5E5E5"> back now why</font>
+
+82
+00:05:30,520 --> 00:05:36,549
+this<font color="#E5E5E5"> code is better</font><font color="#CCCCCC"> first</font><font color="#E5E5E5"> of all it</font>
+
+83
+00:05:33,430 --> 00:05:39,280
+reduced<font color="#E5E5E5"> the cyclomatic complexity of the</font>
+
+84
+00:05:36,550 --> 00:05:42,490
+code<font color="#E5E5E5"> instead</font><font color="#CCCCCC"> of having three lines of</font>
+
+85
+00:05:39,280 --> 00:05:46,809
+<font color="#CCCCCC">code with a if</font><font color="#E5E5E5"> statement</font><font color="#CCCCCC"> I have only one</font>
+
+86
+00:05:42,490 --> 00:05:50,110
+line of<font color="#CCCCCC"> code and secondary</font><font color="#E5E5E5"> and this is a</font>
+
+87
+00:05:46,810 --> 00:05:52,890
+better<font color="#E5E5E5"> object-oriented design because</font>
+
+88
+00:05:50,110 --> 00:05:54,820
+we're relegating the responsible
+
+89
+00:05:52,890 --> 00:05:57,130
+<font color="#E5E5E5">responsibility of invoking the</font>
+
+90
+00:05:54,820 --> 00:06:02,740
+<font color="#CCCCCC">write-back function to the object itself</font>
+
+91
+00:05:57,130 --> 00:06:07,770
+<font color="#CCCCCC">a</font><font color="#E5E5E5"> PD whether it's a dog or yellow dog so</font>
+
+92
+00:06:02,740 --> 00:06:10,780
+we'll have<font color="#E5E5E5"> a better manage to code</font><font color="#CCCCCC"> and</font>
+
+93
+00:06:07,770 --> 00:06:13,570
+lastly by using the virtual function<font color="#E5E5E5"> I</font>
+
+94
+00:06:10,780 --> 00:06:16,869
+can gain a<font color="#CCCCCC"> little</font><font color="#E5E5E5"> bit of the performance</font>
+
+95
+00:06:13,570 --> 00:06:20,110
+advantage because the dynamic<font color="#E5E5E5"> cast using</font>
+
+96
+00:06:16,870 --> 00:06:22,300
+<font color="#CCCCCC">long time</font><font color="#E5E5E5"> type identification</font><font color="#CCCCCC"> and long</font>
+
+97
+00:06:20,110 --> 00:06:26,980
+time type<font color="#E5E5E5"> identification could be very</font>
+
+98
+00:06:22,300 --> 00:06:30,940
+costly<font color="#CCCCCC"> for a depending on the compiler</font>
+
+99
+00:06:26,980 --> 00:06:34,530
+<font color="#E5E5E5">and sometime it could be up</font><font color="#CCCCCC"> to 50 50</font>
+
+100
+00:06:30,940 --> 00:06:34,530
+<font color="#E5E5E5">times</font><font color="#CCCCCC"> more expensive</font>
+
+101
+00:06:34,830 --> 00:06:43,340
+so in summary<font color="#E5E5E5"> polymorphism is a better</font>
+
+102
+00:06:39,120 --> 00:06:48,389
+and<font color="#CCCCCC"> more elegant solution</font><font color="#E5E5E5"> and then using</font>
+
+103
+00:06:43,340 --> 00:06:51,750
+typecasting<font color="#E5E5E5"> sometimes the casting can</font>
+
+104
+00:06:48,389 --> 00:06:55,199
+become a handy tool to<font color="#CCCCCC"> hack code which</font>
+
+105
+00:06:51,750 --> 00:06:58,319
+may or may<font color="#CCCCCC"> not be a good</font><font color="#E5E5E5"> thing but we'll</font>
+
+106
+00:06:55,199 --> 00:07:02,039
+look at it anyway<font color="#E5E5E5"> again we have a class</font>
+
+107
+00:06:58,319 --> 00:07:04,259
+dog and dog have<font color="#CCCCCC"> bark function and this</font>
+
+108
+00:07:02,039 --> 00:07:07,409
+time the<font color="#E5E5E5"> bug function is a constant</font>
+
+109
+00:07:04,259 --> 00:07:10,800
+function<font color="#E5E5E5"> what does the account function</font>
+
+110
+00:07:07,409 --> 00:07:14,129
+mean who is<font color="#CCCCCC"> Const</font><font color="#E5E5E5"> literally speaking</font>
+
+111
+00:07:10,800 --> 00:07:16,849
+<font color="#CCCCCC">only a variable</font><font color="#E5E5E5"> or an</font><font color="#CCCCCC"> object can be a</font>
+
+112
+00:07:14,129 --> 00:07:20,729
+Const<font color="#E5E5E5"> a function cannot</font><font color="#CCCCCC"> be a constant</font>
+
+113
+00:07:16,849 --> 00:07:28,039
+<font color="#CCCCCC">then who has become Const</font><font color="#E5E5E5"> as a result of</font>
+
+114
+00:07:20,729 --> 00:07:32,699
+the keyword Const<font color="#E5E5E5"> it's it's the object</font>
+
+115
+00:07:28,039 --> 00:07:38,818
+<font color="#E5E5E5">pointed to by this pointer become Const</font>
+
+116
+00:07:32,699 --> 00:07:41,460
+<font color="#CCCCCC">in the scope of the</font><font color="#E5E5E5"> buff function now if</font>
+
+117
+00:07:38,819 --> 00:07:48,180
+in the<font color="#E5E5E5"> bug function I try to change you</font>
+
+118
+00:07:41,460 --> 00:07:50,489
+and<font color="#E5E5E5"> name equal</font><font color="#CCCCCC"> to Henry</font><font color="#E5E5E5"> the compiler</font>
+
+119
+00:07:48,180 --> 00:07:52,590
+will not let me to do it<font color="#CCCCCC"> because the</font>
+
+120
+00:07:50,490 --> 00:07:55,830
+compiler<font color="#CCCCCC"> knows that function is a cost</font>
+
+121
+00:07:52,590 --> 00:08:02,090
+function<font color="#CCCCCC"> and I cannot</font><font color="#E5E5E5"> change the member</font>
+
+122
+00:07:55,830 --> 00:08:05,490
+data of the dog in this function however
+
+123
+00:08:02,090 --> 00:08:11,419
+if I really want<font color="#E5E5E5"> to change the name of</font>
+
+124
+00:08:05,490 --> 00:08:14,419
+the dog<font color="#E5E5E5"> in this function I can do host</font>
+
+125
+00:08:11,419 --> 00:08:14,419
+<font color="#CCCCCC">cost</font>
+
+126
+00:08:16,500 --> 00:08:30,390
+<font color="#CCCCCC">DOX pointer this and named</font><font color="#E5E5E5"> equal to</font>
+
+127
+00:08:24,200 --> 00:08:34,218
+<font color="#CCCCCC">Henley</font><font color="#E5E5E5"> now I have</font><font color="#CCCCCC"> successfully changed</font>
+
+128
+00:08:30,390 --> 00:08:39,330
+<font color="#E5E5E5">the data member of dog inside the</font><font color="#CCCCCC"> dog's</font>
+
+129
+00:08:34,219 --> 00:08:41,640
+<font color="#CCCCCC">constant</font><font color="#E5E5E5"> function this is</font><font color="#CCCCCC"> a table that</font>
+
+130
+00:08:39,330 --> 00:08:44,640
+<font color="#E5E5E5">summarizes all</font><font color="#CCCCCC"> the castings that we've</font>
+
+131
+00:08:41,640 --> 00:08:47,310
+talked about<font color="#E5E5E5"> so far and there are a lot</font>
+
+132
+00:08:44,640 --> 00:08:51,630
+<font color="#CCCCCC">of information in this table so I hope I</font>
+
+133
+00:08:47,310 --> 00:08:54,930
+<font color="#E5E5E5">will not put you</font><font color="#CCCCCC"> into</font><font color="#E5E5E5"> sleep first of all</font>
+
+134
+00:08:51,630 --> 00:08:55,500
+<font color="#CCCCCC">I grouped all the casting into</font><font color="#E5E5E5"> two</font>
+
+135
+00:08:54,930 --> 00:08:58,170
+groups
+
+136
+00:08:55,500 --> 00:09:00,870
+why is object<font color="#CCCCCC"> casting and another one is</font>
+
+137
+00:08:58,170 --> 00:09:02,790
+pointer and reference cutting because
+
+138
+00:09:00,870 --> 00:09:05,840
+these two<font color="#CCCCCC"> are so much different from</font>
+
+139
+00:09:02,790 --> 00:09:08,730
+each other in<font color="#CCCCCC"> terms of the behavior</font>
+
+140
+00:09:05,840 --> 00:09:12,210
+<font color="#E5E5E5">there are four columns</font><font color="#CCCCCC"> first ones</font>
+
+141
+00:09:08,730 --> 00:09:14,450
+generate code it indicates whether<font color="#E5E5E5"> the</font>
+
+142
+00:09:12,210 --> 00:09:17,970
+casting<font color="#E5E5E5"> will generate a substantial</font>
+
+143
+00:09:14,450 --> 00:09:22,530
+<font color="#E5E5E5">vulnerable code that will get executed</font>
+
+144
+00:09:17,970 --> 00:09:25,560
+<font color="#E5E5E5">during one time generate data whether</font>
+
+145
+00:09:22,530 --> 00:09:29,880
+the casting<font color="#E5E5E5"> will generate a different</font>
+
+146
+00:09:25,560 --> 00:09:33,479
+data object and saved in memory<font color="#E5E5E5"> here I</font>
+
+147
+00:09:29,880 --> 00:09:38,550
+don't<font color="#CCCCCC"> count a pointer as a data only</font><font color="#E5E5E5"> the</font>
+
+148
+00:09:33,480 --> 00:09:43,260
+pointy<font color="#E5E5E5"> counts risky level how risky is</font>
+
+149
+00:09:38,550 --> 00:09:47,599
+it to use the<font color="#CCCCCC"> cast they type what kind</font>
+
+150
+00:09:43,260 --> 00:09:47,600
+<font color="#CCCCCC">of data type can the cast perform Oh</font>
+
+151
+00:09:48,800 --> 00:09:54,510
+object<font color="#CCCCCC"> casting there are only one cast</font>
+
+152
+00:09:51,960 --> 00:09:59,340
+can be used on object casting<font color="#E5E5E5"> which is</font>
+
+153
+00:09:54,510 --> 00:10:02,490
+the static<font color="#E5E5E5"> cast now the static cast for</font>
+
+154
+00:09:59,340 --> 00:10:06,300
+object<font color="#E5E5E5"> always</font><font color="#CCCCCC"> generate</font><font color="#E5E5E5"> code it will</font>
+
+155
+00:10:02,490 --> 00:10:09,980
+invoke either the type conversion
+
+156
+00:10:06,300 --> 00:10:15,150
+function or the constructor of the
+
+157
+00:10:09,980 --> 00:10:19,020
+casted<font color="#E5E5E5"> are type so it will generate</font><font color="#CCCCCC"> a</font>
+
+158
+00:10:15,150 --> 00:10:22,800
+substantial<font color="#CCCCCC"> runnable code generate data</font>
+
+159
+00:10:19,020 --> 00:10:28,530
+<font color="#E5E5E5">the static cast of object will generate</font>
+
+160
+00:10:22,800 --> 00:10:31,319
+a<font color="#CCCCCC"> new data and to be used</font><font color="#E5E5E5"> risky level</font>
+
+161
+00:10:28,530 --> 00:10:34,920
+static<font color="#E5E5E5"> instead</font><font color="#CCCCCC"> of object is not so risky</font>
+
+162
+00:10:31,320 --> 00:10:38,820
+<font color="#E5E5E5">to use the only</font><font color="#CCCCCC"> place I can think</font><font color="#E5E5E5"> of is</font>
+
+163
+00:10:34,920 --> 00:10:42,089
+if you defined<font color="#E5E5E5"> too many of the implicit</font>
+
+164
+00:10:38,820 --> 00:10:47,130
+<font color="#E5E5E5">type conversion then</font><font color="#CCCCCC"> sometimes the code</font>
+
+165
+00:10:42,090 --> 00:10:51,270
+will become tricky<font color="#E5E5E5"> data type you can</font>
+
+166
+00:10:47,130 --> 00:10:53,730
+perform static cast on any types<font color="#E5E5E5"> as long</font>
+
+167
+00:10:51,270 --> 00:10:58,380
+as the type conversion is defined for
+
+168
+00:10:53,730 --> 00:11:01,680
+these two<font color="#E5E5E5"> types pointer reference</font>
+
+169
+00:10:58,380 --> 00:11:06,540
+casting all forecasts can<font color="#E5E5E5"> be used on a</font>
+
+170
+00:11:01,680 --> 00:11:09,829
+point and reference casting static cast
+
+171
+00:11:06,540 --> 00:11:13,829
+the<font color="#E5E5E5"> for pointers it will not generate</font>
+
+172
+00:11:09,830 --> 00:11:16,730
+<font color="#CCCCCC">code at merely to tell</font><font color="#E5E5E5"> the compiler to</font>
+
+173
+00:11:13,830 --> 00:11:20,820
+<font color="#E5E5E5">interpret the pointer in a different way</font>
+
+174
+00:11:16,730 --> 00:11:23,220
+it will not generate<font color="#E5E5E5"> data either it will</font>
+
+175
+00:11:20,820 --> 00:11:28,160
+work on<font color="#E5E5E5"> the same data that's being</font>
+
+176
+00:11:23,220 --> 00:11:31,770
+pointed to and as we've seen<font color="#E5E5E5"> in</font><font color="#CCCCCC"> previous</font>
+
+177
+00:11:28,160 --> 00:11:37,829
+example that<font color="#E5E5E5"> static cast is very risky</font>
+
+178
+00:11:31,770 --> 00:11:39,689
+<font color="#CCCCCC">to</font><font color="#E5E5E5"> use it always succeed and and you</font>
+
+179
+00:11:37,830 --> 00:11:41,630
+need<font color="#E5E5E5"> to be very careful not</font><font color="#CCCCCC"> to</font><font color="#E5E5E5"> make a</font>
+
+180
+00:11:39,690 --> 00:11:44,569
+wrong<font color="#E5E5E5"> cast</font>
+
+181
+00:11:41,630 --> 00:11:47,810
+static<font color="#CCCCCC"> a stall</font><font color="#E5E5E5"> can only work on related</font>
+
+182
+00:11:44,569 --> 00:11:52,790
+types which means<font color="#E5E5E5"> between child and</font>
+
+183
+00:11:47,810 --> 00:11:56,089
+parent dynamic<font color="#E5E5E5"> cast will generate</font>
+
+184
+00:11:52,790 --> 00:11:58,759
+additional vulnerable code because it
+
+185
+00:11:56,089 --> 00:12:01,699
+will perform<font color="#CCCCCC"> long time type check to see</font>
+
+186
+00:11:58,759 --> 00:12:05,690
+if the<font color="#E5E5E5"> type</font><font color="#CCCCCC"> two types are compatible</font><font color="#E5E5E5"> for</font>
+
+187
+00:12:01,699 --> 00:12:07,849
+dynamic custom dynamic cast typically
+
+188
+00:12:05,690 --> 00:12:10,399
+will not<font color="#E5E5E5"> generate additional data</font><font color="#CCCCCC"> it</font>
+
+189
+00:12:07,850 --> 00:12:14,779
+will<font color="#E5E5E5"> work on the same data being pointed</font>
+
+190
+00:12:10,399 --> 00:12:17,209
+to and the dynamic<font color="#E5E5E5"> cast is less risky</font>
+
+191
+00:12:14,779 --> 00:12:22,819
+<font color="#E5E5E5">than the static cast</font><font color="#CCCCCC"> because of the</font>
+
+192
+00:12:17,209 --> 00:12:25,819
+dynamic<font color="#E5E5E5"> runtime check it performs and it</font>
+
+193
+00:12:22,819 --> 00:12:28,759
+can only<font color="#E5E5E5"> work on related types and most</font>
+
+194
+00:12:25,819 --> 00:12:34,490
+of them it's used<font color="#CCCCCC"> for</font><font color="#E5E5E5"> time casting down</font>
+
+195
+00:12:28,759 --> 00:12:37,970
+casting<font color="#E5E5E5"> Const cast will not generate</font>
+
+196
+00:12:34,490 --> 00:12:41,660
+code and will not generate data and it's
+
+197
+00:12:37,970 --> 00:12:46,100
+very<font color="#CCCCCC"> safe to use but it's not completely</font>
+
+198
+00:12:41,660 --> 00:12:49,490
+<font color="#E5E5E5">risk-free</font><font color="#CCCCCC"> because by using</font><font color="#E5E5E5"> Const cast</font>
+
+199
+00:12:46,100 --> 00:12:52,370
+<font color="#E5E5E5">you are changing an object that original</font>
+
+200
+00:12:49,490 --> 00:12:55,670
+being<font color="#CCCCCC"> consider the Const</font><font color="#E5E5E5"> so you are</font>
+
+201
+00:12:52,370 --> 00:13:00,230
+breaking someone's promise for the
+
+202
+00:12:55,670 --> 00:13:04,699
+object<font color="#E5E5E5"> to be</font><font color="#CCCCCC"> cost tons Const cast can</font>
+
+203
+00:13:00,230 --> 00:13:07,519
+only work on same type<font color="#E5E5E5"> reinterpret cast</font>
+
+204
+00:13:04,699 --> 00:13:10,790
+it will not generate<font color="#CCCCCC"> a code it will not</font>
+
+205
+00:13:07,519 --> 00:13:15,139
+<font color="#CCCCCC">generate data and it</font><font color="#E5E5E5"> is the most risky</font>
+
+206
+00:13:10,790 --> 00:13:18,079
+operation you<font color="#E5E5E5"> can do it can work on any</font>
+
+207
+00:13:15,139 --> 00:13:20,779
+types<font color="#E5E5E5"> and it will always succeed which</font>
+
+208
+00:13:18,079 --> 00:13:23,089
+means you need to<font color="#CCCCCC"> be very</font><font color="#E5E5E5"> clear what you</font>
+
+209
+00:13:20,779 --> 00:13:27,250
+are<font color="#E5E5E5"> doing and making sure you are</font>
+
+210
+00:13:23,089 --> 00:13:27,250
+<font color="#E5E5E5">casting things correctly</font>
+
+211
+00:13:27,900 --> 00:13:33,670
+sISTAR<font color="#CCCCCC"> Casta is a mixture of a static</font>
+
+212
+00:13:31,030 --> 00:13:36,939
+cast<font color="#CCCCCC"> Const cast and a reinterpret cast</font>
+
+213
+00:13:33,670 --> 00:13:39,579
+so based on that<font color="#E5E5E5"> you</font><font color="#CCCCCC"> can get the answers</font>
+
+214
+00:13:36,940 --> 00:13:44,590
+for<font color="#E5E5E5"> the table based on the content of</font>
+
+215
+00:13:39,580 --> 00:13:47,830
+previous table<font color="#CCCCCC"> I've uploaded</font><font color="#E5E5E5"> out the</font>
+
+216
+00:13:44,590 --> 00:13:49,930
+notes to my personal<font color="#CCCCCC"> website and you can</font>
+
+217
+00:13:47,830 --> 00:13:53,770
+<font color="#CCCCCC">download notes and save it for future</font>
+
+218
+00:13:49,930 --> 00:13:57,160
+<font color="#CCCCCC">reference if</font><font color="#E5E5E5"> you like so this wraps up</font>
+
+219
+00:13:53,770 --> 00:13:59,560
+our discussion<font color="#E5E5E5"> on the castings</font><font color="#CCCCCC"> I hope</font>
+
+220
+00:13:57,160 --> 00:14:02,100
+you enjoy the<font color="#CCCCCC"> video see you next time</font>
+
+221
+00:13:59,560 --> 00:14:02,099
+<font color="#E5E5E5">bye</font>
+

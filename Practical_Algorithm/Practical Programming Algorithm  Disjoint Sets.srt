@@ -1,0 +1,860 @@
+﻿1
+00:00:00,439 --> 00:00:06,330
+hello everyone today<font color="#CCCCCC"> we will talk about</font>
+
+2
+00:00:03,210 --> 00:00:11,030
+disjoint sets which<font color="#E5E5E5"> is a very useful</font>
+
+3
+00:00:06,330 --> 00:00:11,030
+<font color="#E5E5E5">data structure for graph algorithms</font>
+
+4
+00:00:11,090 --> 00:00:16,740
+suppose we have a universe of items
+
+5
+00:00:13,830 --> 00:00:21,000
+which we want to<font color="#E5E5E5"> manage with disjoint</font>
+
+6
+00:00:16,740 --> 00:00:23,939
+sets disjoint sets<font color="#E5E5E5"> is a group of sets</font>
+
+7
+00:00:21,000 --> 00:00:29,130
+<font color="#E5E5E5">where no item can be in more than</font><font color="#CCCCCC"> one</font>
+
+8
+00:00:23,939 --> 00:00:34,620
+<font color="#E5E5E5">set so each item</font><font color="#CCCCCC"> can belong to only one</font>
+
+9
+00:00:29,130 --> 00:00:38,910
+set<font color="#E5E5E5"> as an example this is an</font><font color="#CCCCCC"> example of</font>
+
+10
+00:00:34,620 --> 00:00:44,459
+disjoint sets we have<font color="#CCCCCC"> four disjoint sets</font>
+
+11
+00:00:38,910 --> 00:00:48,149
+as well as<font color="#CCCCCC"> 2s 3s 4s</font><font color="#E5E5E5"> 3 contains</font><font color="#CCCCCC"> 2 items</font>
+
+12
+00:00:44,460 --> 00:00:53,309
+as<font color="#E5E5E5"> well as</font><font color="#CCCCCC"> 2's for</font><font color="#E5E5E5"> each contains only</font>
+
+13
+00:00:48,149 --> 00:00:58,140
+<font color="#E5E5E5">one item disjoint sets support at least</font>
+
+14
+00:00:53,309 --> 00:01:01,670
+<font color="#E5E5E5">two operations find and a union which</font><font color="#CCCCCC"> is</font>
+
+15
+00:00:58,140 --> 00:01:05,069
+<font color="#CCCCCC">also known as find</font><font color="#E5E5E5"> a union algorithm</font>
+
+16
+00:01:01,670 --> 00:01:08,430
+find<font color="#E5E5E5"> will take one item as a</font><font color="#CCCCCC"> parameter</font>
+
+17
+00:01:05,069 --> 00:01:09,869
+<font color="#E5E5E5">and then return the disjoint set this</font>
+
+18
+00:01:08,430 --> 00:01:16,530
+<font color="#E5E5E5">item belongs to</font>
+
+19
+00:01:09,869 --> 00:01:22,110
+so find<font color="#CCCCCC"> D will return as 3 because D is</font>
+
+20
+00:01:16,530 --> 00:01:25,680
+an element<font color="#E5E5E5"> in s 3 Union takes two</font>
+
+21
+00:01:22,110 --> 00:01:28,860
+disjoint sets<font color="#E5E5E5"> as parameter and as a</font>
+
+22
+00:01:25,680 --> 00:01:33,990
+result those two disjoint sets will<font color="#E5E5E5"> be</font>
+
+23
+00:01:28,860 --> 00:01:39,420
+merged into one<font color="#E5E5E5"> set so the result of</font>
+
+24
+00:01:33,990 --> 00:01:42,960
+<font color="#CCCCCC">union</font><font color="#E5E5E5"> s 1 s 2 is this both s 1 and s 2</font>
+
+25
+00:01:39,420 --> 00:01:49,910
+are merged into the<font color="#E5E5E5"> same disjoint set s</font>
+
+26
+00:01:42,960 --> 00:01:53,160
+1<font color="#E5E5E5"> and both a and C are items inside s 1</font>
+
+27
+00:01:49,910 --> 00:01:56,009
+so this is an example of disjoint sets
+
+28
+00:01:53,160 --> 00:02:00,179
+<font color="#E5E5E5">and what kind of operations that it can</font>
+
+29
+00:01:56,010 --> 00:02:03,690
+do the<font color="#E5E5E5"> next question to consider is how</font>
+
+30
+00:02:00,180 --> 00:02:05,910
+do<font color="#E5E5E5"> we implement a disjoint set there are</font>
+
+31
+00:02:03,690 --> 00:02:11,190
+<font color="#CCCCCC">different ways to implement disjoint</font>
+
+32
+00:02:05,910 --> 00:02:16,470
+sets the most commonly<font color="#E5E5E5"> used</font><font color="#CCCCCC"> is she based</font>
+
+33
+00:02:11,190 --> 00:02:18,329
+disjoint sets or disjoint set<font color="#E5E5E5"> forests so</font>
+
+34
+00:02:16,470 --> 00:02:22,530
+this is an example of tree based
+
+35
+00:02:18,330 --> 00:02:27,720
+disjoint sets for tree based disjoint
+
+36
+00:02:22,530 --> 00:02:30,960
+sets each set is a key so as<font color="#CCCCCC"> three is a</font>
+
+37
+00:02:27,720 --> 00:02:36,120
+tree and each item<font color="#CCCCCC"> has a pointer that</font>
+
+38
+00:02:30,960 --> 00:02:40,260
+<font color="#CCCCCC">points to another</font><font color="#E5E5E5"> item a set is</font>
+
+39
+00:02:36,120 --> 00:02:45,570
+identified by<font color="#CCCCCC"> the</font><font color="#E5E5E5"> loot of the tree the</font>
+
+40
+00:02:40,260 --> 00:02:50,940
+loot of<font color="#E5E5E5"> S 3 is B and the loot of s 1 is</font>
+
+41
+00:02:45,570 --> 00:02:53,130
+a the loot<font color="#E5E5E5"> of s 2 is C loot has a unique</font>
+
+42
+00:02:50,940 --> 00:02:56,310
+attribute that<font color="#E5E5E5"> its pointer is pointing</font>
+
+43
+00:02:53,130 --> 00:02:58,980
+to itself<font color="#CCCCCC"> so all</font><font color="#E5E5E5"> the</font><font color="#CCCCCC"> loots can</font><font color="#E5E5E5"> be</font>
+
+44
+00:02:56,310 --> 00:03:05,280
+identified by<font color="#E5E5E5"> their self pointing</font>
+
+45
+00:02:58,980 --> 00:03:09,980
+pointers when we can't<font color="#E5E5E5"> find</font><font color="#CCCCCC"> D we'll find</font>
+
+46
+00:03:05,280 --> 00:03:13,170
+the parent<font color="#E5E5E5"> of D which</font><font color="#CCCCCC"> is</font><font color="#E5E5E5"> B and B is</font>
+
+47
+00:03:09,980 --> 00:03:19,399
+representing<font color="#CCCCCC"> s</font><font color="#E5E5E5"> 3 so</font><font color="#CCCCCC"> we claim that we</font>
+
+48
+00:03:13,170 --> 00:03:23,369
+<font color="#E5E5E5">found the disjoint set of D is s 3</font><font color="#CCCCCC"> and</font>
+
+49
+00:03:19,400 --> 00:03:27,540
+when we call Union s 2 s 1 we're merging
+
+50
+00:03:23,370 --> 00:03:32,820
+<font color="#CCCCCC">s 2 and s 1 into</font><font color="#E5E5E5"> one disjoint set so the</font>
+
+51
+00:03:27,540 --> 00:03:37,829
+result is<font color="#E5E5E5"> this as</font><font color="#CCCCCC"> 2 is gone</font><font color="#E5E5E5"> and C is no</font>
+
+52
+00:03:32,820 --> 00:03:42,519
+longer a root<font color="#E5E5E5"> both a and C belong to s 1</font>
+
+53
+00:03:37,830 --> 00:03:47,980
+and s 1 is<font color="#CCCCCC"> represented by its loot a</font>
+
+54
+00:03:42,520 --> 00:03:51,580
+and then if we call<font color="#CCCCCC"> union s1 s3 we are</font>
+
+55
+00:03:47,980 --> 00:03:56,170
+merging<font color="#E5E5E5"> s1 s3 into one disjoint set and</font>
+
+56
+00:03:51,580 --> 00:04:00,550
+that'll result<font color="#E5E5E5"> is this the elements of</font>
+
+57
+00:03:56,170 --> 00:04:07,029
+ABCD<font color="#E5E5E5"> or belong to the disjoint set s3</font>
+
+58
+00:04:00,550 --> 00:04:09,160
+and s3<font color="#E5E5E5"> is represented by its</font><font color="#CCCCCC"> root</font><font color="#E5E5E5"> B now</font>
+
+59
+00:04:07,030 --> 00:04:14,230
+let's consider<font color="#CCCCCC"> what's the</font><font color="#E5E5E5"> complexity of</font>
+
+60
+00:04:09,160 --> 00:04:17,920
+the<font color="#CCCCCC"> tree-based disjoint set union is</font>
+
+61
+00:04:14,230 --> 00:04:21,339
+very fast<font color="#E5E5E5"> because for</font><font color="#CCCCCC"> Union we only need</font>
+
+62
+00:04:17,920 --> 00:04:23,920
+to change one<font color="#E5E5E5"> pointer for example the</font>
+
+63
+00:04:21,339 --> 00:04:27,880
+point<font color="#E5E5E5"> of a originally was pointing to</font>
+
+64
+00:04:23,920 --> 00:04:31,720
+<font color="#E5E5E5">itself and now it points to B and we</font>
+
+65
+00:04:27,880 --> 00:04:36,520
+<font color="#CCCCCC">have</font><font color="#E5E5E5"> finished the</font><font color="#CCCCCC"> merging so Union only</font>
+
+66
+00:04:31,720 --> 00:04:39,430
+takes constant time find take the time
+
+67
+00:04:36,520 --> 00:04:42,549
+of the depth if we try to find that
+
+68
+00:04:39,430 --> 00:04:47,470
+disjoint set of C first<font color="#E5E5E5"> we find its</font>
+
+69
+00:04:42,550 --> 00:04:50,530
+parent<font color="#CCCCCC"> a and then find its parent</font><font color="#E5E5E5"> B so</font>
+
+70
+00:04:47,470 --> 00:04:56,620
+the time of find is proportional<font color="#CCCCCC"> to the</font>
+
+71
+00:04:50,530 --> 00:04:59,549
+depth of<font color="#E5E5E5"> the chi-chi based disjoint set</font>
+
+72
+00:04:56,620 --> 00:05:02,920
+can<font color="#CCCCCC"> be easily</font><font color="#E5E5E5"> implemented</font><font color="#CCCCCC"> with pointers</font>
+
+73
+00:04:59,550 --> 00:05:05,470
+<font color="#E5E5E5">so if we have an item whose data</font>
+
+74
+00:05:02,920 --> 00:05:08,620
+structure is<font color="#E5E5E5"> like</font><font color="#CCCCCC"> this</font><font color="#E5E5E5"> it has some kind</font>
+
+75
+00:05:05,470 --> 00:05:10,900
+<font color="#CCCCCC">of data and there has a pointer that</font>
+
+76
+00:05:08,620 --> 00:05:14,550
+points to its parent which is<font color="#E5E5E5"> another</font>
+
+77
+00:05:10,900 --> 00:05:17,969
+item so with this we<font color="#E5E5E5"> can easily</font>
+
+78
+00:05:14,550 --> 00:05:21,220
+<font color="#E5E5E5">implement the</font><font color="#CCCCCC"> tree-based disjoint set</font>
+
+79
+00:05:17,970 --> 00:05:24,030
+but sometimes this approach of<font color="#CCCCCC"> using</font>
+
+80
+00:05:21,220 --> 00:05:27,460
+pointers is not so convenient<font color="#CCCCCC"> for</font>
+
+81
+00:05:24,030 --> 00:05:31,119
+<font color="#CCCCCC">example what if the item data structure</font>
+
+82
+00:05:27,460 --> 00:05:33,330
+doesn't<font color="#E5E5E5"> have a pointer and this item is</font>
+
+83
+00:05:31,120 --> 00:05:37,480
+defined in a<font color="#CCCCCC"> third-party library</font>
+
+84
+00:05:33,330 --> 00:05:39,550
+<font color="#CCCCCC">therefore you cannot change it then</font>
+
+85
+00:05:37,480 --> 00:05:42,040
+things become<font color="#CCCCCC"> difficult you</font><font color="#E5E5E5"> have to</font>
+
+86
+00:05:39,550 --> 00:05:46,360
+create a wrapper class of this<font color="#E5E5E5"> item and</font>
+
+87
+00:05:42,040 --> 00:05:48,879
+adding a pointer inside<font color="#E5E5E5"> of the wrapper</font>
+
+88
+00:05:46,360 --> 00:05:51,599
+there is another way of<font color="#E5E5E5"> implementing a</font>
+
+89
+00:05:48,879 --> 00:05:56,050
+tree<font color="#E5E5E5"> that doesn't use pointers at all</font>
+
+90
+00:05:51,599 --> 00:05:58,449
+which is<font color="#E5E5E5"> using hash table using hash</font>
+
+91
+00:05:56,050 --> 00:06:01,479
+table has<font color="#CCCCCC"> the advantage that it is not</font>
+
+92
+00:05:58,449 --> 00:06:03,819
+intrusive<font color="#E5E5E5"> we don't have to change the</font>
+
+93
+00:06:01,479 --> 00:06:07,780
+data structure<font color="#E5E5E5"> of the item to add</font>
+
+94
+00:06:03,819 --> 00:06:12,250
+pointers if it doesn't have<font color="#E5E5E5"> one we can</font>
+
+95
+00:06:07,780 --> 00:06:14,559
+<font color="#E5E5E5">use the item as is so for today's coding</font>
+
+96
+00:06:12,250 --> 00:06:16,180
+demo<font color="#E5E5E5"> I'm going to use hash table to</font>
+
+97
+00:06:14,560 --> 00:06:21,190
+implement<font color="#E5E5E5"> sea-based</font>
+
+98
+00:06:16,180 --> 00:06:24,750
+disjoint sets this<font color="#CCCCCC"> is a C++</font>
+
+99
+00:06:21,190 --> 00:06:28,330
+implementation example of disjoint set
+
+100
+00:06:24,750 --> 00:06:33,009
+so in<font color="#E5E5E5"> this case the type</font><font color="#CCCCCC"> of our</font><font color="#E5E5E5"> items is</font>
+
+101
+00:06:28,330 --> 00:06:35,909
+char and the universe of items contain 5
+
+102
+00:06:33,009 --> 00:06:39,969
+chars<font color="#E5E5E5"> ABCDE</font>
+
+103
+00:06:35,909 --> 00:06:43,900
+the key data in the disjoint set is this
+
+104
+00:06:39,969 --> 00:06:46,599
+parent which is<font color="#CCCCCC"> a hash table and this</font>
+
+105
+00:06:43,900 --> 00:06:48,400
+hash table<font color="#E5E5E5"> defines the parental</font>
+
+106
+00:06:46,599 --> 00:06:53,139
+relationship between the chars
+
+107
+00:06:48,400 --> 00:06:57,008
+<font color="#E5E5E5">and in the constructor</font><font color="#CCCCCC"> we take</font><font color="#E5E5E5"> each</font><font color="#CCCCCC"> item</font>
+
+108
+00:06:53,139 --> 00:07:02,469
+of the universe and set its parent to be
+
+109
+00:06:57,009 --> 00:07:06,980
+itself which means<font color="#E5E5E5"> we'll</font><font color="#CCCCCC"> have 5 disjoint</font>
+
+110
+00:07:02,469 --> 00:07:12,890
+sets<font color="#E5E5E5"> and each set contains only one</font><font color="#CCCCCC"> item</font>
+
+111
+00:07:06,980 --> 00:07:16,430
+and then we set<font color="#CCCCCC"> the parent of D to</font><font color="#E5E5E5"> be B</font>
+
+112
+00:07:12,890 --> 00:07:20,690
+and as a result of that<font color="#E5E5E5"> B and</font><font color="#CCCCCC"> D</font><font color="#E5E5E5"> are in</font>
+
+113
+00:07:16,430 --> 00:07:23,350
+the same set<font color="#E5E5E5"> and B is the loot so</font>
+
+114
+00:07:20,690 --> 00:07:27,710
+essentially we have<font color="#CCCCCC"> created this</font>
+
+115
+00:07:23,350 --> 00:07:36,980
+disjoint sets<font color="#E5E5E5"> B and D are in the same</font>
+
+116
+00:07:27,710 --> 00:07:39,919
+set and<font color="#E5E5E5"> AC e are in their own set the</font>
+
+117
+00:07:36,980 --> 00:07:42,590
+find function<font color="#CCCCCC"> take an item as parameter</font>
+
+118
+00:07:39,920 --> 00:07:46,430
+and<font color="#CCCCCC"> the return the disjoint set where</font>
+
+119
+00:07:42,590 --> 00:07:49,580
+this item belong to<font color="#E5E5E5"> if the parent of</font>
+
+120
+00:07:46,430 --> 00:07:53,150
+<font color="#E5E5E5">this</font><font color="#CCCCCC"> item is this</font><font color="#E5E5E5"> item itself which</font>
+
+121
+00:07:49,580 --> 00:07:56,530
+<font color="#E5E5E5">means this item is the</font><font color="#CCCCCC"> loot</font><font color="#E5E5E5"> and the loot</font>
+
+122
+00:07:53,150 --> 00:07:59,900
+is a representative<font color="#E5E5E5"> of the disjoint set</font>
+
+123
+00:07:56,530 --> 00:08:04,119
+so we can claim that<font color="#E5E5E5"> we</font><font color="#CCCCCC"> have found</font><font color="#E5E5E5"> the</font>
+
+124
+00:07:59,900 --> 00:08:07,640
+<font color="#E5E5E5">disjoint set and</font><font color="#CCCCCC"> return the loot</font>
+
+125
+00:08:04,120 --> 00:08:10,480
+otherwise we continue<font color="#E5E5E5"> to find the parent</font>
+
+126
+00:08:07,640 --> 00:08:10,479
+<font color="#E5E5E5">of the item</font>
+
+127
+00:08:10,690 --> 00:08:16,780
+the<font color="#E5E5E5"> union function takes two disjoint</font>
+
+128
+00:08:13,030 --> 00:08:19,179
+sets as parameter and<font color="#CCCCCC"> those</font><font color="#E5E5E5"> two disjoint</font>
+
+129
+00:08:16,780 --> 00:08:23,289
+sets are represented with their roots
+
+130
+00:08:19,180 --> 00:08:25,810
+<font color="#E5E5E5">and what this function does is it sets</font>
+
+131
+00:08:23,290 --> 00:08:30,130
+the<font color="#E5E5E5"> second dilute to be the parent of</font>
+
+132
+00:08:25,810 --> 00:08:32,530
+the first<font color="#CCCCCC"> aleut</font><font color="#E5E5E5"> as a result the first</font>
+
+133
+00:08:30,130 --> 00:08:35,289
+load is no longer<font color="#CCCCCC"> allude</font><font color="#E5E5E5"> and that the</font>
+
+134
+00:08:32,530 --> 00:08:40,659
+second dilute is the<font color="#E5E5E5"> root of both</font>
+
+135
+00:08:35,289 --> 00:08:43,150
+disjoint sets so they<font color="#CCCCCC"> are merged in the</font>
+
+136
+00:08:40,659 --> 00:08:51,990
+<font color="#E5E5E5">main</font><font color="#CCCCCC"> function</font><font color="#E5E5E5"> I</font><font color="#CCCCCC"> have created a disjoint</font>
+
+137
+00:08:43,150 --> 00:08:57,610
+set D s and if I do<font color="#E5E5E5"> D s</font><font color="#CCCCCC"> start find C</font>
+
+138
+00:08:51,990 --> 00:09:01,510
+this should<font color="#E5E5E5"> return C because C belongs</font>
+
+139
+00:08:57,610 --> 00:09:07,570
+to a single item<font color="#E5E5E5"> disjoint set as you</font>
+
+140
+00:09:01,510 --> 00:09:15,819
+shown in this picture and then I do the
+
+141
+00:09:07,570 --> 00:09:19,210
+<font color="#E5E5E5">s dot</font><font color="#CCCCCC"> you mean</font><font color="#E5E5E5"> C a so I'm merging the</font>
+
+142
+00:09:15,820 --> 00:09:25,690
+disjoint set of C and the disjoint set
+
+143
+00:09:19,210 --> 00:09:32,230
+of a so as a<font color="#CCCCCC"> result</font><font color="#E5E5E5"> a and C are in the</font>
+
+144
+00:09:25,690 --> 00:09:35,590
+same set so in the picture<font color="#E5E5E5"> basically</font><font color="#CCCCCC"> we</font>
+
+145
+00:09:32,230 --> 00:09:38,370
+have done this a is the new root of this
+
+146
+00:09:35,590 --> 00:09:38,370
+new set
+
+147
+00:09:38,590 --> 00:09:54,510
+and now if<font color="#CCCCCC"> we do</font><font color="#E5E5E5"> D s dot find C again</font>
+
+148
+00:09:47,290 --> 00:10:00,610
+<font color="#E5E5E5">this will get turn a and if we do D s</font>
+
+149
+00:09:54,510 --> 00:10:05,160
+Union<font color="#CCCCCC"> a a is</font><font color="#E5E5E5"> the new loot</font><font color="#CCCCCC"> so it</font>
+
+150
+00:10:00,610 --> 00:10:12,100
+represents<font color="#CCCCCC"> that set and we</font><font color="#E5E5E5"> Union a ways</font>
+
+151
+00:10:05,160 --> 00:10:18,449
+B and the B is the<font color="#CCCCCC"> loot of the set</font><font color="#E5E5E5"> that</font>
+
+152
+00:10:12,100 --> 00:10:27,640
+<font color="#E5E5E5">contains B and D so</font><font color="#CCCCCC"> as a result is a C</font>
+
+153
+00:10:18,450 --> 00:10:32,670
+<font color="#E5E5E5">be B are in</font><font color="#CCCCCC"> the same set</font><font color="#E5E5E5"> so in the</font>
+
+154
+00:10:27,640 --> 00:10:32,670
+<font color="#E5E5E5">picture what we have done is this</font>
+
+155
+00:10:34,040 --> 00:10:41,329
+so this is how a disjoint set data
+
+156
+00:10:36,770 --> 00:10:44,090
+structure can<font color="#CCCCCC"> be used now let's analyze</font>
+
+157
+00:10:41,330 --> 00:10:48,020
+<font color="#E5E5E5">if there's any way we can improve the</font>
+
+158
+00:10:44,090 --> 00:10:50,240
+performance<font color="#CCCCCC"> of disjoint sets the union</font>
+
+159
+00:10:48,020 --> 00:10:52,730
+function only<font color="#E5E5E5"> takes constant time so</font>
+
+160
+00:10:50,240 --> 00:10:55,610
+<font color="#E5E5E5">there is no room to improve the</font><font color="#CCCCCC"> Union</font>
+
+161
+00:10:52,730 --> 00:10:59,090
+function but the find function<font color="#E5E5E5"> is slower</font>
+
+162
+00:10:55,610 --> 00:11:02,900
+it is<font color="#E5E5E5"> in the order of the depth of the</font>
+
+163
+00:10:59,090 --> 00:11:08,150
+tree so the deeper the tree grows<font color="#E5E5E5"> the</font>
+
+164
+00:11:02,900 --> 00:11:11,540
+slower the find will become so if we can
+
+165
+00:11:08,150 --> 00:11:15,199
+<font color="#E5E5E5">find a way</font><font color="#CCCCCC"> to let the tree more grow</font>
+
+166
+00:11:11,540 --> 00:11:19,400
+towards the<font color="#E5E5E5"> side then grow in downward</font>
+
+167
+00:11:15,200 --> 00:11:21,440
+then we can flatten the<font color="#E5E5E5"> tree and we can</font>
+
+168
+00:11:19,400 --> 00:11:27,470
+<font color="#E5E5E5">improve the performance</font><font color="#CCCCCC"> of the find</font>
+
+169
+00:11:21,440 --> 00:11:30,800
+function let's look at our<font color="#E5E5E5"> code so where</font>
+
+170
+00:11:27,470 --> 00:11:34,610
+do the trees grow the trees grow in the
+
+171
+00:11:30,800 --> 00:11:37,400
+union function<font color="#E5E5E5"> and here I just</font><font color="#CCCCCC"> randomly</font>
+
+172
+00:11:34,610 --> 00:11:40,850
+choose the second<font color="#CCCCCC"> elute to be the new</font>
+
+173
+00:11:37,400 --> 00:11:43,579
+root so if I'm unlucky<font color="#CCCCCC"> my tree will grow</font>
+
+174
+00:11:40,850 --> 00:11:45,520
+deeper and deeper and the<font color="#E5E5E5"> find</font><font color="#CCCCCC"> function</font>
+
+175
+00:11:43,580 --> 00:11:48,650
+will become<font color="#E5E5E5"> slower and slower</font>
+
+176
+00:11:45,520 --> 00:11:52,370
+now let me<font color="#CCCCCC"> implement some strategy in</font>
+
+177
+00:11:48,650 --> 00:11:55,819
+choosing the new root<font color="#E5E5E5"> if I always</font><font color="#CCCCCC"> choose</font>
+
+178
+00:11:52,370 --> 00:11:59,740
+<font color="#CCCCCC">the loot of the deeper G</font><font color="#E5E5E5"> to be the new</font>
+
+179
+00:11:55,820 --> 00:12:02,810
+loot then the tree<font color="#E5E5E5"> will not grow deeper</font>
+
+180
+00:11:59,740 --> 00:12:05,810
+let me repeat<font color="#E5E5E5"> if I always</font><font color="#CCCCCC"> choose the</font>
+
+181
+00:12:02,810 --> 00:12:08,810
+root of the deeper G to be the new root
+
+182
+00:12:05,810 --> 00:12:12,770
+then the tree will<font color="#CCCCCC"> not grow deeper and</font>
+
+183
+00:12:08,810 --> 00:12:14,839
+that is a very good<font color="#E5E5E5"> news for</font><font color="#CCCCCC"> us but in</font>
+
+184
+00:12:12,770 --> 00:12:19,370
+order to<font color="#E5E5E5"> do that we need something</font><font color="#CCCCCC"> to</font>
+
+185
+00:12:14,840 --> 00:12:20,020
+record<font color="#CCCCCC"> the depth of the trees</font><font color="#E5E5E5"> so let's</font>
+
+186
+00:12:19,370 --> 00:12:24,430
+do it
+
+187
+00:12:20,020 --> 00:12:29,000
+will create another on order the map
+
+188
+00:12:24,430 --> 00:12:33,219
+which is<font color="#E5E5E5"> from char to int it's called</font>
+
+189
+00:12:29,000 --> 00:12:39,880
+rank<font color="#E5E5E5"> and this is to record</font>
+
+190
+00:12:33,220 --> 00:12:42,600
+the depth of cheese<font color="#E5E5E5"> initially we made</font>
+
+191
+00:12:39,880 --> 00:12:47,530
+every disjoint set to contain only<font color="#E5E5E5"> one</font>
+
+192
+00:12:42,600 --> 00:12:54,730
+<font color="#CCCCCC">item</font><font color="#E5E5E5"> so</font><font color="#CCCCCC"> that means the length of each</font>
+
+193
+00:12:47,530 --> 00:13:06,310
+<font color="#CCCCCC">key is zero and</font><font color="#E5E5E5"> after we merged D and B</font>
+
+194
+00:12:54,730 --> 00:13:07,960
+the length of B becomes<font color="#CCCCCC"> one</font><font color="#E5E5E5"> and</font><font color="#CCCCCC"> that the</font>
+
+195
+00:13:06,310 --> 00:13:12,099
+<font color="#E5E5E5">Union function needs to be more</font>
+
+196
+00:13:07,960 --> 00:13:15,040
+complicated<font color="#E5E5E5"> so this is my new Union</font>
+
+197
+00:13:12,100 --> 00:13:18,520
+function remember<font color="#E5E5E5"> will choose the loot</font>
+
+198
+00:13:15,040 --> 00:13:20,469
+of a deeper G to be the new loot<font color="#E5E5E5"> so if</font>
+
+199
+00:13:18,520 --> 00:13:23,079
+the rank<font color="#E5E5E5"> of set one is bigger than set</font>
+
+200
+00:13:20,470 --> 00:13:25,660
+<font color="#CCCCCC">two which is set</font><font color="#E5E5E5"> one to be the new loot</font>
+
+201
+00:13:23,080 --> 00:13:28,690
+<font color="#E5E5E5">if the rank of set two is bigger than</font>
+
+202
+00:13:25,660 --> 00:13:32,199
+set one then we'll choose set two to be
+
+203
+00:13:28,690 --> 00:13:35,020
+the<font color="#CCCCCC"> new root</font><font color="#E5E5E5"> else if both three are of</font>
+
+204
+00:13:32,200 --> 00:13:38,050
+the same<font color="#E5E5E5"> depth then we just randomly</font>
+
+205
+00:13:35,020 --> 00:13:41,699
+<font color="#E5E5E5">choose and set two as the new loot but</font>
+
+206
+00:13:38,050 --> 00:13:44,859
+the rank of<font color="#E5E5E5"> set 2 will</font><font color="#CCCCCC"> increase by one</font>
+
+207
+00:13:41,700 --> 00:13:48,630
+so<font color="#E5E5E5"> only when</font><font color="#CCCCCC"> both</font><font color="#E5E5E5"> trees are of the same</font>
+
+208
+00:13:44,860 --> 00:13:51,220
+depth the tree will grow deeper by one
+
+209
+00:13:48,630 --> 00:13:53,950
+now we'll have much<font color="#CCCCCC"> more flat</font><font color="#E5E5E5"> entries</font>
+
+210
+00:13:51,220 --> 00:13:56,200
+than previous implementation<font color="#CCCCCC"> therefore</font>
+
+211
+00:13:53,950 --> 00:14:00,640
+we'll have better performance<font color="#CCCCCC"> with</font><font color="#E5E5E5"> the</font>
+
+212
+00:13:56,200 --> 00:14:02,410
+find function that's all for<font color="#CCCCCC"> today</font><font color="#E5E5E5"> feel</font>
+
+213
+00:14:00,640 --> 00:14:04,470
+free<font color="#CCCCCC"> to subscribe to my channel and</font>
+
+214
+00:14:02,410 --> 00:14:07,469
+<font color="#E5E5E5">check out the other videos I have</font>
+
+215
+00:14:04,470 --> 00:14:07,470
+<font color="#CCCCCC">bye-bye</font>
+

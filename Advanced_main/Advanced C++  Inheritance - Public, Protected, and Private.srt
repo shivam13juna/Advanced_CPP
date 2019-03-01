@@ -1,0 +1,720 @@
+﻿1
+00:00:06,810 --> 00:00:12,030
+hello everyone<font color="#E5E5E5"> welcome back today we are</font>
+
+2
+00:00:10,290 --> 00:00:15,980
+going<font color="#E5E5E5"> to talk about the three type of</font>
+
+3
+00:00:12,030 --> 00:00:19,080
+inheritance<font color="#E5E5E5"> public protected</font><font color="#CCCCCC"> and private</font>
+
+4
+00:00:15,980 --> 00:00:22,380
+<font color="#E5E5E5">inheritance what are they how should</font><font color="#CCCCCC"> you</font>
+
+5
+00:00:19,080 --> 00:00:25,320
+use them in<font color="#E5E5E5"> your code in the example I</font>
+
+6
+00:00:22,380 --> 00:00:29,189
+<font color="#CCCCCC">have a base</font><font color="#E5E5E5"> class B and I have</font><font color="#CCCCCC"> a</font><font color="#E5E5E5"> class</font>
+
+7
+00:00:25,320 --> 00:00:32,809
+deprived<font color="#E5E5E5"> which is a private child of B D</font>
+
+8
+00:00:29,190 --> 00:00:37,860
+<font color="#E5E5E5">plot protected a child of B the pub</font>
+
+9
+00:00:32,809 --> 00:00:40,769
+public child of D of<font color="#CCCCCC"> B the three</font>
+
+10
+00:00:37,860 --> 00:00:43,620
+<font color="#CCCCCC">keywords</font><font color="#E5E5E5"> private protected and public</font>
+
+11
+00:00:40,769 --> 00:00:46,949
+specifies three different level of<font color="#E5E5E5"> X</font>
+
+12
+00:00:43,620 --> 00:00:50,608
+<font color="#E5E5E5">access control from the derived class</font><font color="#CCCCCC"> to</font>
+
+13
+00:00:46,949 --> 00:00:54,120
+the base class the access control<font color="#CCCCCC"> rules</font>
+
+14
+00:00:50,609 --> 00:00:57,420
+can<font color="#CCCCCC"> be summarized into four rules</font><font color="#E5E5E5"> number</font>
+
+15
+00:00:54,120 --> 00:01:01,709
+<font color="#CCCCCC">one</font><font color="#E5E5E5"> none of the derived class can access</font>
+
+16
+00:00:57,420 --> 00:01:03,960
+anything<font color="#CCCCCC"> that is private in B this</font>
+
+17
+00:01:01,710 --> 00:01:06,840
+<font color="#E5E5E5">should be easy to understand</font><font color="#CCCCCC"> because</font>
+
+18
+00:01:03,960 --> 00:01:09,180
+<font color="#E5E5E5">these private members are B's privacy</font>
+
+19
+00:01:06,840 --> 00:01:12,030
+and then no matter<font color="#CCCCCC"> what kind of child</font>
+
+20
+00:01:09,180 --> 00:01:17,100
+you<font color="#CCCCCC"> are of B you cannot</font><font color="#E5E5E5"> include B's</font>
+
+21
+00:01:12,030 --> 00:01:20,219
+privacy secondly the pub inherits public
+
+22
+00:01:17,100 --> 00:01:24,449
+members of B as public and<font color="#E5E5E5"> the protected</font>
+
+23
+00:01:20,219 --> 00:01:27,270
+<font color="#E5E5E5">members of B as protected I assume you</font>
+
+24
+00:01:24,450 --> 00:01:30,210
+have used the public inheritance<font color="#E5E5E5"> a lot</font>
+
+25
+00:01:27,270 --> 00:01:31,920
+of times in your<font color="#E5E5E5"> code already so this</font>
+
+26
+00:01:30,210 --> 00:01:35,429
+one should<font color="#E5E5E5"> not</font><font color="#CCCCCC"> be a surprise to you</font>
+
+27
+00:01:31,920 --> 00:01:38,520
+<font color="#CCCCCC">either</font><font color="#E5E5E5"> both</font><font color="#CCCCCC"> B both these public and</font>
+
+28
+00:01:35,430 --> 00:01:43,200
+protected members will become the<font color="#CCCCCC"> pubs</font>
+
+29
+00:01:38,520 --> 00:01:46,859
+<font color="#CCCCCC">type public and protected members</font><font color="#E5E5E5"> third</font>
+
+30
+00:01:43,200 --> 00:01:50,460
+one<font color="#E5E5E5"> deprived which is a private</font><font color="#CCCCCC"> child of</font>
+
+31
+00:01:46,859 --> 00:01:54,419
+B inherits the public and protected
+
+32
+00:01:50,460 --> 00:01:57,658
+members<font color="#E5E5E5"> of B as private in other words</font>
+
+33
+00:01:54,420 --> 00:02:01,520
+both B's public and protected members
+
+34
+00:01:57,659 --> 00:02:04,770
+become deprived private members and
+
+35
+00:02:01,520 --> 00:02:07,619
+similarly<font color="#E5E5E5"> and</font><font color="#CCCCCC"> D plot which is a</font>
+
+36
+00:02:04,770 --> 00:02:10,430
+protected a child of B inherits the
+
+37
+00:02:07,619 --> 00:02:12,310
+public<font color="#E5E5E5"> protected members of B as</font>
+
+38
+00:02:10,430 --> 00:02:15,550
+protected
+
+39
+00:02:12,310 --> 00:02:19,209
+in other words both<font color="#E5E5E5"> these public and</font>
+
+40
+00:02:15,550 --> 00:02:23,410
+<font color="#E5E5E5">protected</font><font color="#CCCCCC"> members become</font><font color="#E5E5E5"> departs pub</font><font color="#CCCCCC"> and</font>
+
+41
+00:02:19,209 --> 00:02:27,130
+protected a member now let's let's look
+
+42
+00:02:23,410 --> 00:02:30,970
+at the three kind of inheritance from
+
+43
+00:02:27,130 --> 00:02:34,780
+<font color="#E5E5E5">the custom points of view there are</font>
+
+44
+00:02:30,970 --> 00:02:39,720
+<font color="#CCCCCC">three</font><font color="#E5E5E5"> rules rules number one anyone can</font>
+
+45
+00:02:34,780 --> 00:02:43,630
+cast a<font color="#CCCCCC"> deeper pointer</font><font color="#E5E5E5"> to a be pointer</font>
+
+46
+00:02:39,720 --> 00:02:47,829
+because the pub inherits all<font color="#CCCCCC"> the public</font>
+
+47
+00:02:43,630 --> 00:02:50,380
+interface of<font color="#E5E5E5"> B as a public interface</font><font color="#CCCCCC"> in</font>
+
+48
+00:02:47,830 --> 00:02:53,769
+other words<font color="#E5E5E5"> the pub can do anything that</font>
+
+49
+00:02:50,380 --> 00:02:58,540
+<font color="#E5E5E5">we can do so the pub is considered a</font>
+
+50
+00:02:53,769 --> 00:03:01,420
+special kind of a<font color="#CCCCCC"> B secondary the</font>
+
+51
+00:02:58,540 --> 00:03:04,510
+privates members and the friends<font color="#CCCCCC"> can</font>
+
+52
+00:03:01,420 --> 00:03:09,760
+cast a deprived pointer to be pointer
+
+53
+00:03:04,510 --> 00:03:11,500
+and similarly<font color="#E5E5E5"> a depressed member friends</font>
+
+54
+00:03:09,760 --> 00:03:14,700
+and the children can cause that
+
+55
+00:03:11,500 --> 00:03:17,799
+depressed pointer into<font color="#CCCCCC"> a beasts pointer</font>
+
+56
+00:03:14,700 --> 00:03:21,339
+now it should be<font color="#E5E5E5"> clear</font><font color="#CCCCCC"> to you that</font><font color="#E5E5E5"> only</font>
+
+57
+00:03:17,799 --> 00:03:23,890
+<font color="#E5E5E5">public inheritance indicates a is a</font>
+
+58
+00:03:21,340 --> 00:03:28,720
+relationship between the parent and
+
+59
+00:03:23,890 --> 00:03:31,958
+<font color="#E5E5E5">child neither of the private inheritance</font>
+
+60
+00:03:28,720 --> 00:03:35,560
+and protected inheritance<font color="#E5E5E5"> indicates a</font>
+
+61
+00:03:31,959 --> 00:03:40,120
+<font color="#CCCCCC">easier relationship now let's look</font><font color="#E5E5E5"> at a</font>
+
+62
+00:03:35,560 --> 00:03:42,930
+live example our<font color="#CCCCCC"> Class B has</font><font color="#E5E5E5"> three</font>
+
+63
+00:03:40,120 --> 00:03:45,700
+<font color="#CCCCCC">functions</font><font color="#E5E5E5"> a public function</font><font color="#CCCCCC"> of pub</font>
+
+64
+00:03:42,930 --> 00:03:49,209
+protective function<font color="#E5E5E5"> of plot and</font><font color="#CCCCCC"> the</font>
+
+65
+00:03:45,700 --> 00:03:52,030
+private function F Prime
+
+66
+00:03:49,209 --> 00:03:55,870
+now let's look at<font color="#CCCCCC"> a deep pub the public</font>
+
+67
+00:03:52,030 --> 00:04:00,640
+child of<font color="#CCCCCC"> B inside the pub</font><font color="#E5E5E5"> has a function</font>
+
+68
+00:03:55,870 --> 00:04:04,060
+f<font color="#CCCCCC"> F invoking bf pub function is</font><font color="#E5E5E5"> okay</font>
+
+69
+00:04:00,640 --> 00:04:07,719
+because<font color="#CCCCCC"> f pub function has become D pubs</font>
+
+70
+00:04:04,060 --> 00:04:10,299
+<font color="#E5E5E5">public function and similarly invoking</font>
+
+71
+00:04:07,719 --> 00:04:14,099
+f-prot<font color="#E5E5E5"> function is also</font><font color="#CCCCCC"> okay because</font>
+
+72
+00:04:10,299 --> 00:04:20,280
+<font color="#E5E5E5">it's now a</font><font color="#CCCCCC"> D pubs</font><font color="#E5E5E5"> protected</font><font color="#CCCCCC"> a function</font>
+
+73
+00:04:14,099 --> 00:04:20,279
+however<font color="#E5E5E5"> invoking</font><font color="#CCCCCC"> F Prive is not allowed</font>
+
+74
+00:04:20,608 --> 00:04:27,940
+now let's look at the<font color="#E5E5E5"> product the</font>
+
+75
+00:04:23,349 --> 00:04:32,740
+protected<font color="#CCCCCC"> the child of B the</font><font color="#E5E5E5"> plot of F</font>
+
+76
+00:04:27,940 --> 00:04:35,770
+function can invoke<font color="#CCCCCC"> F</font><font color="#E5E5E5"> pub also but the</font>
+
+77
+00:04:32,740 --> 00:04:39,130
+reason is<font color="#CCCCCC"> f pub has become</font><font color="#E5E5E5"> deep rods</font>
+
+78
+00:04:35,770 --> 00:04:43,930
+<font color="#E5E5E5">protected map function as compared to a</font>
+
+79
+00:04:39,130 --> 00:04:46,570
+public function<font color="#E5E5E5"> in the pub</font><font color="#CCCCCC"> F plot also</font>
+
+80
+00:04:43,930 --> 00:04:50,620
+<font color="#E5E5E5">has become deep lots protective function</font>
+
+81
+00:04:46,570 --> 00:04:56,830
+<font color="#E5E5E5">and finally again it cannot access F</font>
+
+82
+00:04:50,620 --> 00:05:01,530
+<font color="#CCCCCC">Prive now deprive class which is a</font>
+
+83
+00:04:56,830 --> 00:05:05,229
+private<font color="#E5E5E5"> member</font><font color="#CCCCCC"> of</font><font color="#E5E5E5"> a private child of be</font>
+
+84
+00:05:01,530 --> 00:05:07,929
+deprived can access<font color="#E5E5E5"> F pub and f-prot</font>
+
+85
+00:05:05,229 --> 00:05:13,590
+<font color="#E5E5E5">because they has become a private</font>
+
+86
+00:05:07,930 --> 00:05:18,159
+<font color="#CCCCCC">function of</font><font color="#E5E5E5"> deprived as compared for a</font>
+
+87
+00:05:13,590 --> 00:05:20,799
+protective function<font color="#E5E5E5"> of D plot and the</font>
+
+88
+00:05:18,159 --> 00:05:24,099
+deprived<font color="#CCCCCC"> it also</font><font color="#E5E5E5"> cannot access these</font>
+
+89
+00:05:20,800 --> 00:05:26,880
+private function now in the main
+
+90
+00:05:24,099 --> 00:05:30,400
+function<font color="#E5E5E5"> I created the D pub D 1 and</font>
+
+91
+00:05:26,880 --> 00:05:33,430
+invoke<font color="#E5E5E5"> F pub from D 1 which is okay</font>
+
+92
+00:05:30,400 --> 00:05:37,739
+<font color="#E5E5E5">because</font><font color="#CCCCCC"> F pub is</font><font color="#E5E5E5"> D pubs public function</font>
+
+93
+00:05:33,430 --> 00:05:42,030
+I create a<font color="#E5E5E5"> D 2 and invoke</font><font color="#CCCCCC"> F pub</font><font color="#E5E5E5"> form D 2</font>
+
+94
+00:05:37,740 --> 00:05:45,699
+which is error<font color="#E5E5E5"> because F pub is</font><font color="#CCCCCC"> D</font><font color="#E5E5E5"> plots</font>
+
+95
+00:05:42,030 --> 00:05:48,638
+protected function not public function
+
+96
+00:05:45,699 --> 00:05:52,300
+if I really want to invoke<font color="#E5E5E5"> F pup</font>
+
+97
+00:05:48,639 --> 00:05:56,880
+function from D to<font color="#E5E5E5"> what I need to do is</font>
+
+98
+00:05:52,300 --> 00:05:58,110
+inside the teapots definition<font color="#CCCCCC"> I add a</font>
+
+99
+00:05:56,880 --> 00:06:06,180
+using
+
+100
+00:05:58,110 --> 00:06:08,940
+be a pub this declaration will bring the
+
+101
+00:06:06,180 --> 00:06:14,600
+<font color="#CCCCCC">F pub function into the</font><font color="#E5E5E5"> scope of deep</font>
+
+102
+00:06:08,940 --> 00:06:14,600
+<font color="#E5E5E5">plot and then this error will go away</font>
+
+103
+00:06:15,920 --> 00:06:23,040
+finally I<font color="#E5E5E5"> can cast a D</font><font color="#CCCCCC"> once point</font><font color="#E5E5E5"> the</font>
+
+104
+00:06:19,080 --> 00:06:26,820
+edges into a<font color="#CCCCCC"> bees pointer</font><font color="#E5E5E5"> P</font><font color="#CCCCCC"> B but I</font>
+
+105
+00:06:23,040 --> 00:06:31,440
+cannot<font color="#E5E5E5"> custody two edges into a bees</font>
+
+106
+00:06:26,820 --> 00:06:33,270
+pointer as we've talked the public
+
+107
+00:06:31,440 --> 00:06:35,490
+inheritance<font color="#E5E5E5"> indicates a is a</font>
+
+108
+00:06:33,270 --> 00:06:41,099
+relationship<font color="#E5E5E5"> between the child and</font>
+
+109
+00:06:35,490 --> 00:06:45,200
+<font color="#CCCCCC">parent the pub is a kind of B</font><font color="#E5E5E5"> and then</font>
+
+110
+00:06:41,100 --> 00:06:47,910
+what<font color="#E5E5E5"> does the private inheritance mean</font>
+
+111
+00:06:45,200 --> 00:06:50,729
+surprisingly private inheritance
+
+112
+00:06:47,910 --> 00:06:53,610
+<font color="#E5E5E5">indicate a relation</font><font color="#CCCCCC"> that's similar to</font>
+
+113
+00:06:50,730 --> 00:06:58,260
+<font color="#E5E5E5">composition in other words that has a</font>
+
+114
+00:06:53,610 --> 00:07:00,390
+relation let's look at our example<font color="#CCCCCC"> we</font>
+
+115
+00:06:58,260 --> 00:07:04,500
+<font color="#E5E5E5">have a class ring</font><font color="#CCCCCC"> and the</font><font color="#E5E5E5"> ring</font>
+
+116
+00:07:00,390 --> 00:07:09,710
+<font color="#CCCCCC">tinkles and for the</font><font color="#E5E5E5"> composition our</font>
+
+117
+00:07:04,500 --> 00:07:13,380
+class dog has a ring which<font color="#CCCCCC"> is M ring and</font>
+
+118
+00:07:09,710 --> 00:07:16,109
+when<font color="#CCCCCC"> doc tinkles</font><font color="#E5E5E5"> it invokes the green</font>
+
+119
+00:07:13,380 --> 00:07:19,770
+<font color="#E5E5E5">stinker function this is commonly known</font>
+
+120
+00:07:16,110 --> 00:07:22,830
+<font color="#E5E5E5">as call forwarding this demonstrates a</font>
+
+121
+00:07:19,770 --> 00:07:25,289
+<font color="#E5E5E5">composition code structure however you</font>
+
+122
+00:07:22,830 --> 00:07:29,190
+can do the same<font color="#E5E5E5"> thing with private</font>
+
+123
+00:07:25,290 --> 00:07:32,970
+inheritance now the dog<font color="#CCCCCC"> is privately</font>
+
+124
+00:07:29,190 --> 00:07:35,430
+derived from<font color="#CCCCCC"> ring and the dog can bring</font>
+
+125
+00:07:32,970 --> 00:07:39,370
+the<font color="#CCCCCC"> rings</font><font color="#E5E5E5"> thinker interface into the</font>
+
+126
+00:07:35,430 --> 00:07:41,990
+<font color="#E5E5E5">docs interface with this statement</font>
+
+127
+00:07:39,370 --> 00:07:45,950
+conversation and private inheritance are
+
+128
+00:07:41,990 --> 00:07:49,340
+similar in terms<font color="#CCCCCC"> that both dogs can</font>
+
+129
+00:07:45,950 --> 00:07:51,500
+access<font color="#CCCCCC"> wins</font><font color="#E5E5E5"> public interface and if</font>
+
+130
+00:07:49,340 --> 00:07:54,169
+<font color="#CCCCCC">dog's client want to access those</font>
+
+131
+00:07:51,500 --> 00:07:57,140
+interface<font color="#E5E5E5"> the dogs have to bring those</font>
+
+132
+00:07:54,170 --> 00:08:00,880
+interface<font color="#E5E5E5"> into dock itself public</font>
+
+133
+00:07:57,140 --> 00:08:06,860
+interface with either<font color="#E5E5E5"> call forwarding or</font>
+
+134
+00:08:00,880 --> 00:08:10,159
+with using declaration however they<font color="#E5E5E5"> are</font>
+
+135
+00:08:06,860 --> 00:08:14,000
+not<font color="#E5E5E5"> totally</font><font color="#CCCCCC"> saying</font><font color="#E5E5E5"> the obvious</font><font color="#CCCCCC"> thing is</font>
+
+136
+00:08:10,160 --> 00:08:17,630
+that<font color="#E5E5E5"> the private inheritance dog can</font>
+
+137
+00:08:14,000 --> 00:08:21,980
+access<font color="#E5E5E5"> rings protected members and this</font>
+
+138
+00:08:17,630 --> 00:08:24,620
+guy cannot in general<font color="#CCCCCC"> the composition</font>
+
+139
+00:08:21,980 --> 00:08:28,130
+code<font color="#E5E5E5"> structure is preferred over the</font>
+
+140
+00:08:24,620 --> 00:08:31,270
+<font color="#E5E5E5">private inheritance because number one</font>
+
+141
+00:08:28,130 --> 00:08:34,640
+composition<font color="#E5E5E5"> is considered a better</font>
+
+142
+00:08:31,270 --> 00:08:38,179
+object-oriented code structure since dog
+
+143
+00:08:34,640 --> 00:08:40,610
+dog can only access<font color="#E5E5E5"> rings public</font>
+
+144
+00:08:38,179 --> 00:08:43,609
+interface<font color="#E5E5E5"> dog and a ring are more</font>
+
+145
+00:08:40,610 --> 00:08:46,970
+decoupled<font color="#E5E5E5"> and secondary and the</font>
+
+146
+00:08:43,610 --> 00:08:50,900
+<font color="#CCCCCC">composition is more flexible for example</font>
+
+147
+00:08:46,970 --> 00:08:54,830
+suppose and the dog wears two rings<font color="#CCCCCC"> M</font>
+
+148
+00:08:50,900 --> 00:08:57,110
+has another<font color="#E5E5E5"> ring</font><font color="#CCCCCC"> M R into with</font>
+
+149
+00:08:54,830 --> 00:08:59,710
+composition<font color="#CCCCCC"> it's easy to do that but</font>
+
+150
+00:08:57,110 --> 00:09:03,020
+with private inherent inheritance<font color="#E5E5E5"> it's</font>
+
+151
+00:08:59,710 --> 00:09:06,920
+impossible<font color="#E5E5E5"> and another</font><font color="#CCCCCC"> example is</font>
+
+152
+00:09:03,020 --> 00:09:09,740
+suppose the top is tied of<font color="#CCCCCC"> the same ring</font>
+
+153
+00:09:06,920 --> 00:09:13,069
+<font color="#E5E5E5">and during the runtime it once switched</font>
+
+154
+00:09:09,740 --> 00:09:15,500
+<font color="#E5E5E5">a different ring and again</font><font color="#CCCCCC"> it's easy</font><font color="#E5E5E5"> to</font>
+
+155
+00:09:13,070 --> 00:09:20,230
+for composition<font color="#E5E5E5"> and hard for it's</font>
+
+156
+00:09:15,500 --> 00:09:20,230
+impossible<font color="#CCCCCC"> for</font><font color="#E5E5E5"> private inheritance</font>
+
+157
+00:09:20,870 --> 00:09:25,880
+there are<font color="#E5E5E5"> a few</font><font color="#CCCCCC"> rare case where the</font>
+
+158
+00:09:23,240 --> 00:09:29,029
+<font color="#CCCCCC">private inheritance is actually</font>
+
+159
+00:09:25,880 --> 00:09:33,470
+preferred over the composition for
+
+160
+00:09:29,029 --> 00:09:39,980
+<font color="#E5E5E5">example suppose the ring has a virtual</font>
+
+161
+00:09:33,470 --> 00:09:47,950
+<font color="#CCCCCC">function chambo and the inside tinkle</font>
+
+162
+00:09:39,980 --> 00:09:52,279
+<font color="#E5E5E5">and the virtual function is called and</font>
+
+163
+00:09:47,950 --> 00:09:55,339
+in the dog<font color="#E5E5E5"> we want to</font><font color="#CCCCCC"> override</font><font color="#E5E5E5"> that</font>
+
+164
+00:09:52,279 --> 00:10:03,080
+<font color="#E5E5E5">tremble function so we can</font><font color="#CCCCCC"> easily define</font>
+
+165
+00:09:55,339 --> 00:10:08,560
+a virtual<font color="#CCCCCC"> function</font><font color="#E5E5E5"> chambo for dog and we</font>
+
+166
+00:10:03,080 --> 00:10:11,870
+can reuse the tinkle function of a ring
+
+167
+00:10:08,560 --> 00:10:14,540
+if you<font color="#E5E5E5"> want to do the same thing for</font>
+
+168
+00:10:11,870 --> 00:10:17,330
+composition<font color="#E5E5E5"> it's a lot more cumbersome</font>
+
+169
+00:10:14,540 --> 00:10:20,959
+you<font color="#CCCCCC"> have to create a new class</font>
+
+170
+00:10:17,330 --> 00:10:23,630
+derived from ring and then<font color="#CCCCCC"> override</font><font color="#E5E5E5"> the</font>
+
+171
+00:10:20,960 --> 00:10:27,380
+virtual function tremble<font color="#E5E5E5"> and inside dog</font>
+
+172
+00:10:23,630 --> 00:10:29,420
+you can have a member of the derived
+
+173
+00:10:27,380 --> 00:10:34,100
+ring in stuff<font color="#E5E5E5"> instead</font><font color="#CCCCCC"> of the original</font>
+
+174
+00:10:29,420 --> 00:10:37,279
+ring overall the composition is still
+
+175
+00:10:34,100 --> 00:10:40,220
+the preferred<font color="#E5E5E5"> code structure you should</font>
+
+176
+00:10:37,279 --> 00:10:43,279
+<font color="#CCCCCC">always use composition whenever you can</font>
+
+177
+00:10:40,220 --> 00:10:46,940
+and<font color="#E5E5E5"> use private inheritance when you</font>
+
+178
+00:10:43,279 --> 00:10:49,580
+have to this<font color="#E5E5E5"> lets up our discussion</font><font color="#CCCCCC"> on</font>
+
+179
+00:10:46,940 --> 00:10:52,240
+the inheritance<font color="#E5E5E5"> thank you for watching</font>
+
+180
+00:10:49,580 --> 00:10:52,240
+<font color="#CCCCCC">bye bye</font>
+

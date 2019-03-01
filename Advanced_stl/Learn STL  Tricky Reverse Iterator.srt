@@ -1,0 +1,496 @@
+﻿1
+00:00:05,200 --> 00:00:10,129
+<font color="#CCCCCC">ruthless iterator is a little bit tricky</font>
+
+2
+00:00:07,880 --> 00:00:13,610
+to<font color="#E5E5E5"> use that's why we need to</font><font color="#CCCCCC"> talk about</font>
+
+3
+00:00:10,129 --> 00:00:16,070
+it<font color="#E5E5E5"> there are two ways</font><font color="#CCCCCC"> to declare a</font>
+
+4
+00:00:13,610 --> 00:00:18,289
+reverse iterator<font color="#CCCCCC"> one is</font><font color="#E5E5E5"> using a</font>
+
+5
+00:00:16,070 --> 00:00:21,349
+temporary class of<font color="#E5E5E5"> reverse iterator</font>
+
+6
+00:00:18,289 --> 00:00:23,869
+<font color="#E5E5E5">another one is</font><font color="#CCCCCC"> using the type of reverse</font>
+
+7
+00:00:21,349 --> 00:00:26,749
+iterator that's nested inside a
+
+8
+00:00:23,869 --> 00:00:29,810
+container<font color="#E5E5E5"> and they're both doing the</font>
+
+9
+00:00:26,749 --> 00:00:33,530
+<font color="#CCCCCC">same thing</font><font color="#E5E5E5"> actually one is a type def of</font>
+
+10
+00:00:29,810 --> 00:00:37,250
+another and here is how to<font color="#CCCCCC"> traverse a</font>
+
+11
+00:00:33,530 --> 00:00:39,710
+vector with<font color="#E5E5E5"> reverse iterator first I</font>
+
+12
+00:00:37,250 --> 00:00:42,379
+define our<font color="#E5E5E5"> our ETA which is</font><font color="#CCCCCC"> a reverse</font>
+
+13
+00:00:39,710 --> 00:00:47,420
+iterator<font color="#E5E5E5"> and then I use the continuous</font>
+
+14
+00:00:42,379 --> 00:00:50,449
+<font color="#E5E5E5">member function our begin and our end so</font>
+
+15
+00:00:47,420 --> 00:00:53,890
+as a<font color="#CCCCCC"> result</font><font color="#E5E5E5"> the content of the vector</font>
+
+16
+00:00:50,449 --> 00:00:56,239
+will be<font color="#E5E5E5"> printed out in a reverse order</font>
+
+17
+00:00:53,890 --> 00:00:58,250
+reverse iterator and<font color="#E5E5E5"> the regular</font>
+
+18
+00:00:56,239 --> 00:01:00,980
+iterator can be converted<font color="#E5E5E5"> from each</font>
+
+19
+00:00:58,250 --> 00:01:04,040
+other<font color="#CCCCCC"> here I have</font><font color="#E5E5E5"> defined a regular</font>
+
+20
+00:01:00,980 --> 00:01:08,600
+iterator<font color="#CCCCCC"> etre and a reverse iterator are</font>
+
+21
+00:01:04,040 --> 00:01:11,720
+<font color="#CCCCCC">Eater and I can convert a litter</font><font color="#E5E5E5"> into</font><font color="#CCCCCC"> a</font>
+
+22
+00:01:08,600 --> 00:01:15,350
+reverse iterator<font color="#CCCCCC"> and</font><font color="#E5E5E5"> assign it</font><font color="#CCCCCC"> to</font><font color="#E5E5E5"> our</font>
+
+23
+00:01:11,720 --> 00:01:18,560
+eater<font color="#E5E5E5"> however the other way around</font>
+
+24
+00:01:15,350 --> 00:01:23,179
+<font color="#E5E5E5">won't work</font><font color="#CCCCCC"> I cannot explicitly</font><font color="#E5E5E5"> convert a</font>
+
+25
+00:01:18,560 --> 00:01:26,360
+<font color="#E5E5E5">auditer back to a litter to do that I</font>
+
+26
+00:01:23,180 --> 00:01:31,250
+have to use the reverse<font color="#E5E5E5"> iterators member</font>
+
+27
+00:01:26,360 --> 00:01:35,420
+function<font color="#E5E5E5"> base so what does the best</font>
+
+28
+00:01:31,250 --> 00:01:38,170
+function<font color="#E5E5E5"> do the C++ standard says best</font>
+
+29
+00:01:35,420 --> 00:01:41,000
+function<font color="#CCCCCC"> will return</font><font color="#E5E5E5"> current iterator</font>
+
+30
+00:01:38,170 --> 00:01:44,560
+<font color="#E5E5E5">but what does the current iterator mean</font>
+
+31
+00:01:41,000 --> 00:01:47,680
+the<font color="#E5E5E5"> answer might surprise you</font>
+
+32
+00:01:44,560 --> 00:01:50,590
+here I have a<font color="#E5E5E5"> vector of integer that has</font>
+
+33
+00:01:47,680 --> 00:01:53,560
+<font color="#CCCCCC">one two three four five</font><font color="#E5E5E5"> and</font><font color="#CCCCCC"> then I used</font>
+
+34
+00:01:50,590 --> 00:01:57,610
+the find function<font color="#E5E5E5"> from our begin to our</font>
+
+35
+00:01:53,560 --> 00:01:59,890
+end<font color="#CCCCCC"> to find the item of</font><font color="#E5E5E5"> three and assign</font>
+
+36
+00:01:57,610 --> 00:02:04,509
+the<font color="#CCCCCC"> resulted iterator to a reverse</font>
+
+37
+00:01:59,890 --> 00:02:08,410
+iterator<font color="#E5E5E5"> or ETA then I print out the</font>
+
+38
+00:02:04,509 --> 00:02:12,459
+content of our eater naturally<font color="#E5E5E5"> it will</font>
+
+39
+00:02:08,410 --> 00:02:15,370
+<font color="#E5E5E5">print out three then I</font><font color="#CCCCCC"> use</font><font color="#E5E5E5"> the base</font>
+
+40
+00:02:12,459 --> 00:02:19,410
+function to get<font color="#E5E5E5"> the are uterus current</font>
+
+41
+00:02:15,370 --> 00:02:22,769
+iterator<font color="#E5E5E5"> and assigned it to eater</font><font color="#CCCCCC"> and</font>
+
+42
+00:02:19,410 --> 00:02:27,160
+then I print out<font color="#E5E5E5"> the content of</font><font color="#CCCCCC"> ETA</font>
+
+43
+00:02:22,769 --> 00:02:32,170
+guess what will be<font color="#E5E5E5"> printed out it will</font>
+
+44
+00:02:27,160 --> 00:02:34,780
+<font color="#E5E5E5">print out</font><font color="#CCCCCC"> 4 this is what often times</font>
+
+45
+00:02:32,170 --> 00:02:37,059
+<font color="#E5E5E5">surprised the beginners the reverse</font>
+
+46
+00:02:34,780 --> 00:02:39,010
+iterator and<font color="#E5E5E5"> it'll that can be</font><font color="#CCCCCC"> converted</font>
+
+47
+00:02:37,060 --> 00:02:42,850
+from each other but<font color="#CCCCCC"> they are not</font>
+
+48
+00:02:39,010 --> 00:02:43,329
+pointing<font color="#CCCCCC"> to</font><font color="#E5E5E5"> the same thing how does this</font>
+
+49
+00:02:42,850 --> 00:02:47,079
+happen
+
+50
+00:02:43,330 --> 00:02:49,989
+let's look<font color="#E5E5E5"> at</font><font color="#CCCCCC"> our</font><font color="#E5E5E5"> picture here I have a</font>
+
+51
+00:02:47,080 --> 00:02:52,450
+vector<font color="#CCCCCC"> and</font><font color="#E5E5E5"> back dot began pointing to</font>
+
+52
+00:02:49,989 --> 00:02:55,450
+the first item<font color="#E5E5E5"> of the vector and vector</font>
+
+53
+00:02:52,450 --> 00:02:59,828
+<font color="#E5E5E5">and pointing</font><font color="#CCCCCC"> to the one after the last</font>
+
+54
+00:02:55,450 --> 00:03:05,440
+item of<font color="#E5E5E5"> the vector so where is the our</font>
+
+55
+00:02:59,829 --> 00:03:08,950
+<font color="#CCCCCC">begin on our end or begin pointing to</font>
+
+56
+00:03:05,440 --> 00:03:12,190
+the last item<font color="#E5E5E5"> and our end pointing to</font>
+
+57
+00:03:08,950 --> 00:03:13,549
+the item before<font color="#E5E5E5"> the first item of the</font>
+
+58
+00:03:12,190 --> 00:03:16,900
+vector
+
+59
+00:03:13,550 --> 00:03:21,310
+so that is what the current<font color="#E5E5E5"> iterate</font><font color="#CCCCCC"> Amin</font>
+
+60
+00:03:16,900 --> 00:03:25,630
+the<font color="#E5E5E5"> current iterator of our end is begin</font>
+
+61
+00:03:21,310 --> 00:03:28,100
+the current iterate<font color="#CCCCCC"> of our begin is end</font>
+
+62
+00:03:25,630 --> 00:03:31,269
+so they are not pointing to<font color="#CCCCCC"> the same</font>
+
+63
+00:03:28,100 --> 00:03:34,340
+thing<font color="#CCCCCC"> they are</font><font color="#E5E5E5"> off by one element and</font>
+
+64
+00:03:31,270 --> 00:03:39,290
+the same thing<font color="#E5E5E5"> for eater and our eater</font>
+
+65
+00:03:34,340 --> 00:03:42,530
+if our eater is pointing to n then our
+
+66
+00:03:39,290 --> 00:03:47,440
+it at the base<font color="#E5E5E5"> or eater is pointing to n</font>
+
+67
+00:03:42,530 --> 00:03:50,600
+<font color="#E5E5E5">password they're off by</font><font color="#CCCCCC"> once</font><font color="#E5E5E5"> one item</font><font color="#CCCCCC"> so</font>
+
+68
+00:03:47,440 --> 00:03:54,530
+<font color="#CCCCCC">the</font><font color="#E5E5E5"> current literature is the reverse</font>
+
+69
+00:03:50,600 --> 00:03:57,650
+iterator increment by one<font color="#E5E5E5"> this is why</font>
+
+70
+00:03:54,530 --> 00:04:01,910
+our eater point into<font color="#CCCCCC"> three and</font><font color="#E5E5E5"> eater is</font>
+
+71
+00:03:57,650 --> 00:04:05,990
+pointing to for now let's look<font color="#E5E5E5"> at more</font>
+
+72
+00:04:01,910 --> 00:04:10,060
+examples again our eater is<font color="#E5E5E5"> pointing to</font>
+
+73
+00:04:05,990 --> 00:04:13,730
+<font color="#E5E5E5">three and when I insert our eater nine</font>
+
+74
+00:04:10,060 --> 00:04:17,810
+<font color="#E5E5E5">nine will</font><font color="#CCCCCC"> be inserted before</font><font color="#E5E5E5"> our eater</font>
+
+75
+00:04:13,730 --> 00:04:20,779
+<font color="#CCCCCC">and since</font><font color="#E5E5E5"> our eater is iterating</font>
+
+76
+00:04:17,810 --> 00:04:23,330
+backwards<font color="#E5E5E5"> so the place</font><font color="#CCCCCC"> before our it is</font>
+
+77
+00:04:20,779 --> 00:04:26,479
+actually after<font color="#CCCCCC"> three between three and</font>
+
+78
+00:04:23,330 --> 00:04:32,359
+four so<font color="#E5E5E5"> nine will</font><font color="#CCCCCC"> be inserted</font><font color="#E5E5E5"> between</font>
+
+79
+00:04:26,480 --> 00:04:35,690
+three and four if I insert our eater<font color="#E5E5E5"> top</font>
+
+80
+00:04:32,360 --> 00:04:39,650
+base nine nine will<font color="#E5E5E5"> be inserted before</font>
+
+81
+00:04:35,690 --> 00:04:42,710
+<font color="#E5E5E5">our eater third base since our</font><font color="#CCCCCC"> eater</font>
+
+82
+00:04:39,650 --> 00:04:45,770
+<font color="#CCCCCC">debase is a regular iterator</font><font color="#E5E5E5"> not a</font>
+
+83
+00:04:42,710 --> 00:04:49,400
+reverse iterator<font color="#CCCCCC"> and either the base</font>
+
+84
+00:04:45,770 --> 00:04:54,530
+point into<font color="#E5E5E5"> four so nine will be inserted</font>
+
+85
+00:04:49,400 --> 00:04:58,250
+before four so now<font color="#CCCCCC"> is inserted between</font>
+
+86
+00:04:54,530 --> 00:05:02,559
+three and<font color="#E5E5E5"> four</font><font color="#CCCCCC"> so insert our eater and</font>
+
+87
+00:04:58,250 --> 00:05:05,940
+insert our database have the same result
+
+88
+00:05:02,560 --> 00:05:09,389
+however this is not<font color="#E5E5E5"> true for</font><font color="#CCCCCC"> Eurasia</font>
+
+89
+00:05:05,940 --> 00:05:14,770
+<font color="#E5E5E5">again</font><font color="#CCCCCC"> our</font><font color="#E5E5E5"> eta is pointing to three and</font>
+
+90
+00:05:09,389 --> 00:05:17,620
+if<font color="#E5E5E5"> I do back dot erase our</font><font color="#CCCCCC"> eater free</font>
+
+91
+00:05:14,770 --> 00:05:22,780
+will be removed<font color="#E5E5E5"> sold without is one</font>
+
+92
+00:05:17,620 --> 00:05:25,180
+<font color="#CCCCCC">proof or five however if I do vac dot</font>
+
+93
+00:05:22,780 --> 00:05:27,989
+erase<font color="#E5E5E5"> our it at third base</font>
+
+94
+00:05:25,180 --> 00:05:31,900
+since<font color="#CCCCCC"> our database is pointing to</font><font color="#E5E5E5"> for</font>
+
+95
+00:05:27,990 --> 00:05:34,650
+<font color="#CCCCCC">four will be removed</font><font color="#E5E5E5"> so the result is</font>
+
+96
+00:05:31,900 --> 00:05:37,750
+<font color="#E5E5E5">one two three five</font>
+
+97
+00:05:34,650 --> 00:05:40,419
+so as you see<font color="#E5E5E5"> reverse iterator is</font><font color="#CCCCCC"> a</font>
+
+98
+00:05:37,750 --> 00:05:44,020
+little bit tricky<font color="#CCCCCC"> to use</font><font color="#E5E5E5"> and you need to</font>
+
+99
+00:05:40,419 --> 00:05:47,080
+be<font color="#E5E5E5"> careful when use it in case you</font>
+
+100
+00:05:44,020 --> 00:05:50,049
+<font color="#E5E5E5">haven't noticed I have a or in between</font>
+
+101
+00:05:47,080 --> 00:05:52,510
+the two insertion and it is very
+
+102
+00:05:50,050 --> 00:05:56,650
+important<font color="#E5E5E5"> for me to have a or in between</font>
+
+103
+00:05:52,510 --> 00:05:59,710
+<font color="#CCCCCC">the two insertion</font><font color="#E5E5E5"> if I insert our eater</font>
+
+104
+00:05:56,650 --> 00:06:04,590
+<font color="#CCCCCC">nine and then</font><font color="#E5E5E5"> do insert are at a base</font>
+
+105
+00:05:59,710 --> 00:06:07,780
+<font color="#E5E5E5">nine what will happen undefined behavior</font>
+
+106
+00:06:04,590 --> 00:06:10,030
+<font color="#E5E5E5">remember for a vector</font><font color="#CCCCCC"> whenever you</font>
+
+107
+00:06:07,780 --> 00:06:12,429
+insert something into it<font color="#E5E5E5"> or remove</font>
+
+108
+00:06:10,030 --> 00:06:14,679
+something from it<font color="#E5E5E5"> the pointers that</font>
+
+109
+00:06:12,430 --> 00:06:19,270
+previously<font color="#CCCCCC"> pointing to the vectors</font>
+
+110
+00:06:14,680 --> 00:06:24,370
+content will get invalidated<font color="#E5E5E5"> and same</font>
+
+111
+00:06:19,270 --> 00:06:27,479
+<font color="#CCCCCC">thing for references and iterators it is</font>
+
+112
+00:06:24,370 --> 00:06:30,460
+very important to<font color="#CCCCCC"> keep that in mind</font><font color="#E5E5E5"> and</font>
+
+113
+00:06:27,479 --> 00:06:32,760
+that<font color="#E5E5E5"> the you lace also will invalidate</font>
+
+114
+00:06:30,460 --> 00:06:36,820
+the pointers and references and
+
+115
+00:06:32,760 --> 00:06:39,630
+<font color="#CCCCCC">iterators if you want them not</font><font color="#E5E5E5"> to</font><font color="#CCCCCC"> be</font>
+
+116
+00:06:36,820 --> 00:06:42,340
+invalidated<font color="#CCCCCC"> you have to use a</font><font color="#E5E5E5"> list or</font>
+
+117
+00:06:39,630 --> 00:06:44,409
+associative containers or<font color="#CCCCCC"> unordered</font>
+
+118
+00:06:42,340 --> 00:06:46,750
+<font color="#E5E5E5">containers</font>
+
+119
+00:06:44,410 --> 00:06:49,090
+that's all for today<font color="#E5E5E5"> thank</font><font color="#CCCCCC"> you for</font>
+
+120
+00:06:46,750 --> 00:06:51,490
+<font color="#CCCCCC">watching feel free to subscribe to my</font>
+
+121
+00:06:49,090 --> 00:06:53,590
+channel<font color="#CCCCCC"> so when I post a new</font><font color="#E5E5E5"> video</font><font color="#CCCCCC"> you</font>
+
+122
+00:06:51,490 --> 00:06:55,390
+will<font color="#E5E5E5"> be updated or you can go to my</font>
+
+123
+00:06:53,590 --> 00:06:58,830
+<font color="#E5E5E5">channels home page and see</font><font color="#CCCCCC"> what I'm</font>
+
+124
+00:06:55,390 --> 00:06:58,830
+offering<font color="#CCCCCC"> today bye bye</font>
+

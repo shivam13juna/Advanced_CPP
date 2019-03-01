@@ -1,0 +1,520 @@
+﻿1
+00:00:07,050 --> 00:00:14,830
+hello everyone<font color="#E5E5E5"> today's topic is</font><font color="#CCCCCC"> how to</font>
+
+2
+00:00:10,900 --> 00:00:16,810
+define<font color="#CCCCCC"> your own new handle</font><font color="#E5E5E5"> last session</font>
+
+3
+00:00:14,830 --> 00:00:19,270
+we've talked<font color="#CCCCCC"> about how to customize</font>
+
+4
+00:00:16,810 --> 00:00:23,320
+<font color="#E5E5E5">operate and new and operate a delete</font>
+
+5
+00:00:19,270 --> 00:00:27,250
+from<font color="#E5E5E5"> the wave</font><font color="#CCCCCC"> input it</font><font color="#E5E5E5"> free and talk</font>
+
+6
+00:00:23,320 --> 00:00:30,160
+about what is what new handler<font color="#E5E5E5"> is and</font>
+
+7
+00:00:27,250 --> 00:00:32,439
+today let's<font color="#CCCCCC"> start with the review</font><font color="#E5E5E5"> a new</font>
+
+8
+00:00:30,160 --> 00:00:35,230
+<font color="#E5E5E5">handler is a function that's invoked</font>
+
+9
+00:00:32,439 --> 00:00:40,000
+when an operate a new field<font color="#E5E5E5"> to allocate</font>
+
+10
+00:00:35,230 --> 00:00:44,500
+memory<font color="#E5E5E5"> its main purpose is to</font><font color="#CCCCCC"> help</font><font color="#E5E5E5"> the</font>
+
+11
+00:00:40,000 --> 00:00:47,530
+memory allocation to succeed<font color="#CCCCCC"> the</font>
+
+12
+00:00:44,500 --> 00:00:50,080
+function set new handler installs a new
+
+13
+00:00:47,530 --> 00:00:52,080
+<font color="#E5E5E5">handler and the</font><font color="#CCCCCC"> lieutenant current</font><font color="#E5E5E5"> new</font>
+
+14
+00:00:50,080 --> 00:00:55,629
+handler
+
+15
+00:00:52,080 --> 00:00:58,239
+this is an example of operate a new
+
+16
+00:00:55,629 --> 00:01:04,239
+implementation<font color="#CCCCCC"> that we talked about</font><font color="#E5E5E5"> last</font>
+
+17
+00:00:58,239 --> 00:01:08,798
+week last<font color="#E5E5E5"> assertion</font><font color="#CCCCCC"> to demo</font><font color="#E5E5E5"> the what the</font>
+
+18
+00:01:04,239 --> 00:01:11,310
+operator<font color="#E5E5E5"> new typically does inside the</font>
+
+19
+00:01:08,799 --> 00:01:14,500
+function<font color="#E5E5E5"> there is an infinite loop</font><font color="#CCCCCC"> and</font>
+
+20
+00:01:11,310 --> 00:01:18,640
+first thing it try to do is allocate the
+
+21
+00:01:14,500 --> 00:01:21,700
+memory of the size size<font color="#E5E5E5"> if the</font>
+
+22
+00:01:18,640 --> 00:01:25,540
+allocations succeed it will<font color="#CCCCCC"> return</font><font color="#E5E5E5"> the</font>
+
+23
+00:01:21,700 --> 00:01:28,070
+memory and<font color="#E5E5E5"> it's done otherwise it will</font>
+
+24
+00:01:25,540 --> 00:01:32,420
+fetch<font color="#CCCCCC"> the new handler</font>
+
+25
+00:01:28,070 --> 00:01:35,690
+and check if the new handle is<font color="#E5E5E5"> the valid</font>
+
+26
+00:01:32,420 --> 00:01:38,300
+or is a null pointer<font color="#CCCCCC"> if it's not a null</font>
+
+27
+00:01:35,690 --> 00:01:41,450
+pointer<font color="#CCCCCC"> it will just invoke the new</font>
+
+28
+00:01:38,300 --> 00:01:46,009
+<font color="#E5E5E5">handler hopefully it can do something</font>
+
+29
+00:01:41,450 --> 00:01:48,200
+nice<font color="#E5E5E5"> to free up</font><font color="#CCCCCC"> the memory and then go</font>
+
+30
+00:01:46,010 --> 00:01:54,650
+back<font color="#CCCCCC"> to the loop</font><font color="#E5E5E5"> and try</font><font color="#CCCCCC"> to</font><font color="#E5E5E5"> allocate</font>
+
+31
+00:01:48,200 --> 00:01:59,360
+memory<font color="#E5E5E5"> again</font><font color="#CCCCCC"> new</font><font color="#E5E5E5"> handle can if the new</font>
+
+32
+00:01:54,650 --> 00:02:03,259
+handle<font color="#E5E5E5"> is now a bad a log exception in</font>
+
+33
+00:01:59,360 --> 00:02:06,610
+the<font color="#E5E5E5"> throw new handler can do a lot</font><font color="#CCCCCC"> of</font>
+
+34
+00:02:03,259 --> 00:02:10,399
+things but one thing<font color="#E5E5E5"> it must do is to</font>
+
+35
+00:02:06,610 --> 00:02:13,100
+<font color="#E5E5E5">exit the infinite loop and there are</font>
+
+36
+00:02:10,399 --> 00:02:17,690
+three exit from the<font color="#E5E5E5"> infinite loop one is</font>
+
+37
+00:02:13,100 --> 00:02:22,160
+<font color="#E5E5E5">return the memory and second thing is</font>
+
+38
+00:02:17,690 --> 00:02:25,940
+<font color="#E5E5E5">flow a bad allocate exception lastly</font>
+
+39
+00:02:22,160 --> 00:02:30,790
+that new handler itself can either<font color="#CCCCCC"> throw</font>
+
+40
+00:02:25,940 --> 00:02:30,790
+exception or terminate the program
+
+41
+00:02:30,940 --> 00:02:33,940
+<font color="#E5E5E5">immediately</font>
+
+42
+00:02:35,470 --> 00:02:44,030
+so these are<font color="#CCCCCC"> five</font><font color="#E5E5E5"> options that our new</font>
+
+43
+00:02:40,040 --> 00:02:47,480
+handler<font color="#E5E5E5"> must do oh it must do at least</font>
+
+44
+00:02:44,030 --> 00:02:50,390
+one of the things first make memory
+
+45
+00:02:47,480 --> 00:02:53,570
+<font color="#CCCCCC">available</font><font color="#E5E5E5"> so that next run of</font><font color="#CCCCCC"> memory</font>
+
+46
+00:02:50,390 --> 00:02:56,420
+allocation could be succeed second
+
+47
+00:02:53,570 --> 00:02:58,340
+install different<font color="#E5E5E5"> new handle if the</font>
+
+48
+00:02:56,420 --> 00:03:01,010
+current and new handler<font color="#E5E5E5"> can not do</font>
+
+49
+00:02:58,340 --> 00:03:04,820
+<font color="#CCCCCC">anything to free up the memory</font><font color="#E5E5E5"> and maybe</font>
+
+50
+00:03:01,010 --> 00:03:07,489
+a<font color="#E5E5E5"> different new</font><font color="#CCCCCC"> handler could third I'll</font>
+
+51
+00:03:04,820 --> 00:03:11,269
+install the<font color="#E5E5E5"> new handle set the new</font>
+
+52
+00:03:07,490 --> 00:03:13,460
+handle to now which<font color="#E5E5E5"> means I can do</font><font color="#CCCCCC"> it</font>
+
+53
+00:03:11,270 --> 00:03:16,340
+cannot do anything about the memory
+
+54
+00:03:13,460 --> 00:03:21,320
+anymore<font color="#CCCCCC"> so it</font><font color="#E5E5E5"> will just throw a bad a</font>
+
+55
+00:03:16,340 --> 00:03:25,610
+log exception number four
+
+56
+00:03:21,320 --> 00:03:27,410
+instead of let operate<font color="#E5E5E5"> a new to throw</font>
+
+57
+00:03:25,610 --> 00:03:31,400
+the exception and<font color="#CCCCCC"> you handle</font><font color="#E5E5E5"> again</font>
+
+58
+00:03:27,410 --> 00:03:34,940
+<font color="#CCCCCC">through exception self of the bad</font><font color="#E5E5E5"> a log</font>
+
+59
+00:03:31,400 --> 00:03:39,260
+or any exception that is derived<font color="#E5E5E5"> from a</font>
+
+60
+00:03:34,940 --> 00:03:41,440
+<font color="#E5E5E5">dialog last option is</font><font color="#CCCCCC"> to terminate</font><font color="#E5E5E5"> the</font>
+
+61
+00:03:39,260 --> 00:03:41,440
+program
+
+62
+00:03:43,970 --> 00:03:52,530
+so let's look at some examples<font color="#E5E5E5"> in this</font>
+
+63
+00:03:49,579 --> 00:03:56,269
+example in the main function<font color="#CCCCCC"> I try to</font>
+
+64
+00:03:52,530 --> 00:04:00,180
+<font color="#E5E5E5">create a gigantic array of integers and</font>
+
+65
+00:03:56,269 --> 00:04:06,209
+of course my host machine cannot handle
+
+66
+00:04:00,180 --> 00:04:09,359
+that<font color="#E5E5E5"> so it will print out extra</font>
+
+67
+00:04:06,209 --> 00:04:11,730
+exceptions<font color="#E5E5E5"> so what's happening here</font><font color="#CCCCCC"> is</font>
+
+68
+00:04:09,359 --> 00:04:14,400
+because<font color="#E5E5E5"> I haven't installed any new</font>
+
+69
+00:04:11,730 --> 00:04:18,000
+<font color="#CCCCCC">Handler</font><font color="#E5E5E5"> and by default the new</font><font color="#CCCCCC"> handle is</font>
+
+70
+00:04:14,400 --> 00:04:21,418
+now so when then operate a new test
+
+71
+00:04:18,000 --> 00:04:26,130
+whether the new handle is now it<font color="#E5E5E5"> is now</font>
+
+72
+00:04:21,418 --> 00:04:28,590
+so it's<font color="#E5E5E5"> just throw exceptions so output</font>
+
+73
+00:04:26,130 --> 00:04:32,990
+<font color="#CCCCCC">will be terminate called</font>
+
+74
+00:04:28,590 --> 00:04:32,989
+after throwing<font color="#CCCCCC"> instances of bad I look</font>
+
+75
+00:04:33,139 --> 00:04:41,220
+our second example<font color="#CCCCCC"> I define a new</font>
+
+76
+00:04:37,530 --> 00:04:44,520
+function<font color="#CCCCCC"> called no</font><font color="#E5E5E5"> more mem and in the</font>
+
+77
+00:04:41,220 --> 00:04:47,099
+main function<font color="#CCCCCC"> I</font><font color="#E5E5E5"> install</font><font color="#CCCCCC"> the normal man</font>
+
+78
+00:04:44,520 --> 00:04:50,419
+function to be<font color="#CCCCCC"> the new Handler</font><font color="#E5E5E5"> and then</font>
+
+79
+00:04:47,099 --> 00:04:53,699
+again as before<font color="#CCCCCC"> I</font><font color="#E5E5E5"> create a gigantic</font>
+
+80
+00:04:50,419 --> 00:04:58,229
+integer array and this time because I
+
+81
+00:04:53,699 --> 00:05:00,270
+<font color="#CCCCCC">already</font><font color="#E5E5E5"> set a new</font><font color="#CCCCCC"> handler and what the</font>
+
+82
+00:04:58,229 --> 00:05:02,729
+new handler does is print out some
+
+83
+00:05:00,270 --> 00:05:05,719
+message and then terminate the program
+
+84
+00:05:02,729 --> 00:05:09,300
+<font color="#E5E5E5">the last option</font>
+
+85
+00:05:05,720 --> 00:05:10,990
+so the<font color="#E5E5E5"> output</font><font color="#CCCCCC"> will be</font><font color="#E5E5E5"> unable to allocate</font>
+
+86
+00:05:09,300 --> 00:05:15,130
+memory<font color="#CCCCCC"> Bo</font>
+
+87
+00:05:10,990 --> 00:05:18,460
+what I have done<font color="#CCCCCC"> here is I set a global</font>
+
+88
+00:05:15,130 --> 00:05:23,050
+new handler<font color="#E5E5E5"> to be a</font><font color="#CCCCCC"> normal man</font><font color="#E5E5E5"> which</font>
+
+89
+00:05:18,460 --> 00:05:26,590
+means any memory allocation<font color="#E5E5E5"> fail</font><font color="#CCCCCC"> we'll</font>
+
+90
+00:05:23,050 --> 00:05:29,580
+call this new handle one question you
+
+91
+00:05:26,590 --> 00:05:31,690
+<font color="#CCCCCC">might want to ask is can I set a class</font>
+
+92
+00:05:29,580 --> 00:05:36,099
+specific new handler
+
+93
+00:05:31,690 --> 00:05:38,650
+<font color="#CCCCCC">a new handler can invoked</font><font color="#E5E5E5"> only when the</font>
+
+94
+00:05:36,100 --> 00:05:43,480
+memory allocation allocation for a
+
+95
+00:05:38,650 --> 00:05:47,739
+particular class<font color="#CCCCCC"> fail the answer is yes</font>
+
+96
+00:05:43,480 --> 00:05:52,510
+we<font color="#CCCCCC"> can</font><font color="#E5E5E5"> implement that in tsipras pass by</font>
+
+97
+00:05:47,740 --> 00:05:56,890
+overloading<font color="#E5E5E5"> the operator new so this</font>
+
+98
+00:05:52,510 --> 00:06:00,870
+<font color="#E5E5E5">example</font><font color="#CCCCCC"> my dog class have a function no</font>
+
+99
+00:05:56,890 --> 00:06:05,530
+<font color="#E5E5E5">more ma'am no member dot</font><font color="#CCCCCC"> and I've</font>
+
+100
+00:06:00,870 --> 00:06:08,230
+overloaded the operator new over here
+
+101
+00:06:05,530 --> 00:06:11,020
+and the main purpose<font color="#CCCCCC"> of the operating</font>
+
+102
+00:06:08,230 --> 00:06:15,250
+new overloading is to three things
+
+103
+00:06:11,020 --> 00:06:21,549
+number one<font color="#E5E5E5"> I set the new handler to be</font>
+
+104
+00:06:15,250 --> 00:06:25,870
+no<font color="#E5E5E5"> mem for dog and secondly I called</font>
+
+105
+00:06:21,550 --> 00:06:28,830
+operate the new as before as usual<font color="#E5E5E5"> this</font>
+
+106
+00:06:25,870 --> 00:06:32,760
+will allocate memory for dog
+
+107
+00:06:28,830 --> 00:06:36,659
+lastly I restore the new<font color="#CCCCCC"> Hendra</font><font color="#E5E5E5"> to</font>
+
+108
+00:06:32,760 --> 00:06:39,860
+<font color="#E5E5E5">whatever that was before because the</font>
+
+109
+00:06:36,660 --> 00:06:45,150
+<font color="#CCCCCC">gnome m4 dog</font><font color="#E5E5E5"> new</font><font color="#CCCCCC"> handle is only for dog</font>
+
+110
+00:06:39,860 --> 00:06:51,170
+<font color="#E5E5E5">so anybody else after</font><font color="#CCCCCC"> that should use</font>
+
+111
+00:06:45,150 --> 00:06:51,169
+<font color="#E5E5E5">one whatever was</font><font color="#CCCCCC"> that new handler</font><font color="#E5E5E5"> before</font>
+
+112
+00:06:52,040 --> 00:06:58,770
+so this is<font color="#E5E5E5"> how the new</font><font color="#CCCCCC"> hinderer</font>
+
+113
+00:06:56,270 --> 00:07:01,859
+<font color="#E5E5E5">class-specific new handler can be</font>
+
+114
+00:06:58,770 --> 00:07:04,229
+<font color="#E5E5E5">implement there's a small problem with</font>
+
+115
+00:07:01,860 --> 00:07:06,440
+this part<font color="#E5E5E5"> this program can</font><font color="#CCCCCC"> you see what</font>
+
+116
+00:07:04,230 --> 00:07:06,440
+it is
+
+117
+00:07:07,250 --> 00:07:15,960
+the problem is when then operate a new
+
+118
+00:07:11,780 --> 00:07:18,809
+fail fail to allocate the memory it will
+
+119
+00:07:15,960 --> 00:07:22,169
+invoke<font color="#CCCCCC"> the new handler which is the</font>
+
+120
+00:07:18,810 --> 00:07:27,150
+gnome m4 dog and then no man for dog
+
+121
+00:07:22,170 --> 00:07:31,070
+will throw exceptions<font color="#E5E5E5"> so that means the</font>
+
+122
+00:07:27,150 --> 00:07:37,799
+original<font color="#CCCCCC"> new handler will not be</font>
+
+123
+00:07:31,070 --> 00:07:42,180
+restored<font color="#CCCCCC"> so we need to copy this</font><font color="#E5E5E5"> next</font>
+
+124
+00:07:37,800 --> 00:07:44,880
+line<font color="#E5E5E5"> to over here and in the gnome m4</font>
+
+125
+00:07:42,180 --> 00:07:47,670
+<font color="#CCCCCC">dock function before I throw exception I</font>
+
+126
+00:07:44,880 --> 00:07:52,969
+want to restore<font color="#CCCCCC"> the original</font><font color="#E5E5E5"> handler</font>
+
+127
+00:07:47,670 --> 00:07:52,970
+that will complete the<font color="#E5E5E5"> implementation</font>
+
+128
+00:07:53,980 --> 00:08:00,290
+that's all thank you<font color="#E5E5E5"> if you</font><font color="#CCCCCC"> have any</font>
+
+129
+00:07:57,890 --> 00:08:03,849
+<font color="#CCCCCC">question</font><font color="#E5E5E5"> any comments please leave</font>
+
+130
+00:08:00,290 --> 00:08:03,850
+comments in<font color="#CCCCCC"> below</font>
+

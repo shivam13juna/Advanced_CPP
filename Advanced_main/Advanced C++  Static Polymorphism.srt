@@ -1,0 +1,788 @@
+﻿1
+00:00:05,129 --> 00:00:11,200
+hello everyone<font color="#E5E5E5"> today</font><font color="#CCCCCC"> we are going</font><font color="#E5E5E5"> to</font>
+
+2
+00:00:07,779 --> 00:00:14,230
+talk about<font color="#E5E5E5"> static polymorphism</font><font color="#CCCCCC"> when we</font>
+
+3
+00:00:11,200 --> 00:00:16,869
+talk about<font color="#E5E5E5"> polymorphism by default we</font>
+
+4
+00:00:14,230 --> 00:00:19,599
+<font color="#CCCCCC">are talking about dynamic</font><font color="#E5E5E5"> polymorphism</font>
+
+5
+00:00:16,869 --> 00:00:21,820
+<font color="#E5E5E5">because dynamic polymorphism is such an</font>
+
+6
+00:00:19,599 --> 00:00:25,630
+important part<font color="#E5E5E5"> of object-oriented</font>
+
+7
+00:00:21,820 --> 00:00:28,990
+<font color="#E5E5E5">programming and here I'm giving you an</font>
+
+8
+00:00:25,630 --> 00:00:32,019
+example<font color="#E5E5E5"> of dynamic polymorphism this is</font>
+
+9
+00:00:28,990 --> 00:00:34,989
+an example of<font color="#E5E5E5"> tree passing we have a</font>
+
+10
+00:00:32,020 --> 00:00:37,030
+class<font color="#E5E5E5"> generic</font><font color="#CCCCCC"> parser</font><font color="#E5E5E5"> and the generic</font>
+
+11
+00:00:34,989 --> 00:00:39,608
+parser has a member function<font color="#CCCCCC"> past</font>
+
+12
+00:00:37,030 --> 00:00:42,819
+<font color="#CCCCCC">pre-order</font><font color="#E5E5E5"> which does the pre-order</font>
+
+13
+00:00:39,609 --> 00:00:44,969
+passing of the tree and<font color="#E5E5E5"> the while</font>
+
+14
+00:00:42,819 --> 00:00:48,460
+passing<font color="#E5E5E5"> the tree it invoke a function</font>
+
+15
+00:00:44,969 --> 00:00:52,049
+<font color="#E5E5E5">process node which it has certain</font>
+
+16
+00:00:48,460 --> 00:00:55,239
+specific thing to this particular<font color="#E5E5E5"> node</font>
+
+17
+00:00:52,049 --> 00:00:57,850
+<font color="#E5E5E5">however the genetic</font><font color="#CCCCCC"> parses process</font><font color="#E5E5E5"> node</font>
+
+18
+00:00:55,239 --> 00:01:01,419
+function is an empty<font color="#E5E5E5"> function which does</font>
+
+19
+00:00:57,850 --> 00:01:04,780
+nothing the employee<font color="#CCCCCC"> child process</font>
+
+20
+00:01:01,420 --> 00:01:07,600
+<font color="#CCCCCC">parser is a specialized parser and it's</font>
+
+21
+00:01:04,780 --> 00:01:10,330
+<font color="#E5E5E5">derived</font><font color="#CCCCCC"> from</font><font color="#E5E5E5"> the generic passer it</font>
+
+22
+00:01:07,600 --> 00:01:13,479
+overrides the<font color="#E5E5E5"> process node function and</font>
+
+23
+00:01:10,330 --> 00:01:17,259
+it does some customized thing for the
+
+24
+00:01:13,480 --> 00:01:19,840
+employee chart in the main<font color="#E5E5E5"> function that</font>
+
+25
+00:01:17,260 --> 00:01:22,360
+employee chart<font color="#CCCCCC"> parser is created and</font>
+
+26
+00:01:19,840 --> 00:01:24,850
+that<font color="#CCCCCC"> the</font><font color="#E5E5E5"> employee chart</font><font color="#CCCCCC"> parser will call</font>
+
+27
+00:01:22,360 --> 00:01:28,150
+the<font color="#CCCCCC"> pass pre-order function from its</font>
+
+28
+00:01:24,850 --> 00:01:31,270
+base class<font color="#E5E5E5"> the pass pre-order function</font>
+
+29
+00:01:28,150 --> 00:01:33,190
+will call process node because the
+
+30
+00:01:31,270 --> 00:01:35,860
+process node function is a virtual
+
+31
+00:01:33,190 --> 00:01:40,480
+<font color="#CCCCCC">function so it will actually</font><font color="#E5E5E5"> call the</font>
+
+32
+00:01:35,860 --> 00:01:43,780
+employee<font color="#CCCCCC"> child process process node so</font>
+
+33
+00:01:40,480 --> 00:01:46,240
+the generic algorithm of<font color="#CCCCCC"> pass pre-order</font>
+
+34
+00:01:43,780 --> 00:01:49,510
+is customized<font color="#E5E5E5"> by</font><font color="#CCCCCC"> the employee</font><font color="#E5E5E5"> child</font>
+
+35
+00:01:46,240 --> 00:01:54,280
+<font color="#E5E5E5">passes</font><font color="#CCCCCC"> own process node function this is</font>
+
+36
+00:01:49,510 --> 00:01:57,520
+<font color="#CCCCCC">a typical example</font><font color="#E5E5E5"> of polymorphism we</font>
+
+37
+00:01:54,280 --> 00:02:01,659
+like polymorphism because it makes your
+
+38
+00:01:57,520 --> 00:02:04,990
+code<font color="#CCCCCC"> more clean</font><font color="#E5E5E5"> and elegant</font><font color="#CCCCCC"> it helps you</font>
+
+39
+00:02:01,659 --> 00:02:07,659
+<font color="#E5E5E5">to write more generic code that is more</font>
+
+40
+00:02:04,990 --> 00:02:11,560
+decoupled from other code
+
+41
+00:02:07,659 --> 00:02:14,920
+however polymorphism is not for free<font color="#CCCCCC"> it</font>
+
+42
+00:02:11,560 --> 00:02:18,069
+comes with a small<font color="#E5E5E5"> price to pay the</font>
+
+43
+00:02:14,920 --> 00:02:21,369
+price is number<font color="#CCCCCC"> one the memory cost of</font>
+
+44
+00:02:18,069 --> 00:02:26,018
+the virtual table<font color="#E5E5E5"> and number two the</font>
+
+45
+00:02:21,370 --> 00:02:29,590
+<font color="#CCCCCC">runtime cost</font><font color="#E5E5E5"> of dynamic binding which is</font>
+
+46
+00:02:26,019 --> 00:02:34,380
+basically the<font color="#E5E5E5"> code that creates and uses</font>
+
+47
+00:02:29,590 --> 00:02:37,630
+the virtual<font color="#E5E5E5"> table this costs us more</font>
+
+48
+00:02:34,380 --> 00:02:40,120
+<font color="#E5E5E5">however what if my profiler tells me</font>
+
+49
+00:02:37,630 --> 00:02:43,359
+that this<font color="#E5E5E5"> is</font><font color="#CCCCCC"> a critical part of</font><font color="#E5E5E5"> my</font>
+
+50
+00:02:40,120 --> 00:02:46,870
+algorithm<font color="#E5E5E5"> and it needs to run as fast as</font>
+
+51
+00:02:43,360 --> 00:02:49,870
+it<font color="#E5E5E5"> can</font><font color="#CCCCCC"> and I don't want</font><font color="#E5E5E5"> to give up on</font>
+
+52
+00:02:46,870 --> 00:02:53,680
+the benefit of polymorphism<font color="#E5E5E5"> what can I</font>
+
+53
+00:02:49,870 --> 00:02:56,110
+do one<font color="#E5E5E5"> solution that I'm going to show</font>
+
+54
+00:02:53,680 --> 00:02:59,290
+<font color="#E5E5E5">you in this</font><font color="#CCCCCC"> video</font><font color="#E5E5E5"> is we can actually</font>
+
+55
+00:02:56,110 --> 00:03:02,860
+<font color="#E5E5E5">simulate the behavior</font><font color="#CCCCCC"> of polymorphism</font>
+
+56
+00:02:59,290 --> 00:03:06,630
+<font color="#E5E5E5">and by simulating</font><font color="#CCCCCC"> it</font><font color="#E5E5E5"> we are getting its</font>
+
+57
+00:03:02,860 --> 00:03:09,579
+benefit and not<font color="#CCCCCC"> paying</font><font color="#E5E5E5"> in surprise</font>
+
+58
+00:03:06,630 --> 00:03:11,590
+before<font color="#E5E5E5"> going to</font><font color="#CCCCCC"> the</font><font color="#E5E5E5"> solution let's take</font>
+
+59
+00:03:09,579 --> 00:03:16,150
+a look what are<font color="#E5E5E5"> the things that we want</font>
+
+60
+00:03:11,590 --> 00:03:18,579
+<font color="#E5E5E5">to simulate first is a relationship</font>
+
+61
+00:03:16,150 --> 00:03:21,549
+<font color="#E5E5E5">between the base class under the derived</font>
+
+62
+00:03:18,579 --> 00:03:24,069
+class so the employee chart<font color="#CCCCCC"> parser is</font>
+
+63
+00:03:21,549 --> 00:03:27,970
+publicly derived from the generic
+
+64
+00:03:24,069 --> 00:03:30,880
+<font color="#CCCCCC">passive class number to base class</font>
+
+65
+00:03:27,970 --> 00:03:34,120
+defines a generic algorithm that is<font color="#CCCCCC"> used</font>
+
+66
+00:03:30,880 --> 00:03:36,760
+by<font color="#E5E5E5"> the derived class in this case the</font>
+
+67
+00:03:34,120 --> 00:03:40,359
+generic algorithm is the<font color="#CCCCCC"> past</font><font color="#E5E5E5"> pre-order</font>
+
+68
+00:03:36,760 --> 00:03:42,970
+function number<font color="#CCCCCC"> three</font><font color="#E5E5E5"> the generic</font>
+
+69
+00:03:40,359 --> 00:03:46,359
+algorithm is customized by<font color="#CCCCCC"> the derived</font>
+
+70
+00:03:42,970 --> 00:03:49,950
+class<font color="#E5E5E5"> in this example that is done with</font>
+
+71
+00:03:46,359 --> 00:03:52,990
+<font color="#E5E5E5">the process</font><font color="#CCCCCC"> node function</font>
+
+72
+00:03:49,950 --> 00:03:57,819
+having<font color="#E5E5E5"> these three things in mind let's</font>
+
+73
+00:03:52,990 --> 00:04:00,280
+look<font color="#E5E5E5"> at our solution this</font><font color="#CCCCCC"> is our</font>
+
+74
+00:03:57,819 --> 00:04:03,880
+solution<font color="#E5E5E5"> the first thing you might</font>
+
+75
+00:04:00,280 --> 00:04:06,700
+notice<font color="#E5E5E5"> is the base class generic</font><font color="#CCCCCC"> path so</font>
+
+76
+00:04:03,880 --> 00:04:10,870
+now has become<font color="#E5E5E5"> a temporary class of type</font>
+
+77
+00:04:06,700 --> 00:04:14,109
+T<font color="#CCCCCC"> past</font><font color="#E5E5E5"> pre-order function is the same as</font>
+
+78
+00:04:10,870 --> 00:04:17,320
+before<font color="#E5E5E5"> however the process</font><font color="#CCCCCC"> note function</font>
+
+79
+00:04:14,110 --> 00:04:20,640
+is changed<font color="#E5E5E5"> instead of doing</font><font color="#CCCCCC"> nothing like</font>
+
+80
+00:04:17,320 --> 00:04:24,849
+<font color="#E5E5E5">before it will statically cast this</font>
+
+81
+00:04:20,640 --> 00:04:31,150
+<font color="#CCCCCC">object</font><font color="#E5E5E5"> into</font><font color="#CCCCCC"> the type of</font><font color="#E5E5E5"> T and invoke the</font>
+
+82
+00:04:24,850 --> 00:04:33,610
+<font color="#E5E5E5">process note function of the type T now</font>
+
+83
+00:04:31,150 --> 00:04:36,400
+here's the tricky part<font color="#CCCCCC"> the employee</font>
+
+84
+00:04:33,610 --> 00:04:39,730
+chart<font color="#E5E5E5"> passer</font><font color="#CCCCCC"> is publicly derived from</font>
+
+85
+00:04:36,400 --> 00:04:42,669
+generic<font color="#CCCCCC"> passer and the generic passer</font><font color="#E5E5E5"> is</font>
+
+86
+00:04:39,730 --> 00:04:45,300
+a temporary class<font color="#E5E5E5"> with a template type</font>
+
+87
+00:04:42,669 --> 00:04:50,200
+of employee chart<font color="#CCCCCC"> passer</font>
+
+88
+00:04:45,300 --> 00:04:53,350
+think about it the rest<font color="#E5E5E5"> of the</font><font color="#CCCCCC"> code is</font>
+
+89
+00:04:50,200 --> 00:04:55,539
+<font color="#CCCCCC">the same the process node will do some</font>
+
+90
+00:04:53,350 --> 00:04:59,350
+customized thing for the employee chart
+
+91
+00:04:55,540 --> 00:05:01,870
+<font color="#E5E5E5">and in the</font><font color="#CCCCCC"> main function</font><font color="#E5E5E5"> is also</font><font color="#CCCCCC"> the</font>
+
+92
+00:04:59,350 --> 00:05:04,630
+same<font color="#E5E5E5"> will create</font><font color="#CCCCCC"> an employee chart</font>
+
+93
+00:05:01,870 --> 00:05:09,100
+<font color="#E5E5E5">processor and invoke</font><font color="#CCCCCC"> the pass</font><font color="#E5E5E5"> pre-order</font>
+
+94
+00:05:04,630 --> 00:05:11,440
+function for the inquiry chart the<font color="#CCCCCC"> pass</font>
+
+95
+00:05:09,100 --> 00:05:15,669
+pre-order function is a function<font color="#CCCCCC"> of the</font>
+
+96
+00:05:11,440 --> 00:05:18,969
+generic passer<font color="#E5E5E5"> over here it will invoke</font>
+
+97
+00:05:15,669 --> 00:05:21,280
+<font color="#CCCCCC">the process node function please note</font>
+
+98
+00:05:18,970 --> 00:05:23,860
+that the process node function is no
+
+99
+00:05:21,280 --> 00:05:26,979
+longer a virtual<font color="#E5E5E5"> function so the generic</font>
+
+100
+00:05:23,860 --> 00:05:29,590
+passer will call itself<font color="#CCCCCC"> the process node</font>
+
+101
+00:05:26,979 --> 00:05:33,400
+function not<font color="#E5E5E5"> the employee child passes</font>
+
+102
+00:05:29,590 --> 00:05:35,590
+process node function however<font color="#E5E5E5"> the</font>
+
+103
+00:05:33,400 --> 00:05:38,799
+generic process process node function
+
+104
+00:05:35,590 --> 00:05:42,099
+will<font color="#E5E5E5"> cast this</font><font color="#CCCCCC"> object</font><font color="#E5E5E5"> into type of T and</font>
+
+105
+00:05:38,800 --> 00:05:45,570
+invoke this process node function<font color="#E5E5E5"> in</font>
+
+106
+00:05:42,100 --> 00:05:48,360
+this example<font color="#E5E5E5"> the type T is actually</font>
+
+107
+00:05:45,570 --> 00:05:51,509
+employee child processor
+
+108
+00:05:48,360 --> 00:05:54,090
+so eventually<font color="#E5E5E5"> it is the employee</font><font color="#CCCCCC"> chart</font>
+
+109
+00:05:51,509 --> 00:05:57,960
+<font color="#E5E5E5">processes process note function that's</font>
+
+110
+00:05:54,090 --> 00:06:02,638
+got invoked<font color="#E5E5E5"> thus the polymorphism is</font>
+
+111
+00:05:57,960 --> 00:06:05,758
+achieved now let's review<font color="#CCCCCC"> the three</font>
+
+112
+00:06:02,639 --> 00:06:08,250
+elements<font color="#E5E5E5"> that we</font><font color="#CCCCCC"> want to simulate</font><font color="#E5E5E5"> there</font>
+
+113
+00:06:05,759 --> 00:06:12,650
+is a<font color="#E5E5E5"> relationship between the base class</font>
+
+114
+00:06:08,250 --> 00:06:15,840
+<font color="#E5E5E5">and the derived class that is still true</font>
+
+115
+00:06:12,650 --> 00:06:20,008
+this class defines a<font color="#E5E5E5"> generic algorithm</font>
+
+116
+00:06:15,840 --> 00:06:23,400
+that is used<font color="#CCCCCC"> by derived class which is</font>
+
+117
+00:06:20,009 --> 00:06:27,030
+<font color="#CCCCCC">also true the generic algorithm is</font>
+
+118
+00:06:23,400 --> 00:06:30,120
+customized<font color="#CCCCCC"> by</font><font color="#E5E5E5"> the derived class</font><font color="#CCCCCC"> and here</font>
+
+119
+00:06:27,030 --> 00:06:34,229
+is done by the process node<font color="#E5E5E5"> it's also</font>
+
+120
+00:06:30,120 --> 00:06:36,870
+true<font color="#E5E5E5"> so</font><font color="#CCCCCC"> we are</font><font color="#E5E5E5"> getting all the</font><font color="#CCCCCC"> benefits</font>
+
+121
+00:06:34,229 --> 00:06:41,068
+<font color="#E5E5E5">of polymorphism but we are not paying</font>
+
+122
+00:06:36,870 --> 00:06:44,849
+any<font color="#E5E5E5"> price</font><font color="#CCCCCC"> for</font><font color="#E5E5E5"> it another thing to note</font>
+
+123
+00:06:41,069 --> 00:06:47,939
+is<font color="#E5E5E5"> from our</font><font color="#CCCCCC"> kind</font><font color="#E5E5E5"> point of view they can</font>
+
+124
+00:06:44,849 --> 00:06:50,669
+<font color="#E5E5E5">use our class as if it is a true</font>
+
+125
+00:06:47,939 --> 00:06:52,789
+polymorphism they don't even<font color="#E5E5E5"> care</font>
+
+126
+00:06:50,669 --> 00:06:57,080
+whether it's real or simulated
+
+127
+00:06:52,789 --> 00:07:00,628
+<font color="#E5E5E5">polymorphism this technique is called</font>
+
+128
+00:06:57,080 --> 00:07:03,389
+<font color="#E5E5E5">curiously</font><font color="#CCCCCC"> recurring</font><font color="#E5E5E5"> temperate it is also</font>
+
+129
+00:07:00,629 --> 00:07:07,830
+called static polymorphism<font color="#E5E5E5"> or simulated</font>
+
+130
+00:07:03,389 --> 00:07:10,830
+<font color="#E5E5E5">polymorphism it is very fairly popular</font>
+
+131
+00:07:07,830 --> 00:07:13,050
+<font color="#CCCCCC">in the library code</font><font color="#E5E5E5"> because in most of</font>
+
+132
+00:07:10,830 --> 00:07:16,050
+the application code<font color="#E5E5E5"> you don't</font><font color="#CCCCCC"> really</font>
+
+133
+00:07:13,050 --> 00:07:20,669
+<font color="#CCCCCC">care about the cost of the virtual table</font>
+
+134
+00:07:16,050 --> 00:07:22,589
+and the dynamic binding<font color="#CCCCCC"> unless the your</font>
+
+135
+00:07:20,669 --> 00:07:25,799
+profiler tells you that this<font color="#CCCCCC"> is</font>
+
+136
+00:07:22,589 --> 00:07:28,319
+important<font color="#E5E5E5"> but in the library code often</font>
+
+137
+00:07:25,800 --> 00:07:33,539
+<font color="#CCCCCC">time you want</font><font color="#E5E5E5"> to squeeze every</font><font color="#CCCCCC"> bit of</font>
+
+138
+00:07:28,319 --> 00:07:35,789
+performance<font color="#E5E5E5"> out of your code so</font><font color="#CCCCCC"> we are</font>
+
+139
+00:07:33,539 --> 00:07:38,159
+<font color="#E5E5E5">getting all the benefits</font><font color="#CCCCCC"> of polymorphism</font>
+
+140
+00:07:35,789 --> 00:07:41,419
+<font color="#E5E5E5">but we are not paying</font><font color="#CCCCCC"> in price for</font><font color="#E5E5E5"> it</font>
+
+141
+00:07:38,159 --> 00:07:44,270
+it's like free lunch<font color="#E5E5E5"> right</font>
+
+142
+00:07:41,420 --> 00:07:46,510
+<font color="#E5E5E5">now nothing is free in</font><font color="#CCCCCC"> this world</font>
+
+143
+00:07:44,270 --> 00:07:50,750
+everything comes in with the price
+
+144
+00:07:46,510 --> 00:07:54,340
+except my video which is totally free<font color="#E5E5E5"> so</font>
+
+145
+00:07:50,750 --> 00:07:58,340
+what<font color="#E5E5E5"> is the price we are paying here</font>
+
+146
+00:07:54,340 --> 00:08:04,609
+suppose<font color="#E5E5E5"> I</font><font color="#CCCCCC"> create another parser which is</font>
+
+147
+00:07:58,340 --> 00:08:06,500
+cut military chart<font color="#CCCCCC"> parser and that the</font>
+
+148
+00:08:04,610 --> 00:08:09,680
+<font color="#E5E5E5">military child parser will be derived</font>
+
+149
+00:08:06,500 --> 00:08:14,300
+from the generic parser of the time<font color="#CCCCCC"> rate</font>
+
+150
+00:08:09,680 --> 00:08:16,850
+type of<font color="#E5E5E5"> military child</font><font color="#CCCCCC"> parser note the</font>
+
+151
+00:08:14,300 --> 00:08:19,340
+generic<font color="#CCCCCC"> part genetic parts of employed</font>
+
+152
+00:08:16,850 --> 00:08:22,040
+child parser and<font color="#CCCCCC"> the generic</font><font color="#E5E5E5"> parts of</font>
+
+153
+00:08:19,340 --> 00:08:25,789
+military child<font color="#E5E5E5"> processor are two</font>
+
+154
+00:08:22,040 --> 00:08:29,120
+different<font color="#E5E5E5"> classes they're distinguished</font>
+
+155
+00:08:25,790 --> 00:08:32,750
+classes that occupies their own space in
+
+156
+00:08:29,120 --> 00:08:36,350
+<font color="#E5E5E5">the program image now you would</font><font color="#CCCCCC"> realize</font>
+
+157
+00:08:32,750 --> 00:08:39,080
+that<font color="#E5E5E5"> the launch is</font><font color="#CCCCCC"> not free</font><font color="#E5E5E5"> this is a</font>
+
+158
+00:08:36,350 --> 00:08:42,880
+typical trade-off between a<font color="#CCCCCC"> program</font>
+
+159
+00:08:39,080 --> 00:08:45,890
+image size and program performance
+
+160
+00:08:42,880 --> 00:08:48,790
+whether the trade-off<font color="#CCCCCC"> is worth it</font><font color="#E5E5E5"> it</font>
+
+161
+00:08:45,890 --> 00:08:51,410
+<font color="#E5E5E5">totally depends on your application</font>
+
+162
+00:08:48,790 --> 00:08:57,219
+<font color="#CCCCCC">another thing I want to point out is</font>
+
+163
+00:08:51,410 --> 00:09:04,160
+this is<font color="#E5E5E5"> also a small demo of TMP</font>
+
+164
+00:08:57,220 --> 00:09:07,010
+template meta programming the idea of
+
+165
+00:09:04,160 --> 00:09:09,949
+<font color="#E5E5E5">temporary meta programming is it moves</font>
+
+166
+00:09:07,010 --> 00:09:12,530
+part of the<font color="#CCCCCC"> computation which typically</font>
+
+167
+00:09:09,950 --> 00:09:16,430
+happens<font color="#E5E5E5"> during a long time up front to</font>
+
+168
+00:09:12,530 --> 00:09:19,370
+<font color="#CCCCCC">the</font><font color="#E5E5E5"> compile time therefore improve the</font>
+
+169
+00:09:16,430 --> 00:09:22,430
+efficiency<font color="#CCCCCC"> of</font><font color="#E5E5E5"> your program</font>
+
+170
+00:09:19,370 --> 00:09:26,420
+and that is exactly<font color="#CCCCCC"> our static</font>
+
+171
+00:09:22,430 --> 00:09:28,520
+polymorphism does although<font color="#CCCCCC"> static</font>
+
+172
+00:09:26,420 --> 00:09:31,430
+polymorphism<font color="#CCCCCC"> only improves the</font>
+
+173
+00:09:28,520 --> 00:09:34,310
+efficiency a little bit some time by
+
+174
+00:09:31,430 --> 00:09:38,800
+using the TMP technique you can<font color="#E5E5E5"> make</font>
+
+175
+00:09:34,310 --> 00:09:41,689
+much bigger improvements to<font color="#CCCCCC"> your program</font>
+
+176
+00:09:38,800 --> 00:09:44,060
+the last thing that<font color="#E5E5E5"> I want to point it</font>
+
+177
+00:09:41,690 --> 00:09:46,670
+<font color="#E5E5E5">out is when some people talk</font><font color="#CCCCCC"> about</font>
+
+178
+00:09:44,060 --> 00:09:50,119
+static polymorphism<font color="#CCCCCC"> they are actually</font>
+
+179
+00:09:46,670 --> 00:09:52,520
+referring<font color="#CCCCCC"> to the template</font><font color="#E5E5E5"> itself</font><font color="#CCCCCC"> in this</font>
+
+180
+00:09:50,120 --> 00:09:55,670
+example I<font color="#E5E5E5"> have a temperate function max</font>
+
+181
+00:09:52,520 --> 00:09:59,000
+<font color="#E5E5E5">which goes through every</font><font color="#CCCCCC"> element of the</font>
+
+182
+00:09:55,670 --> 00:10:03,219
+vector<font color="#CCCCCC"> V and find the</font><font color="#E5E5E5"> largest one and</font>
+
+183
+00:09:59,000 --> 00:10:06,140
+return it<font color="#E5E5E5"> and when function max is</font>
+
+184
+00:10:03,220 --> 00:10:09,920
+materialized with<font color="#E5E5E5"> any different type</font><font color="#CCCCCC"> of</font>
+
+185
+00:10:06,140 --> 00:10:13,939
+T or the operators such<font color="#CCCCCC"> as large then</font>
+
+186
+00:10:09,920 --> 00:10:16,520
+and copy assignment<font color="#E5E5E5"> will</font><font color="#CCCCCC"> be invoked with</font>
+
+187
+00:10:13,940 --> 00:10:20,300
+different version of the operator<font color="#CCCCCC"> large</font>
+
+188
+00:10:16,520 --> 00:10:22,819
+<font color="#CCCCCC">then and copy assignment</font><font color="#E5E5E5"> and because</font>
+
+189
+00:10:20,300 --> 00:10:26,089
+that happens in the<font color="#E5E5E5"> compiler time they</font>
+
+190
+00:10:22,820 --> 00:10:27,920
+call it<font color="#E5E5E5"> static polymorphism</font><font color="#CCCCCC"> there's</font>
+
+191
+00:10:26,089 --> 00:10:31,070
+nothing wrong with<font color="#CCCCCC"> it</font><font color="#E5E5E5"> it's just</font><font color="#CCCCCC"> a</font>
+
+192
+00:10:27,920 --> 00:10:33,229
+different definition<font color="#CCCCCC"> I just want to</font>
+
+193
+00:10:31,070 --> 00:10:35,150
+clear up<font color="#E5E5E5"> with the concepts</font><font color="#CCCCCC"> so next time</font>
+
+194
+00:10:33,230 --> 00:10:37,730
+you hear other people talking about
+
+195
+00:10:35,150 --> 00:10:40,370
+static polymorphism<font color="#CCCCCC"> you know which one</font>
+
+196
+00:10:37,730 --> 00:10:44,050
+they are talking<font color="#CCCCCC"> about</font><font color="#E5E5E5"> that's all for</font>
+
+197
+00:10:40,370 --> 00:10:44,050
+today<font color="#E5E5E5"> thank you for watching bye bye</font>
+

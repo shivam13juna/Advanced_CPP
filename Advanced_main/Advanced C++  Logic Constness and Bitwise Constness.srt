@@ -1,0 +1,412 @@
+﻿1
+00:00:05,100 --> 00:00:10,989
+hello everyone<font color="#E5E5E5"> last time we have</font>
+
+2
+00:00:07,870 --> 00:00:12,969
+<font color="#CCCCCC">discussed Const function</font><font color="#E5E5E5"> accounts the</font>
+
+3
+00:00:10,990 --> 00:00:16,570
+function is a member<font color="#CCCCCC"> function that</font>
+
+4
+00:00:12,969 --> 00:00:18,730
+<font color="#E5E5E5">doesn't change member variables</font><font color="#CCCCCC"> so if a</font>
+
+5
+00:00:16,570 --> 00:00:23,560
+<font color="#CCCCCC">function that changed member variables</font>
+
+6
+00:00:18,730 --> 00:00:26,470
+<font color="#CCCCCC">it cannot be a cost function</font><font color="#E5E5E5"> today let's</font>
+
+7
+00:00:23,560 --> 00:00:28,929
+stay back and rethink the question what
+
+8
+00:00:26,470 --> 00:00:33,519
+does<font color="#CCCCCC"> it really mean for</font><font color="#E5E5E5"> a function to be</font>
+
+9
+00:00:28,929 --> 00:00:37,030
+<font color="#E5E5E5">cost for example</font><font color="#CCCCCC"> we have a class big</font>
+
+10
+00:00:33,520 --> 00:00:41,760
+array and the big array has a member
+
+11
+00:00:37,030 --> 00:00:44,590
+variable<font color="#CCCCCC"> V which is a huge vector of int</font>
+
+12
+00:00:41,760 --> 00:00:47,559
+big array<font color="#E5E5E5"> also has another member</font>
+
+13
+00:00:44,590 --> 00:00:50,739
+variable access counter which keeps
+
+14
+00:00:47,559 --> 00:00:54,489
+<font color="#CCCCCC">track of how many times</font><font color="#E5E5E5"> V has been</font>
+
+15
+00:00:50,739 --> 00:00:58,690
+accessed there is<font color="#CCCCCC"> also a function</font><font color="#E5E5E5"> get</font>
+
+16
+00:00:54,489 --> 00:01:01,780
+item which takes a<font color="#CCCCCC"> parameter of</font><font color="#E5E5E5"> index it</font>
+
+17
+00:00:58,690 --> 00:01:05,440
+incremented the access counter and then
+
+18
+00:01:01,780 --> 00:01:09,100
+we turn an item<font color="#CCCCCC"> of V at the position of</font>
+
+19
+00:01:05,440 --> 00:01:12,970
+index from my programming models point
+
+20
+00:01:09,100 --> 00:01:16,990
+of view this function get item really
+
+21
+00:01:12,970 --> 00:01:20,530
+should be a constant function because
+
+22
+00:01:16,990 --> 00:01:24,369
+the vector<font color="#CCCCCC"> V is the primary</font><font color="#E5E5E5"> data that</font>
+
+23
+00:01:20,530 --> 00:01:27,909
+I'm concerned<font color="#E5E5E5"> with</font><font color="#CCCCCC"> the function get item</font>
+
+24
+00:01:24,369 --> 00:01:31,329
+did not change any<font color="#CCCCCC"> value in V it only</font>
+
+25
+00:01:27,909 --> 00:01:35,140
+<font color="#E5E5E5">take a peek at the item at a position of</font>
+
+26
+00:01:31,329 --> 00:01:39,548
+index so the function get item<font color="#E5E5E5"> really</font>
+
+27
+00:01:35,140 --> 00:01:42,610
+should be<font color="#E5E5E5"> a constant this</font><font color="#CCCCCC"> is my logic</font>
+
+28
+00:01:39,549 --> 00:01:47,850
+<font color="#E5E5E5">constant list of what accounts function</font>
+
+29
+00:01:42,610 --> 00:01:50,619
+mean<font color="#E5E5E5"> however if I compile this program</font>
+
+30
+00:01:47,850 --> 00:01:53,979
+<font color="#E5E5E5">the compiler reports an error saying</font>
+
+31
+00:01:50,619 --> 00:01:56,680
+<font color="#E5E5E5">increment of member access counter in a</font>
+
+32
+00:01:53,979 --> 00:01:59,590
+<font color="#CCCCCC">read-only</font><font color="#E5E5E5"> object so the compiler</font>
+
+33
+00:01:56,680 --> 00:02:03,549
+disagree with me that<font color="#E5E5E5"> this function get</font>
+
+34
+00:01:59,590 --> 00:02:05,920
+item can be<font color="#CCCCCC"> a</font><font color="#E5E5E5"> Const function</font><font color="#CCCCCC"> because I'm</font>
+
+35
+00:02:03,549 --> 00:02:10,330
+<font color="#CCCCCC">changing one one</font><font color="#E5E5E5"> of the member variables</font>
+
+36
+00:02:05,920 --> 00:02:12,940
+<font color="#E5E5E5">of access counter so the compiler</font>
+
+37
+00:02:10,330 --> 00:02:16,210
+maintains the concept of<font color="#E5E5E5"> bitwise</font>
+
+38
+00:02:12,940 --> 00:02:19,359
+constant<font color="#E5E5E5"> is as long as the</font><font color="#CCCCCC"> function has</font>
+
+39
+00:02:16,210 --> 00:02:23,440
+made change to the member variables<font color="#CCCCCC"> it</font>
+
+40
+00:02:19,360 --> 00:02:26,440
+cannot<font color="#E5E5E5"> be a constant</font><font color="#CCCCCC"> function so there</font>
+
+41
+00:02:23,440 --> 00:02:28,990
+<font color="#CCCCCC">is a</font><font color="#E5E5E5"> conflict between my model of logic</font>
+
+42
+00:02:26,440 --> 00:02:32,890
+constants and the simplest<font color="#E5E5E5"> process</font>
+
+43
+00:02:28,990 --> 00:02:36,370
+concept of bitwise Council<font color="#E5E5E5"> Ernest how</font>
+
+44
+00:02:32,890 --> 00:02:39,970
+can we solve<font color="#E5E5E5"> this conflict</font><font color="#CCCCCC"> the solution</font>
+
+45
+00:02:36,370 --> 00:02:45,520
+is we can make the member of access
+
+46
+00:02:39,970 --> 00:02:48,370
+counter<font color="#E5E5E5"> a mutable member by making it a</font>
+
+47
+00:02:45,520 --> 00:02:52,660
+mute book member<font color="#E5E5E5"> this variable can be</font>
+
+48
+00:02:48,370 --> 00:02:57,070
+changed in<font color="#E5E5E5"> a Const function so if we run</font>
+
+49
+00:02:52,660 --> 00:02:59,230
+<font color="#E5E5E5">this</font><font color="#CCCCCC"> program again</font><font color="#E5E5E5"> now it can run</font>
+
+50
+00:02:57,070 --> 00:03:02,930
+through successfully
+
+51
+00:02:59,230 --> 00:03:04,549
+just for the fun<font color="#CCCCCC"> of it even if tsipras</font>
+
+52
+00:03:02,930 --> 00:03:07,600
+<font color="#CCCCCC">pants</font><font color="#E5E5E5"> doesn't have the support</font><font color="#CCCCCC"> of</font>
+
+53
+00:03:04,550 --> 00:03:16,760
+mutable members we still have a solution
+
+54
+00:03:07,600 --> 00:03:20,140
+<font color="#E5E5E5">we could use Const cast to cast away the</font>
+
+55
+00:03:16,760 --> 00:03:24,170
+constant is of this<font color="#CCCCCC"> object</font><font color="#E5E5E5"> and then</font>
+
+56
+00:03:20,140 --> 00:03:30,309
+<font color="#E5E5E5">increment the access counter and this</font>
+
+57
+00:03:24,170 --> 00:03:34,640
+let's run it it also runs through<font color="#E5E5E5"> okay</font>
+
+58
+00:03:30,310 --> 00:03:37,310
+however<font color="#CCCCCC"> as I said cust</font><font color="#E5E5E5"> is a hacky way of</font>
+
+59
+00:03:34,640 --> 00:03:41,299
+coding<font color="#CCCCCC"> and you should use it only when</font>
+
+60
+00:03:37,310 --> 00:03:45,470
+<font color="#E5E5E5">you</font><font color="#CCCCCC"> have to now let's</font><font color="#E5E5E5"> consider another</font>
+
+61
+00:03:41,300 --> 00:03:49,100
+<font color="#E5E5E5">example say big array has another member</font>
+
+62
+00:03:45,470 --> 00:03:53,150
+called V 2 and V 2 is another big
+
+63
+00:03:49,100 --> 00:03:57,400
+<font color="#CCCCCC">integer array</font><font color="#E5E5E5"> and it also has another</font>
+
+64
+00:03:53,150 --> 00:04:00,590
+member function called<font color="#E5E5E5"> set V 2 item and</font>
+
+65
+00:03:57,400 --> 00:04:04,300
+this<font color="#E5E5E5"> apparently is not a constant</font>
+
+66
+00:04:00,590 --> 00:04:08,750
+function<font color="#E5E5E5"> it is setting the</font><font color="#CCCCCC"> value of</font><font color="#E5E5E5"> V</font><font color="#CCCCCC"> 2</font>
+
+67
+00:04:04,300 --> 00:04:14,900
+it sets the item of V 2 at the position
+
+68
+00:04:08,750 --> 00:04:16,910
+of index to<font color="#CCCCCC"> be X however</font><font color="#E5E5E5"> if we change</font>
+
+69
+00:04:14,900 --> 00:04:22,980
+this function to be<font color="#CCCCCC"> a constant function</font>
+
+70
+00:04:16,910 --> 00:04:26,190
+<font color="#CCCCCC">and run it it is still</font><font color="#E5E5E5"> run through</font><font color="#CCCCCC"> ok</font>
+
+71
+00:04:22,980 --> 00:04:29,340
+so even<font color="#E5E5E5"> though in my programming model</font>
+
+72
+00:04:26,190 --> 00:04:31,590
+<font color="#E5E5E5">this is not a constant function the</font>
+
+73
+00:04:29,340 --> 00:04:35,400
+<font color="#CCCCCC">Sigma's passed compiler</font><font color="#E5E5E5"> will happily</font>
+
+74
+00:04:31,590 --> 00:04:38,099
+accept it as a<font color="#E5E5E5"> Const function because</font>
+
+75
+00:04:35,400 --> 00:04:41,159
+this function<font color="#E5E5E5"> has maintained the bitwise</font>
+
+76
+00:04:38,100 --> 00:04:45,900
+constant<font color="#CCCCCC"> Ness of this class</font><font color="#E5E5E5"> it doesn't</font>
+
+77
+00:04:41,160 --> 00:04:48,510
+<font color="#E5E5E5">change any of the members directory so</font>
+
+78
+00:04:45,900 --> 00:04:51,349
+this is another example<font color="#E5E5E5"> of conflict</font>
+
+79
+00:04:48,510 --> 00:04:53,330
+between logic<font color="#E5E5E5"> constants and the bitwise</font>
+
+80
+00:04:51,350 --> 00:04:56,760
+constants
+
+81
+00:04:53,330 --> 00:04:59,609
+however this conflict<font color="#E5E5E5"> is easy to solve</font>
+
+82
+00:04:56,760 --> 00:05:02,640
+<font color="#E5E5E5">all we need to do is remove the</font><font color="#CCCCCC"> Const</font>
+
+83
+00:04:59,610 --> 00:05:03,570
+<font color="#CCCCCC">and now this function</font><font color="#E5E5E5"> is not</font><font color="#CCCCCC"> a constant</font>
+
+84
+00:05:02,640 --> 00:05:07,979
+function<font color="#E5E5E5"> anymore</font>
+
+85
+00:05:03,570 --> 00:05:11,099
+as a summary<font color="#E5E5E5"> during the software design</font>
+
+86
+00:05:07,980 --> 00:05:14,610
+if the logic constant is is what you are
+
+87
+00:05:11,100 --> 00:05:19,850
+<font color="#E5E5E5">striving for then you</font><font color="#CCCCCC"> should use mutable</font>
+
+88
+00:05:14,610 --> 00:05:23,420
+members to implement the logic<font color="#CCCCCC"> consulars</font>
+
+89
+00:05:19,850 --> 00:05:31,440
+this wraps up our<font color="#E5E5E5"> discussion about</font><font color="#CCCCCC"> Const</font>
+
+90
+00:05:23,420 --> 00:05:34,800
+lastly<font color="#E5E5E5"> let's have a quiz here is a</font>
+
+91
+00:05:31,440 --> 00:05:39,570
+declaration<font color="#CCCCCC"> of function</font><font color="#E5E5E5"> fun and it has</font>
+
+92
+00:05:34,800 --> 00:05:43,580
+<font color="#CCCCCC">Const integer pointer Const fun Const</font>
+
+93
+00:05:39,570 --> 00:05:46,980
+integer pointer Const<font color="#CCCCCC"> ref</font><font color="#E5E5E5"> P constant</font>
+
+94
+00:05:43,580 --> 00:05:49,200
+<font color="#E5E5E5">what the heck is this</font>
+
+95
+00:05:46,980 --> 00:05:51,570
+you can post your answer below<font color="#E5E5E5"> as a</font>
+
+96
+00:05:49,200 --> 00:05:55,710
+comment<font color="#E5E5E5"> and the see if you can get</font>
+
+97
+00:05:51,570 --> 00:05:56,310
+everything correct<font color="#E5E5E5"> good luck that's all</font>
+
+98
+00:05:55,710 --> 00:05:58,830
+for today
+
+99
+00:05:56,310 --> 00:06:00,420
+feel free<font color="#E5E5E5"> to subscribe</font><font color="#CCCCCC"> to</font><font color="#E5E5E5"> my channel</font><font color="#CCCCCC"> so</font>
+
+100
+00:05:58,830 --> 00:06:03,060
+when I<font color="#E5E5E5"> post a new video you'll be</font>
+
+101
+00:06:00,420 --> 00:06:04,800
+<font color="#E5E5E5">updated</font><font color="#CCCCCC"> or you can go</font><font color="#E5E5E5"> to my</font><font color="#CCCCCC"> channels</font>
+
+102
+00:06:03,060 --> 00:06:08,390
+home page and see<font color="#CCCCCC"> what I'm offering</font>
+
+103
+00:06:04,800 --> 00:06:08,390
+<font color="#E5E5E5">today bye bye</font>
+

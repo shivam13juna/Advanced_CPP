@@ -1,0 +1,656 @@
+﻿1
+00:00:03,600 --> 00:00:08,379
+hello everyone today<font color="#CCCCCC"> we are</font><font color="#E5E5E5"> going</font><font color="#CCCCCC"> to</font>
+
+2
+00:00:06,279 --> 00:00:10,809
+talk about<font color="#CCCCCC"> a pitfall that</font><font color="#E5E5E5"> happens when</font>
+
+3
+00:00:08,379 --> 00:00:14,259
+you<font color="#E5E5E5"> have a</font><font color="#CCCCCC"> class</font><font color="#E5E5E5"> that owns another</font>
+
+4
+00:00:10,809 --> 00:00:17,770
+<font color="#E5E5E5">object through its pointer what do I</font>
+
+5
+00:00:14,259 --> 00:00:20,800
+<font color="#E5E5E5">mean by that here is example of this we</font>
+
+6
+00:00:17,770 --> 00:00:24,009
+have a class<font color="#E5E5E5"> person and this person has</font>
+
+7
+00:00:20,800 --> 00:00:27,880
+a private data member which<font color="#CCCCCC"> is a pointer</font>
+
+8
+00:00:24,009 --> 00:00:30,480
+<font color="#CCCCCC">to a stream key</font><font color="#E5E5E5"> name and in this</font>
+
+9
+00:00:27,880 --> 00:00:34,480
+person's constructor<font color="#E5E5E5"> it create a new</font>
+
+10
+00:00:30,480 --> 00:00:37,570
+<font color="#CCCCCC">string object</font><font color="#E5E5E5"> with this name and in the</font>
+
+11
+00:00:34,480 --> 00:00:42,010
+person's destructor it deletes<font color="#CCCCCC"> that key</font>
+
+12
+00:00:37,570 --> 00:00:45,910
+name so this is what I mean<font color="#E5E5E5"> by one class</font>
+
+13
+00:00:42,010 --> 00:00:48,730
+is<font color="#CCCCCC"> only another class by pointer</font><font color="#E5E5E5"> in this</font>
+
+14
+00:00:45,910 --> 00:00:53,440
+case the person owns the stream through
+
+15
+00:00:48,730 --> 00:00:56,169
+<font color="#E5E5E5">its pointer</font><font color="#CCCCCC"> that P</font><font color="#E5E5E5"> name note</font><font color="#CCCCCC"> that if</font><font color="#E5E5E5"> the</font>
+
+16
+00:00:53,440 --> 00:00:58,928
+<font color="#CCCCCC">person has the</font><font color="#E5E5E5"> pointer</font><font color="#CCCCCC"> of</font><font color="#E5E5E5"> P name but it</font>
+
+17
+00:00:56,170 --> 00:01:02,350
+is<font color="#E5E5E5"> not responsible of creating and the</font>
+
+18
+00:00:58,929 --> 00:01:05,680
+destructing of the object of p name then
+
+19
+00:01:02,350 --> 00:01:09,640
+<font color="#E5E5E5">this person is not</font><font color="#CCCCCC"> owning that object of</font>
+
+20
+00:01:05,680 --> 00:01:14,440
+<font color="#E5E5E5">p name it merely has acquaintance with</font>
+
+21
+00:01:09,640 --> 00:01:16,870
+that object<font color="#CCCCCC"> of p name and this person</font>
+
+22
+00:01:14,440 --> 00:01:20,800
+also<font color="#E5E5E5"> have a print name function which</font>
+
+23
+00:01:16,870 --> 00:01:23,320
+prints out the<font color="#E5E5E5"> name and in the main</font>
+
+24
+00:01:20,800 --> 00:01:25,929
+<font color="#E5E5E5">function I created a vector of person</font>
+
+25
+00:01:23,320 --> 00:01:28,839
+called<font color="#CCCCCC"> persons and then I create a</font>
+
+26
+00:01:25,930 --> 00:01:32,640
+person whose name<font color="#E5E5E5"> is George and push it</font>
+
+27
+00:01:28,840 --> 00:01:36,070
+back<font color="#E5E5E5"> into the</font><font color="#CCCCCC"> person's the vector and</font>
+
+28
+00:01:32,640 --> 00:01:37,750
+<font color="#E5E5E5">since I'm using</font><font color="#CCCCCC"> pushing push back so</font><font color="#E5E5E5"> the</font>
+
+29
+00:01:36,070 --> 00:01:41,199
+person's thought back<font color="#E5E5E5"> function will</font>
+
+30
+00:01:37,750 --> 00:01:44,290
+return<font color="#E5E5E5"> a reference to the last person in</font>
+
+31
+00:01:41,200 --> 00:01:47,110
+the vector<font color="#E5E5E5"> namely the</font><font color="#CCCCCC"> person George</font><font color="#E5E5E5"> and</font>
+
+32
+00:01:44,290 --> 00:01:51,760
+then I invoke the print name<font color="#E5E5E5"> function</font>
+
+33
+00:01:47,110 --> 00:01:54,730
+from<font color="#CCCCCC"> that person so this code looks so</font>
+
+34
+00:01:51,760 --> 00:01:56,710
+innocent<font color="#CCCCCC"> I create a person push it</font><font color="#E5E5E5"> into</font>
+
+35
+00:01:54,730 --> 00:02:00,460
+vector and the line codes print name
+
+36
+00:01:56,710 --> 00:02:02,710
+function<font color="#E5E5E5"> what could go wrong if I run</font>
+
+37
+00:02:00,460 --> 00:02:08,180
+the program
+
+38
+00:02:02,710 --> 00:02:11,480
+it actually crashed<font color="#E5E5E5"> and if we look at</font>
+
+39
+00:02:08,180 --> 00:02:13,700
+the<font color="#E5E5E5"> coding stack it crashed at at the</font>
+
+40
+00:02:11,480 --> 00:02:20,660
+point where the print name function<font color="#E5E5E5"> is</font>
+
+41
+00:02:13,700 --> 00:02:23,380
+called<font color="#E5E5E5"> so what happened let's analyze</font>
+
+42
+00:02:20,660 --> 00:02:26,210
+what has happened with this line<font color="#CCCCCC"> of code</font>
+
+43
+00:02:23,380 --> 00:02:28,100
+<font color="#E5E5E5">what happened over here is actually</font>
+
+44
+00:02:26,210 --> 00:02:30,400
+different for signals<font color="#E5E5E5"> past</font><font color="#CCCCCC"> eleven</font>
+
+45
+00:02:28,100 --> 00:02:32,960
+standard and for the older standard
+
+46
+00:02:30,400 --> 00:02:35,030
+today<font color="#E5E5E5"> will mainly talk about the older</font>
+
+47
+00:02:32,960 --> 00:02:40,220
+standard and in<font color="#E5E5E5"> the future we'll cover</font>
+
+48
+00:02:35,030 --> 00:02:42,500
+<font color="#CCCCCC">C+</font><font color="#E5E5E5"> 11 with the old standard this simple</font>
+
+49
+00:02:40,220 --> 00:02:46,570
+line of code actually<font color="#E5E5E5"> involves three</font>
+
+50
+00:02:42,500 --> 00:02:55,190
+operations step<font color="#E5E5E5"> one</font>
+
+51
+00:02:46,570 --> 00:02:55,700
+this person<font color="#CCCCCC"> George</font><font color="#E5E5E5"> is constructed step</font>
+
+52
+00:02:55,190 --> 00:03:04,730
+<font color="#CCCCCC">two</font>
+
+53
+00:02:55,700 --> 00:03:10,660
+a copy of George is saved in<font color="#E5E5E5"> the vector</font>
+
+54
+00:03:04,730 --> 00:03:10,660
+persons step three
+
+55
+00:03:10,819 --> 00:03:22,310
+this person George<font color="#CCCCCC"> is destroyed</font><font color="#E5E5E5"> there</font>
+
+56
+00:03:20,840 --> 00:03:24,859
+are a<font color="#E5E5E5"> couple of things that we need</font><font color="#CCCCCC"> to</font>
+
+57
+00:03:22,310 --> 00:03:27,620
+pay attention<font color="#E5E5E5"> to</font><font color="#CCCCCC"> first of all this</font>
+
+58
+00:03:24,859 --> 00:03:31,700
+person George<font color="#E5E5E5"> and this person in the</font>
+
+59
+00:03:27,620 --> 00:03:34,069
+vector<font color="#CCCCCC"> are not the same person they are</font>
+
+60
+00:03:31,700 --> 00:03:38,000
+identical but they are not<font color="#E5E5E5"> the same</font>
+
+61
+00:03:34,069 --> 00:03:42,319
+<font color="#CCCCCC">person</font><font color="#E5E5E5"> that different objects one person</font>
+
+62
+00:03:38,000 --> 00:03:44,750
+is copy of the other and<font color="#CCCCCC"> secondly when</font>
+
+63
+00:03:42,319 --> 00:03:47,298
+we<font color="#E5E5E5"> make</font><font color="#CCCCCC"> a copy</font><font color="#E5E5E5"> of this person George and</font>
+
+64
+00:03:44,750 --> 00:03:52,510
+saved in the vector<font color="#E5E5E5"> we are making a</font>
+
+65
+00:03:47,299 --> 00:03:52,510
+<font color="#CCCCCC">share low copy of this person</font><font color="#E5E5E5"> George</font>
+
+66
+00:03:52,930 --> 00:03:59,329
+<font color="#E5E5E5">because that's what the</font><font color="#CCCCCC"> default copy</font>
+
+67
+00:03:55,760 --> 00:04:02,599
+constructor would do so as<font color="#CCCCCC"> a result of</font>
+
+68
+00:03:59,329 --> 00:04:04,970
+that this person<font color="#CCCCCC"> George's pointer P</font><font color="#E5E5E5"> name</font>
+
+69
+00:04:02,599 --> 00:04:08,089
+and that<font color="#E5E5E5"> this person in the vectors</font>
+
+70
+00:04:04,970 --> 00:04:14,000
+pointer P name<font color="#E5E5E5"> are pointing to the</font><font color="#CCCCCC"> same</font>
+
+71
+00:04:08,090 --> 00:04:17,209
+object<font color="#CCCCCC"> of stream</font><font color="#E5E5E5"> and the lastly this</font>
+
+72
+00:04:14,000 --> 00:04:20,358
+person<font color="#E5E5E5"> George is our value which means</font>
+
+73
+00:04:17,209 --> 00:04:23,240
+<font color="#E5E5E5">it will be destroyed at the</font><font color="#CCCCCC"> end of</font><font color="#E5E5E5"> this</font>
+
+74
+00:04:20,358 --> 00:04:25,669
+statement<font color="#E5E5E5"> and when the person George is</font>
+
+75
+00:04:23,240 --> 00:04:28,610
+destroyed<font color="#CCCCCC"> it will call the destructor</font>
+
+76
+00:04:25,669 --> 00:04:32,570
+and we will delete<font color="#CCCCCC"> the object</font><font color="#E5E5E5"> that is</font>
+
+77
+00:04:28,610 --> 00:04:35,599
+pointing to by the<font color="#CCCCCC"> P</font><font color="#E5E5E5"> name pointer</font><font color="#CCCCCC"> and as</font>
+
+78
+00:04:32,570 --> 00:04:39,860
+a direct result of<font color="#E5E5E5"> that the person in</font>
+
+79
+00:04:35,599 --> 00:04:44,409
+the<font color="#E5E5E5"> vector whose pointer P name will be</font>
+
+80
+00:04:39,860 --> 00:04:47,240
+pointing to a deleted<font color="#E5E5E5"> object of stream</font>
+
+81
+00:04:44,409 --> 00:04:50,030
+so when we call the person<font color="#CCCCCC"> in the</font>
+
+82
+00:04:47,240 --> 00:04:53,650
+vectors print<font color="#E5E5E5"> name function it will</font>
+
+83
+00:04:50,030 --> 00:04:58,630
+access an object<font color="#CCCCCC"> that is</font><font color="#E5E5E5"> already deleted</font>
+
+84
+00:04:53,650 --> 00:04:58,630
+<font color="#E5E5E5">that is why this program has crashed</font>
+
+85
+00:04:59,080 --> 00:05:04,810
+so what should we<font color="#E5E5E5"> do with this kind of</font>
+
+86
+00:05:01,569 --> 00:05:08,289
+class there are<font color="#CCCCCC"> two</font><font color="#E5E5E5"> solution that you</font>
+
+87
+00:05:04,810 --> 00:05:10,479
+<font color="#E5E5E5">can use solution</font><font color="#CCCCCC"> number one is define</font>
+
+88
+00:05:08,289 --> 00:05:15,219
+copy constructor<font color="#E5E5E5"> and copy assignment</font>
+
+89
+00:05:10,479 --> 00:05:22,180
+operator for deep copy<font color="#E5E5E5"> so here let's</font>
+
+90
+00:05:15,220 --> 00:05:28,710
+define a copy constructor right hand
+
+91
+00:05:22,180 --> 00:05:28,710
+side value and we'll make a deep copy
+
+92
+00:05:39,860 --> 00:05:46,039
+and since we need to access<font color="#E5E5E5"> this private</font>
+
+93
+00:05:43,310 --> 00:05:50,110
+data member so we need to provide an
+
+94
+00:05:46,039 --> 00:05:50,110
+accessor<font color="#E5E5E5"> to</font><font color="#CCCCCC"> that data member</font>
+
+95
+00:06:00,660 --> 00:06:07,280
+and we should do the<font color="#E5E5E5"> same thing for copy</font>
+
+96
+00:06:04,200 --> 00:06:07,280
+assignment operator
+
+97
+00:06:19,930 --> 00:06:33,460
+and this one should also<font color="#CCCCCC"> do</font><font color="#E5E5E5"> deep</font><font color="#CCCCCC"> copying</font>
+
+98
+00:06:24,990 --> 00:06:37,750
+and now<font color="#E5E5E5"> if we</font><font color="#CCCCCC"> learn the program again it</font>
+
+99
+00:06:33,460 --> 00:06:44,349
+went<font color="#E5E5E5"> through</font><font color="#CCCCCC"> okay</font><font color="#E5E5E5"> and the second</font>
+
+100
+00:06:37,750 --> 00:06:51,419
+solution<font color="#E5E5E5"> for this is delete copy</font>
+
+101
+00:06:44,350 --> 00:06:57,160
+constructor and copy assignment operator
+
+102
+00:06:51,419 --> 00:06:59,490
+<font color="#E5E5E5">and we can do that by making the copy</font>
+
+103
+00:06:57,160 --> 00:07:02,919
+constructor and copy assignment operator
+
+104
+00:06:59,490 --> 00:07:05,889
+private functions so<font color="#CCCCCC"> that nobody</font><font color="#E5E5E5"> else</font>
+
+105
+00:07:02,919 --> 00:07:08,680
+can use<font color="#E5E5E5"> them</font><font color="#CCCCCC"> and better yet</font><font color="#E5E5E5"> we can</font>
+
+106
+00:07:05,889 --> 00:07:12,190
+<font color="#E5E5E5">remove the definition of these two</font>
+
+107
+00:07:08,680 --> 00:07:14,590
+functions<font color="#CCCCCC"> so that even the person's</font>
+
+108
+00:07:12,190 --> 00:07:19,180
+children and<font color="#E5E5E5"> friends cannot use these</font>
+
+109
+00:07:14,590 --> 00:07:21,400
+two functions<font color="#E5E5E5"> so now we have two</font>
+
+110
+00:07:19,180 --> 00:07:25,810
+<font color="#CCCCCC">solutions</font><font color="#E5E5E5"> solution one and a</font><font color="#CCCCCC"> solution to</font>
+
+111
+00:07:21,400 --> 00:07:28,870
+which one should<font color="#CCCCCC"> we prefer personally I</font>
+
+112
+00:07:25,810 --> 00:07:30,909
+prefer<font color="#E5E5E5"> the second solution delete the</font>
+
+113
+00:07:28,870 --> 00:07:34,810
+copy constructor and the copy assignment
+
+114
+00:07:30,909 --> 00:07:37,479
+operator<font color="#E5E5E5"> if you think about it there's</font>
+
+115
+00:07:34,810 --> 00:07:39,729
+<font color="#CCCCCC">rarely the case where you</font><font color="#E5E5E5"> have to define</font>
+
+116
+00:07:37,479 --> 00:07:43,870
+a copy constructor<font color="#E5E5E5"> and a copy assignment</font>
+
+117
+00:07:39,729 --> 00:07:46,419
+operator one common place<font color="#CCCCCC"> where you want</font>
+
+118
+00:07:43,870 --> 00:07:50,259
+to define<font color="#E5E5E5"> these two functions is when</font>
+
+119
+00:07:46,419 --> 00:07:52,900
+you are working with<font color="#E5E5E5"> STL containers STL</font>
+
+120
+00:07:50,259 --> 00:07:54,820
+container<font color="#E5E5E5"> requires</font><font color="#CCCCCC"> there contain need to</font>
+
+121
+00:07:52,900 --> 00:07:58,508
+be<font color="#CCCCCC"> copy</font><font color="#E5E5E5"> constructible and copy</font>
+
+122
+00:07:54,820 --> 00:08:01,539
+assignable but we can easily<font color="#E5E5E5"> work around</font>
+
+123
+00:07:58,509 --> 00:08:04,360
+this by saving an<font color="#CCCCCC"> object's pointer in</font>
+
+124
+00:08:01,539 --> 00:08:07,419
+the containers<font color="#E5E5E5"> instead</font><font color="#CCCCCC"> of for the object</font>
+
+125
+00:08:04,360 --> 00:08:10,840
+itself<font color="#E5E5E5"> and when we push back we push it</font>
+
+126
+00:08:07,419 --> 00:08:14,289
+back a pointer of the<font color="#E5E5E5"> person and when we</font>
+
+127
+00:08:10,840 --> 00:08:16,479
+call the print<font color="#CCCCCC"> named</font><font color="#E5E5E5"> function we use the</font>
+
+128
+00:08:14,289 --> 00:08:18,789
+pointers syntax
+
+129
+00:08:16,480 --> 00:08:23,410
+and of course we need<font color="#CCCCCC"> to remember to</font>
+
+130
+00:08:18,790 --> 00:08:27,700
+<font color="#E5E5E5">delete all the objects later on so this</font>
+
+131
+00:08:23,410 --> 00:08:29,980
+<font color="#E5E5E5">will</font><font color="#CCCCCC"> work as we expected however</font><font color="#E5E5E5"> even</font>
+
+132
+00:08:27,700 --> 00:08:32,130
+though we can live without<font color="#E5E5E5"> the copy</font>
+
+133
+00:08:29,980 --> 00:08:35,080
+<font color="#E5E5E5">construct and copy assignment operator</font>
+
+134
+00:08:32,130 --> 00:08:39,760
+<font color="#E5E5E5">sometimes we do need</font><font color="#CCCCCC"> to</font><font color="#E5E5E5"> make a copy of</font>
+
+135
+00:08:35,080 --> 00:08:43,960
+<font color="#CCCCCC">object</font><font color="#E5E5E5"> how can we do that if we don't</font>
+
+136
+00:08:39,760 --> 00:08:47,040
+have<font color="#CCCCCC"> these two functions we can define a</font>
+
+137
+00:08:43,960 --> 00:08:47,040
+clone function
+
+138
+00:08:57,440 --> 00:09:05,640
+so this chrome function will return<font color="#E5E5E5"> an</font>
+
+139
+00:09:00,450 --> 00:09:07,500
+identical copy<font color="#E5E5E5"> of this object itself you</font>
+
+140
+00:09:05,640 --> 00:09:09,780
+can find all the<font color="#E5E5E5"> places where the</font>
+
+141
+00:09:07,500 --> 00:09:14,360
+copying has happened by grabbing the
+
+142
+00:09:09,780 --> 00:09:14,360
+<font color="#E5E5E5">function</font><font color="#CCCCCC"> name clone of all your code</font>
+
+143
+00:09:14,720 --> 00:09:21,630
+the problem with copy constructor is it
+
+144
+00:09:18,090 --> 00:09:23,550
+is<font color="#E5E5E5"> making the copying implicit the</font>
+
+145
+00:09:21,630 --> 00:09:25,950
+copying<font color="#E5E5E5"> can happen implicitly</font>
+
+146
+00:09:23,550 --> 00:09:28,680
+when an<font color="#E5E5E5"> object is passed as a parameter</font>
+
+147
+00:09:25,950 --> 00:09:33,150
+<font color="#CCCCCC">to another function or being returned</font>
+
+148
+00:09:28,680 --> 00:09:35,489
+from another<font color="#CCCCCC"> function</font><font color="#E5E5E5"> an implicit AKOP</font>
+
+149
+00:09:33,150 --> 00:09:40,079
+<font color="#CCCCCC">eing</font><font color="#E5E5E5"> is</font><font color="#CCCCCC"> oftentimes the place where the</font>
+
+150
+00:09:35,490 --> 00:09:42,600
+<font color="#E5E5E5">bugger is introduced so</font><font color="#CCCCCC"> our solution to</font>
+
+151
+00:09:40,080 --> 00:09:46,260
+<font color="#E5E5E5">is delete copy constructor and copy</font>
+
+152
+00:09:42,600 --> 00:09:52,020
+<font color="#CCCCCC">assignment</font><font color="#E5E5E5"> operator and the define clone</font>
+
+153
+00:09:46,260 --> 00:09:54,660
+function so in summary anytime you have
+
+154
+00:09:52,020 --> 00:09:57,960
+one object<font color="#E5E5E5"> owning another object</font><font color="#CCCCCC"> through</font>
+
+155
+00:09:54,660 --> 00:10:01,650
+its pointer<font color="#E5E5E5"> like this you have</font><font color="#CCCCCC"> to do one</font>
+
+156
+00:09:57,960 --> 00:10:03,630
+of<font color="#E5E5E5"> these two things first one is define</font>
+
+157
+00:10:01,650 --> 00:10:06,540
+copy construct and copy assignment
+
+158
+00:10:03,630 --> 00:10:09,060
+operator for deep copying and second one
+
+159
+00:10:06,540 --> 00:10:11,569
+is delete the copy constructor and<font color="#E5E5E5"> a</font>
+
+160
+00:10:09,060 --> 00:10:13,920
+copy assignment operator
+
+161
+00:10:11,570 --> 00:10:16,110
+thank you for watching feel free to
+
+162
+00:10:13,920 --> 00:10:18,180
+<font color="#E5E5E5">subscribe to</font><font color="#CCCCCC"> my channel and check out</font>
+
+163
+00:10:16,110 --> 00:10:20,330
+the other videos<font color="#E5E5E5"> I have see you next</font>
+
+164
+00:10:18,180 --> 00:10:20,329
+time
+

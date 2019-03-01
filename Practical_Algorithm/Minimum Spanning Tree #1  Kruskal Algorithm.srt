@@ -1,0 +1,564 @@
+﻿1
+00:00:00,230 --> 00:00:05,460
+hello everyone today<font color="#CCCCCC"> we</font><font color="#E5E5E5"> will find</font>
+
+2
+00:00:02,730 --> 00:00:08,820
+minimum<font color="#E5E5E5"> spanning tree with classical air</font>
+
+3
+00:00:05,460 --> 00:00:12,179
+exam<font color="#E5E5E5"> classical algorithm is implemented</font>
+
+4
+00:00:08,820 --> 00:00:15,629
+<font color="#E5E5E5">with</font><font color="#CCCCCC"> disjoint</font><font color="#E5E5E5"> sets so my previous video</font>
+
+5
+00:00:12,179 --> 00:00:20,160
+on disjoint sets<font color="#E5E5E5"> is a prerequisite for</font>
+
+6
+00:00:15,630 --> 00:00:22,650
+this<font color="#E5E5E5"> video in previous video we have</font>
+
+7
+00:00:20,160 --> 00:00:25,170
+talked about disjoint set and how it
+
+8
+00:00:22,650 --> 00:00:28,979
+operates but we<font color="#E5E5E5"> haven't talked about how</font>
+
+9
+00:00:25,170 --> 00:00:32,160
+<font color="#CCCCCC">this joint sets can be useful today</font>
+
+10
+00:00:28,980 --> 00:00:35,880
+we'll use disjoint set<font color="#E5E5E5"> to find the</font>
+
+11
+00:00:32,159 --> 00:00:39,239
+<font color="#E5E5E5">minimum spanning tree of a graph what is</font>
+
+12
+00:00:35,880 --> 00:00:42,210
+<font color="#E5E5E5">minimum spanning tree so this is the</font>
+
+13
+00:00:39,239 --> 00:00:46,110
+graph that<font color="#E5E5E5"> we</font><font color="#CCCCCC"> have it has a bunch</font><font color="#E5E5E5"> of</font>
+
+14
+00:00:42,210 --> 00:00:51,360
+vertices and a bunch of<font color="#CCCCCC"> edges each edge</font>
+
+15
+00:00:46,110 --> 00:00:54,719
+has<font color="#E5E5E5"> a weight the minimum spanning tree</font>
+
+16
+00:00:51,360 --> 00:00:57,300
+is a subset of<font color="#CCCCCC"> edges that</font><font color="#E5E5E5"> connects all</font>
+
+17
+00:00:54,719 --> 00:01:01,710
+the vertices in<font color="#CCCCCC"> the graph and it has</font>
+
+18
+00:00:57,300 --> 00:01:06,470
+minimum<font color="#E5E5E5"> total weight so in this case the</font>
+
+19
+00:01:01,710 --> 00:01:09,180
+<font color="#E5E5E5">minimum spanning tree is CF</font><font color="#CCCCCC"> AF</font><font color="#E5E5E5"> and a B</font>
+
+20
+00:01:06,470 --> 00:01:12,720
+because they connect all the vertices<font color="#CCCCCC"> in</font>
+
+21
+00:01:09,180 --> 00:01:16,470
+<font color="#CCCCCC">the graph</font><font color="#E5E5E5"> and they have the minimum</font>
+
+22
+00:01:12,720 --> 00:01:19,229
+total weight so the problem we<font color="#E5E5E5"> want to</font>
+
+23
+00:01:16,470 --> 00:01:23,539
+solve is given a graph<font color="#CCCCCC"> with weighted</font>
+
+24
+00:01:19,229 --> 00:01:26,460
+edges find its minimum spanning tree
+
+25
+00:01:23,540 --> 00:01:28,400
+today<font color="#E5E5E5"> we'll use classical algorithm to</font>
+
+26
+00:01:26,460 --> 00:01:31,530
+find<font color="#CCCCCC"> the minimum spanning tree and</font>
+
+27
+00:01:28,400 --> 00:01:33,170
+classical algorithm utilizes disjoint
+
+28
+00:01:31,530 --> 00:01:36,299
+sets
+
+29
+00:01:33,170 --> 00:01:40,380
+<font color="#E5E5E5">you call that disjoint sets has two</font>
+
+30
+00:01:36,299 --> 00:01:42,270
+operations find and<font color="#CCCCCC"> Union find we'll</font>
+
+31
+00:01:40,380 --> 00:01:44,759
+take an<font color="#CCCCCC"> item and then return the</font>
+
+32
+00:01:42,270 --> 00:01:47,610
+disjoint set that item belongs to and
+
+33
+00:01:44,759 --> 00:01:50,430
+the<font color="#CCCCCC"> Union will merge the two disjoint</font>
+
+34
+00:01:47,610 --> 00:01:54,539
+sets of these two<font color="#CCCCCC"> items into one</font>
+
+35
+00:01:50,430 --> 00:01:56,790
+disjoint set so<font color="#E5E5E5"> now let's talk about the</font>
+
+36
+00:01:54,540 --> 00:02:01,990
+classical algorithm
+
+37
+00:01:56,790 --> 00:02:05,020
+we define a a is used to<font color="#E5E5E5"> store all the</font>
+
+38
+00:02:01,990 --> 00:02:07,780
+edges of the<font color="#E5E5E5"> minimum</font><font color="#CCCCCC"> spanning tree</font><font color="#E5E5E5"> so</font>
+
+39
+00:02:05,020 --> 00:02:12,180
+initially<font color="#E5E5E5"> a is empty and eventually</font>
+
+40
+00:02:07,780 --> 00:02:16,780
+<font color="#CCCCCC">we'll return</font><font color="#E5E5E5"> a then for each vertex of</font>
+
+41
+00:02:12,180 --> 00:02:20,920
+the graph<font color="#CCCCCC"> make a disjoint set</font><font color="#E5E5E5"> with that</font>
+
+42
+00:02:16,780 --> 00:02:24,990
+vertex<font color="#E5E5E5"> so each vertex will</font><font color="#CCCCCC"> be used to</font>
+
+43
+00:02:20,920 --> 00:02:29,910
+<font color="#E5E5E5">create</font><font color="#CCCCCC"> like single vertex disjoint</font><font color="#E5E5E5"> set</font>
+
+44
+00:02:24,990 --> 00:02:33,280
+and then sort all<font color="#E5E5E5"> the edges by weight</font>
+
+45
+00:02:29,910 --> 00:02:35,350
+increasingly so the edge with smallest
+
+46
+00:02:33,280 --> 00:02:37,990
+weight will be in the<font color="#E5E5E5"> front and the</font>
+
+47
+00:02:35,350 --> 00:02:43,150
+edges with biggest weight will be in the
+
+48
+00:02:37,990 --> 00:02:46,540
+end<font color="#E5E5E5"> and then for each edge that connects</font>
+
+49
+00:02:43,150 --> 00:02:47,500
+<font color="#E5E5E5">v1 and v2 the smallest edge will be</font>
+
+50
+00:02:46,540 --> 00:02:51,910
+<font color="#E5E5E5">taken first</font>
+
+51
+00:02:47,500 --> 00:02:55,750
+if the disjoint set of v1<font color="#E5E5E5"> is not the</font>
+
+52
+00:02:51,910 --> 00:03:01,420
+same as the<font color="#CCCCCC"> disjoint</font><font color="#E5E5E5"> set of v2 then we</font>
+
+53
+00:02:55,750 --> 00:03:04,660
+push that edge<font color="#CCCCCC"> into a and then merge the</font>
+
+54
+00:03:01,420 --> 00:03:09,640
+disjoint sets of v1<font color="#CCCCCC"> and v2</font><font color="#E5E5E5"> into one</font>
+
+55
+00:03:04,660 --> 00:03:12,420
+disjoint set now let's use this<font color="#E5E5E5"> example</font>
+
+56
+00:03:09,640 --> 00:03:15,640
+of graph to walk through the<font color="#E5E5E5"> algorithm</font>
+
+57
+00:03:12,420 --> 00:03:21,220
+first<font color="#E5E5E5"> we take the edge with smallest</font>
+
+58
+00:03:15,640 --> 00:03:23,920
+weight which is<font color="#CCCCCC"> CF</font><font color="#E5E5E5"> and it's in C and F</font>
+
+59
+00:03:21,220 --> 00:03:26,890
+do<font color="#CCCCCC"> not belong to the same disjoint set</font>
+
+60
+00:03:23,920 --> 00:03:33,010
+so we go<font color="#CCCCCC"> ahead and merge them and push</font>
+
+61
+00:03:26,890 --> 00:03:36,850
+the edge<font color="#E5E5E5"> into a and next one is</font><font color="#CCCCCC"> AF which</font>
+
+62
+00:03:33,010 --> 00:03:39,399
+has the weight of<font color="#CCCCCC"> two and again a</font><font color="#E5E5E5"> and F</font>
+
+63
+00:03:36,850 --> 00:03:44,319
+do not<font color="#E5E5E5"> belong to the same disjoint</font><font color="#CCCCCC"> set</font>
+
+64
+00:03:39,400 --> 00:03:48,400
+so merge them<font color="#E5E5E5"> and push</font><font color="#CCCCCC"> them into a</font>
+
+65
+00:03:44,319 --> 00:03:52,379
+next is de de<font color="#E5E5E5"> do not belong</font><font color="#CCCCCC"> to the same</font>
+
+66
+00:03:48,400 --> 00:03:57,280
+disjoint set merge and push to the<font color="#E5E5E5"> a</font>
+
+67
+00:03:52,379 --> 00:04:00,159
+next<font color="#E5E5E5"> one is</font><font color="#CCCCCC"> CD note that</font><font color="#E5E5E5"> CFA belong to</font>
+
+68
+00:03:57,280 --> 00:04:03,400
+the same disjoint<font color="#E5E5E5"> set and de belong to</font>
+
+69
+00:04:00,159 --> 00:04:05,459
+the same disjoint<font color="#E5E5E5"> is set so C</font><font color="#CCCCCC"> and D do</font>
+
+70
+00:04:03,400 --> 00:04:11,230
+not belong<font color="#E5E5E5"> to the same set</font>
+
+71
+00:04:05,459 --> 00:04:16,988
+so again<font color="#E5E5E5"> merge them and push to a next</font>
+
+72
+00:04:11,230 --> 00:04:19,988
+one is f e now<font color="#E5E5E5"> a</font><font color="#CCCCCC"> F CDE</font><font color="#E5E5E5"> all belong to the</font>
+
+73
+00:04:16,988 --> 00:04:23,609
+<font color="#CCCCCC">same</font><font color="#E5E5E5"> set so f e belong to the same set</font>
+
+74
+00:04:19,988 --> 00:04:28,388
+so we should<font color="#E5E5E5"> not push this edge into</font><font color="#CCCCCC"> a</font>
+
+75
+00:04:23,610 --> 00:04:34,240
+next one is a B and a B do<font color="#CCCCCC"> not belong to</font>
+
+76
+00:04:28,389 --> 00:04:36,220
+the same set so merge<font color="#E5E5E5"> and push now we</font>
+
+77
+00:04:34,240 --> 00:04:38,710
+have a spanning<font color="#CCCCCC"> tree that connects all</font>
+
+78
+00:04:36,220 --> 00:04:41,470
+the vertices<font color="#E5E5E5"> and we believe this</font>
+
+79
+00:04:38,710 --> 00:04:46,388
+spanning tree has the<font color="#E5E5E5"> minimum</font><font color="#CCCCCC"> total</font>
+
+80
+00:04:41,470 --> 00:04:49,240
+weight now let's look at<font color="#CCCCCC"> our code our</font>
+
+81
+00:04:46,389 --> 00:04:54,010
+graph is<font color="#CCCCCC"> represented with</font><font color="#E5E5E5"> a vector of</font>
+
+82
+00:04:49,240 --> 00:04:57,520
+vertices<font color="#E5E5E5"> and a vector of edges</font><font color="#CCCCCC"> an edge</font>
+
+83
+00:04:54,010 --> 00:05:03,430
+is modeled with<font color="#E5E5E5"> two vertices</font><font color="#CCCCCC"> that the</font>
+
+84
+00:04:57,520 --> 00:05:06,490
+edge connects and a weight in the<font color="#CCCCCC"> main</font>
+
+85
+00:05:03,430 --> 00:05:12,039
+<font color="#E5E5E5">function I create a graph and its</font>
+
+86
+00:05:06,490 --> 00:05:15,000
+vertices<font color="#E5E5E5"> contains ABCDE F and it has all</font>
+
+87
+00:05:12,039 --> 00:05:18,039
+the edges<font color="#CCCCCC"> that connects the vertices</font>
+
+88
+00:05:15,000 --> 00:05:20,340
+essentially I'm creating a graph like
+
+89
+00:05:18,039 --> 00:05:20,340
+<font color="#CCCCCC">this</font>
+
+90
+00:05:21,380 --> 00:05:29,030
+and then I call<font color="#E5E5E5"> the function classical</font>
+
+91
+00:05:25,030 --> 00:05:32,119
+with the graph as its parameter<font color="#E5E5E5"> this</font>
+
+92
+00:05:29,030 --> 00:05:36,409
+<font color="#E5E5E5">will use classical algorithm to find the</font>
+
+93
+00:05:32,120 --> 00:05:40,220
+<font color="#E5E5E5">minimum spanning tree this is the data</font>
+
+94
+00:05:36,410 --> 00:05:42,500
+structure of disjoint set we use<font color="#E5E5E5"> parent</font>
+
+95
+00:05:40,220 --> 00:05:45,170
+<font color="#E5E5E5">to record the parental relationship</font>
+
+96
+00:05:42,500 --> 00:05:48,310
+between the vertices<font color="#E5E5E5"> and they use the</font>
+
+97
+00:05:45,170 --> 00:05:51,560
+rank<font color="#E5E5E5"> to record the depth of the tree</font>
+
+98
+00:05:48,310 --> 00:05:53,930
+remember the purpose<font color="#E5E5E5"> of the rank is to</font>
+
+99
+00:05:51,560 --> 00:05:57,500
+<font color="#E5E5E5">flatten the tree so</font><font color="#CCCCCC"> that we have better</font>
+
+100
+00:05:53,930 --> 00:05:59,330
+performance<font color="#CCCCCC"> of</font><font color="#E5E5E5"> the find function the</font>
+
+101
+00:05:57,500 --> 00:06:00,980
+find function<font color="#E5E5E5"> and a union function are</font>
+
+102
+00:05:59,330 --> 00:06:05,090
+<font color="#E5E5E5">the same function</font><font color="#CCCCCC"> that we talked about</font>
+
+103
+00:06:00,980 --> 00:06:07,400
+<font color="#E5E5E5">last time we have added another function</font>
+
+104
+00:06:05,090 --> 00:06:10,369
+called mix set which will take one
+
+105
+00:06:07,400 --> 00:06:18,890
+vertex<font color="#E5E5E5"> and make a single vertex disjoint</font>
+
+106
+00:06:10,370 --> 00:06:20,270
+set and initialize<font color="#E5E5E5"> its rank to</font><font color="#CCCCCC"> zero this</font>
+
+107
+00:06:18,890 --> 00:06:23,539
+<font color="#E5E5E5">is the classical function that</font>
+
+108
+00:06:20,270 --> 00:06:27,349
+implements classical algorithm first we
+
+109
+00:06:23,540 --> 00:06:30,320
+create a a a is<font color="#CCCCCC"> a</font><font color="#E5E5E5"> vector of edge and a</font>
+
+110
+00:06:27,350 --> 00:06:35,510
+will be used<font color="#E5E5E5"> to store all the edges of</font>
+
+111
+00:06:30,320 --> 00:06:38,840
+the minimum<font color="#CCCCCC"> spanky</font><font color="#E5E5E5"> and then we take each</font>
+
+112
+00:06:35,510 --> 00:06:43,250
+vertex of the graph and make<font color="#E5E5E5"> it a single</font>
+
+113
+00:06:38,840 --> 00:06:47,560
+<font color="#E5E5E5">vertex</font><font color="#CCCCCC"> disjoint a set and then sort all</font>
+
+114
+00:06:43,250 --> 00:06:51,080
+the edges according<font color="#E5E5E5"> to their weight and</font>
+
+115
+00:06:47,560 --> 00:06:54,110
+then take each edge<font color="#E5E5E5"> find that the loot</font>
+
+116
+00:06:51,080 --> 00:06:57,349
+of its first vertex<font color="#E5E5E5"> find out the loot of</font>
+
+117
+00:06:54,110 --> 00:07:00,680
+its second<font color="#E5E5E5"> vertex and if root</font><font color="#CCCCCC"> one and</font>
+
+118
+00:06:57,350 --> 00:07:04,610
+the loot two are not<font color="#CCCCCC"> the</font><font color="#E5E5E5"> same loot we</font>
+
+119
+00:07:00,680 --> 00:07:07,550
+push the edge into<font color="#CCCCCC"> a and then call Union</font>
+
+120
+00:07:04,610 --> 00:07:10,130
+root one and loot two this<font color="#E5E5E5"> will merge</font>
+
+121
+00:07:07,550 --> 00:07:14,670
+the disjoint set of vertex<font color="#E5E5E5"> one and</font>
+
+122
+00:07:10,130 --> 00:07:17,469
+vertex<font color="#E5E5E5"> two into one disjoint set</font>
+
+123
+00:07:14,670 --> 00:07:20,730
+so by the end<font color="#CCCCCC"> of this loop we'll find</font>
+
+124
+00:07:17,470 --> 00:07:23,470
+the minimum spanning tree<font color="#CCCCCC"> of the graph</font>
+
+125
+00:07:20,730 --> 00:07:28,560
+let's print<font color="#E5E5E5"> out the minimum spanning</font>
+
+126
+00:07:23,470 --> 00:07:28,560
+tree and run the program
+
+127
+00:07:32,599 --> 00:07:40,159
+so this is the minimum<font color="#CCCCCC"> spanning tree</font>
+
+128
+00:07:35,400 --> 00:07:43,500
+<font color="#E5E5E5">computed by our classical function and</font>
+
+129
+00:07:40,159 --> 00:07:46,800
+it's the same<font color="#E5E5E5"> result as what we have</font>
+
+130
+00:07:43,500 --> 00:07:49,080
+manually computed now let's consider
+
+131
+00:07:46,800 --> 00:07:53,819
+what's the complexity<font color="#CCCCCC"> of this algorithm</font>
+
+132
+00:07:49,080 --> 00:08:04,940
+<font color="#E5E5E5">the</font><font color="#CCCCCC"> sorting will take the</font><font color="#E5E5E5"> complexity of</font>
+
+133
+00:07:53,819 --> 00:08:08,280
+e<font color="#E5E5E5"> timings of log</font><font color="#CCCCCC"> E and this is e</font><font color="#E5E5E5"> and</font>
+
+134
+00:08:04,940 --> 00:08:11,550
+since we have used the<font color="#E5E5E5"> link to flatten</font>
+
+135
+00:08:08,280 --> 00:08:15,900
+the tree we can assume both find and
+
+136
+00:08:11,550 --> 00:08:18,270
+<font color="#E5E5E5">Union to be very fast so the performance</font>
+
+137
+00:08:15,900 --> 00:08:22,710
+<font color="#E5E5E5">of this algorithm is dominated by</font><font color="#CCCCCC"> the</font>
+
+138
+00:08:18,270 --> 00:08:24,508
+sort algorithm<font color="#E5E5E5"> that's all for today feel</font>
+
+139
+00:08:22,710 --> 00:08:26,609
+free<font color="#CCCCCC"> to subscribe</font><font color="#E5E5E5"> to my channel</font><font color="#CCCCCC"> and</font>
+
+140
+00:08:24,509 --> 00:08:29,539
+check<font color="#CCCCCC"> out the other videos I have</font>
+
+141
+00:08:26,610 --> 00:08:29,539
+<font color="#CCCCCC">bye-bye</font>
+

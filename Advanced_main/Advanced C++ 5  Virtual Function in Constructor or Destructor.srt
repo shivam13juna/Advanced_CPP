@@ -1,0 +1,360 @@
+﻿1
+00:00:07,400 --> 00:00:12,389
+hello everyone today<font color="#CCCCCC"> I'm going to show</font>
+
+2
+00:00:10,170 --> 00:00:14,660
+<font color="#E5E5E5">you a pitfall in calling virtual</font>
+
+3
+00:00:12,389 --> 00:00:17,310
+function in constructor<font color="#CCCCCC"> or destructor</font>
+
+4
+00:00:14,660 --> 00:00:20,279
+<font color="#E5E5E5">let's look at our example we have</font><font color="#CCCCCC"> a</font>
+
+5
+00:00:17,310 --> 00:00:23,339
+class dog and dogs constructor<font color="#E5E5E5"> prints</font>
+
+6
+00:00:20,279 --> 00:00:27,210
+out dog born and dogs<font color="#CCCCCC"> bark function</font>
+
+7
+00:00:23,339 --> 00:00:30,390
+<font color="#E5E5E5">print out I'm just</font><font color="#CCCCCC"> a dog</font><font color="#E5E5E5"> and dog also</font>
+
+8
+00:00:27,210 --> 00:00:34,530
+has a<font color="#CCCCCC"> seek add function in a dog see a</font>
+
+9
+00:00:30,390 --> 00:00:36,930
+cat<font color="#E5E5E5"> big box yellow dog is derived from</font>
+
+10
+00:00:34,530 --> 00:00:39,600
+dog and the yellow dog is constructor
+
+11
+00:00:36,930 --> 00:00:42,989
+printout yellow dog<font color="#E5E5E5"> born and the yellow</font>
+
+12
+00:00:39,600 --> 00:00:45,449
+dog box<font color="#CCCCCC"> I'm</font><font color="#E5E5E5"> a yellow dog in the main</font>
+
+13
+00:00:42,989 --> 00:00:49,379
+<font color="#E5E5E5">function I created a yellow dog D and</font>
+
+14
+00:00:45,449 --> 00:00:53,879
+then called<font color="#E5E5E5"> D dot C cat let's run the</font>
+
+15
+00:00:49,379 --> 00:00:56,489
+program<font color="#CCCCCC"> so when I created the yellow</font>
+
+16
+00:00:53,879 --> 00:00:59,099
+double<font color="#E5E5E5"> D it first called the</font><font color="#CCCCCC"> dog's</font>
+
+17
+00:00:56,489 --> 00:01:01,349
+constructor and the<font color="#CCCCCC"> printout dog-bone</font>
+
+18
+00:00:59,100 --> 00:01:03,719
+<font color="#E5E5E5">and then it</font><font color="#CCCCCC"> called yellow dogs</font>
+
+19
+00:01:01,350 --> 00:01:08,430
+constructor<font color="#E5E5E5"> and cleaned out yellow</font><font color="#CCCCCC"> dot</font>
+
+20
+00:01:03,719 --> 00:01:11,940
+<font color="#CCCCCC">born</font><font color="#E5E5E5"> and then it caused</font><font color="#CCCCCC"> seed cat</font><font color="#E5E5E5"> and C</font>
+
+21
+00:01:08,430 --> 00:01:14,900
+cat<font color="#E5E5E5"> cause the bulk function and and the</font>
+
+22
+00:01:11,940 --> 00:01:19,470
+<font color="#E5E5E5">bunk function prints out I'm just</font><font color="#CCCCCC"> a dog</font>
+
+23
+00:01:14,900 --> 00:01:22,200
+even<font color="#CCCCCC"> though this is a yellow dog to help</font>
+
+24
+00:01:19,470 --> 00:01:28,230
+the dog to<font color="#CCCCCC"> be honest we have to make</font>
+
+25
+00:01:22,200 --> 00:01:31,200
+this bark function virtual the version
+
+26
+00:01:28,230 --> 00:01:33,450
+is of a function<font color="#E5E5E5"> can be inherited so the</font>
+
+27
+00:01:31,200 --> 00:01:35,940
+yellow dogs bark function<font color="#E5E5E5"> automatically</font>
+
+28
+00:01:33,450 --> 00:01:39,180
+becomes a virtual function<font color="#CCCCCC"> but in</font>
+
+29
+00:01:35,940 --> 00:01:40,950
+practice it<font color="#CCCCCC"> is a good idea to always put</font>
+
+30
+00:01:39,180 --> 00:01:44,520
+a virtual keyword<font color="#E5E5E5"> in front of the</font>
+
+31
+00:01:40,950 --> 00:01:46,490
+function<font color="#E5E5E5"> to make it explicit that this</font>
+
+32
+00:01:44,520 --> 00:01:52,548
+is a virtual<font color="#E5E5E5"> function</font>
+
+33
+00:01:46,490 --> 00:01:56,000
+and now let's learn<font color="#E5E5E5"> the</font><font color="#CCCCCC"> program</font><font color="#E5E5E5"> the dog</font>
+
+34
+00:01:52,549 --> 00:01:59,300
+<font color="#E5E5E5">box I'm a yellow dog so when the</font><font color="#CCCCCC"> Seacat</font>
+
+35
+00:01:56,000 --> 00:02:02,780
+function invoke the<font color="#CCCCCC"> bug function it</font>
+
+36
+00:01:59,300 --> 00:02:06,440
+realized that this this object is a
+
+37
+00:02:02,780 --> 00:02:10,759
+yellow dog<font color="#E5E5E5"> so it invokes the yellow dogs</font>
+
+38
+00:02:06,440 --> 00:02:14,000
+function this<font color="#E5E5E5"> is the power of dynamic</font>
+
+39
+00:02:10,758 --> 00:02:16,579
+binding<font color="#E5E5E5"> as long as the D is a yellow dog</font>
+
+40
+00:02:14,000 --> 00:02:19,730
+<font color="#CCCCCC">it will always call a yellow dogs</font>
+
+41
+00:02:16,580 --> 00:02:21,950
+virtual function<font color="#E5E5E5"> today I'm going to show</font>
+
+42
+00:02:19,730 --> 00:02:27,679
+you<font color="#E5E5E5"> a scenario where this</font><font color="#CCCCCC"> idea</font><font color="#E5E5E5"> of</font>
+
+43
+00:02:21,950 --> 00:02:32,149
+dynamic<font color="#E5E5E5"> binding is not</font><font color="#CCCCCC"> working let's say</font>
+
+44
+00:02:27,680 --> 00:02:34,640
+the bark function is invoked<font color="#E5E5E5"> inside the</font>
+
+45
+00:02:32,150 --> 00:02:40,370
+docs constructor and to see what
+
+46
+00:02:34,640 --> 00:02:43,488
+happened this<font color="#E5E5E5"> spark function prints out</font>
+
+47
+00:02:40,370 --> 00:02:45,800
+I'm<font color="#E5E5E5"> just a dog even</font><font color="#CCCCCC"> though the bark</font>
+
+48
+00:02:43,489 --> 00:02:48,140
+function is a virtual function<font color="#CCCCCC"> and we</font>
+
+49
+00:02:45,800 --> 00:02:51,320
+<font color="#E5E5E5">know that the</font><font color="#CCCCCC"> object being created is a</font>
+
+50
+00:02:48,140 --> 00:02:57,109
+yellow dog<font color="#CCCCCC"> it is still calling</font><font color="#E5E5E5"> the dogs</font>
+
+51
+00:02:51,320 --> 00:02:59,720
+bark function so what happened when
+
+52
+00:02:57,110 --> 00:03:02,239
+yellow<font color="#E5E5E5"> dog D is created before it</font>
+
+53
+00:02:59,720 --> 00:03:07,430
+calling the yellow dogs constructor<font color="#E5E5E5"> it</font>
+
+54
+00:03:02,239 --> 00:03:10,040
+first call the<font color="#CCCCCC"> dogs constructor so at</font>
+
+55
+00:03:07,430 --> 00:03:13,220
+this<font color="#E5E5E5"> point the constructor</font><font color="#CCCCCC"> of the yellow</font>
+
+56
+00:03:10,040 --> 00:03:17,328
+dog is not executed<font color="#E5E5E5"> yet in other words</font>
+
+57
+00:03:13,220 --> 00:03:19,820
+the yellow dog is not constructed yet we
+
+58
+00:03:17,329 --> 00:03:22,489
+all<font color="#E5E5E5"> know it is dangerous to call the</font>
+
+59
+00:03:19,820 --> 00:03:25,640
+member function<font color="#E5E5E5"> of an object that is not</font>
+
+60
+00:03:22,489 --> 00:03:29,630
+constructed yet unless<font color="#E5E5E5"> that function is</font>
+
+61
+00:03:25,640 --> 00:03:32,208
+a static function so the compiler is
+
+62
+00:03:29,630 --> 00:03:36,019
+doing the second best thing which is
+
+63
+00:03:32,209 --> 00:03:38,000
+calling the dogs<font color="#E5E5E5"> own bark function so</font>
+
+64
+00:03:36,019 --> 00:03:40,519
+this<font color="#CCCCCC"> Park function behaves like a</font>
+
+65
+00:03:38,000 --> 00:03:44,020
+non-virtual function when it is imposed
+
+66
+00:03:40,519 --> 00:03:46,550
+inside a<font color="#CCCCCC"> constructor</font>
+
+67
+00:03:44,020 --> 00:03:49,280
+the conclusion we're getting from this
+
+68
+00:03:46,550 --> 00:03:52,280
+<font color="#CCCCCC">example is we should avoid calling</font>
+
+69
+00:03:49,280 --> 00:03:54,290
+virtual function in<font color="#E5E5E5"> a constructor the</font>
+
+70
+00:03:52,280 --> 00:03:57,170
+constructor<font color="#E5E5E5"> should do as</font><font color="#CCCCCC"> little</font><font color="#E5E5E5"> as</font>
+
+71
+00:03:54,290 --> 00:04:00,709
+<font color="#E5E5E5">possible to put the</font><font color="#CCCCCC"> object into a valid</font>
+
+72
+00:03:57,170 --> 00:04:03,260
+<font color="#CCCCCC">state and that's</font><font color="#E5E5E5"> it calling any fancy</font>
+
+73
+00:04:00,710 --> 00:04:07,370
+function inside<font color="#E5E5E5"> the constructor is</font><font color="#CCCCCC"> not</font>
+
+74
+00:04:03,260 --> 00:04:11,239
+recommended<font color="#E5E5E5"> and at the same idea</font><font color="#CCCCCC"> for</font>
+
+75
+00:04:07,370 --> 00:04:15,190
+destructor<font color="#E5E5E5"> if we have a destructive</font><font color="#CCCCCC"> talk</font>
+
+76
+00:04:11,240 --> 00:04:17,320
+that also<font color="#CCCCCC"> caught the bump</font><font color="#E5E5E5"> function and</font>
+
+77
+00:04:15,190 --> 00:04:22,280
+run<font color="#E5E5E5"> the program</font>
+
+78
+00:04:17,320 --> 00:04:24,740
+<font color="#E5E5E5">as you see when the destructor of the</font>
+
+79
+00:04:22,280 --> 00:04:30,530
+dog<font color="#E5E5E5"> calling the bark function it also</font>
+
+80
+00:04:24,740 --> 00:04:33,230
+<font color="#E5E5E5">call the dogs</font><font color="#CCCCCC"> bark function because when</font>
+
+81
+00:04:30,530 --> 00:04:36,080
+the D gets destroyed<font color="#E5E5E5"> it first</font><font color="#CCCCCC"> called</font><font color="#E5E5E5"> the</font>
+
+82
+00:04:33,230 --> 00:04:39,230
+destructor of the yellow dog and then
+
+83
+00:04:36,080 --> 00:04:41,960
+call the destructor of the dog so at
+
+84
+00:04:39,230 --> 00:04:45,260
+<font color="#E5E5E5">this point the yellow dog is already</font>
+
+85
+00:04:41,960 --> 00:04:47,359
+destroyed<font color="#E5E5E5"> and it is not a good</font><font color="#CCCCCC"> idea to</font>
+
+86
+00:04:45,260 --> 00:04:51,680
+call the member function of<font color="#E5E5E5"> something is</font>
+
+87
+00:04:47,360 --> 00:04:54,080
+already<font color="#E5E5E5"> destroyed that's all for today</font>
+
+88
+00:04:51,680 --> 00:04:56,140
+feel free<font color="#E5E5E5"> to subscribe to</font><font color="#CCCCCC"> my channel and</font>
+
+89
+00:04:54,080 --> 00:04:59,140
+check<font color="#CCCCCC"> out</font><font color="#E5E5E5"> the other videos I have</font>
+
+90
+00:04:56,140 --> 00:04:59,140
+<font color="#E5E5E5">bye-bye</font>
+

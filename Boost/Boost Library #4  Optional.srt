@@ -1,0 +1,468 @@
+﻿1
+00:00:00,110 --> 00:00:07,319
+hello everyone today<font color="#CCCCCC"> we</font><font color="#E5E5E5"> will talk</font><font color="#CCCCCC"> about</font>
+
+2
+00:00:02,669 --> 00:00:10,740
+boost<font color="#CCCCCC"> the optional class let's consider</font>
+
+3
+00:00:07,319 --> 00:00:13,230
+this function<font color="#E5E5E5"> get</font><font color="#CCCCCC"> acing data</font><font color="#E5E5E5"> it will get</font>
+
+4
+00:00:10,740 --> 00:00:20,310
+data<font color="#E5E5E5"> from this queue and then you turn</font>
+
+5
+00:00:13,230 --> 00:00:32,460
+it<font color="#E5E5E5"> as a charm so</font><font color="#CCCCCC"> if the queue</font><font color="#E5E5E5"> is not</font>
+
+6
+00:00:20,310 --> 00:00:36,570
+empty<font color="#E5E5E5"> it</font><font color="#CCCCCC"> will</font><font color="#E5E5E5"> return q dot back else it</font>
+
+7
+00:00:32,460 --> 00:00:40,140
+<font color="#E5E5E5">will return what what should i will</font>
+
+8
+00:00:36,570 --> 00:00:43,290
+return<font color="#E5E5E5"> here whatever</font><font color="#CCCCCC"> I will return here</font>
+
+9
+00:00:40,140 --> 00:00:45,930
+<font color="#E5E5E5">it will be a valid</font><font color="#CCCCCC"> a charm so I'm unable</font>
+
+10
+00:00:43,290 --> 00:00:48,930
+to<font color="#E5E5E5"> convey the</font><font color="#CCCCCC"> information that the queue</font>
+
+11
+00:00:45,930 --> 00:00:54,629
+is empty and the<font color="#CCCCCC"> Lewton the value is an</font>
+
+12
+00:00:48,930 --> 00:01:01,769
+<font color="#E5E5E5">invalid value my best bet is return a</font>
+
+13
+00:00:54,629 --> 00:01:05,128
+null<font color="#E5E5E5"> character but again this is a valid</font>
+
+14
+00:01:01,770 --> 00:01:07,229
+charm so it doesn't convey the
+
+15
+00:01:05,129 --> 00:01:11,790
+information<font color="#CCCCCC"> that the return the value is</font>
+
+16
+00:01:07,229 --> 00:01:14,250
+invalid<font color="#E5E5E5"> so it seems the return value</font>
+
+17
+00:01:11,790 --> 00:01:17,189
+from<font color="#CCCCCC"> this function should not be just a</font>
+
+18
+00:01:14,250 --> 00:01:20,220
+charm<font color="#E5E5E5"> it should be a different type that</font>
+
+19
+00:01:17,189 --> 00:01:24,059
+includes all<font color="#CCCCCC"> the charts plus a value</font>
+
+20
+00:01:20,220 --> 00:01:26,490
+that<font color="#CCCCCC"> indicates invalid value</font><font color="#E5E5E5"> if you have</font>
+
+21
+00:01:24,060 --> 00:01:29,270
+<font color="#CCCCCC">watched</font><font color="#E5E5E5"> the other video of boost valiant</font>
+
+22
+00:01:26,490 --> 00:01:37,770
+<font color="#E5E5E5">it since the be tender value should be</font>
+
+23
+00:01:29,270 --> 00:01:39,810
+<font color="#E5E5E5">boost variant now</font><font color="#CCCCCC"> pointer type chow</font>
+
+24
+00:01:37,770 --> 00:01:42,630
+so the<font color="#CCCCCC"> lieutenant</font><font color="#E5E5E5"> value should be</font><font color="#CCCCCC"> either</font>
+
+25
+00:01:39,810 --> 00:01:47,130
+<font color="#E5E5E5">a char or something like a null pointer</font>
+
+26
+00:01:42,630 --> 00:01:49,170
+to indicate a<font color="#E5E5E5"> invalid return value this</font>
+
+27
+00:01:47,130 --> 00:01:52,649
+is why the<font color="#E5E5E5"> boost library provide</font>
+
+28
+00:01:49,170 --> 00:01:55,140
+optional optional<font color="#E5E5E5"> is essentially the</font>
+
+29
+00:01:52,649 --> 00:01:59,009
+same thing<font color="#CCCCCC"> but it</font><font color="#E5E5E5"> has a much more</font>
+
+30
+00:01:55,140 --> 00:02:08,220
+convenient and powerful<font color="#E5E5E5"> interface</font><font color="#CCCCCC"> so if</font>
+
+31
+00:01:59,009 --> 00:02:12,530
+<font color="#E5E5E5">I have a boost optional char</font><font color="#CCCCCC"> okie now</font>
+
+32
+00:02:08,220 --> 00:02:16,819
+<font color="#CCCCCC">opie is a optional but it is</font>
+
+33
+00:02:12,530 --> 00:02:22,709
+uninitialized<font color="#E5E5E5"> which means no char is</font>
+
+34
+00:02:16,819 --> 00:02:31,200
+constructed<font color="#E5E5E5"> and then I assign</font><font color="#CCCCCC"> a P equal</font>
+
+35
+00:02:22,709 --> 00:02:33,390
+<font color="#CCCCCC">to a now opie contains a so with</font>
+
+36
+00:02:31,200 --> 00:02:36,510
+optional we can provide the<font color="#CCCCCC"> information</font>
+
+37
+00:02:33,390 --> 00:02:39,958
+we need for this<font color="#CCCCCC"> function if the</font><font color="#E5E5E5"> app is</font>
+
+38
+00:02:36,510 --> 00:02:42,870
+<font color="#CCCCCC">not initialized</font><font color="#E5E5E5"> it means the</font><font color="#CCCCCC"> value is</font>
+
+39
+00:02:39,959 --> 00:02:47,970
+<font color="#CCCCCC">not</font><font color="#E5E5E5"> a valid if</font><font color="#CCCCCC"> the app is initialized</font>
+
+40
+00:02:42,870 --> 00:02:54,690
+the value is valid<font color="#E5E5E5"> so</font><font color="#CCCCCC"> we can return a</font>
+
+41
+00:02:47,970 --> 00:02:59,070
+boost optional<font color="#E5E5E5"> char for</font><font color="#CCCCCC"> this</font><font color="#E5E5E5"> get sync</font>
+
+42
+00:02:54,690 --> 00:03:04,790
+data function and if the queue<font color="#CCCCCC"> is not</font>
+
+43
+00:02:59,070 --> 00:03:04,790
+empty<font color="#CCCCCC"> will you turn a optional</font>
+
+44
+00:03:05,650 --> 00:03:13,090
+that is initialized<font color="#E5E5E5"> with the last item</font>
+
+45
+00:03:08,950 --> 00:03:19,379
+in the<font color="#E5E5E5"> queue otherwise we'll just</font><font color="#CCCCCC"> return</font>
+
+46
+00:03:13,090 --> 00:03:19,379
+a empty optional
+
+47
+00:03:21,660 --> 00:03:31,050
+now in the main<font color="#CCCCCC"> function I can</font><font color="#E5E5E5"> do up</font>
+
+48
+00:03:24,000 --> 00:03:33,900
+equal to get<font color="#E5E5E5"> a sync data and if the app</font>
+
+49
+00:03:31,050 --> 00:03:39,950
+is<font color="#CCCCCC"> not initialized</font><font color="#E5E5E5"> in other words the</font>
+
+50
+00:03:33,900 --> 00:03:49,380
+app is empty<font color="#E5E5E5"> we print out no data is</font>
+
+51
+00:03:39,950 --> 00:03:57,019
+<font color="#E5E5E5">available else which means the app is</font>
+
+52
+00:03:49,380 --> 00:04:05,160
+not<font color="#E5E5E5"> empty we print out up contains up</font>
+
+53
+00:03:57,020 --> 00:04:09,030
+dot gap and<font color="#E5E5E5"> end line so this is checking</font>
+
+54
+00:04:05,160 --> 00:04:13,079
+<font color="#E5E5E5">if op is empty or not you can do the</font>
+
+55
+00:04:09,030 --> 00:04:17,910
+same thing it<font color="#E5E5E5"> was if up not equal to</font>
+
+56
+00:04:13,080 --> 00:04:20,970
+<font color="#E5E5E5">zero and this gate function must be</font>
+
+57
+00:04:17,910 --> 00:04:23,490
+<font color="#CCCCCC">called only if the OP is not empty</font><font color="#E5E5E5"> if</font>
+
+58
+00:04:20,970 --> 00:04:27,440
+you call the gate function when<font color="#CCCCCC"> app is</font>
+
+59
+00:04:23,490 --> 00:04:27,440
+empty<font color="#E5E5E5"> it will crash</font>
+
+60
+00:04:36,380 --> 00:04:46,490
+another way of<font color="#E5E5E5"> getting the</font><font color="#CCCCCC"> data is</font>
+
+61
+00:04:39,160 --> 00:04:48,920
+calling a dereference<font color="#E5E5E5"> of the OP note</font>
+
+62
+00:04:46,490 --> 00:04:51,860
+that an optional can be used in a
+
+63
+00:04:48,920 --> 00:04:54,320
+similar<font color="#CCCCCC"> way to</font><font color="#E5E5E5"> a pointer but you should</font>
+
+64
+00:04:51,860 --> 00:04:57,830
+not<font color="#E5E5E5"> get the impression</font><font color="#CCCCCC"> that optional is</font>
+
+65
+00:04:54,320 --> 00:05:00,290
+modeled as a pointer because<font color="#CCCCCC"> it was not</font>
+
+66
+00:04:57,830 --> 00:05:03,050
+modeled as a pointer and it could be
+
+67
+00:05:00,290 --> 00:05:09,470
+dangerous<font color="#CCCCCC"> if you think it was modeled as</font>
+
+68
+00:05:03,050 --> 00:05:15,350
+a pointer there is another function
+
+69
+00:05:09,470 --> 00:05:22,280
+<font color="#E5E5E5">called op dot reset this will be set up</font>
+
+70
+00:05:15,350 --> 00:05:25,190
+to<font color="#CCCCCC"> uninitialized State if you don't like</font>
+
+71
+00:05:22,280 --> 00:05:32,090
+<font color="#E5E5E5">if-else statement you can use another</font>
+
+72
+00:05:25,190 --> 00:05:37,010
+function<font color="#E5E5E5"> called op dot get value or Z</font>
+
+73
+00:05:32,090 --> 00:05:39,590
+<font color="#CCCCCC">and in this case if</font><font color="#E5E5E5"> op is initialized it</font>
+
+74
+00:05:37,010 --> 00:05:42,620
+will return<font color="#E5E5E5"> the data contained in up</font>
+
+75
+00:05:39,590 --> 00:05:51,010
+<font color="#E5E5E5">otherwise it will return a default</font><font color="#CCCCCC"> value</font>
+
+76
+00:05:42,620 --> 00:05:53,420
+of<font color="#E5E5E5"> Z so return Z if op is empty</font>
+
+77
+00:05:51,010 --> 00:05:56,060
+alternatively you<font color="#CCCCCC"> can use</font><font color="#E5E5E5"> the</font><font color="#CCCCCC"> function</font>
+
+78
+00:05:53,420 --> 00:06:10,480
+get pointer<font color="#E5E5E5"> to return</font><font color="#CCCCCC"> a pointer to</font><font color="#E5E5E5"> the</font>
+
+79
+00:05:56,060 --> 00:06:15,740
+data this will return now<font color="#CCCCCC"> if AB is empty</font>
+
+80
+00:06:10,480 --> 00:06:20,570
+optional can store any<font color="#CCCCCC"> kind of data so</font>
+
+81
+00:06:15,740 --> 00:06:28,730
+if we have a struct<font color="#E5E5E5"> of a that contains a</font>
+
+82
+00:06:20,570 --> 00:06:33,170
+string name<font color="#E5E5E5"> an integer value</font><font color="#CCCCCC"> and</font><font color="#E5E5E5"> then</font><font color="#CCCCCC"> we</font>
+
+83
+00:06:28,730 --> 00:06:43,640
+construct<font color="#E5E5E5"> an instance of a then create</font>
+
+84
+00:06:33,170 --> 00:06:47,560
+optional a up a<font color="#E5E5E5"> 0 up a</font><font color="#CCCCCC"> 0 is an optional</font>
+
+85
+00:06:43,640 --> 00:06:56,360
+<font color="#E5E5E5">of a but it is not initialized and</font>
+
+86
+00:06:47,560 --> 00:07:06,010
+constructor<font color="#E5E5E5"> of a is not called if I</font>
+
+87
+00:06:56,360 --> 00:07:13,230
+construct option of a with a then a is
+
+88
+00:07:06,010 --> 00:07:22,080
+copy constructed<font color="#CCCCCC"> into up a</font>
+
+89
+00:07:13,230 --> 00:07:22,080
+and<font color="#CCCCCC"> later</font><font color="#E5E5E5"> on we can use up a s name a</font>
+
+90
+00:07:26,190 --> 00:07:29,190
+value
+
+91
+00:07:30,090 --> 00:07:41,729
+so here again<font color="#CCCCCC"> an optional can be used in</font>
+
+92
+00:07:33,840 --> 00:07:47,369
+a similar<font color="#CCCCCC"> way to</font><font color="#E5E5E5"> a pointer an optional</font>
+
+93
+00:07:41,730 --> 00:07:57,960
+can also store a pointer boost optional
+
+94
+00:07:47,370 --> 00:08:08,840
+<font color="#E5E5E5">a pointer up</font><font color="#CCCCCC"> a P address of a</font><font color="#E5E5E5"> and then I</font>
+
+95
+00:07:57,960 --> 00:08:08,840
+can use<font color="#E5E5E5"> the up</font><font color="#CCCCCC"> AP name equal</font><font color="#E5E5E5"> to Bob</font>
+
+96
+00:08:10,220 --> 00:08:14,660
+optional can also store reference
+
+97
+00:08:18,840 --> 00:08:36,900
+<font color="#E5E5E5">a reference</font><font color="#CCCCCC"> of a are a and then we can</font>
+
+98
+00:08:29,370 --> 00:08:45,060
+use up<font color="#E5E5E5"> a</font><font color="#CCCCCC"> are</font><font color="#E5E5E5"> nine equal to pub so this</font>
+
+99
+00:08:36,900 --> 00:08:48,930
+also<font color="#CCCCCC"> changed</font><font color="#E5E5E5"> a dot</font><font color="#CCCCCC"> name optionals can</font>
+
+100
+00:08:45,060 --> 00:08:58,160
+also be used for comparison<font color="#E5E5E5"> by using the</font>
+
+101
+00:08:48,930 --> 00:09:04,430
+bill relational operator<font color="#E5E5E5"> boost optional</font>
+
+102
+00:08:58,160 --> 00:09:09,329
+int<font color="#E5E5E5"> I</font><font color="#CCCCCC"> one which is initialized</font><font color="#E5E5E5"> to 1 and</font>
+
+103
+00:09:04,430 --> 00:09:16,349
+I 2 is initialized<font color="#E5E5E5"> to</font><font color="#CCCCCC"> 9</font>
+
+104
+00:09:09,330 --> 00:09:27,020
+if I 1 is less than I<font color="#CCCCCC"> to and we print</font>
+
+105
+00:09:16,350 --> 00:09:31,709
+out I I<font color="#CCCCCC"> 2 is bigger so if both are</font>
+
+106
+00:09:27,020 --> 00:09:34,290
+initialized<font color="#E5E5E5"> both I 1 and I 2 are</font>
+
+107
+00:09:31,709 --> 00:09:39,290
+initialized<font color="#E5E5E5"> this is the equivalent of</font>
+
+108
+00:09:34,290 --> 00:09:42,719
+comparing that the reference of i1 and
+
+109
+00:09:39,290 --> 00:09:45,230
+<font color="#CCCCCC">leti reference</font><font color="#E5E5E5"> I</font><font color="#CCCCCC"> 2</font>
+
+110
+00:09:42,720 --> 00:09:48,030
+otherwise if one of them is
+
+111
+00:09:45,230 --> 00:09:50,720
+uninitialized<font color="#E5E5E5"> that uninitialized one</font>
+
+112
+00:09:48,030 --> 00:09:58,050
+will<font color="#E5E5E5"> always be considered the smallest</font>
+
+113
+00:09:50,720 --> 00:10:00,600
+so if we have<font color="#CCCCCC"> I</font><font color="#E5E5E5"> three then I 3 is</font>
+
+114
+00:09:58,050 --> 00:10:04,530
+<font color="#E5E5E5">smaller than I</font><font color="#CCCCCC"> 2 and a smaller than I</font>
+
+115
+00:10:00,600 --> 00:10:06,450
+one that's all for today
+
+116
+00:10:04,530 --> 00:10:09,980
+feel<font color="#CCCCCC"> free to check</font><font color="#E5E5E5"> out the</font><font color="#CCCCCC"> other videos</font>
+
+117
+00:10:06,450 --> 00:10:09,980
+I<font color="#CCCCCC"> have and see you next time</font>
+

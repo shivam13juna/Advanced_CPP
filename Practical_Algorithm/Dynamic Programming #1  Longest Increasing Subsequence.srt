@@ -1,0 +1,564 @@
+﻿1
+00:00:00,199 --> 00:00:05,189
+hello everyone today<font color="#CCCCCC"> we will talk</font><font color="#E5E5E5"> about</font>
+
+2
+00:00:02,879 --> 00:00:10,110
+the problem of finding the<font color="#E5E5E5"> longest</font>
+
+3
+00:00:05,190 --> 00:00:14,030
+increasing subsequence<font color="#E5E5E5"> first let's</font>
+
+4
+00:00:10,110 --> 00:00:17,060
+define<font color="#CCCCCC"> what is increasing subsequence</font>
+
+5
+00:00:14,030 --> 00:00:20,840
+for example we have a vector like<font color="#E5E5E5"> this</font>
+
+6
+00:00:17,060 --> 00:00:26,729
+<font color="#E5E5E5">what increasing subsequence does it have</font>
+
+7
+00:00:20,840 --> 00:00:30,289
+it has three six<font color="#CCCCCC"> three six is increasing</font>
+
+8
+00:00:26,730 --> 00:00:33,750
+and it is<font color="#CCCCCC"> a subsequence of this vector</font>
+
+9
+00:00:30,289 --> 00:00:38,190
+<font color="#CCCCCC">two six also</font><font color="#E5E5E5"> increasing and it</font><font color="#CCCCCC"> is a</font>
+
+10
+00:00:33,750 --> 00:00:41,730
+subsequence<font color="#E5E5E5"> two four five two four five</font>
+
+11
+00:00:38,190 --> 00:00:45,180
+<font color="#E5E5E5">and one even though it</font><font color="#CCCCCC"> only has one</font>
+
+12
+00:00:41,730 --> 00:00:49,140
+element<font color="#E5E5E5"> we</font><font color="#CCCCCC"> can still consider it as a</font>
+
+13
+00:00:45,180 --> 00:00:51,870
+increasing sequence and that<font color="#CCCCCC"> the longest</font>
+
+14
+00:00:49,140 --> 00:00:56,250
+<font color="#E5E5E5">increasing subsequence</font><font color="#CCCCCC"> is the longest</font>
+
+15
+00:00:51,870 --> 00:01:00,930
+among all the increasing subsequence so
+
+16
+00:00:56,250 --> 00:01:05,000
+our problem<font color="#CCCCCC"> is for a vector d of size n</font>
+
+17
+00:01:00,930 --> 00:01:07,710
+find its longest increasing subsequence
+
+18
+00:01:05,000 --> 00:01:10,560
+<font color="#E5E5E5">on the surface this is not a difficult</font>
+
+19
+00:01:07,710 --> 00:01:13,679
+<font color="#E5E5E5">problem as long as we find all the</font>
+
+20
+00:01:10,560 --> 00:01:17,520
+subsequence<font color="#E5E5E5"> of D and extract those</font>
+
+21
+00:01:13,680 --> 00:01:19,350
+subsequence<font color="#E5E5E5"> who is increasing and then</font>
+
+22
+00:01:17,520 --> 00:01:21,979
+we can find<font color="#E5E5E5"> that the longest increasing</font>
+
+23
+00:01:19,350 --> 00:01:21,979
+subsequence
+
+24
+00:01:22,280 --> 00:01:31,500
+so our first algorithm<font color="#E5E5E5"> is like this for</font>
+
+25
+00:01:26,790 --> 00:01:35,509
+integer<font color="#CCCCCC"> I from n</font><font color="#E5E5E5"> to</font><font color="#CCCCCC"> one find all the</font>
+
+26
+00:01:31,500 --> 00:01:39,509
+subsequence of<font color="#E5E5E5"> D with the</font><font color="#CCCCCC"> length of I if</font>
+
+27
+00:01:35,509 --> 00:01:42,390
+there is one increasing subsequence then
+
+28
+00:01:39,509 --> 00:01:45,540
+we are done that one ought to<font color="#CCCCCC"> be</font><font color="#E5E5E5"> the</font>
+
+29
+00:01:42,390 --> 00:01:47,530
+longest increasing subsequence<font color="#CCCCCC"> so we can</font>
+
+30
+00:01:45,540 --> 00:01:50,470
+break
+
+31
+00:01:47,530 --> 00:01:54,460
+this<font color="#E5E5E5"> algorithm is simple and it should</font>
+
+32
+00:01:50,470 --> 00:01:59,020
+<font color="#CCCCCC">work but the problem is how complex is</font>
+
+33
+00:01:54,460 --> 00:02:04,030
+this let's<font color="#CCCCCC"> consider how many subsequence</font>
+
+34
+00:01:59,020 --> 00:02:10,780
+does<font color="#CCCCCC"> d have with the length of I the</font>
+
+35
+00:02:04,030 --> 00:02:13,510
+answer<font color="#CCCCCC"> is this formula so the worst</font><font color="#E5E5E5"> case</font>
+
+36
+00:02:10,780 --> 00:02:19,870
+complexity of<font color="#E5E5E5"> this for loop is a</font>
+
+37
+00:02:13,510 --> 00:02:24,670
+summation of this formula with all I so
+
+38
+00:02:19,870 --> 00:02:28,390
+we get this for I equal to n - 1 and sum
+
+39
+00:02:24,670 --> 00:02:30,160
+up every value of<font color="#E5E5E5"> this formula and I</font>
+
+40
+00:02:28,390 --> 00:02:35,260
+just you have learned from<font color="#CCCCCC"> your math</font>
+
+41
+00:02:30,160 --> 00:02:37,480
+class this<font color="#E5E5E5"> is exponential in n so the</font>
+
+42
+00:02:35,260 --> 00:02:40,149
+complexity<font color="#CCCCCC"> of this algorithm is not</font>
+
+43
+00:02:37,480 --> 00:02:44,738
+acceptable<font color="#E5E5E5"> we have to find a better</font>
+
+44
+00:02:40,150 --> 00:02:47,640
+algorithm now let's try to solve the
+
+45
+00:02:44,739 --> 00:02:50,590
+same problem with<font color="#E5E5E5"> dynamic programming</font>
+
+46
+00:02:47,640 --> 00:02:53,920
+<font color="#E5E5E5">the idea of dynamic</font><font color="#CCCCCC"> programming is to</font>
+
+47
+00:02:50,590 --> 00:02:57,450
+<font color="#CCCCCC">solve a</font><font color="#E5E5E5"> complex problem by breaking it</font>
+
+48
+00:02:53,920 --> 00:03:00,220
+down<font color="#CCCCCC"> into</font><font color="#E5E5E5"> smaller</font><font color="#CCCCCC"> subproblems</font>
+
+49
+00:02:57,450 --> 00:03:05,709
+so first let's find<font color="#E5E5E5"> it a smaller</font>
+
+50
+00:03:00,220 --> 00:03:09,430
+subproblem let's define<font color="#CCCCCC"> a vector L and L</font>
+
+51
+00:03:05,709 --> 00:03:12,519
+<font color="#E5E5E5">I itself is also a vector which is the</font>
+
+52
+00:03:09,430 --> 00:03:18,640
+longest increasing subsequence of<font color="#CCCCCC"> D that</font>
+
+53
+00:03:12,519 --> 00:03:21,070
+ends with di in other words of all the
+
+54
+00:03:18,640 --> 00:03:26,529
+increasing subsequence of<font color="#CCCCCC"> D that ends</font>
+
+55
+00:03:21,070 --> 00:03:31,570
+with<font color="#E5E5E5"> di Li is the longest and by</font>
+
+56
+00:03:26,530 --> 00:03:34,000
+definition<font color="#CCCCCC"> L 0 is</font><font color="#E5E5E5"> d</font><font color="#CCCCCC"> 0 because the</font>
+
+57
+00:03:31,570 --> 00:03:38,109
+increasing subsequence that ends with<font color="#CCCCCC"> d</font>
+
+58
+00:03:34,000 --> 00:03:43,120
+0 must be D 0 itself
+
+59
+00:03:38,110 --> 00:03:43,120
+let's use our<font color="#E5E5E5"> old example</font><font color="#CCCCCC"> to find the</font>
+
+60
+00:03:43,720 --> 00:03:57,110
+ll0<font color="#CCCCCC"> must be 3 L 1 is 2 because</font><font color="#E5E5E5"> 3 is</font>
+
+61
+00:03:51,650 --> 00:04:09,640
+<font color="#E5E5E5">bigger than 2 so 3 2 is not increasing L</font>
+
+62
+00:03:57,110 --> 00:04:15,470
+2<font color="#E5E5E5"> is 2 6 our 3 is 2 4 l 4 is 2 4 5 and</font>
+
+63
+00:04:09,640 --> 00:04:18,260
+our 5 is 1 because<font color="#CCCCCC"> 1 is the</font><font color="#E5E5E5"> smallest so</font>
+
+64
+00:04:15,470 --> 00:04:21,978
+this is our<font color="#CCCCCC"> definition of</font><font color="#E5E5E5"> L a smaller</font>
+
+65
+00:04:18,260 --> 00:04:25,460
+<font color="#CCCCCC">sub-problem and as long as we find</font><font color="#E5E5E5"> every</font>
+
+66
+00:04:21,978 --> 00:04:28,280
+<font color="#CCCCCC">vector of L we can easily find the</font>
+
+67
+00:04:25,460 --> 00:04:33,198
+longest increasing subsequence<font color="#CCCCCC"> in this</font>
+
+68
+00:04:28,280 --> 00:04:36,138
+case<font color="#E5E5E5"> 2 4 5 so we</font><font color="#CCCCCC"> have an</font><font color="#E5E5E5"> initial</font>
+
+69
+00:04:33,199 --> 00:04:40,310
+<font color="#CCCCCC">condition and if we can find a</font><font color="#E5E5E5"> dual</font>
+
+70
+00:04:36,139 --> 00:04:43,490
+<font color="#E5E5E5">evasion formula which can use L with</font>
+
+71
+00:04:40,310 --> 00:04:49,610
+smaller<font color="#E5E5E5"> I to computer L with bigger I</font>
+
+72
+00:04:43,490 --> 00:04:52,250
+and then we can find every L by
+
+73
+00:04:49,610 --> 00:04:58,010
+analyzing the problem we get this
+
+74
+00:04:52,250 --> 00:05:02,570
+formula our eye is looking<font color="#E5E5E5"> at every l j</font>
+
+75
+00:04:58,010 --> 00:05:08,659
+where<font color="#E5E5E5"> j is</font><font color="#CCCCCC"> less</font><font color="#E5E5E5"> than</font><font color="#CCCCCC"> i and DJ which is</font>
+
+76
+00:05:02,570 --> 00:05:11,710
+the tale of l j is less than di and then
+
+77
+00:05:08,660 --> 00:05:16,760
+pick<font color="#E5E5E5"> the one that is</font><font color="#CCCCCC"> the longest and</font>
+
+78
+00:05:11,710 --> 00:05:23,060
+<font color="#E5E5E5">append the</font><font color="#CCCCCC"> i to</font><font color="#E5E5E5"> the end of it let's look</font>
+
+79
+00:05:16,760 --> 00:05:28,460
+<font color="#E5E5E5">at our example let's say our I is for so</font>
+
+80
+00:05:23,060 --> 00:05:32,900
+L I is L for<font color="#E5E5E5"> and di is 5 and we have</font>
+
+81
+00:05:28,460 --> 00:05:37,530
+<font color="#CCCCCC">already found every L from</font><font color="#E5E5E5"> L 0 to L 3</font>
+
+82
+00:05:32,900 --> 00:05:41,159
+<font color="#CCCCCC">and</font><font color="#E5E5E5"> next we want to find</font><font color="#CCCCCC"> L</font><font color="#E5E5E5"> 4</font>
+
+83
+00:05:37,530 --> 00:05:46,770
+so first we<font color="#CCCCCC"> look at every L from l0 to</font>
+
+84
+00:05:41,160 --> 00:05:51,840
+<font color="#CCCCCC">l3 whose tail is less</font><font color="#E5E5E5"> than di</font><font color="#CCCCCC"> 5</font><font color="#E5E5E5"> so we</font>
+
+85
+00:05:46,770 --> 00:05:56,099
+got l0 l1 and l3<font color="#E5E5E5"> whose tail is less than</font>
+
+86
+00:05:51,840 --> 00:06:01,710
+<font color="#E5E5E5">5 and then we pick the longest which is</font>
+
+87
+00:05:56,100 --> 00:06:08,310
+l3<font color="#E5E5E5"> and lastly we append di to the end of</font>
+
+88
+00:06:01,710 --> 00:06:11,400
+it<font color="#E5E5E5"> so</font><font color="#CCCCCC"> we got 2 4 5 so this</font><font color="#E5E5E5"> is the</font>
+
+89
+00:06:08,310 --> 00:06:13,860
+algorithm<font color="#E5E5E5"> if it is still not clear</font><font color="#CCCCCC"> to</font>
+
+90
+00:06:11,400 --> 00:06:19,080
+you I'm sure it will<font color="#E5E5E5"> be more clear</font><font color="#CCCCCC"> when</font>
+
+91
+00:06:13,860 --> 00:06:22,050
+you look<font color="#E5E5E5"> at the code this is the C++</font>
+
+92
+00:06:19,080 --> 00:06:24,659
+implementation of the algorithm<font color="#CCCCCC"> in the</font>
+
+93
+00:06:22,050 --> 00:06:28,890
+main<font color="#CCCCCC"> function</font><font color="#E5E5E5"> I create a vector of int</font>
+
+94
+00:06:24,660 --> 00:06:32,250
+and then pass the vector to a function
+
+95
+00:06:28,890 --> 00:06:36,360
+called calculus which calculate the
+
+96
+00:06:32,250 --> 00:06:39,000
+longest increasing subsequence<font color="#E5E5E5"> so this</font>
+
+97
+00:06:36,360 --> 00:06:42,419
+<font color="#E5E5E5">function calculus is where the</font><font color="#CCCCCC"> algorithm</font>
+
+98
+00:06:39,000 --> 00:06:46,169
+is implemented<font color="#E5E5E5"> as you see the code is</font>
+
+99
+00:06:42,419 --> 00:06:52,770
+<font color="#E5E5E5">quite compact it only has about</font><font color="#CCCCCC"> 10 lines</font>
+
+100
+00:06:46,169 --> 00:06:58,409
+<font color="#E5E5E5">of code</font><font color="#CCCCCC"> first we create</font><font color="#E5E5E5"> L and L is the</font>
+
+101
+00:06:52,770 --> 00:07:05,039
+<font color="#CCCCCC">same size as the input data D and then</font>
+
+102
+00:06:58,410 --> 00:07:07,040
+we<font color="#E5E5E5"> initialize l0 to be</font><font color="#CCCCCC"> D 0 that is the</font>
+
+103
+00:07:05,040 --> 00:07:13,229
+initial condition<font color="#E5E5E5"> we have talked about</font>
+
+104
+00:07:07,040 --> 00:07:17,430
+about<font color="#E5E5E5"> L and then we start the loop to</font>
+
+105
+00:07:13,229 --> 00:07:22,520
+find every entry of L since we already
+
+106
+00:07:17,430 --> 00:07:25,550
+<font color="#E5E5E5">have</font><font color="#CCCCCC"> l0</font><font color="#E5E5E5"> so our group will</font><font color="#CCCCCC"> start with</font><font color="#E5E5E5"> 1 I</font>
+
+107
+00:07:22,520 --> 00:07:29,659
+will start<font color="#E5E5E5"> with 1</font>
+
+108
+00:07:25,550 --> 00:07:35,650
+and for each I will<font color="#E5E5E5"> have a inner loop of</font>
+
+109
+00:07:29,660 --> 00:07:39,490
+J and J is<font color="#E5E5E5"> from</font><font color="#CCCCCC"> zero</font><font color="#E5E5E5"> to I minus one and</font>
+
+110
+00:07:35,650 --> 00:07:47,200
+<font color="#E5E5E5">for all the J's</font><font color="#CCCCCC"> we'll find the longest</font>
+
+111
+00:07:39,490 --> 00:07:50,210
+<font color="#E5E5E5">LJ whose tail DJ is less than di and</font>
+
+112
+00:07:47,200 --> 00:07:55,010
+here we are using<font color="#E5E5E5"> Li as a temporary</font>
+
+113
+00:07:50,210 --> 00:07:58,250
+variable<font color="#E5E5E5"> to store the longest LJ so by</font>
+
+114
+00:07:55,010 --> 00:08:01,490
+end of<font color="#CCCCCC"> the inner loop Li is equal to the</font>
+
+115
+00:07:58,250 --> 00:08:09,010
+<font color="#E5E5E5">longest LJ whose tail is less than di</font>
+
+116
+00:08:01,490 --> 00:08:15,070
+and lastly we append<font color="#E5E5E5"> di to the end of</font><font color="#CCCCCC"> Li</font>
+
+117
+00:08:09,010 --> 00:08:18,380
+it is<font color="#E5E5E5"> this di that we are talking</font><font color="#CCCCCC"> about</font>
+
+118
+00:08:15,070 --> 00:08:23,420
+by end of all the loops<font color="#E5E5E5"> we have computed</font>
+
+119
+00:08:18,380 --> 00:08:27,310
+every entry of L to visualize the lose
+
+120
+00:08:23,420 --> 00:08:30,710
+out let's print out every entry of L
+
+121
+00:08:27,310 --> 00:08:33,830
+this<font color="#E5E5E5"> is</font><font color="#CCCCCC"> a printed here that I have</font><font color="#E5E5E5"> to</font>
+
+122
+00:08:30,710 --> 00:08:36,309
+print a vector now we can run<font color="#E5E5E5"> the</font>
+
+123
+00:08:33,830 --> 00:08:36,310
+<font color="#CCCCCC">program</font>
+
+124
+00:08:43,679 --> 00:08:55,300
+so it<font color="#E5E5E5"> print out every entry of L this is</font>
+
+125
+00:08:47,560 --> 00:08:58,780
+<font color="#E5E5E5">l0 l1 l2 l3 l4 l5 and l4 is the longest</font>
+
+126
+00:08:55,300 --> 00:09:01,479
+increasing subsequence<font color="#E5E5E5"> so this result is</font>
+
+127
+00:08:58,780 --> 00:09:08,050
+<font color="#E5E5E5">the</font><font color="#CCCCCC"> same as the</font><font color="#E5E5E5"> result that we have</font>
+
+128
+00:09:01,480 --> 00:09:12,430
+<font color="#E5E5E5">manually calculated lastly let's analyze</font>
+
+129
+00:09:08,050 --> 00:09:18,550
+the<font color="#CCCCCC"> complexity of our algorithm this</font><font color="#E5E5E5"> is</font>
+
+130
+00:09:12,430 --> 00:09:21,280
+n<font color="#CCCCCC"> and this is another</font><font color="#E5E5E5"> n so the</font>
+
+131
+00:09:18,550 --> 00:09:24,579
+complexity<font color="#E5E5E5"> of our algorithm is n square</font>
+
+132
+00:09:21,280 --> 00:09:29,910
+which<font color="#CCCCCC"> is</font><font color="#E5E5E5"> much better than exponential in</font>
+
+133
+00:09:24,580 --> 00:09:33,000
+n so the idea of dynamic<font color="#CCCCCC"> programming is</font>
+
+134
+00:09:29,910 --> 00:09:36,329
+sacrificing<font color="#E5E5E5"> some</font><font color="#CCCCCC"> of the space to</font>
+
+135
+00:09:33,000 --> 00:09:39,580
+substantially reduce<font color="#CCCCCC"> the time</font><font color="#E5E5E5"> complexity</font>
+
+136
+00:09:36,330 --> 00:09:43,390
+in this case we have sacrificed<font color="#E5E5E5"> the</font>
+
+137
+00:09:39,580 --> 00:09:50,230
+space of L to bring the time complexity
+
+138
+00:09:43,390 --> 00:09:52,300
+<font color="#E5E5E5">from exponential in n to n square that's</font>
+
+139
+00:09:50,230 --> 00:09:54,430
+all for<font color="#CCCCCC"> today</font><font color="#E5E5E5"> feel free to subscribe to</font>
+
+140
+00:09:52,300 --> 00:09:58,199
+<font color="#CCCCCC">my channel and check out</font><font color="#E5E5E5"> the other</font>
+
+141
+00:09:54,430 --> 00:09:58,199
+videos I<font color="#CCCCCC"> have</font><font color="#E5E5E5"> bye-bye</font>
+

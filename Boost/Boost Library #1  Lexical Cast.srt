@@ -1,0 +1,392 @@
+﻿1
+00:00:00,030 --> 00:00:05,850
+hello everyone<font color="#CCCCCC"> this is</font><font color="#E5E5E5"> the first video</font>
+
+2
+00:00:03,120 --> 00:00:10,650
+<font color="#E5E5E5">on boost library today</font><font color="#CCCCCC"> we will talk</font>
+
+3
+00:00:05,850 --> 00:00:13,259
+<font color="#E5E5E5">about lexical</font><font color="#CCCCCC"> caste</font><font color="#E5E5E5"> C++ provides many</font>
+
+4
+00:00:10,650 --> 00:00:15,269
+different ways of converting<font color="#E5E5E5"> a data from</font>
+
+5
+00:00:13,259 --> 00:00:18,570
+string<font color="#CCCCCC"> to other types and from other</font>
+
+6
+00:00:15,269 --> 00:00:21,900
+types to string and here is a list of
+
+7
+00:00:18,570 --> 00:00:23,939
+the functions that's available<font color="#E5E5E5"> the</font>
+
+8
+00:00:21,900 --> 00:00:27,598
+problem with using<font color="#E5E5E5"> these functions</font><font color="#CCCCCC"> is</font>
+
+9
+00:00:23,939 --> 00:00:30,390
+there are too many functions<font color="#E5E5E5"> for people</font>
+
+10
+00:00:27,599 --> 00:00:32,430
+who has a short memory<font color="#CCCCCC"> like me who can</font>
+
+11
+00:00:30,390 --> 00:00:35,520
+never remember<font color="#CCCCCC"> the</font><font color="#E5E5E5"> last one or two</font>
+
+12
+00:00:32,430 --> 00:00:38,390
+<font color="#CCCCCC">characters every time I want to</font><font color="#E5E5E5"> use them</font>
+
+13
+00:00:35,520 --> 00:00:40,829
+<font color="#E5E5E5">I have to</font><font color="#CCCCCC"> look them up in the document</font>
+
+14
+00:00:38,390 --> 00:00:43,260
+besides the function names are not
+
+15
+00:00:40,829 --> 00:00:45,719
+uniformed<font color="#E5E5E5"> some of them are a to</font>
+
+16
+00:00:43,260 --> 00:00:49,680
+something<font color="#E5E5E5"> and some of them are screen to</font>
+
+17
+00:00:45,719 --> 00:00:51,870
+something<font color="#E5E5E5"> and what's even worse is if I</font>
+
+18
+00:00:49,680 --> 00:00:54,269
+want to do the<font color="#E5E5E5"> reverse operation</font><font color="#CCCCCC"> I want</font>
+
+19
+00:00:51,870 --> 00:00:57,089
+<font color="#CCCCCC">to convert data from other type to</font>
+
+20
+00:00:54,270 --> 00:00:59,789
+string<font color="#E5E5E5"> I have</font><font color="#CCCCCC"> to use a completely</font>
+
+21
+00:00:57,090 --> 00:01:03,149
+<font color="#CCCCCC">different</font><font color="#E5E5E5"> method</font><font color="#CCCCCC"> I need to create a</font>
+
+22
+00:00:59,789 --> 00:01:05,640
+string stream and then left shifter the
+
+23
+00:01:03,149 --> 00:01:09,920
+data into<font color="#E5E5E5"> the stream and then call its</font>
+
+24
+00:01:05,640 --> 00:01:12,900
+member function to get the<font color="#E5E5E5"> final stream</font>
+
+25
+00:01:09,920 --> 00:01:16,049
+this method of<font color="#E5E5E5"> using</font><font color="#CCCCCC"> stream stream is</font>
+
+26
+00:01:12,900 --> 00:01:18,659
+<font color="#E5E5E5">very powerful</font><font color="#CCCCCC"> if I want to have fine</font>
+
+27
+00:01:16,049 --> 00:01:21,290
+control<font color="#E5E5E5"> over</font><font color="#CCCCCC"> the</font><font color="#E5E5E5"> formatting then using</font>
+
+28
+00:01:18,659 --> 00:01:24,000
+<font color="#CCCCCC">string stream is still the way to go</font>
+
+29
+00:01:21,290 --> 00:01:26,729
+however if all<font color="#E5E5E5"> I want to do is</font>
+
+30
+00:01:24,000 --> 00:01:30,799
+converting<font color="#CCCCCC"> an integer</font><font color="#E5E5E5"> value into a text</font>
+
+31
+00:01:26,729 --> 00:01:35,070
+format<font color="#E5E5E5"> then using stream stream is both</font>
+
+32
+00:01:30,799 --> 00:01:39,600
+inconvenient<font color="#E5E5E5"> and inefficient it is like</font>
+
+33
+00:01:35,070 --> 00:01:42,059
+to<font color="#CCCCCC"> cure a</font><font color="#E5E5E5"> fly with a</font><font color="#CCCCCC"> cannon of</font><font color="#E5E5E5"> course I</font>
+
+34
+00:01:39,600 --> 00:01:43,979
+can still use the<font color="#CCCCCC"> Odyssey function of s</font>
+
+35
+00:01:42,060 --> 00:01:50,369
+printf
+
+36
+00:01:43,979 --> 00:01:53,789
+and as scanf but these functions are
+
+37
+00:01:50,369 --> 00:01:55,189
+also not convenient<font color="#E5E5E5"> to use and they</font><font color="#CCCCCC"> are</font>
+
+38
+00:01:53,789 --> 00:01:58,409
+not safe
+
+39
+00:01:55,189 --> 00:02:04,100
+another option is to<font color="#E5E5E5"> use function like I</font>
+
+40
+00:01:58,409 --> 00:02:07,890
+<font color="#CCCCCC">-</font><font color="#E5E5E5"> a but that</font><font color="#CCCCCC"> is non-standard</font><font color="#E5E5E5"> function</font>
+
+41
+00:02:04,100 --> 00:02:12,239
+this is<font color="#CCCCCC"> why boost provide the lexical</font>
+
+42
+00:02:07,890 --> 00:02:15,540
+cast library which is a safe convenient
+
+43
+00:02:12,239 --> 00:02:22,110
+<font color="#E5E5E5">and efficient way of do the conversion</font>
+
+44
+00:02:15,540 --> 00:02:25,500
+from and to a text format<font color="#E5E5E5"> so let me give</font>
+
+45
+00:02:22,110 --> 00:02:28,140
+you a demo of<font color="#CCCCCC"> using lexical cast first</font>
+
+46
+00:02:25,500 --> 00:02:31,560
+you need to<font color="#E5E5E5"> include the header file of</font>
+
+47
+00:02:28,140 --> 00:02:39,899
+next cast<font color="#E5E5E5"> and then in the main function</font>
+
+48
+00:02:31,560 --> 00:02:45,709
+<font color="#CCCCCC">I</font><font color="#E5E5E5"> can</font><font color="#CCCCCC"> induce in HS equal to 23</font><font color="#E5E5E5"> and the</font>
+
+49
+00:02:39,900 --> 00:02:50,760
+string a string<font color="#CCCCCC"> equal to lexical cast</font>
+
+50
+00:02:45,709 --> 00:02:55,019
+string<font color="#E5E5E5"> s this will convert s from</font><font color="#CCCCCC"> an</font>
+
+51
+00:02:50,760 --> 00:02:59,420
+integer<font color="#E5E5E5"> to a string</font><font color="#CCCCCC"> I can also use</font><font color="#E5E5E5"> that</font>
+
+52
+00:02:55,019 --> 00:03:08,260
+<font color="#CCCCCC">to form</font><font color="#E5E5E5"> a message string equal to</font>
+
+53
+00:02:59,420 --> 00:03:19,560
+message<font color="#CCCCCC"> plus lexical cast string</font>
+
+54
+00:03:08,260 --> 00:03:28,988
+<font color="#CCCCCC">a character A+ equal plus lexical cast</font>
+
+55
+00:03:19,560 --> 00:03:30,819
+<font color="#E5E5E5">school 34.5</font><font color="#CCCCCC"> a float so as you see I only</font>
+
+56
+00:03:28,989 --> 00:03:34,090
+need to<font color="#CCCCCC"> use the same function</font><font color="#E5E5E5"> name</font>
+
+57
+00:03:30,819 --> 00:03:38,920
+lexical cast to do<font color="#CCCCCC"> a different type of</font>
+
+58
+00:03:34,090 --> 00:03:43,359
+<font color="#E5E5E5">conversion so this</font><font color="#CCCCCC"> is very convenient</font>
+
+59
+00:03:38,920 --> 00:03:46,659
+<font color="#E5E5E5">and I not only can convert</font><font color="#CCCCCC"> that data to</font>
+
+60
+00:03:43,359 --> 00:03:55,950
+a string<font color="#CCCCCC"> I can also convert a data to a</font>
+
+61
+00:03:46,659 --> 00:03:55,950
+ray of character 64
+
+62
+00:04:03,340 --> 00:04:09,300
+turn<font color="#E5E5E5"> a</font><font color="#CCCCCC"> three</font>
+
+63
+00:04:06,300 --> 00:04:09,300
+I
+
+64
+00:04:10,069 --> 00:04:18,139
+so this will convert<font color="#E5E5E5"> the integer 23 to a</font>
+
+65
+00:04:13,280 --> 00:04:19,070
+relay<font color="#E5E5E5"> of chars now I will do it the</font>
+
+66
+00:04:18,139 --> 00:04:24,190
+other<font color="#E5E5E5"> way around</font>
+
+67
+00:04:19,070 --> 00:04:28,090
+I'll convert<font color="#E5E5E5"> a string to an integer as</font>
+
+68
+00:04:24,190 --> 00:04:33,500
+equal<font color="#CCCCCC"> to I still use</font><font color="#E5E5E5"> the same function</font>
+
+69
+00:04:28,090 --> 00:04:40,039
+<font color="#CCCCCC">lexical cast int</font><font color="#E5E5E5"> instead of string and I</font>
+
+70
+00:04:33,500 --> 00:04:45,880
+<font color="#E5E5E5">pass a string to this function this will</font>
+
+71
+00:04:40,039 --> 00:04:53,380
+convert<font color="#CCCCCC"> this string</font><font color="#E5E5E5"> to the integer</font><font color="#CCCCCC"> s and</font>
+
+72
+00:04:45,880 --> 00:04:53,380
+if I do as equal<font color="#CCCCCC"> to lexical</font><font color="#E5E5E5"> cast moon</font>
+
+73
+00:04:54,580 --> 00:05:05,389
+56.7<font color="#CCCCCC"> 8 this</font><font color="#E5E5E5"> is</font><font color="#CCCCCC"> the</font><font color="#E5E5E5"> invalid cast because</font>
+
+74
+00:05:01,389 --> 00:05:10,509
+56.7<font color="#E5E5E5"> 8 is not an integer</font><font color="#CCCCCC"> so this will</font>
+
+75
+00:05:05,389 --> 00:05:13,880
+<font color="#CCCCCC">flow exception of bad luck circle cast</font>
+
+76
+00:05:10,509 --> 00:05:16,180
+you<font color="#E5E5E5"> can catch</font><font color="#CCCCCC"> it with a child catch</font>
+
+77
+00:05:13,880 --> 00:05:16,180
+block
+
+78
+00:05:27,570 --> 00:05:32,120
+and print the message<font color="#E5E5E5"> out</font>
+
+79
+00:05:47,999 --> 00:05:52,279
+and now if I run<font color="#CCCCCC"> the program</font>
+
+80
+00:05:53,590 --> 00:05:59,560
+it prints out<font color="#E5E5E5"> exception cut bad lexical</font>
+
+81
+00:05:57,100 --> 00:06:05,380
+cast source type value could not be
+
+82
+00:05:59,560 --> 00:06:07,660
+interpreted<font color="#E5E5E5"> as target and if I do as</font>
+
+83
+00:06:05,380 --> 00:06:19,230
+<font color="#CCCCCC">equal lexical</font>
+
+84
+00:06:07,660 --> 00:06:24,310
+<font color="#E5E5E5">cast int</font><font color="#CCCCCC"> Y you</font><font color="#E5E5E5"> and again this is a bad</font>
+
+85
+00:06:19,230 --> 00:06:28,050
+lexical<font color="#E5E5E5"> cast however if I do the same</font>
+
+86
+00:06:24,310 --> 00:06:32,470
+function<font color="#CCCCCC"> with an additional parameter</font>
+
+87
+00:06:28,050 --> 00:06:35,920
+<font color="#E5E5E5">for this will tell</font><font color="#CCCCCC"> the lexical cast</font>
+
+88
+00:06:32,470 --> 00:06:41,920
+function to only pass<font color="#E5E5E5"> the first four</font>
+
+89
+00:06:35,920 --> 00:06:46,690
+character of the<font color="#CCCCCC"> string so this is not</font><font color="#E5E5E5"> a</font>
+
+90
+00:06:41,920 --> 00:06:49,900
+bad cast<font color="#E5E5E5"> so this is how to use</font><font color="#CCCCCC"> a lexical</font>
+
+91
+00:06:46,690 --> 00:06:52,690
+cast<font color="#CCCCCC"> it is convenient because</font><font color="#E5E5E5"> all you</font>
+
+92
+00:06:49,900 --> 00:06:56,380
+<font color="#CCCCCC">need to remember</font><font color="#E5E5E5"> is one name and it is</font>
+
+93
+00:06:52,690 --> 00:06:59,920
+safe it generates exception and it's
+
+94
+00:06:56,380 --> 00:07:03,760
+fast<font color="#E5E5E5"> it is generally faster than any one</font>
+
+95
+00:06:59,920 --> 00:07:05,770
+<font color="#E5E5E5">of the methods</font><font color="#CCCCCC"> listed below</font><font color="#E5E5E5"> that's all</font>
+
+96
+00:07:03,760 --> 00:07:07,750
+<font color="#E5E5E5">for today</font><font color="#CCCCCC"> feel free to check out the</font>
+
+97
+00:07:05,770 --> 00:07:09,900
+<font color="#E5E5E5">other videos I</font><font color="#CCCCCC"> have and</font><font color="#E5E5E5"> see you next</font>
+
+98
+00:07:07,750 --> 00:07:09,900
+time
+

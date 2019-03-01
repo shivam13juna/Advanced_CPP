@@ -1,0 +1,588 @@
+﻿1
+00:00:05,830 --> 00:00:12,350
+software engineering is largely about
+
+2
+00:00:08,420 --> 00:00:15,590
+<font color="#E5E5E5">code reuse in C++ there are mainly two</font>
+
+3
+00:00:12,350 --> 00:00:19,310
+<font color="#E5E5E5">ways of code reuse one is inheritance</font>
+
+4
+00:00:15,590 --> 00:00:22,700
+<font color="#E5E5E5">one is</font><font color="#CCCCCC"> composition</font><font color="#E5E5E5"> so which one should</font>
+
+5
+00:00:19,310 --> 00:00:25,759
+<font color="#E5E5E5">we</font><font color="#CCCCCC"> use</font><font color="#E5E5E5"> we had a light touch on this</font>
+
+6
+00:00:22,700 --> 00:00:30,410
+<font color="#E5E5E5">topic</font><font color="#CCCCCC"> in</font><font color="#E5E5E5"> previous videos and today we</font>
+
+7
+00:00:25,760 --> 00:00:32,599
+are<font color="#E5E5E5"> going to dive deeper into it let's</font>
+
+8
+00:00:30,410 --> 00:00:35,629
+look<font color="#E5E5E5"> at our example</font><font color="#CCCCCC"> we have a class</font>
+
+9
+00:00:32,598 --> 00:00:38,480
+<font color="#CCCCCC">based</font><font color="#E5E5E5"> dog and Bulldog and Shepherd dog</font>
+
+10
+00:00:35,629 --> 00:00:40,970
+are derived<font color="#CCCCCC"> from the base dog</font><font color="#E5E5E5"> the base</font>
+
+11
+00:00:38,480 --> 00:00:43,519
+<font color="#CCCCCC">stock defines some common activities and</font>
+
+12
+00:00:40,970 --> 00:00:46,280
+poor dog and she'll talk<font color="#CCCCCC"> we'll call</font>
+
+13
+00:00:43,520 --> 00:00:50,570
+these common activities<font color="#E5E5E5"> to perform more</font>
+
+14
+00:00:46,280 --> 00:00:54,110
+tasks I've seen this kind of code
+
+15
+00:00:50,570 --> 00:00:55,750
+structuring a lot of places<font color="#E5E5E5"> and honestly</font>
+
+16
+00:00:54,110 --> 00:00:58,700
+I<font color="#CCCCCC"> don't</font><font color="#E5E5E5"> like it</font>
+
+17
+00:00:55,750 --> 00:01:04,009
+the first<font color="#E5E5E5"> problem I have is</font><font color="#CCCCCC"> with</font><font color="#E5E5E5"> the</font>
+
+18
+00:00:58,700 --> 00:01:06,950
+<font color="#E5E5E5">name base talk almost every C++ program</font>
+
+19
+00:01:04,009 --> 00:01:09,499
+that I've seen there's always a class or
+
+20
+00:01:06,950 --> 00:01:13,999
+even<font color="#E5E5E5"> a bunch of classes which are named</font>
+
+21
+00:01:09,499 --> 00:01:16,880
+based something with<font color="#E5E5E5"> inheritance the</font>
+
+22
+00:01:13,999 --> 00:01:19,249
+class names<font color="#E5E5E5"> should symbolize</font><font color="#CCCCCC"> a easier</font>
+
+23
+00:01:16,880 --> 00:01:23,779
+relationship between the base class and
+
+24
+00:01:19,249 --> 00:01:27,259
+the derived class and in our<font color="#CCCCCC"> example the</font>
+
+25
+00:01:23,779 --> 00:01:28,009
+Bulldog is a base dog which doesn't<font color="#E5E5E5"> make</font>
+
+26
+00:01:27,259 --> 00:01:32,090
+any sense
+
+27
+00:01:28,009 --> 00:01:35,630
+<font color="#CCCCCC">what is the base dog anyway besides the</font>
+
+28
+00:01:32,090 --> 00:01:38,090
+name base<font color="#CCCCCC"> top is not extendable what if</font>
+
+29
+00:01:35,630 --> 00:01:40,639
+later<font color="#E5E5E5"> on I decide to create</font><font color="#CCCCCC"> a</font><font color="#E5E5E5"> new class</font>
+
+30
+00:01:38,090 --> 00:01:43,399
+<font color="#E5E5E5">and derive base dog from that new class</font>
+
+31
+00:01:40,639 --> 00:01:47,990
+what should I name the new class<font color="#E5E5E5"> should</font>
+
+32
+00:01:43,399 --> 00:01:50,719
+I name it<font color="#E5E5E5"> base base dog</font><font color="#CCCCCC"> I guess</font><font color="#E5E5E5"> the</font>
+
+33
+00:01:47,990 --> 00:01:54,169
+biggest problem I have with the base dog
+
+34
+00:01:50,719 --> 00:01:57,139
+name is it reviews the<font color="#E5E5E5"> implementation</font>
+
+35
+00:01:54,169 --> 00:02:00,560
+detail<font color="#E5E5E5"> it will reviews the fact that</font>
+
+36
+00:01:57,139 --> 00:02:01,920
+<font color="#E5E5E5">this class based on is used to derive</font>
+
+37
+00:02:00,560 --> 00:02:05,490
+other classes
+
+38
+00:02:01,920 --> 00:02:08,038
+<font color="#E5E5E5">a class name is part of the interface</font>
+
+39
+00:02:05,490 --> 00:02:10,978
+<font color="#CCCCCC">and when the</font><font color="#E5E5E5"> interface reveals the</font>
+
+40
+00:02:08,038 --> 00:02:15,599
+implementation<font color="#E5E5E5"> details we are losing all</font>
+
+41
+00:02:10,979 --> 00:02:18,150
+the benefits of abstraction<font color="#E5E5E5"> however this</font>
+
+42
+00:02:15,599 --> 00:02:21,420
+is not<font color="#CCCCCC"> a problem if the base talk is</font>
+
+43
+00:02:18,150 --> 00:02:25,530
+only a internal<font color="#E5E5E5"> class and not exposed on</font>
+
+44
+00:02:21,420 --> 00:02:27,720
+the interface<font color="#E5E5E5"> so instead of call coded</font>
+
+45
+00:02:25,530 --> 00:02:30,989
+<font color="#E5E5E5">based something why don't we just call</font>
+
+46
+00:02:27,720 --> 00:02:36,500
+it<font color="#E5E5E5"> something instead of calling it based</font>
+
+47
+00:02:30,989 --> 00:02:36,500
+on why<font color="#E5E5E5"> don't we just call</font><font color="#CCCCCC"> it dog</font>
+
+48
+00:02:39,460 --> 00:02:46,220
+now Bulldog<font color="#E5E5E5"> is a kind of dog and the</font>
+
+49
+00:02:43,220 --> 00:02:49,670
+shepherd dog is another<font color="#E5E5E5"> kind of dog it</font>
+
+50
+00:02:46,220 --> 00:02:53,270
+makes much more sense this way and it's
+
+51
+00:02:49,670 --> 00:02:55,730
+extendable<font color="#E5E5E5"> a dog can</font><font color="#CCCCCC"> be derived from an</font>
+
+52
+00:02:53,270 --> 00:03:00,440
+animal animal<font color="#CCCCCC"> can be</font><font color="#E5E5E5"> derived from</font>
+
+53
+00:02:55,730 --> 00:03:03,260
+organism so on and so forth<font color="#E5E5E5"> some people</font>
+
+54
+00:03:00,440 --> 00:03:07,010
+may<font color="#CCCCCC"> argue yeah yeah but these are</font><font color="#E5E5E5"> names</font>
+
+55
+00:03:03,260 --> 00:03:10,359
+there are cosmetic changes in software
+
+56
+00:03:07,010 --> 00:03:14,329
+engineering<font color="#CCCCCC"> good</font><font color="#E5E5E5"> naming is not cosmetic</font>
+
+57
+00:03:10,360 --> 00:03:16,970
+<font color="#E5E5E5">good naming is a critical element of a</font>
+
+58
+00:03:14,330 --> 00:03:19,940
+good software<font color="#E5E5E5"> design we should always</font>
+
+59
+00:03:16,970 --> 00:03:23,210
+strive for precise and self-explaining
+
+60
+00:03:19,940 --> 00:03:27,620
+names<font color="#E5E5E5"> for our classes our functions and</font>
+
+61
+00:03:23,210 --> 00:03:30,710
+our variables<font color="#E5E5E5"> now let's move on to the</font>
+
+62
+00:03:27,620 --> 00:03:34,210
+main line of<font color="#E5E5E5"> today's topic the</font><font color="#CCCCCC"> dog</font>
+
+63
+00:03:30,710 --> 00:03:37,640
+defines some common activities and
+
+64
+00:03:34,210 --> 00:03:41,780
+<font color="#E5E5E5">Bulldog</font><font color="#CCCCCC"> shepherd dog we</font><font color="#E5E5E5"> use these common</font>
+
+65
+00:03:37,640 --> 00:03:48,649
+activities to perform more tasks so this
+
+66
+00:03:41,780 --> 00:03:51,580
+is the example<font color="#E5E5E5"> of code reuse with</font>
+
+67
+00:03:48,650 --> 00:03:51,580
+inheritance
+
+68
+00:03:51,790 --> 00:03:57,640
+and let's look at<font color="#E5E5E5"> how we can achieve the</font>
+
+69
+00:03:55,330 --> 00:04:03,489
+same<font color="#E5E5E5"> kind of code we use with</font>
+
+70
+00:03:57,640 --> 00:04:06,369
+<font color="#CCCCCC">compensation we have a new class</font>
+
+71
+00:04:03,489 --> 00:04:08,680
+activity<font color="#CCCCCC"> manager and all the common</font>
+
+72
+00:04:06,370 --> 00:04:12,269
+activities that originally defined in
+
+73
+00:04:08,680 --> 00:04:15,819
+dog are moved to the activity manager
+
+74
+00:04:12,269 --> 00:04:18,639
+<font color="#E5E5E5">every dog have a pointer to the activity</font>
+
+75
+00:04:15,819 --> 00:04:21,339
+manager<font color="#E5E5E5"> P act manager and that they</font>
+
+76
+00:04:18,639 --> 00:04:25,630
+reuse the code<font color="#E5E5E5"> of the common activities</font>
+
+77
+00:04:21,339 --> 00:04:27,940
+through<font color="#CCCCCC"> the P act manager this</font><font color="#E5E5E5"> is</font><font color="#CCCCCC"> a code</font>
+
+78
+00:04:25,630 --> 00:04:30,430
+<font color="#CCCCCC">reuse</font><font color="#E5E5E5"> with composition structure</font>
+
+79
+00:04:27,940 --> 00:04:33,910
+how does it look comparing to the
+
+80
+00:04:30,430 --> 00:04:36,340
+inheritance example<font color="#E5E5E5"> on the surface it</font>
+
+81
+00:04:33,910 --> 00:04:39,820
+seems<font color="#E5E5E5"> like the composition is worse</font>
+
+82
+00:04:36,340 --> 00:04:43,539
+because<font color="#E5E5E5"> it has more lines of code</font><font color="#CCCCCC"> and it</font>
+
+83
+00:04:39,820 --> 00:04:45,669
+introduces a new class however<font color="#E5E5E5"> the</font>
+
+84
+00:04:43,539 --> 00:04:49,240
+composition is actually a much better
+
+85
+00:04:45,669 --> 00:04:54,010
+structure<font color="#E5E5E5"> for code reuse let's discuss</font>
+
+86
+00:04:49,240 --> 00:04:56,590
+why number<font color="#CCCCCC"> one composition</font><font color="#E5E5E5"> has less code</font>
+
+87
+00:04:54,010 --> 00:05:00,310
+coupling between the reused code and the
+
+88
+00:04:56,590 --> 00:05:03,010
+double user of the code inheritance
+
+89
+00:05:00,310 --> 00:05:06,070
+<font color="#E5E5E5">implies more coat covering between the</font>
+
+90
+00:05:03,010 --> 00:05:08,880
+child class under the parent class<font color="#E5E5E5"> the</font>
+
+91
+00:05:06,070 --> 00:05:11,440
+reasons are a the child class
+
+92
+00:05:08,880 --> 00:05:15,219
+<font color="#E5E5E5">automatically inherits all the</font><font color="#CCCCCC"> parent</font>
+
+93
+00:05:11,440 --> 00:05:17,139
+classes public members so whether you
+
+94
+00:05:15,220 --> 00:05:20,320
+like it or not<font color="#E5E5E5"> the child classes</font>
+
+95
+00:05:17,139 --> 00:05:23,710
+<font color="#E5E5E5">interface is bloated with the parent</font>
+
+96
+00:05:20,320 --> 00:05:25,750
+classes interface however with the
+
+97
+00:05:23,710 --> 00:05:28,359
+composition<font color="#CCCCCC"> you can always pick the</font>
+
+98
+00:05:25,750 --> 00:05:33,669
+<font color="#E5E5E5">things that you want to use and bring</font>
+
+99
+00:05:28,360 --> 00:05:36,030
+that<font color="#E5E5E5"> into</font><font color="#CCCCCC"> your interface</font><font color="#E5E5E5"> be the child</font>
+
+100
+00:05:33,669 --> 00:05:39,580
+<font color="#E5E5E5">class can access parent classes</font>
+
+101
+00:05:36,030 --> 00:05:43,630
+<font color="#E5E5E5">protected members in other words it can</font>
+
+102
+00:05:39,580 --> 00:05:46,150
+<font color="#E5E5E5">access the parents internals so in a</font>
+
+103
+00:05:43,630 --> 00:05:48,020
+sense<font color="#E5E5E5"> that in the inheritance breaks</font>
+
+104
+00:05:46,150 --> 00:05:50,479
+<font color="#E5E5E5">encapsulation</font>
+
+105
+00:05:48,020 --> 00:05:53,590
+there are two peaks the enemy of
+
+106
+00:05:50,479 --> 00:05:58,330
+encapsulation<font color="#CCCCCC"> in C++ what are they</font>
+
+107
+00:05:53,590 --> 00:06:03,318
+number one is friend<font color="#CCCCCC"> and number two is</font>
+
+108
+00:05:58,330 --> 00:06:05,960
+inheritance so friends and<font color="#E5E5E5"> children</font><font color="#CCCCCC"> fix</font>
+
+109
+00:06:03,319 --> 00:06:09,560
+the enemy of<font color="#CCCCCC"> your privacy</font><font color="#E5E5E5"> it's a</font>
+
+110
+00:06:05,960 --> 00:06:11,750
+<font color="#E5E5E5">philosophy of life the second reason why</font>
+
+111
+00:06:09,560 --> 00:06:15,860
+composition is better than<font color="#E5E5E5"> inheritance</font>
+
+112
+00:06:11,750 --> 00:06:18,830
+is dynamic binding<font color="#E5E5E5"> the inheritance</font>
+
+113
+00:06:15,860 --> 00:06:21,440
+<font color="#CCCCCC">relationship is bound at compile time</font>
+
+114
+00:06:18,830 --> 00:06:25,000
+once you pass the<font color="#E5E5E5"> compile time the</font>
+
+115
+00:06:21,440 --> 00:06:28,069
+relationship<font color="#E5E5E5"> cannot be change it animal</font>
+
+116
+00:06:25,000 --> 00:06:30,830
+however the composition relationship<font color="#E5E5E5"> can</font>
+
+117
+00:06:28,069 --> 00:06:33,949
+<font color="#CCCCCC">be bound either at compile time</font><font color="#E5E5E5"> or at</font>
+
+118
+00:06:30,830 --> 00:06:38,030
+one time through polymorphism<font color="#E5E5E5"> and the</font>
+
+119
+00:06:33,949 --> 00:06:40,789
+dynamic binding<font color="#E5E5E5"> so we have a outdoor</font>
+
+120
+00:06:38,030 --> 00:06:43,068
+activity<font color="#CCCCCC"> manager and a indoor activity</font>
+
+121
+00:06:40,789 --> 00:06:46,759
+manager<font color="#E5E5E5"> both of them are derived from</font>
+
+122
+00:06:43,069 --> 00:06:49,460
+<font color="#CCCCCC">the activity manager</font><font color="#E5E5E5"> since each dog</font><font color="#CCCCCC"> has</font>
+
+123
+00:06:46,759 --> 00:06:51,469
+a pointer<font color="#CCCCCC"> to activity manager</font><font color="#E5E5E5"> we can</font>
+
+124
+00:06:49,460 --> 00:06:54,109
+<font color="#E5E5E5">switch between the outdoor and indoor</font>
+
+125
+00:06:51,469 --> 00:06:56,319
+activity manager<font color="#E5E5E5"> easily during</font><font color="#CCCCCC"> the</font>
+
+126
+00:06:54,110 --> 00:06:59,690
+<font color="#CCCCCC">runtime</font>
+
+127
+00:06:56,319 --> 00:07:02,990
+lastly composition<font color="#E5E5E5"> has more flexible</font>
+
+128
+00:06:59,690 --> 00:07:05,509
+code constructor<font color="#CCCCCC"> say you have many types</font>
+
+129
+00:07:02,990 --> 00:07:08,750
+of dog and many<font color="#E5E5E5"> types of activity</font>
+
+130
+00:07:05,509 --> 00:07:11,509
+managers with composition<font color="#E5E5E5"> you can make</font>
+
+131
+00:07:08,750 --> 00:07:15,860
+arbitrary<font color="#E5E5E5"> combination of the dogs and</font>
+
+132
+00:07:11,509 --> 00:07:18,199
+activity managers there is no limit on
+
+133
+00:07:15,860 --> 00:07:21,740
+how you can combine a dog with an
+
+134
+00:07:18,199 --> 00:07:24,969
+activity<font color="#CCCCCC"> manager if you</font><font color="#E5E5E5"> really want one</font>
+
+135
+00:07:21,740 --> 00:07:29,029
+dog can even have<font color="#CCCCCC"> multiple instances of</font>
+
+136
+00:07:24,969 --> 00:07:31,460
+activity<font color="#CCCCCC"> manager at the same time with</font>
+
+137
+00:07:29,029 --> 00:07:35,740
+the inheritance<font color="#E5E5E5"> you can only have</font><font color="#CCCCCC"> one</font>
+
+138
+00:07:31,460 --> 00:07:35,739
+instance<font color="#E5E5E5"> of an apparent at a time</font>
+
+139
+00:07:35,789 --> 00:07:40,719
+so combine those three let's<font color="#E5E5E5"> code</font>
+
+140
+00:07:39,880 --> 00:07:43,840
+covering
+
+141
+00:07:40,720 --> 00:07:47,050
+dynamic binding<font color="#E5E5E5"> and the flexible code</font>
+
+142
+00:07:43,840 --> 00:07:49,690
+constructor we<font color="#CCCCCC"> declare that composition</font>
+
+143
+00:07:47,050 --> 00:07:53,710
+<font color="#E5E5E5">is a better structure for code reuse</font>
+
+144
+00:07:49,690 --> 00:07:56,789
+<font color="#E5E5E5">than inheritance inheritance is good for</font>
+
+145
+00:07:53,710 --> 00:07:59,799
+other things<font color="#E5E5E5"> but not</font><font color="#CCCCCC"> for code reuse</font>
+
+146
+00:07:56,789 --> 00:08:02,460
+<font color="#E5E5E5">that's all for today see you next time</font>
+
+147
+00:07:59,800 --> 00:08:02,460
+<font color="#E5E5E5">bye</font><font color="#CCCCCC"> bye</font>
+

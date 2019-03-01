@@ -1,0 +1,712 @@
+﻿1
+00:00:07,880 --> 00:00:15,420
+hello welcome to C++<font color="#E5E5E5"> advanced today we</font>
+
+2
+00:00:12,870 --> 00:00:18,240
+are<font color="#E5E5E5"> going to talk</font><font color="#CCCCCC"> about a special</font><font color="#E5E5E5"> coding</font>
+
+3
+00:00:15,420 --> 00:00:22,259
+technique called<font color="#E5E5E5"> resource acquisition is</font>
+
+4
+00:00:18,240 --> 00:00:26,240
+initialization<font color="#CCCCCC"> what it basically</font><font color="#E5E5E5"> means</font>
+
+5
+00:00:22,260 --> 00:00:29,369
+is using objects to manage resources
+
+6
+00:00:26,240 --> 00:00:34,050
+resources could be<font color="#E5E5E5"> memory</font><font color="#CCCCCC"> hardware</font>
+
+7
+00:00:29,369 --> 00:00:37,860
+device<font color="#E5E5E5"> network handle et cetera let's</font>
+
+8
+00:00:34,050 --> 00:00:41,940
+look at the example I<font color="#E5E5E5"> have a mutex mu</font>
+
+9
+00:00:37,860 --> 00:00:45,359
+and the in function a I block the mutex
+
+10
+00:00:41,940 --> 00:00:51,239
+<font color="#CCCCCC">and then do a bunch of</font><font color="#E5E5E5"> things and then</font>
+
+11
+00:00:45,359 --> 00:00:54,149
+unlock mutex this is a pretty<font color="#CCCCCC"> regular</font>
+
+12
+00:00:51,239 --> 00:00:59,968
+looking code but there is a<font color="#CCCCCC"> problem with</font>
+
+13
+00:00:54,149 --> 00:01:03,749
+this code the problem<font color="#E5E5E5"> is the statement</font>
+
+14
+00:00:59,969 --> 00:01:06,570
+of unlocking<font color="#E5E5E5"> music mutex</font><font color="#CCCCCC"> may not be</font>
+
+15
+00:01:03,749 --> 00:01:10,009
+executed<font color="#CCCCCC"> because a doing a bunch of</font>
+
+16
+00:01:06,570 --> 00:01:11,538
+thing could return<font color="#E5E5E5"> to function</font><font color="#CCCCCC"> a</font>
+
+17
+00:01:10,009 --> 00:01:14,219
+<font color="#E5E5E5">prematurely</font>
+
+18
+00:01:11,539 --> 00:01:18,450
+even if it didn't even<font color="#E5E5E5"> if it doesn't</font>
+
+19
+00:01:14,219 --> 00:01:21,990
+<font color="#E5E5E5">return it may throw an</font><font color="#CCCCCC"> exception and in</font>
+
+20
+00:01:18,450 --> 00:01:26,009
+either<font color="#E5E5E5"> case the mutex will be locked</font>
+
+21
+00:01:21,990 --> 00:01:28,740
+<font color="#E5E5E5">forever so we need to need a way to</font>
+
+22
+00:01:26,009 --> 00:01:33,530
+<font color="#CCCCCC">guarantee that the mutex will be</font>
+
+23
+00:01:28,740 --> 00:01:38,399
+unlocked once it is<font color="#E5E5E5"> no longer needed</font>
+
+24
+00:01:33,530 --> 00:01:41,549
+let's look at<font color="#E5E5E5"> how solution the solution</font>
+
+25
+00:01:38,399 --> 00:01:45,600
+is to<font color="#CCCCCC"> use</font><font color="#E5E5E5"> the resource acquisition is</font>
+
+26
+00:01:41,549 --> 00:01:49,560
+initialization technique here<font color="#CCCCCC"> I have a</font>
+
+27
+00:01:45,600 --> 00:01:52,678
+class<font color="#CCCCCC"> lock the class lock have a private</font>
+
+28
+00:01:49,560 --> 00:01:57,420
+data member which<font color="#CCCCCC"> is a pointer to mutex</font>
+
+29
+00:01:52,679 --> 00:02:02,580
+<font color="#E5E5E5">and in the constructor of</font><font color="#CCCCCC"> the lock</font>
+
+30
+00:01:57,420 --> 00:02:05,280
+the mutex<font color="#E5E5E5"> will be locked and in the</font>
+
+31
+00:02:02,580 --> 00:02:09,630
+destructor of the lock mutex<font color="#E5E5E5"> will be</font>
+
+32
+00:02:05,280 --> 00:02:12,990
+<font color="#E5E5E5">unlocked now in function a whenever I</font>
+
+33
+00:02:09,630 --> 00:02:17,400
+want<font color="#E5E5E5"> to lock the mutex</font><font color="#CCCCCC"> I construct a</font>
+
+34
+00:02:12,990 --> 00:02:23,720
+<font color="#CCCCCC">lock and then do whatever things</font><font color="#E5E5E5"> that I</font>
+
+35
+00:02:17,400 --> 00:02:27,540
+want to<font color="#E5E5E5"> do and by the end of function a</font>
+
+36
+00:02:23,720 --> 00:02:32,130
+my lock<font color="#E5E5E5"> will be destroyed from the stack</font>
+
+37
+00:02:27,540 --> 00:02:42,329
+<font color="#E5E5E5">and then the destructor of the lock will</font>
+
+38
+00:02:32,130 --> 00:02:45,239
+be invoked so mutex<font color="#E5E5E5"> will be unlocked the</font>
+
+39
+00:02:42,330 --> 00:02:49,050
+conclusion we can take<font color="#E5E5E5"> from this example</font>
+
+40
+00:02:45,239 --> 00:02:52,440
+is<font color="#E5E5E5"> the</font><font color="#CCCCCC"> only code that can guaranteed to</font>
+
+41
+00:02:49,050 --> 00:02:55,380
+be executed after exception is thrown at
+
+42
+00:02:52,440 --> 00:03:00,510
+<font color="#E5E5E5">the destructor of the objects deciding</font>
+
+43
+00:02:55,380 --> 00:03:03,390
+on stack so in this example<font color="#E5E5E5"> the</font>
+
+44
+00:03:00,510 --> 00:03:08,120
+destructor<font color="#E5E5E5"> of my lock is guaranteed to</font>
+
+45
+00:03:03,390 --> 00:03:12,059
+be executed so our resource management
+
+46
+00:03:08,120 --> 00:03:15,750
+needs to<font color="#CCCCCC"> be</font><font color="#E5E5E5"> tied</font><font color="#CCCCCC"> to the lifespan</font><font color="#E5E5E5"> of a</font>
+
+47
+00:03:12,060 --> 00:03:20,510
+<font color="#CCCCCC">souped suitable objects</font><font color="#E5E5E5"> in order</font><font color="#CCCCCC"> to gain</font>
+
+48
+00:03:15,750 --> 00:03:20,510
+automatic<font color="#E5E5E5"> the allocation</font><font color="#CCCCCC"> and reclamation</font>
+
+49
+00:03:22,010 --> 00:03:28,200
+another good example<font color="#CCCCCC"> of resource</font>
+
+50
+00:03:24,720 --> 00:03:32,370
+acquisition is<font color="#CCCCCC"> initialization</font><font color="#E5E5E5"> is shared</font>
+
+51
+00:03:28,200 --> 00:03:36,060
+pointer<font color="#E5E5E5"> a shared pointer is a reference</font>
+
+52
+00:03:32,370 --> 00:03:38,760
+<font color="#E5E5E5">counting smart pointer it counts a</font>
+
+53
+00:03:36,060 --> 00:03:42,690
+number of pointer points to<font color="#E5E5E5"> itself and</font>
+
+54
+00:03:38,760 --> 00:03:46,220
+when that number<font color="#E5E5E5"> which is 0 the smart</font>
+
+55
+00:03:42,690 --> 00:03:46,220
+pointer will be<font color="#E5E5E5"> destroyed</font>
+
+56
+00:03:46,269 --> 00:03:53,780
+so in now in function a I created a<font color="#CCCCCC"> new</font>
+
+57
+00:03:50,629 --> 00:03:58,969
+dog<font color="#E5E5E5"> and assign the new</font><font color="#CCCCCC"> dog's pointer to</font>
+
+58
+00:03:53,780 --> 00:04:01,909
+<font color="#E5E5E5">a shared pointer</font><font color="#CCCCCC"> pd-1 speedy goes out of</font>
+
+59
+00:03:58,969 --> 00:04:05,390
+<font color="#CCCCCC">scope</font><font color="#E5E5E5"> or in other words once there's no</font>
+
+60
+00:04:01,909 --> 00:04:13,099
+more pointer points to PD and a new dog
+
+61
+00:04:05,390 --> 00:04:13,939
+will be destroyed<font color="#E5E5E5"> let's look at another</font>
+
+62
+00:04:13,099 --> 00:04:18,469
+<font color="#E5E5E5">example</font>
+
+63
+00:04:13,939 --> 00:04:21,620
+I have a class dog<font color="#E5E5E5"> class trick and a</font>
+
+64
+00:04:18,470 --> 00:04:25,840
+function<font color="#CCCCCC"> chain which change that change</font>
+
+65
+00:04:21,620 --> 00:04:28,759
+the dog<font color="#E5E5E5"> with some kind of dog trick</font><font color="#CCCCCC"> I</font>
+
+66
+00:04:25,840 --> 00:04:32,320
+have a function<font color="#E5E5E5"> get trick which returns</font>
+
+67
+00:04:28,759 --> 00:04:36,800
+a trick now<font color="#E5E5E5"> in the main function</font><font color="#CCCCCC"> I</font>
+
+68
+00:04:32,320 --> 00:04:39,710
+invoke the<font color="#E5E5E5"> chain function with the</font>
+
+69
+00:04:36,800 --> 00:04:45,320
+parameter dog is created<font color="#E5E5E5"> from a new dog</font>
+
+70
+00:04:39,710 --> 00:04:50,659
+<font color="#CCCCCC">and the parameter dog trick is get from</font>
+
+71
+00:04:45,320 --> 00:04:56,870
+the cat check<font color="#E5E5E5"> function now do you see</font>
+
+72
+00:04:50,659 --> 00:05:00,020
+any problem with<font color="#CCCCCC"> this</font><font color="#E5E5E5"> kind of code let's</font>
+
+73
+00:04:56,870 --> 00:05:03,590
+examine on what happens<font color="#E5E5E5"> in the</font><font color="#CCCCCC"> train</font>
+
+74
+00:05:00,020 --> 00:05:09,020
+functions primate passing more
+
+75
+00:05:03,590 --> 00:05:11,840
+<font color="#E5E5E5">specifically is part of the code the</font>
+
+76
+00:05:09,020 --> 00:05:13,690
+there are<font color="#E5E5E5"> three</font><font color="#CCCCCC"> things happening one is</font>
+
+77
+00:05:11,840 --> 00:05:17,780
+creating a new dog
+
+78
+00:05:13,690 --> 00:05:21,469
+second thing is invoking the<font color="#CCCCCC"> get</font><font color="#E5E5E5"> trick</font>
+
+79
+00:05:17,780 --> 00:05:24,770
+function and lastly construct a shared
+
+80
+00:05:21,470 --> 00:05:30,770
+pointer and assign the dog to<font color="#CCCCCC"> the shared</font>
+
+81
+00:05:24,770 --> 00:05:35,180
+pointer now in C++<font color="#CCCCCC"> the order of the</font>
+
+82
+00:05:30,770 --> 00:05:39,049
+<font color="#E5E5E5">three operations are not fixed it is</font>
+
+83
+00:05:35,180 --> 00:05:42,940
+compact<font color="#E5E5E5"> completely up to the compiler so</font>
+
+84
+00:05:39,050 --> 00:05:46,389
+if the compiler<font color="#CCCCCC"> decide</font><font color="#E5E5E5"> to execute</font><font color="#CCCCCC"> the 3</font>
+
+85
+00:05:42,940 --> 00:05:52,070
+operation in this order
+
+86
+00:05:46,389 --> 00:05:56,240
+then there's a<font color="#E5E5E5"> problem the gastric</font>
+
+87
+00:05:52,070 --> 00:05:59,719
+function might throw an exception<font color="#E5E5E5"> and if</font>
+
+88
+00:05:56,240 --> 00:06:02,960
+that<font color="#CCCCCC"> happen we have created a new dog</font>
+
+89
+00:05:59,720 --> 00:06:06,830
+and that<font color="#CCCCCC"> a</font><font color="#E5E5E5"> new dog is has not being</font>
+
+90
+00:06:02,960 --> 00:06:11,950
+assigned to<font color="#E5E5E5"> a shared pointer yet so the</font>
+
+91
+00:06:06,830 --> 00:06:11,950
+memory<font color="#CCCCCC"> of the new dog will be leaked</font>
+
+92
+00:06:13,270 --> 00:06:20,930
+then the conclusion<font color="#CCCCCC"> where we can take</font>
+
+93
+00:06:16,310 --> 00:06:23,570
+from<font color="#E5E5E5"> this example is don't combine the</font>
+
+94
+00:06:20,930 --> 00:06:29,030
+operation of storing objects in a shared
+
+95
+00:06:23,570 --> 00:06:31,969
+pointer<font color="#E5E5E5"> with any other statement in</font>
+
+96
+00:06:29,030 --> 00:06:35,840
+other words<font color="#E5E5E5"> put the storing objects</font>
+
+97
+00:06:31,970 --> 00:06:41,169
+<font color="#CCCCCC">insured pointer statement to a standard</font>
+
+98
+00:06:35,840 --> 00:06:48,250
+long statement<font color="#E5E5E5"> so in this example we'll</font>
+
+99
+00:06:41,169 --> 00:06:48,250
+extract<font color="#E5E5E5"> this part of the code and then</font>
+
+100
+00:07:02,439 --> 00:07:10,339
+now<font color="#E5E5E5"> now our code is</font><font color="#CCCCCC"> thread-safe because</font>
+
+101
+00:07:07,249 --> 00:07:13,489
+the new dog<font color="#E5E5E5"> once it's going</font><font color="#CCCCCC"> to</font><font color="#E5E5E5"> get</font>
+
+102
+00:07:10,339 --> 00:07:18,339
+created<font color="#E5E5E5"> it will be always assigned to a</font>
+
+103
+00:07:13,489 --> 00:07:23,619
+<font color="#E5E5E5">shared pointer and there were no longer</font>
+
+104
+00:07:18,339 --> 00:07:23,619
+the possibility of memory leak
+
+105
+00:07:26,990 --> 00:07:37,050
+our last<font color="#E5E5E5"> note what happens</font><font color="#CCCCCC"> when the</font>
+
+106
+00:07:33,300 --> 00:07:40,620
+resource management<font color="#E5E5E5"> object is copied so</font>
+
+107
+00:07:37,050 --> 00:07:44,460
+in this example I create our one<font color="#E5E5E5"> form</font>
+
+108
+00:07:40,620 --> 00:07:49,290
+mutex<font color="#E5E5E5"> mu and then copy can construct our</font>
+
+109
+00:07:44,460 --> 00:07:52,739
+<font color="#CCCCCC">two from l1 usually the mutex</font><font color="#E5E5E5"> is</font>
+
+110
+00:07:49,290 --> 00:07:56,760
+mutually exclusive<font color="#CCCCCC"> so it cannot</font><font color="#E5E5E5"> be</font>
+
+111
+00:07:52,740 --> 00:08:01,680
+called shared by multiple clients so one
+
+112
+00:07:56,760 --> 00:08:09,930
+solution<font color="#CCCCCC"> for the</font><font color="#E5E5E5"> for this is prohibit</font>
+
+113
+00:08:01,680 --> 00:08:12,660
+copying completely<font color="#CCCCCC"> and we can do that by</font>
+
+114
+00:08:09,930 --> 00:08:15,240
+disallow the copy constructor<font color="#E5E5E5"> and copy</font>
+
+115
+00:08:12,660 --> 00:08:18,890
+assignment operator from<font color="#E5E5E5"> being used by</font>
+
+116
+00:08:15,240 --> 00:08:22,070
+our<font color="#E5E5E5"> client</font><font color="#CCCCCC"> and to see how to do that</font>
+
+117
+00:08:18,890 --> 00:08:25,050
+<font color="#E5E5E5">please watch my another</font><font color="#CCCCCC"> session which is</font>
+
+118
+00:08:22,070 --> 00:08:27,840
+disallow compiler generated functions
+
+119
+00:08:25,050 --> 00:08:34,200
+and we're<font color="#E5E5E5"> not going</font><font color="#CCCCCC"> to talk</font><font color="#E5E5E5"> about that</font>
+
+120
+00:08:27,840 --> 00:08:36,500
+in this session solution<font color="#E5E5E5"> to</font><font color="#CCCCCC"> sometime</font><font color="#E5E5E5"> the</font>
+
+121
+00:08:34,200 --> 00:08:41,130
+resource can be<font color="#E5E5E5"> shared by multiple</font>
+
+122
+00:08:36,500 --> 00:08:44,940
+clients<font color="#E5E5E5"> and in those kind of scenario or</font>
+
+123
+00:08:41,130 --> 00:08:48,170
+we<font color="#E5E5E5"> need to</font><font color="#CCCCCC"> always want to</font><font color="#E5E5E5"> make sure</font><font color="#CCCCCC"> if</font>
+
+124
+00:08:44,940 --> 00:08:51,180
+<font color="#E5E5E5">that resource will be released</font>
+
+125
+00:08:48,170 --> 00:08:55,530
+appropriately<font color="#E5E5E5"> once all the clients are</font>
+
+126
+00:08:51,180 --> 00:08:59,430
+done with<font color="#E5E5E5"> it</font><font color="#CCCCCC"> so we need to implement</font>
+
+127
+00:08:55,530 --> 00:09:03,060
+some<font color="#CCCCCC"> kind of reference count</font><font color="#E5E5E5"> mechanism</font>
+
+128
+00:08:59,430 --> 00:09:07,859
+and<font color="#E5E5E5"> to keep track</font><font color="#CCCCCC"> of</font><font color="#E5E5E5"> the number of</font>
+
+129
+00:09:03,060 --> 00:09:12,630
+clients<font color="#CCCCCC"> who</font><font color="#E5E5E5"> is using the resource and we</font>
+
+130
+00:09:07,860 --> 00:09:16,020
+can do that<font color="#E5E5E5"> with the shared pointer in</font>
+
+131
+00:09:12,630 --> 00:09:20,310
+previous example we have we have seen
+
+132
+00:09:16,020 --> 00:09:23,490
+<font color="#E5E5E5">that shared pointer can take one</font>
+
+133
+00:09:20,310 --> 00:09:26,619
+parameter<font color="#E5E5E5"> which</font><font color="#CCCCCC"> is a new created object</font>
+
+134
+00:09:23,490 --> 00:09:31,190
+that's starting on heap
+
+135
+00:09:26,620 --> 00:09:35,120
+the shared pointer constructor can<font color="#E5E5E5"> take</font>
+
+136
+00:09:31,190 --> 00:09:37,400
+a second parameter which is<font color="#CCCCCC"> at the litre</font>
+
+137
+00:09:35,120 --> 00:09:40,400
+<font color="#CCCCCC">a</font><font color="#E5E5E5"> deleter</font>
+
+138
+00:09:37,400 --> 00:09:45,560
+is a function that<font color="#E5E5E5"> will</font><font color="#CCCCCC"> be invoked</font><font color="#E5E5E5"> when</font>
+
+139
+00:09:40,400 --> 00:09:48,319
+the shared pointer is destroyed and the
+
+140
+00:09:45,560 --> 00:09:53,839
+<font color="#E5E5E5">default value for the deleter is the</font>
+
+141
+00:09:48,320 --> 00:09:56,780
+operator delete so in this example once
+
+142
+00:09:53,840 --> 00:09:59,780
+the shared pointer PD is<font color="#CCCCCC"> delay is</font>
+
+143
+00:09:56,780 --> 00:10:03,459
+destroyed<font color="#E5E5E5"> the operator delete the</font>
+
+144
+00:09:59,780 --> 00:10:08,959
+default<font color="#E5E5E5"> value of the</font><font color="#CCCCCC"> litre</font><font color="#E5E5E5"> will</font><font color="#CCCCCC"> be</font>
+
+145
+00:10:03,460 --> 00:10:11,990
+performed upon<font color="#E5E5E5"> the new dock and a good</font>
+
+146
+00:10:08,960 --> 00:10:14,930
+thing about the shared pointer is that
+
+147
+00:10:11,990 --> 00:10:20,090
+the<font color="#CCCCCC"> litre can</font><font color="#E5E5E5"> be customized to any</font>
+
+148
+00:10:14,930 --> 00:10:24,920
+<font color="#E5E5E5">function</font><font color="#CCCCCC"> you like and here we're going</font>
+
+149
+00:10:20,090 --> 00:10:27,470
+<font color="#CCCCCC">to take advantage</font><font color="#E5E5E5"> of that now let's look</font>
+
+150
+00:10:24,920 --> 00:10:31,310
+at<font color="#E5E5E5"> the new implementation of the lock</font>
+
+151
+00:10:27,470 --> 00:10:34,100
+class and now it has a private<font color="#CCCCCC"> date</font>
+
+152
+00:10:31,310 --> 00:10:38,900
+member peanut X which is a shared
+
+153
+00:10:34,100 --> 00:10:43,430
+pointer to a mutex the constructor<font color="#E5E5E5"> of</font>
+
+154
+00:10:38,900 --> 00:10:45,949
+the<font color="#E5E5E5"> log initialize the</font><font color="#CCCCCC"> PMU</font><font color="#E5E5E5"> text with the</font>
+
+155
+00:10:43,430 --> 00:10:49,550
+pointer of<font color="#CCCCCC"> the mutex as the first</font>
+
+156
+00:10:45,950 --> 00:10:53,170
+parameter and the mutex<font color="#E5E5E5"> unlock</font><font color="#CCCCCC"> function</font>
+
+157
+00:10:49,550 --> 00:10:56,930
+at<font color="#E5E5E5"> the second parameter the deleter</font>
+
+158
+00:10:53,170 --> 00:11:03,319
+in the body<font color="#E5E5E5"> of the constructor</font><font color="#CCCCCC"> it will</font>
+
+159
+00:10:56,930 --> 00:11:07,089
+lock the<font color="#CCCCCC"> Premio type P lock the mutex so</font>
+
+160
+00:11:03,320 --> 00:11:12,320
+what this<font color="#CCCCCC"> means is when the lock is</font>
+
+161
+00:11:07,090 --> 00:11:15,170
+created it will<font color="#CCCCCC"> lock the mutex and when</font>
+
+162
+00:11:12,320 --> 00:11:21,100
+there's no more<font color="#E5E5E5"> pointer points to P</font>
+
+163
+00:11:15,170 --> 00:11:21,099
+mutex the mutex<font color="#E5E5E5"> will be unlocked</font>
+
+164
+00:11:21,830 --> 00:11:30,390
+let's look<font color="#E5E5E5"> at the example</font><font color="#CCCCCC"> again</font><font color="#E5E5E5"> I create</font>
+
+165
+00:11:25,710 --> 00:11:35,670
+mute<font color="#E5E5E5"> log</font><font color="#CCCCCC"> l14 mutex</font><font color="#E5E5E5"> and then can copy</font>
+
+166
+00:11:30,390 --> 00:11:39,860
+construct l2 from<font color="#CCCCCC"> l1 by this time we</font>
+
+167
+00:11:35,670 --> 00:11:45,660
+have two pointers points to<font color="#E5E5E5"> peameal tags</font>
+
+168
+00:11:39,860 --> 00:11:48,630
+and the reference count is<font color="#CCCCCC"> two</font><font color="#E5E5E5"> and by</font>
+
+169
+00:11:45,660 --> 00:11:53,459
+the time both l1 and l2<font color="#E5E5E5"> goes out of</font>
+
+170
+00:11:48,630 --> 00:11:57,020
+scope<font color="#E5E5E5"> the number of pointer points to</font>
+
+171
+00:11:53,460 --> 00:12:02,420
+<font color="#CCCCCC">premio</font><font color="#E5E5E5"> tags will become 0</font><font color="#CCCCCC"> that means</font>
+
+172
+00:11:57,020 --> 00:12:05,760
+<font color="#CCCCCC">premio</font><font color="#E5E5E5"> texas deleter will be invoked and</font>
+
+173
+00:12:02,420 --> 00:12:10,319
+then the<font color="#CCCCCC"> period the mutex</font><font color="#E5E5E5"> will be</font>
+
+174
+00:12:05,760 --> 00:12:15,150
+unlocked so that<font color="#E5E5E5"> completes our solution</font>
+
+175
+00:12:10,320 --> 00:12:19,980
+for<font color="#E5E5E5"> our solution 2 which guarantees the</font>
+
+176
+00:12:15,150 --> 00:12:24,689
+unlocking of mutex<font color="#E5E5E5"> once there's no kind</font>
+
+177
+00:12:19,980 --> 00:12:27,710
+is using the mutex anymore that's all
+
+178
+00:12:24,690 --> 00:12:27,710
+<font color="#E5E5E5">bye bye</font>
+

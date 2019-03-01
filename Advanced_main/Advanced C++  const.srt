@@ -1,0 +1,492 @@
+﻿1
+00:00:05,020 --> 00:00:11,360
+hello everyone today<font color="#CCCCCC"> we</font><font color="#E5E5E5"> will talk</font><font color="#CCCCCC"> about</font>
+
+2
+00:00:08,000 --> 00:00:14,629
+a<font color="#CCCCCC"> sequence s keyword Const what else</font>
+
+3
+00:00:11,360 --> 00:00:17,240
+comes<font color="#E5E5E5"> to me Const is a compiled time</font>
+
+4
+00:00:14,630 --> 00:00:21,200
+constraint<font color="#E5E5E5"> that an object cannot be</font>
+
+5
+00:00:17,240 --> 00:00:23,479
+<font color="#E5E5E5">modified</font><font color="#CCCCCC"> so first it's a constraint</font><font color="#E5E5E5"> that</font>
+
+6
+00:00:21,200 --> 00:00:26,988
+<font color="#CCCCCC">a number</font><font color="#E5E5E5"> an object cannot be</font><font color="#CCCCCC"> modified</font>
+
+7
+00:00:23,480 --> 00:00:32,000
+and secondly this constraint<font color="#E5E5E5"> is enforced</font>
+
+8
+00:00:26,989 --> 00:00:35,960
+at compile time so here I have<font color="#CCCCCC"> a Const</font>
+
+9
+00:00:32,000 --> 00:00:44,719
+integer<font color="#CCCCCC"> I equal to nine and</font><font color="#E5E5E5"> if I want to</font>
+
+10
+00:00:35,960 --> 00:00:47,780
+change I<font color="#E5E5E5"> to six and compile</font><font color="#CCCCCC"> it filled</font>
+
+11
+00:00:44,719 --> 00:00:51,739
+with<font color="#E5E5E5"> the message assignment of read only</font>
+
+12
+00:00:47,780 --> 00:00:54,739
+<font color="#E5E5E5">valuable I so this is what a constant</font>
+
+13
+00:00:51,739 --> 00:00:58,669
+<font color="#CCCCCC">ask</font><font color="#E5E5E5"> it enforces the constant is during</font>
+
+14
+00:00:54,739 --> 00:01:05,089
+the compile time now let's look at some
+
+15
+00:00:58,670 --> 00:01:08,510
+more<font color="#CCCCCC"> examples</font><font color="#E5E5E5"> Const int star p1 what</font>
+
+16
+00:01:05,089 --> 00:01:12,650
+does that mean it means the data<font color="#E5E5E5"> that</font>
+
+17
+00:01:08,510 --> 00:01:16,940
+point to 2 by P 1 is a Const but the<font color="#CCCCCC"> cop</font>
+
+18
+00:01:12,650 --> 00:01:25,590
+the point itself<font color="#CCCCCC"> p1 is not constant</font>
+
+19
+00:01:16,940 --> 00:01:30,000
+so if we do<font color="#E5E5E5"> P 1 star equal</font><font color="#CCCCCC"> to 5</font><font color="#E5E5E5"> and then</font>
+
+20
+00:01:25,590 --> 00:01:32,520
+comment<font color="#CCCCCC"> out</font><font color="#E5E5E5"> this one and run it it will</font>
+
+21
+00:01:30,000 --> 00:01:37,320
+not compile<font color="#CCCCCC"> because the</font><font color="#E5E5E5"> assignment of</font>
+
+22
+00:01:32,520 --> 00:01:43,080
+read<font color="#CCCCCC"> only location star</font><font color="#E5E5E5"> P 1 however if</font>
+
+23
+00:01:37,320 --> 00:01:47,369
+we do P 1 plus plus that<font color="#CCCCCC"> modifies the P</font>
+
+24
+00:01:43,080 --> 00:01:51,420
+1 itself and compile it<font color="#E5E5E5"> it runs through</font>
+
+25
+00:01:47,369 --> 00:01:55,020
+<font color="#CCCCCC">ok so P 1 is not a constant but the data</font>
+
+26
+00:01:51,420 --> 00:01:58,140
+pointed to by<font color="#E5E5E5"> P 1 is a constant the way</font>
+
+27
+00:01:55,020 --> 00:02:02,970
+to remember it is by reading<font color="#E5E5E5"> it Const</font>
+
+28
+00:01:58,140 --> 00:02:07,979
+int so the integer is<font color="#E5E5E5"> a constant next</font>
+
+29
+00:02:02,970 --> 00:02:10,560
+example is<font color="#E5E5E5"> integers star counts P 2 what</font>
+
+30
+00:02:07,979 --> 00:02:14,850
+does this mean this is the opposite of
+
+31
+00:02:10,560 --> 00:02:17,459
+the P 1 which<font color="#E5E5E5"> means the P 2 itself is a</font>
+
+32
+00:02:14,850 --> 00:02:20,900
+<font color="#E5E5E5">constant but the data it points to is</font>
+
+33
+00:02:17,459 --> 00:02:20,900
+not a constant
+
+34
+00:02:22,830 --> 00:02:31,200
+so the way to remember<font color="#E5E5E5"> it</font><font color="#CCCCCC"> is const</font><font color="#E5E5E5"> p2 so</font>
+
+35
+00:02:27,910 --> 00:02:31,200
+the p2 is a Const
+
+36
+00:02:31,320 --> 00:02:40,810
+next one is Const into star Const p3 now
+
+37
+00:02:37,690 --> 00:02:45,820
+both the point p3 and the data pointed
+
+38
+00:02:40,810 --> 00:02:48,310
+to by p3 are Const so it is easy<font color="#E5E5E5"> to</font>
+
+39
+00:02:45,820 --> 00:02:51,670
+remember<font color="#E5E5E5"> Const int the integer is</font>
+
+40
+00:02:48,310 --> 00:02:56,770
+constant constant e to p2 is constant
+
+41
+00:02:51,670 --> 00:03:01,149
+now here's the tricky one integer<font color="#E5E5E5"> can</font>
+
+42
+00:02:56,770 --> 00:03:04,870
+star p4 so what is constant what is<font color="#E5E5E5"> not</font>
+
+43
+00:03:01,150 --> 00:03:12,100
+constant the rule that you<font color="#CCCCCC"> should</font>
+
+44
+00:03:04,870 --> 00:03:15,700
+remember<font color="#E5E5E5"> is this if Const is on the left</font>
+
+45
+00:03:12,100 --> 00:03:18,489
+of a star data is the Const<font color="#E5E5E5"> if Const is</font>
+
+46
+00:03:15,700 --> 00:03:21,399
+on the right<font color="#E5E5E5"> of the star pointer is the</font>
+
+47
+00:03:18,490 --> 00:03:23,020
+constant actually<font color="#CCCCCC"> you</font><font color="#E5E5E5"> don't need to</font>
+
+48
+00:03:21,400 --> 00:03:25,270
+remember<font color="#E5E5E5"> all this all you need</font><font color="#CCCCCC"> to</font>
+
+49
+00:03:23,020 --> 00:03:27,640
+remember<font color="#E5E5E5"> is if constant is on the left</font>
+
+50
+00:03:25,270 --> 00:03:31,360
+of<font color="#CCCCCC"> stop it's one thing and if Const is</font>
+
+51
+00:03:27,640 --> 00:03:35,790
+on the right<font color="#E5E5E5"> of star it's another so in</font>
+
+52
+00:03:31,360 --> 00:03:35,790
+this case we can rewrite this code
+
+53
+00:03:36,810 --> 00:03:45,340
+by changing<font color="#CCCCCC"> the order of hint and</font>
+
+54
+00:03:41,380 --> 00:03:48,250
+constant<font color="#E5E5E5"> and think since in both case</font>
+
+55
+00:03:45,340 --> 00:03:51,160
+the<font color="#CCCCCC"> constant</font><font color="#E5E5E5"> is on the left of the star</font>
+
+56
+00:03:48,250 --> 00:03:53,220
+<font color="#E5E5E5">so</font><font color="#CCCCCC"> there are the</font><font color="#E5E5E5"> same and this one is</font>
+
+57
+00:03:51,160 --> 00:03:57,940
+much easier to<font color="#CCCCCC"> make sense of its</font>
+
+58
+00:03:53,220 --> 00:04:04,990
+constant<font color="#E5E5E5"> that integer is constant so for</font>
+
+59
+00:03:57,940 --> 00:04:08,680
+this case the<font color="#E5E5E5"> data is constant is not in</font>
+
+60
+00:04:04,990 --> 00:04:11,800
+C++<font color="#E5E5E5"> that type of data can be casted</font><font color="#CCCCCC"> from</font>
+
+61
+00:04:08,680 --> 00:04:14,800
+one to another and the constant use of<font color="#CCCCCC"> a</font>
+
+62
+00:04:11,800 --> 00:04:18,459
+<font color="#E5E5E5">data can also be casted away let's</font>
+
+63
+00:04:14,800 --> 00:04:23,880
+comment out all<font color="#CCCCCC"> this and go to the first</font>
+
+64
+00:04:18,459 --> 00:04:26,290
+<font color="#CCCCCC">example we know this will not compile</font>
+
+65
+00:04:23,880 --> 00:04:30,159
+because<font color="#CCCCCC"> we are change changing</font><font color="#E5E5E5"> a</font>
+
+66
+00:04:26,290 --> 00:04:32,860
+constant data say I really really<font color="#CCCCCC"> want</font>
+
+67
+00:04:30,160 --> 00:04:35,130
+<font color="#E5E5E5">to change the integer</font><font color="#CCCCCC"> I what</font><font color="#E5E5E5"> I can do</font><font color="#CCCCCC"> is</font>
+
+68
+00:04:32,860 --> 00:04:35,130
+this
+
+69
+00:04:36,750 --> 00:04:44,470
+<font color="#E5E5E5">Const</font><font color="#CCCCCC"> cast integer ref I equal to</font><font color="#E5E5E5"> 6 and</font>
+
+70
+00:04:41,140 --> 00:04:49,120
+<font color="#E5E5E5">now</font><font color="#CCCCCC"> let let's compile it</font>
+
+71
+00:04:44,470 --> 00:04:54,340
+a glance through<font color="#E5E5E5"> okay so the</font><font color="#CCCCCC"> const</font><font color="#E5E5E5"> cast</font>
+
+72
+00:04:49,120 --> 00:04:58,630
+can cast away the countenance of<font color="#E5E5E5"> I now</font>
+
+73
+00:04:54,340 --> 00:05:00,849
+say I have a<font color="#E5E5E5"> integer J and J is not a</font>
+
+74
+00:04:58,630 --> 00:05:04,270
+constant<font color="#E5E5E5"> so I can</font><font color="#CCCCCC"> change it to</font><font color="#E5E5E5"> any value</font>
+
+75
+00:05:00,850 --> 00:05:07,440
+<font color="#E5E5E5">I want but at a certain point I want to</font>
+
+76
+00:05:04,270 --> 00:05:12,190
+make J account<font color="#E5E5E5"> what I can do is use</font>
+
+77
+00:05:07,440 --> 00:05:15,610
+static<font color="#CCCCCC"> cast</font><font color="#E5E5E5"> Const integer left J this</font>
+
+78
+00:05:12,190 --> 00:05:21,640
+<font color="#CCCCCC">will make J a constant integer and if</font><font color="#E5E5E5"> I</font>
+
+79
+00:05:15,610 --> 00:05:25,030
+modify its value to<font color="#CCCCCC"> 7 and compile</font><font color="#E5E5E5"> it</font>
+
+80
+00:05:21,640 --> 00:05:29,370
+field<font color="#E5E5E5"> and the message is assignment of</font>
+
+81
+00:05:25,030 --> 00:05:33,340
+read<font color="#CCCCCC"> only location comes to individual</font><font color="#E5E5E5"> J</font>
+
+82
+00:05:29,370 --> 00:05:36,070
+so with cost<font color="#E5E5E5"> I can cast away that cut</font>
+
+83
+00:05:33,340 --> 00:05:40,179
+<font color="#E5E5E5">constant</font><font color="#CCCCCC"> is</font><font color="#E5E5E5"> over data and I also can</font>
+
+84
+00:05:36,070 --> 00:05:42,099
+cast a data into account but in general
+
+85
+00:05:40,180 --> 00:05:46,960
+<font color="#CCCCCC">cost is not a good thing you should</font>
+
+86
+00:05:42,100 --> 00:05:49,330
+avoid them as<font color="#E5E5E5"> much as possible by cast</font>
+
+87
+00:05:46,960 --> 00:05:52,060
+away the<font color="#E5E5E5"> confidence of a data I'm</font>
+
+88
+00:05:49,330 --> 00:05:55,300
+breaking someone's promise for that data
+
+89
+00:05:52,060 --> 00:05:57,219
+to<font color="#CCCCCC"> be a constant so cost is</font><font color="#E5E5E5"> a hacky way</font>
+
+90
+00:05:55,300 --> 00:06:00,319
+of coding
+
+91
+00:05:57,219 --> 00:06:03,409
+so what's the benefit of using<font color="#E5E5E5"> constant</font>
+
+92
+00:06:00,319 --> 00:06:05,779
+<font color="#E5E5E5">the beginners usually don't like Const</font>
+
+93
+00:06:03,409 --> 00:06:07,520
+<font color="#E5E5E5">it looks like nothing but the</font>
+
+94
+00:06:05,779 --> 00:06:09,680
+<font color="#E5E5E5">troublemaker</font><font color="#CCCCCC"> when the code doesn't</font>
+
+95
+00:06:07,520 --> 00:06:10,748
+<font color="#E5E5E5">compile remove the Const</font><font color="#CCCCCC"> and the</font>
+
+96
+00:06:09,680 --> 00:06:14,120
+<font color="#E5E5E5">compound</font>
+
+97
+00:06:10,749 --> 00:06:17,590
+however Const<font color="#CCCCCC"> is really a good thing to</font>
+
+98
+00:06:14,120 --> 00:06:20,479
+use<font color="#E5E5E5"> it has several benefits first of all</font>
+
+99
+00:06:17,590 --> 00:06:23,960
+<font color="#CCCCCC">Const guards against in</font><font color="#E5E5E5"> the divergent</font>
+
+100
+00:06:20,479 --> 00:06:26,770
+<font color="#CCCCCC">right to a</font><font color="#E5E5E5"> variable so it can stop the</font>
+
+101
+00:06:23,960 --> 00:06:30,310
+<font color="#CCCCCC">wrong behavior at the compile time</font>
+
+102
+00:06:26,770 --> 00:06:33,498
+<font color="#CCCCCC">rather than wait until</font><font color="#E5E5E5"> the long time</font>
+
+103
+00:06:30,310 --> 00:06:36,289
+<font color="#E5E5E5">secondly Const is a way of self</font>
+
+104
+00:06:33,499 --> 00:06:39,020
+documenting<font color="#E5E5E5"> by using Const you are</font>
+
+105
+00:06:36,289 --> 00:06:42,469
+telling your reader that<font color="#E5E5E5"> this variable</font>
+
+106
+00:06:39,020 --> 00:06:44,389
+will not be changed and<font color="#E5E5E5"> that</font><font color="#CCCCCC"> is a extra</font>
+
+107
+00:06:42,469 --> 00:06:47,990
+<font color="#CCCCCC">information for your readers to</font>
+
+108
+00:06:44,389 --> 00:06:51,550
+understand the code number<font color="#CCCCCC"> three comes</font>
+
+109
+00:06:47,990 --> 00:06:54,560
+in<font color="#CCCCCC"> DuBose the compiler</font><font color="#E5E5E5"> to do up more</font>
+
+110
+00:06:51,550 --> 00:06:58,099
+optimization so the compiler can make
+
+111
+00:06:54,560 --> 00:07:02,089
+the code tighter and therefore faster
+
+112
+00:06:58,099 --> 00:07:04,789
+and lastly Const<font color="#E5E5E5"> also means</font><font color="#CCCCCC"> that the</font>
+
+113
+00:07:02,089 --> 00:07:08,149
+variable can<font color="#CCCCCC"> be put in ROM the read-only</font>
+
+114
+00:07:04,789 --> 00:07:11,419
+memory<font color="#E5E5E5"> this is particularly useful in</font>
+
+115
+00:07:08,149 --> 00:07:14,240
+the<font color="#E5E5E5"> embedded programming so as a</font>
+
+116
+00:07:11,419 --> 00:07:17,810
+professional C++ programmer<font color="#E5E5E5"> you should</font>
+
+117
+00:07:14,240 --> 00:07:20,220
+be using Const<font color="#CCCCCC"> Pro actively</font><font color="#E5E5E5"> next time</font>
+
+118
+00:07:17,810 --> 00:07:22,260
+we'll<font color="#E5E5E5"> talk more about constant</font>
+
+119
+00:07:20,220 --> 00:07:24,840
+that's all for today<font color="#CCCCCC"> feel</font><font color="#E5E5E5"> free to</font>
+
+120
+00:07:22,260 --> 00:07:27,390
+subscribe<font color="#E5E5E5"> to my channel</font><font color="#CCCCCC"> so when I post</font><font color="#E5E5E5"> a</font>
+
+121
+00:07:24,840 --> 00:07:29,729
+<font color="#CCCCCC">new video</font><font color="#E5E5E5"> you'll be</font><font color="#CCCCCC"> updated</font><font color="#E5E5E5"> or you can</font>
+
+122
+00:07:27,390 --> 00:07:33,650
+go<font color="#E5E5E5"> to my channels</font><font color="#CCCCCC"> homepage and see what</font>
+
+123
+00:07:29,730 --> 00:07:33,650
+I'm offering<font color="#E5E5E5"> today</font><font color="#CCCCCC"> bye</font><font color="#E5E5E5"> bye</font>
+

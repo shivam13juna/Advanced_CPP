@@ -1,0 +1,804 @@
+﻿1
+00:00:00,260 --> 00:00:06,149
+hello everyone<font color="#CCCCCC"> today we'll talk about</font>
+
+2
+00:00:03,090 --> 00:00:11,190
+<font color="#E5E5E5">the</font><font color="#CCCCCC"> problem</font><font color="#E5E5E5"> of finding longest common</font>
+
+3
+00:00:06,150 --> 00:00:14,460
+subsequence<font color="#E5E5E5"> first let's define</font><font color="#CCCCCC"> what is</font>
+
+4
+00:00:11,190 --> 00:00:18,029
+longest common subsequence<font color="#E5E5E5"> we have two</font>
+
+5
+00:00:14,460 --> 00:00:24,480
+<font color="#E5E5E5">strings x and y and we want to find</font>
+
+6
+00:00:18,029 --> 00:00:27,150
+their longest common subsequence<font color="#E5E5E5"> first</font>
+
+7
+00:00:24,480 --> 00:00:32,340
+let's find<font color="#CCCCCC"> the common subsequence of</font>
+
+8
+00:00:27,150 --> 00:00:37,290
+length<font color="#CCCCCC"> one</font><font color="#E5E5E5"> which is easy X has a</font><font color="#CCCCCC"> y has a</font>
+
+9
+00:00:32,340 --> 00:00:44,040
+so a is a common subsequence of<font color="#CCCCCC"> x and</font><font color="#E5E5E5"> y</font>
+
+10
+00:00:37,290 --> 00:00:47,030
+and so is C<font color="#E5E5E5"> and so is G and then let's</font>
+
+11
+00:00:44,040 --> 00:00:53,820
+find the common subsequence of length 2
+
+12
+00:00:47,030 --> 00:00:56,129
+<font color="#CCCCCC">x has a see Y has a and C note that the</font>
+
+13
+00:00:53,820 --> 00:00:57,770
+common subsequence<font color="#E5E5E5"> doesn't have to be</font>
+
+14
+00:00:56,129 --> 00:01:03,420
+consecutive
+
+15
+00:00:57,770 --> 00:01:10,470
+exhale<font color="#CCCCCC"> CC</font><font color="#E5E5E5"> one hell</font><font color="#CCCCCC"> CC exhale</font><font color="#E5E5E5"> see G will</font>
+
+16
+00:01:03,420 --> 00:01:12,840
+<font color="#E5E5E5">have C and G X has a G one has a G next</font>
+
+17
+00:01:10,470 --> 00:01:18,630
+let's find the common subsequence of
+
+18
+00:01:12,840 --> 00:01:22,430
+length<font color="#CCCCCC"> three X has a CC y doesn't have a</font>
+
+19
+00:01:18,630 --> 00:01:28,530
+CC x has<font color="#CCCCCC"> C c/g</font>
+
+20
+00:01:22,430 --> 00:01:32,869
+<font color="#CCCCCC">Y also has CC G so the common</font>
+
+21
+00:01:28,530 --> 00:01:35,250
+subsequence of length 3 is<font color="#E5E5E5"> C c/g next</font>
+
+22
+00:01:32,869 --> 00:01:39,180
+finding the<font color="#E5E5E5"> common subsequence of length</font>
+
+23
+00:01:35,250 --> 00:01:43,740
+<font color="#CCCCCC">4</font><font color="#E5E5E5"> for X it must be a</font><font color="#CCCCCC"> C c/g</font>
+
+24
+00:01:39,180 --> 00:01:47,420
+<font color="#CCCCCC">and</font><font color="#E5E5E5"> there is no AC C G in Y so there is</font>
+
+25
+00:01:43,740 --> 00:01:50,460
+no common subsequence of length 4
+
+26
+00:01:47,420 --> 00:01:53,159
+so by manually analyzing these two
+
+27
+00:01:50,460 --> 00:01:56,009
+string<font color="#E5E5E5"> we can find that the longest</font>
+
+28
+00:01:53,159 --> 00:02:01,890
+common<font color="#E5E5E5"> subsequence of these two string</font>
+
+29
+00:01:56,009 --> 00:02:04,319
+is<font color="#CCCCCC"> CCG with the length of</font><font color="#E5E5E5"> three this</font>
+
+30
+00:02:01,890 --> 00:02:06,719
+problem of finding longest common
+
+31
+00:02:04,319 --> 00:02:11,250
+subsequence<font color="#E5E5E5"> is a very practical problem</font>
+
+32
+00:02:06,719 --> 00:02:14,120
+for example<font color="#E5E5E5"> we know a DNA sequence can</font>
+
+33
+00:02:11,250 --> 00:02:19,200
+be<font color="#E5E5E5"> expressed as a stream of</font><font color="#CCCCCC"> characters</font>
+
+34
+00:02:14,120 --> 00:02:22,560
+<font color="#E5E5E5">ACGT so by finding</font><font color="#CCCCCC"> the longest common</font>
+
+35
+00:02:19,200 --> 00:02:25,380
+subsequence<font color="#E5E5E5"> of two strands of</font><font color="#CCCCCC"> DNA</font><font color="#E5E5E5"> we can</font>
+
+36
+00:02:22,560 --> 00:02:28,620
+<font color="#E5E5E5">see how similar these two strands of</font><font color="#CCCCCC"> DNA</font>
+
+37
+00:02:25,380 --> 00:02:32,970
+are therefore<font color="#E5E5E5"> tell if the two persons</font>
+
+38
+00:02:28,620 --> 00:02:36,290
+are related<font color="#E5E5E5"> or not it can help people to</font>
+
+39
+00:02:32,970 --> 00:02:39,359
+find their long-lost child<font color="#E5E5E5"> for example</font>
+
+40
+00:02:36,290 --> 00:02:44,970
+<font color="#E5E5E5">but the problem</font><font color="#CCCCCC"> is we have to look</font><font color="#E5E5E5"> at</font>
+
+41
+00:02:39,360 --> 00:02:49,650
+very<font color="#E5E5E5"> long sequences of</font><font color="#CCCCCC"> DNA strings now</font>
+
+42
+00:02:44,970 --> 00:02:51,959
+we have much longer<font color="#E5E5E5"> X&Y and it is no</font>
+
+43
+00:02:49,650 --> 00:02:55,350
+<font color="#E5E5E5">longer possible to manually find the</font>
+
+44
+00:02:51,959 --> 00:02:57,660
+longest<font color="#E5E5E5"> common subsequence of x and y we</font>
+
+45
+00:02:55,350 --> 00:03:00,920
+<font color="#CCCCCC">have to write a program</font><font color="#E5E5E5"> and implement</font>
+
+46
+00:02:57,660 --> 00:03:05,340
+some algorithm to find<font color="#E5E5E5"> out the answer</font>
+
+47
+00:03:00,920 --> 00:03:11,160
+let's denote<font color="#E5E5E5"> the size of X is n under</font>
+
+48
+00:03:05,340 --> 00:03:15,389
+the size of<font color="#E5E5E5"> Y is M since X is shorter</font>
+
+49
+00:03:11,160 --> 00:03:19,680
+than Y so our<font color="#E5E5E5"> algorithm is like this for</font>
+
+50
+00:03:15,389 --> 00:03:23,130
+integer<font color="#E5E5E5"> I from n to 1 find all</font>
+
+51
+00:03:19,680 --> 00:03:25,410
+subsequence of X with length of I find
+
+52
+00:03:23,130 --> 00:03:28,739
+all the subsequence of Y with<font color="#CCCCCC"> the length</font>
+
+53
+00:03:25,410 --> 00:03:31,980
+of I if there is a common<font color="#E5E5E5"> subsequence</font>
+
+54
+00:03:28,739 --> 00:03:34,189
+between x and y<font color="#E5E5E5"> we've found the answer</font>
+
+55
+00:03:31,980 --> 00:03:37,409
+break
+
+56
+00:03:34,189 --> 00:03:41,189
+so this algorithm<font color="#E5E5E5"> is simple and</font>
+
+57
+00:03:37,409 --> 00:03:44,010
+straightforward<font color="#CCCCCC"> we know it will work</font><font color="#E5E5E5"> the</font>
+
+58
+00:03:41,189 --> 00:03:48,390
+problem is how complex is<font color="#CCCCCC"> the cell</font>
+
+59
+00:03:44,010 --> 00:03:52,230
+result let's consider how<font color="#CCCCCC"> many</font>
+
+60
+00:03:48,390 --> 00:03:59,659
+subsequence does X have<font color="#E5E5E5"> with the lens of</font>
+
+61
+00:03:52,230 --> 00:04:02,089
+<font color="#CCCCCC">I</font><font color="#E5E5E5"> the answer</font><font color="#CCCCCC"> is this so the worst</font><font color="#E5E5E5"> case</font>
+
+62
+00:03:59,659 --> 00:04:08,730
+complexity of<font color="#CCCCCC"> this for loop is a</font>
+
+63
+00:04:02,090 --> 00:04:11,430
+summation<font color="#E5E5E5"> of this formula for every I so</font>
+
+64
+00:04:08,730 --> 00:04:14,399
+this<font color="#E5E5E5"> is the complexity of the algorithm</font>
+
+65
+00:04:11,430 --> 00:04:17,430
+<font color="#E5E5E5">and I</font><font color="#CCCCCC"> just you that you have learned</font>
+
+66
+00:04:14,400 --> 00:04:22,260
+from<font color="#E5E5E5"> your math class</font><font color="#CCCCCC"> this</font><font color="#E5E5E5"> is exponential</font>
+
+67
+00:04:17,430 --> 00:04:25,260
+<font color="#E5E5E5">in n so this algorithm</font><font color="#CCCCCC"> is very complex</font>
+
+68
+00:04:22,260 --> 00:04:30,539
+<font color="#E5E5E5">and</font><font color="#CCCCCC"> we</font><font color="#E5E5E5"> cannot afford it we have to find</font>
+
+69
+00:04:25,260 --> 00:04:33,030
+a better<font color="#E5E5E5"> algorithm now let's try to use</font>
+
+70
+00:04:30,539 --> 00:04:36,419
+<font color="#CCCCCC">dynamic programming</font><font color="#E5E5E5"> to solve this</font>
+
+71
+00:04:33,030 --> 00:04:39,630
+problem<font color="#E5E5E5"> the</font><font color="#CCCCCC"> idea of dynamic programming</font>
+
+72
+00:04:36,419 --> 00:04:44,570
+is to<font color="#E5E5E5"> solve a complex problem by</font>
+
+73
+00:04:39,630 --> 00:04:48,659
+breaking<font color="#E5E5E5"> it down into smaller</font><font color="#CCCCCC"> subproblem</font>
+
+74
+00:04:44,570 --> 00:04:51,630
+so here since<font color="#E5E5E5"> the problem with size of N</font>
+
+75
+00:04:48,660 --> 00:04:54,690
+and<font color="#CCCCCC"> M is too complex for us</font><font color="#E5E5E5"> let's</font>
+
+76
+00:04:51,630 --> 00:04:59,070
+consider a problem<font color="#CCCCCC"> with smaller</font><font color="#E5E5E5"> size I</font>
+
+77
+00:04:54,690 --> 00:05:01,570
+and J I is less<font color="#CCCCCC"> than N</font><font color="#E5E5E5"> and J is less</font>
+
+78
+00:04:59,070 --> 00:05:05,460
+<font color="#CCCCCC">than M</font>
+
+79
+00:05:01,570 --> 00:05:09,159
+so let's<font color="#CCCCCC"> define</font><font color="#E5E5E5"> C IJ is</font><font color="#CCCCCC"> the length of</font>
+
+80
+00:05:05,460 --> 00:05:15,159
+longest common subsequence<font color="#E5E5E5"> of sequence X</font>
+
+81
+00:05:09,160 --> 00:05:19,510
+1<font color="#E5E5E5"> to X I which is this</font><font color="#CCCCCC"> 1 and y 1 to y J</font>
+
+82
+00:05:15,160 --> 00:05:26,610
+which is<font color="#E5E5E5"> this one note</font><font color="#CCCCCC"> that</font><font color="#E5E5E5"> our index</font>
+
+83
+00:05:19,510 --> 00:05:31,420
+<font color="#E5E5E5">start with 1</font><font color="#CCCCCC"> and by definition CI</font><font color="#E5E5E5"> 0 is</font>
+
+84
+00:05:26,610 --> 00:05:34,870
+equal to<font color="#E5E5E5"> 0</font><font color="#CCCCCC"> for all</font><font color="#E5E5E5"> I because 0 means the</font>
+
+85
+00:05:31,420 --> 00:05:38,050
+length of the sequence<font color="#CCCCCC"> is 0 so it's</font>
+
+86
+00:05:34,870 --> 00:05:43,540
+<font color="#E5E5E5">Long's</font><font color="#CCCCCC"> the common subsequence</font><font color="#E5E5E5"> must be 0</font>
+
+87
+00:05:38,050 --> 00:05:49,060
+and<font color="#E5E5E5"> for the same reason C 0 J is also</font>
+
+88
+00:05:43,540 --> 00:05:51,960
+<font color="#E5E5E5">equal to 0 for all J and our goal is</font><font color="#CCCCCC"> to</font>
+
+89
+00:05:49,060 --> 00:05:57,610
+gradually<font color="#E5E5E5"> increase I and J and</font>
+
+90
+00:05:51,960 --> 00:06:01,299
+eventually find C<font color="#CCCCCC"> and M to</font><font color="#E5E5E5"> achieve this</font>
+
+91
+00:05:57,610 --> 00:06:05,620
+goal<font color="#CCCCCC"> the key</font><font color="#E5E5E5"> question is how</font><font color="#CCCCCC"> to use C</font>
+
+92
+00:06:01,300 --> 00:06:11,170
+with smaller<font color="#E5E5E5"> I and J to computer C with</font>
+
+93
+00:06:05,620 --> 00:06:17,650
+greater<font color="#E5E5E5"> I</font><font color="#CCCCCC"> and J by analyzing the problem</font>
+
+94
+00:06:11,170 --> 00:06:22,450
+we come up<font color="#E5E5E5"> with this formula if X I</font>
+
+95
+00:06:17,650 --> 00:06:28,120
+equal to XJ which means<font color="#E5E5E5"> the last item is</font>
+
+96
+00:06:22,450 --> 00:06:33,340
+the same then C IJ equal to C I minus 1
+
+97
+00:06:28,120 --> 00:06:36,370
+J<font color="#CCCCCC"> minus</font><font color="#E5E5E5"> 1 plus</font><font color="#CCCCCC"> 1 since</font><font color="#E5E5E5"> the last item</font><font color="#CCCCCC"> is</font>
+
+98
+00:06:33,340 --> 00:06:42,299
+the same so if we take off<font color="#CCCCCC"> the last item</font>
+
+99
+00:06:36,370 --> 00:06:42,300
+<font color="#E5E5E5">then we get CI minus 1 and J minus 1</font>
+
+100
+00:06:43,380 --> 00:06:51,639
+otherwise if the last item<font color="#E5E5E5"> is not the</font>
+
+101
+00:06:47,020 --> 00:06:58,450
+same then CIJ equal to the bigger of<font color="#E5E5E5"> C I</font>
+
+102
+00:06:51,639 --> 00:07:00,669
+minus<font color="#CCCCCC"> one J</font><font color="#E5E5E5"> and the C I J minus</font><font color="#CCCCCC"> 1 since</font>
+
+103
+00:06:58,450 --> 00:07:03,340
+we<font color="#E5E5E5"> have the initial condition and we</font>
+
+104
+00:07:00,669 --> 00:07:10,440
+have this formula<font color="#E5E5E5"> to derive C with</font>
+
+105
+00:07:03,340 --> 00:07:10,440
+bigger<font color="#E5E5E5"> I and J eventually we'll find CNM</font>
+
+106
+00:07:10,980 --> 00:07:17,580
+now let's look at<font color="#E5E5E5"> our code in the main</font>
+
+107
+00:07:14,440 --> 00:07:21,940
+<font color="#CCCCCC">function I create</font><font color="#E5E5E5"> two string x and y and</font>
+
+108
+00:07:17,580 --> 00:07:23,889
+then I call<font color="#E5E5E5"> the function</font><font color="#CCCCCC"> calc</font><font color="#E5E5E5"> LCS this</font>
+
+109
+00:07:21,940 --> 00:07:27,160
+is the function that<font color="#E5E5E5"> will implement our</font>
+
+110
+00:07:23,889 --> 00:07:31,060
+algorithm so let's finish up this
+
+111
+00:07:27,160 --> 00:07:36,040
+<font color="#E5E5E5">function the first step is to create C</font>
+
+112
+00:07:31,060 --> 00:07:39,280
+and initialize it so I have created<font color="#E5E5E5"> a</font>
+
+113
+00:07:36,040 --> 00:07:42,280
+<font color="#CCCCCC">matrix C which is to store the length of</font>
+
+114
+00:07:39,280 --> 00:07:47,380
+longest common subsequence<font color="#E5E5E5"> of sequence X</font>
+
+115
+00:07:42,280 --> 00:07:51,309
+1<font color="#E5E5E5"> to X I and y 1 to y J note that our</font>
+
+116
+00:07:47,380 --> 00:07:55,539
+<font color="#E5E5E5">index start from 1 so the first item of</font>
+
+117
+00:07:51,310 --> 00:07:59,410
+<font color="#CCCCCC">each string is ignored and then</font><font color="#E5E5E5"> I</font>
+
+118
+00:07:55,539 --> 00:08:02,800
+initialize C to be<font color="#E5E5E5"> n by M matrix and</font>
+
+119
+00:07:59,410 --> 00:08:09,220
+each<font color="#CCCCCC"> entry of the matrix is initialized</font>
+
+120
+00:08:02,800 --> 00:08:13,479
+<font color="#CCCCCC">to 0 so we also have finished</font><font color="#E5E5E5"> the</font>
+
+121
+00:08:09,220 --> 00:08:18,639
+initialization<font color="#E5E5E5"> of C value for C 0</font><font color="#CCCCCC"> and C</font>
+
+122
+00:08:13,479 --> 00:08:21,180
+0 J the next step is to<font color="#E5E5E5"> implement this</font>
+
+123
+00:08:18,639 --> 00:08:21,180
+formula
+
+124
+00:08:27,710 --> 00:08:34,650
+so we have two nested loops<font color="#CCCCCC"> the outer</font>
+
+125
+00:08:30,990 --> 00:08:41,279
+loop is<font color="#E5E5E5"> for</font><font color="#CCCCCC"> I</font><font color="#E5E5E5"> and that inner loop is for</font>
+
+126
+00:08:34,650 --> 00:08:45,199
+J if X I equal to YJ<font color="#E5E5E5"> then</font><font color="#CCCCCC"> CIJ is equal</font>
+
+127
+00:08:41,279 --> 00:08:50,610
+to C I minus 1 J<font color="#CCCCCC"> minus</font><font color="#E5E5E5"> 1 plus 1</font>
+
+128
+00:08:45,200 --> 00:08:56,040
+otherwise<font color="#E5E5E5"> CIJ will take the bigger of C</font>
+
+129
+00:08:50,610 --> 00:09:02,580
+I J minus 1 and C I minus 1 J so this is
+
+130
+00:08:56,040 --> 00:09:05,400
+<font color="#E5E5E5">exactly the replica of this formula so</font>
+
+131
+00:09:02,580 --> 00:09:08,040
+by the end<font color="#E5E5E5"> of these two loops C will</font>
+
+132
+00:09:05,400 --> 00:09:12,839
+contains the longest common<font color="#E5E5E5"> subsequence</font>
+
+133
+00:09:08,040 --> 00:09:18,360
+<font color="#E5E5E5">length of x and y so</font><font color="#CCCCCC"> let's print out the</font>
+
+134
+00:09:12,839 --> 00:09:21,720
+C and inspect its value this is a
+
+135
+00:09:18,360 --> 00:09:26,450
+utility<font color="#E5E5E5"> to print matrix that I created</font>
+
+136
+00:09:21,720 --> 00:09:26,450
+and now<font color="#CCCCCC"> we can actually run</font><font color="#E5E5E5"> the program</font>
+
+137
+00:09:34,550 --> 00:09:44,359
+so this is the C and the<font color="#CCCCCC"> CNM</font><font color="#E5E5E5"> in</font><font color="#CCCCCC"> this</font><font color="#E5E5E5"> guy</font>
+
+138
+00:09:41,260 --> 00:09:48,950
+which indicates the length of the
+
+139
+00:09:44,360 --> 00:09:51,170
+longest common<font color="#E5E5E5"> subsequence is 5 so we</font>
+
+140
+00:09:48,950 --> 00:09:53,810
+have<font color="#E5E5E5"> found the length of the longest</font>
+
+141
+00:09:51,170 --> 00:09:57,740
+<font color="#E5E5E5">common subsequence</font><font color="#CCCCCC"> but we don't know</font>
+
+142
+00:09:53,810 --> 00:09:59,630
+what the sequence is yet<font color="#CCCCCC"> in order to</font>
+
+143
+00:09:57,740 --> 00:10:03,110
+find<font color="#E5E5E5"> out the sequence we</font><font color="#CCCCCC"> need more</font>
+
+144
+00:09:59,630 --> 00:10:06,320
+information<font color="#CCCCCC"> to be specific</font><font color="#E5E5E5"> we need a</font>
+
+145
+00:10:03,110 --> 00:10:09,410
+data structure<font color="#CCCCCC"> to save the position of</font>
+
+146
+00:10:06,320 --> 00:10:16,160
+the elements of the longest common
+
+147
+00:10:09,410 --> 00:10:22,670
+<font color="#E5E5E5">subsequence so let's create another</font>
+
+148
+00:10:16,160 --> 00:10:26,870
+matrix called s and<font color="#CCCCCC"> s is to store</font><font color="#E5E5E5"> the</font>
+
+149
+00:10:22,670 --> 00:10:32,719
+position<font color="#CCCCCC"> of longest common subsequence</font>
+
+150
+00:10:26,870 --> 00:10:36,980
+<font color="#CCCCCC">and let's use a matrix</font><font color="#E5E5E5"> of char to save</font>
+
+151
+00:10:32,720 --> 00:10:45,220
+the position and<font color="#CCCCCC"> we need to</font><font color="#E5E5E5"> initialize</font>
+
+152
+00:10:36,980 --> 00:10:45,220
+the<font color="#E5E5E5"> size of s to</font><font color="#CCCCCC"> be n</font><font color="#E5E5E5"> by M</font>
+
+153
+00:10:47,010 --> 00:10:58,230
+and if X I equal to YJ<font color="#CCCCCC"> will set s IJ</font>
+
+154
+00:10:53,940 --> 00:11:01,740
+equal to s s means they are<font color="#E5E5E5"> the same and</font>
+
+155
+00:10:58,230 --> 00:11:05,430
+when they are the<font color="#CCCCCC"> same it</font><font color="#E5E5E5"> means either X</font>
+
+156
+00:11:01,740 --> 00:11:08,520
+I or<font color="#CCCCCC"> Y J doesn't matter which one</font>
+
+157
+00:11:05,430 --> 00:11:11,969
+because they are the same either<font color="#E5E5E5"> X I or</font>
+
+158
+00:11:08,520 --> 00:11:16,189
+Y J is one item<font color="#CCCCCC"> of the longest common</font>
+
+159
+00:11:11,970 --> 00:11:20,670
+<font color="#E5E5E5">subsequence</font><font color="#CCCCCC"> if they are not the same and</font>
+
+160
+00:11:16,190 --> 00:11:27,200
+if C IJ minus<font color="#CCCCCC"> one is bigger than say I</font>
+
+161
+00:11:20,670 --> 00:11:31,260
+minus<font color="#CCCCCC"> one J then we</font><font color="#E5E5E5"> set s IJ equal to J</font>
+
+162
+00:11:27,200 --> 00:11:35,940
+what this means is even if we take away
+
+163
+00:11:31,260 --> 00:11:39,870
+<font color="#E5E5E5">the last item of Y we can still find the</font>
+
+164
+00:11:35,940 --> 00:11:44,660
+same longest common subsequence<font color="#E5E5E5"> so we</font>
+
+165
+00:11:39,870 --> 00:11:44,660
+can<font color="#E5E5E5"> safely take away the last item of Y</font>
+
+166
+00:11:45,680 --> 00:11:52,770
+otherwise we'll set s IJ equal to<font color="#CCCCCC"> AI</font>
+
+167
+00:11:49,370 --> 00:11:56,640
+which<font color="#CCCCCC"> means we can safely</font><font color="#E5E5E5"> take away the</font>
+
+168
+00:11:52,770 --> 00:12:01,140
+last item<font color="#E5E5E5"> of X and still can find the</font>
+
+169
+00:11:56,640 --> 00:12:03,990
+same longest common subsequence so<font color="#CCCCCC"> s has</font>
+
+170
+00:12:01,140 --> 00:12:07,740
+saved<font color="#E5E5E5"> all the information we need</font><font color="#CCCCCC"> to</font>
+
+171
+00:12:03,990 --> 00:12:10,260
+<font color="#CCCCCC">find the longest common</font><font color="#E5E5E5"> subsequence so</font>
+
+172
+00:12:07,740 --> 00:12:14,010
+finally we can write<font color="#CCCCCC"> a function to</font><font color="#E5E5E5"> print</font>
+
+173
+00:12:10,260 --> 00:12:19,200
+out the longest common<font color="#E5E5E5"> subsequence let's</font>
+
+174
+00:12:14,010 --> 00:12:22,470
+call our function print<font color="#E5E5E5"> L say s and it</font>
+
+175
+00:12:19,200 --> 00:12:27,840
+will take s as one parameter<font color="#E5E5E5"> X as</font>
+
+176
+00:12:22,470 --> 00:12:32,610
+another<font color="#CCCCCC"> parameter and X dot size minus 1</font>
+
+177
+00:12:27,840 --> 00:12:35,360
+that<font color="#E5E5E5"> is our n why does size minus 1 that</font>
+
+178
+00:12:32,610 --> 00:12:35,360
+<font color="#CCCCCC">is our</font><font color="#E5E5E5"> M</font>
+
+179
+00:12:40,329 --> 00:12:47,709
+and our<font color="#E5E5E5"> function would be look</font><font color="#CCCCCC"> like this</font>
+
+180
+00:12:43,209 --> 00:12:49,508
+<font color="#CCCCCC">if</font><font color="#E5E5E5"> I equal to</font><font color="#CCCCCC"> zero or J equal to</font><font color="#E5E5E5"> zero it</font>
+
+181
+00:12:47,709 --> 00:12:53,529
+means we have<font color="#CCCCCC"> reached it</font><font color="#E5E5E5"> at the end</font>
+
+182
+00:12:49,509 --> 00:13:00,339
+<font color="#E5E5E5">there</font><font color="#CCCCCC"> will not be any common subsequence</font>
+
+183
+00:12:53,529 --> 00:13:06,579
+left<font color="#CCCCCC"> if</font><font color="#E5E5E5"> si J equal to</font><font color="#CCCCCC"> s it means X I and</font>
+
+184
+00:13:00,339 --> 00:13:08,679
+<font color="#CCCCCC">Y J</font><font color="#E5E5E5"> are the</font><font color="#CCCCCC"> same so X I must be one</font>
+
+185
+00:13:06,579 --> 00:13:13,540
+element<font color="#CCCCCC"> of the long straumann</font>
+
+186
+00:13:08,679 --> 00:13:17,470
+subsequence<font color="#E5E5E5"> so we just print it out</font><font color="#CCCCCC"> if s</font>
+
+187
+00:13:13,540 --> 00:13:21,759
+IJ equal to<font color="#E5E5E5"> J it means we can safely</font>
+
+188
+00:13:17,470 --> 00:13:24,670
+take away the<font color="#E5E5E5"> last element</font><font color="#CCCCCC"> of</font><font color="#E5E5E5"> Y and they</font>
+
+189
+00:13:21,759 --> 00:13:33,720
+can still find the same longest common
+
+190
+00:13:24,670 --> 00:13:37,149
+subsequence<font color="#E5E5E5"> LS s</font><font color="#CCCCCC"> IJ must be equal to I</font>
+
+191
+00:13:33,720 --> 00:13:40,869
+which<font color="#CCCCCC"> means we can</font><font color="#E5E5E5"> safely take away the</font>
+
+192
+00:13:37,149 --> 00:13:44,889
+last<font color="#E5E5E5"> element of X and can still find the</font>
+
+193
+00:13:40,869 --> 00:13:47,189
+longest<font color="#E5E5E5"> common subsequence so let's run</font>
+
+194
+00:13:44,889 --> 00:13:47,189
+the program
+
+195
+00:13:52,120 --> 00:13:59,770
+it prints out<font color="#CCCCCC"> a GGA see that's the</font>
+
+196
+00:13:57,040 --> 00:14:06,760
+longest subsequence<font color="#CCCCCC"> let's see</font>
+
+197
+00:13:59,770 --> 00:14:11,800
+AC AGG AC AGG AC yes that<font color="#E5E5E5"> appears to</font><font color="#CCCCCC"> be</font>
+
+198
+00:14:06,760 --> 00:14:13,960
+<font color="#CCCCCC">the longest</font><font color="#E5E5E5"> common subsequence that's</font>
+
+199
+00:14:11,800 --> 00:14:15,969
+all for<font color="#E5E5E5"> today feel free to subscribe to</font>
+
+200
+00:14:13,960 --> 00:14:19,770
+<font color="#CCCCCC">my channel and check out the other</font>
+
+201
+00:14:15,970 --> 00:14:19,770
+videos I have<font color="#CCCCCC"> bye bye</font>
+

@@ -1,0 +1,472 @@
+﻿1
+00:00:04,930 --> 00:00:10,940
+hello everyone<font color="#E5E5E5"> let's start</font><font color="#CCCCCC"> today's</font>
+
+2
+00:00:07,970 --> 00:00:14,869
+discussion with a question we have
+
+3
+00:00:10,940 --> 00:00:18,198
+<font color="#E5E5E5">functor LSB less which checks if the</font>
+
+4
+00:00:14,869 --> 00:00:22,280
+<font color="#E5E5E5">last digit of one integer is less than</font>
+
+5
+00:00:18,199 --> 00:00:24,710
+the<font color="#E5E5E5"> last digit of another integer and</font>
+
+6
+00:00:22,280 --> 00:00:28,700
+the way<font color="#E5E5E5"> the functor of LSB less I</font>
+
+7
+00:00:24,710 --> 00:00:36,260
+created a set of integer it is called s
+
+8
+00:00:28,700 --> 00:00:41,269
+and s contains 21 23 26 27<font color="#E5E5E5"> and because</font>
+
+9
+00:00:36,260 --> 00:00:44,839
+it's a set<font color="#E5E5E5"> it is always sorted now I use</font>
+
+10
+00:00:41,270 --> 00:00:48,890
+the algorithm function find to<font color="#CCCCCC"> find the</font>
+
+11
+00:00:44,840 --> 00:00:53,059
+item of 36<font color="#CCCCCC"> and save the result in</font>
+
+12
+00:00:48,890 --> 00:00:56,590
+iterator<font color="#CCCCCC"> 1 and then I use member</font>
+
+13
+00:00:53,059 --> 00:01:02,089
+function find to find<font color="#CCCCCC"> the item of 36 and</font>
+
+14
+00:00:56,590 --> 00:01:05,299
+save the result in<font color="#CCCCCC"> 82 the question is</font>
+
+15
+00:01:02,090 --> 00:01:10,729
+which items will eat a while and it to
+
+16
+00:01:05,299 --> 00:01:16,039
+be<font color="#E5E5E5"> pointing to the eater one will be</font>
+
+17
+00:01:10,729 --> 00:01:19,520
+pointing to as that end this is what we
+
+18
+00:01:16,039 --> 00:01:23,209
+would<font color="#E5E5E5"> expect because 36 doesn't exist in</font>
+
+19
+00:01:19,520 --> 00:01:26,449
+s and when the arizim find can't find
+
+20
+00:01:23,209 --> 00:01:30,609
+the item of 36<font color="#E5E5E5"> it will return a iterator</font>
+
+21
+00:01:26,450 --> 00:01:33,920
+pointing to the end of the container<font color="#E5E5E5"> as</font>
+
+22
+00:01:30,609 --> 00:01:38,830
+the member function find returns an
+
+23
+00:01:33,920 --> 00:01:42,170
+iterator<font color="#E5E5E5"> that's pointing to 26</font>
+
+24
+00:01:38,830 --> 00:01:45,620
+so the algorithm function and the member
+
+25
+00:01:42,170 --> 00:01:47,420
+function behaves differently<font color="#CCCCCC"> remember in</font>
+
+26
+00:01:45,620 --> 00:01:51,050
+one of<font color="#E5E5E5"> the previous</font><font color="#CCCCCC"> videos that I</font>
+
+27
+00:01:47,420 --> 00:01:53,240
+<font color="#E5E5E5">mentioned when</font><font color="#CCCCCC"> al-qasim function has the</font>
+
+28
+00:01:51,050 --> 00:01:56,030
+<font color="#E5E5E5">same name</font><font color="#CCCCCC"> as a containers member</font>
+
+29
+00:01:53,240 --> 00:01:59,149
+function in general<font color="#CCCCCC"> you should prefer</font>
+
+30
+00:01:56,030 --> 00:02:01,190
+using the member function<font color="#CCCCCC"> I said in</font>
+
+31
+00:01:59,150 --> 00:02:05,000
+general<font color="#CCCCCC"> because there are exceptions</font><font color="#E5E5E5"> and</font>
+
+32
+00:02:01,190 --> 00:02:07,160
+this is one<font color="#E5E5E5"> of the exception the</font>
+
+33
+00:02:05,000 --> 00:02:10,130
+<font color="#E5E5E5">algorithm function and the member</font>
+
+34
+00:02:07,160 --> 00:02:13,340
+function are<font color="#E5E5E5"> not exactly doing the same</font>
+
+35
+00:02:10,130 --> 00:02:16,010
+thing<font color="#E5E5E5"> so which one to use is depending</font>
+
+36
+00:02:13,340 --> 00:02:20,180
+<font color="#E5E5E5">on what you want</font><font color="#CCCCCC"> to do not just</font><font color="#E5E5E5"> to the</font>
+
+37
+00:02:16,010 --> 00:02:22,549
+performance consideration<font color="#CCCCCC"> anymore now</font>
+
+38
+00:02:20,180 --> 00:02:26,360
+let's spend some<font color="#E5E5E5"> time to find out why</font>
+
+39
+00:02:22,550 --> 00:02:28,430
+they are<font color="#E5E5E5"> behaving differently both the</font>
+
+40
+00:02:26,360 --> 00:02:31,370
+algorithm find under the member function
+
+41
+00:02:28,430 --> 00:02:34,880
+find use certain comparison function<font color="#E5E5E5"> for</font>
+
+42
+00:02:31,370 --> 00:02:38,330
+searching<font color="#E5E5E5"> the algorithm find uses</font>
+
+43
+00:02:34,880 --> 00:02:42,829
+operator equal for searching so it
+
+44
+00:02:38,330 --> 00:02:47,420
+checks<font color="#E5E5E5"> if any one item of s is equal to</font>
+
+45
+00:02:42,830 --> 00:02:49,220
+<font color="#E5E5E5">36</font><font color="#CCCCCC"> and the things there's none</font><font color="#E5E5E5"> of the</font>
+
+46
+00:02:47,420 --> 00:02:52,489
+item is equal to<font color="#E5E5E5"> 36</font>
+
+47
+00:02:49,220 --> 00:02:55,130
+<font color="#E5E5E5">the algorithm returns up iterator points</font>
+
+48
+00:02:52,490 --> 00:02:59,640
+to<font color="#CCCCCC"> s done end</font>
+
+49
+00:02:55,130 --> 00:03:04,709
+the mem function find uses operator<font color="#CCCCCC"> less</font>
+
+50
+00:02:59,640 --> 00:03:08,489
+than<font color="#E5E5E5"> for searching it checks if X is not</font>
+
+51
+00:03:04,709 --> 00:03:13,230
+<font color="#CCCCCC">less than Y and</font><font color="#E5E5E5"> Y is not less than</font><font color="#CCCCCC"> X to</font>
+
+52
+00:03:08,490 --> 00:03:17,970
+check if an item<font color="#E5E5E5"> is found and recall</font>
+
+53
+00:03:13,230 --> 00:03:21,149
+that<font color="#E5E5E5"> s is a set of integer that uses LSB</font>
+
+54
+00:03:17,970 --> 00:03:25,500
+less as<font color="#CCCCCC"> a comparison function so the</font>
+
+55
+00:03:21,150 --> 00:03:28,260
+less than is defined as LSB less which
+
+56
+00:03:25,500 --> 00:03:32,330
+checks<font color="#CCCCCC"> the last digit</font><font color="#E5E5E5"> of the number</font><font color="#CCCCCC"> only</font>
+
+57
+00:03:28,260 --> 00:03:37,738
+<font color="#E5E5E5">and if you only look at the last digit</font>
+
+58
+00:03:32,330 --> 00:03:41,630
+<font color="#E5E5E5">26 is not less than 36 and 36 is not</font>
+
+59
+00:03:37,739 --> 00:03:44,880
+less<font color="#CCCCCC"> than 26</font><font color="#E5E5E5"> so these two</font><font color="#CCCCCC"> are</font><font color="#E5E5E5"> equivalent</font>
+
+60
+00:03:41,630 --> 00:03:50,459
+<font color="#CCCCCC">that</font><font color="#E5E5E5"> is why the member function find</font>
+
+61
+00:03:44,880 --> 00:03:52,530
+returns a iterator pointing to 26 so in
+
+62
+00:03:50,459 --> 00:03:56,220
+<font color="#E5E5E5">summary the membership member function</font>
+
+63
+00:03:52,530 --> 00:04:00,980
+find is looking for equivalence and the
+
+64
+00:03:56,220 --> 00:04:00,980
+algorithm find is looking for equality
+
+65
+00:04:01,489 --> 00:04:07,200
+note that if I create a set with<font color="#E5E5E5"> the</font>
+
+66
+00:04:04,620 --> 00:04:11,480
+default comparison function<font color="#E5E5E5"> instead</font><font color="#CCCCCC"> of</font>
+
+67
+00:04:07,200 --> 00:04:15,450
+my own comparison function<font color="#CCCCCC"> of LSB less</font>
+
+68
+00:04:11,480 --> 00:04:17,728
+then both the algorithm find and the
+
+69
+00:04:15,450 --> 00:04:20,548
+member function find will give me the
+
+70
+00:04:17,728 --> 00:04:26,120
+same result<font color="#E5E5E5"> both return iterators</font>
+
+71
+00:04:20,548 --> 00:04:26,120
+pointing to a stud<font color="#CCCCCC"> and</font>
+
+72
+00:04:26,850 --> 00:04:31,440
+now the question<font color="#E5E5E5"> is there are many</font>
+
+73
+00:04:29,280 --> 00:04:33,510
+algorithm functions and that there<font color="#CCCCCC"> are</font>
+
+74
+00:04:31,440 --> 00:04:35,550
+many member functions<font color="#E5E5E5"> how do I know</font>
+
+75
+00:04:33,510 --> 00:04:38,030
+which<font color="#CCCCCC"> one is checking for</font><font color="#E5E5E5"> equivalence</font>
+
+76
+00:04:35,550 --> 00:04:41,190
+and which one is checking<font color="#E5E5E5"> for equality</font>
+
+77
+00:04:38,030 --> 00:04:43,710
+<font color="#E5E5E5">the safest thing to do is look it up in</font>
+
+78
+00:04:41,190 --> 00:04:47,580
+the document<font color="#CCCCCC"> but there are guidelines</font>
+
+79
+00:04:43,710 --> 00:04:50,599
+that<font color="#CCCCCC"> you can follow</font><font color="#E5E5E5"> if the function is</font>
+
+80
+00:04:47,580 --> 00:04:53,969
+using operator less than or it's like
+
+81
+00:04:50,600 --> 00:04:57,150
+for comparison<font color="#CCCCCC"> than it is checking</font><font color="#E5E5E5"> for</font>
+
+82
+00:04:53,970 --> 00:04:59,910
+<font color="#E5E5E5">equivalence typically what</font><font color="#CCCCCC"> that means is</font>
+
+83
+00:04:57,150 --> 00:05:03,359
+the function is a<font color="#E5E5E5"> algorithm that works</font>
+
+84
+00:04:59,910 --> 00:05:05,300
+with sorted<font color="#E5E5E5"> data or the function is a</font>
+
+85
+00:05:03,360 --> 00:05:08,910
+methyl<font color="#CCCCCC"> function of a container that</font>
+
+86
+00:05:05,300 --> 00:05:13,980
+<font color="#CCCCCC">contains sorted</font><font color="#E5E5E5"> data such as a such</font>
+
+87
+00:05:08,910 --> 00:05:17,370
+associative container secondly if the
+
+88
+00:05:13,980 --> 00:05:19,830
+function<font color="#E5E5E5"> is using operator equal or it's</font>
+
+89
+00:05:17,370 --> 00:05:22,980
+<font color="#E5E5E5">a like for comparison then it's checking</font>
+
+90
+00:05:19,830 --> 00:05:25,289
+for equality<font color="#E5E5E5"> and typically what that</font>
+
+91
+00:05:22,980 --> 00:05:30,030
+<font color="#E5E5E5">means is the function</font><font color="#CCCCCC"> doesn't require</font>
+
+92
+00:05:25,290 --> 00:05:32,430
+the<font color="#E5E5E5"> data to be sorted and here I give</font>
+
+93
+00:05:30,030 --> 00:05:36,780
+you more example of algorithms<font color="#E5E5E5"> that</font>
+
+94
+00:05:32,430 --> 00:05:41,130
+check for<font color="#CCCCCC"> equality search find and find</font>
+
+95
+00:05:36,780 --> 00:05:43,320
+first of adjacent search and some more
+
+96
+00:05:41,130 --> 00:05:47,219
+example<font color="#E5E5E5"> of algorithms that check for</font>
+
+97
+00:05:43,320 --> 00:05:51,420
+equivalence<font color="#E5E5E5"> binary search includes lower</font>
+
+98
+00:05:47,220 --> 00:05:53,760
+bound upper bound<font color="#CCCCCC"> as you see these</font><font color="#E5E5E5"> are</font>
+
+99
+00:05:51,420 --> 00:05:57,380
+the algorithms<font color="#CCCCCC"> that require</font><font color="#E5E5E5"> the data</font><font color="#CCCCCC"> to</font>
+
+100
+00:05:53,760 --> 00:06:01,349
+be sorted applying them on unsorted data
+
+101
+00:05:57,380 --> 00:06:03,030
+results in undefined behavior<font color="#E5E5E5"> the</font>
+
+102
+00:06:01,350 --> 00:06:06,210
+important thing for<font color="#E5E5E5"> you to</font><font color="#CCCCCC"> remember</font>
+
+103
+00:06:03,030 --> 00:06:09,090
+today<font color="#CCCCCC"> is whenever you use a function to</font>
+
+104
+00:06:06,210 --> 00:06:10,469
+search or<font color="#CCCCCC"> to remove certain element make</font>
+
+105
+00:06:09,090 --> 00:06:14,700
+sure you understand the difference
+
+106
+00:06:10,470 --> 00:06:16,980
+<font color="#CCCCCC">between equality</font><font color="#E5E5E5"> and equivalence and be</font>
+
+107
+00:06:14,700 --> 00:06:20,490
+aware<font color="#E5E5E5"> there might be different</font><font color="#CCCCCC"> versions</font>
+
+108
+00:06:16,980 --> 00:06:23,010
+<font color="#CCCCCC">of functions for them</font><font color="#E5E5E5"> sometimes</font><font color="#CCCCCC"> they</font>
+
+109
+00:06:20,490 --> 00:06:24,720
+both will give you the same result<font color="#E5E5E5"> and</font>
+
+110
+00:06:23,010 --> 00:06:27,780
+sometimes they'll give you different
+
+111
+00:06:24,720 --> 00:06:29,080
+result<font color="#E5E5E5"> so choose a correct one</font><font color="#CCCCCC"> for</font>
+
+112
+00:06:27,780 --> 00:06:31,299
+<font color="#CCCCCC">yourself</font>
+
+113
+00:06:29,080 --> 00:06:33,639
+that's all for today<font color="#E5E5E5"> thank you</font><font color="#CCCCCC"> for</font>
+
+114
+00:06:31,300 --> 00:06:36,069
+<font color="#CCCCCC">watching</font><font color="#E5E5E5"> feel free</font><font color="#CCCCCC"> to</font><font color="#E5E5E5"> subscribe</font><font color="#CCCCCC"> to</font><font color="#E5E5E5"> my</font>
+
+115
+00:06:33,639 --> 00:06:38,139
+<font color="#CCCCCC">channel</font><font color="#E5E5E5"> so when I post a</font><font color="#CCCCCC"> new video</font><font color="#E5E5E5"> you</font>
+
+116
+00:06:36,069 --> 00:06:39,940
+will<font color="#E5E5E5"> be</font><font color="#CCCCCC"> updated</font><font color="#E5E5E5"> or you can go to my</font>
+
+117
+00:06:38,139 --> 00:06:43,379
+<font color="#E5E5E5">channels home page and see what</font><font color="#CCCCCC"> I'm</font>
+
+118
+00:06:39,940 --> 00:06:43,379
+offering<font color="#E5E5E5"> today bye bye</font>
+

@@ -1,0 +1,756 @@
+﻿1
+00:00:05,009 --> 00:00:10,660
+hello everyone welcome to<font color="#E5E5E5"> C++ advanced</font>
+
+2
+00:00:08,559 --> 00:00:14,500
+today<font color="#E5E5E5"> we are going to talk about our</font>
+
+3
+00:00:10,660 --> 00:00:16,209
+value<font color="#E5E5E5"> and</font><font color="#CCCCCC"> our value</font><font color="#E5E5E5"> our value and our</font>
+
+4
+00:00:14,500 --> 00:00:18,880
+value are<font color="#CCCCCC"> not something that</font><font color="#E5E5E5"> you learn</font>
+
+5
+00:00:16,209 --> 00:00:21,640
+<font color="#E5E5E5">into very often some people has</font>
+
+6
+00:00:18,880 --> 00:00:23,470
+programmed the C++ for years and<font color="#E5E5E5"> they</font>
+
+7
+00:00:21,640 --> 00:00:28,599
+<font color="#CCCCCC">still don't have a good understanding</font><font color="#E5E5E5"> of</font>
+
+8
+00:00:23,470 --> 00:00:33,100
+what our value<font color="#E5E5E5"> and our values are so the</font>
+
+9
+00:00:28,599 --> 00:00:36,010
+question to ask<font color="#E5E5E5"> is why do I care our</font>
+
+10
+00:00:33,100 --> 00:00:40,230
+value<font color="#E5E5E5"> and L value are actually two very</font>
+
+11
+00:00:36,010 --> 00:00:43,150
+important concept<font color="#E5E5E5"> in C++ core language</font>
+
+12
+00:00:40,230 --> 00:00:47,500
+<font color="#E5E5E5">having a good knowledge of them will</font>
+
+13
+00:00:43,150 --> 00:00:50,410
+help<font color="#E5E5E5"> you understand C++ construct and to</font>
+
+14
+00:00:47,500 --> 00:00:55,410
+explain some<font color="#CCCCCC"> similar strange behavior</font><font color="#E5E5E5"> of</font>
+
+15
+00:00:50,410 --> 00:00:59,980
+C++<font color="#E5E5E5"> it also can help you to decipher</font>
+
+16
+00:00:55,410 --> 00:01:03,010
+<font color="#E5E5E5">compiler errors and warnings because</font>
+
+17
+00:00:59,980 --> 00:01:06,610
+<font color="#CCCCCC">these two terms appears</font><font color="#E5E5E5"> quite often in</font>
+
+18
+00:01:03,010 --> 00:01:09,670
+<font color="#E5E5E5">the compiler messages</font><font color="#CCCCCC"> a second reason</font>
+
+19
+00:01:06,610 --> 00:01:12,490
+that<font color="#E5E5E5"> you should care</font><font color="#CCCCCC"> about</font><font color="#E5E5E5"> them is C++</font>
+
+20
+00:01:09,670 --> 00:01:15,970
+<font color="#CCCCCC">11</font><font color="#E5E5E5"> introduced a new feature called our</font>
+
+21
+00:01:12,490 --> 00:01:18,789
+value<font color="#CCCCCC"> reference if you</font><font color="#E5E5E5"> don't have a good</font>
+
+22
+00:01:15,970 --> 00:01:21,520
+grasp<font color="#E5E5E5"> of our value and</font><font color="#CCCCCC"> our value</font><font color="#E5E5E5"> it will</font>
+
+23
+00:01:18,790 --> 00:01:26,740
+be<font color="#CCCCCC"> impossible for you to</font><font color="#E5E5E5"> learn our value</font>
+
+24
+00:01:21,520 --> 00:01:30,340
+reference so what are the error values
+
+25
+00:01:26,740 --> 00:01:33,548
+and our values it is<font color="#E5E5E5"> hard to</font><font color="#CCCCCC"> give a</font>
+
+26
+00:01:30,340 --> 00:01:35,890
+rigorous<font color="#CCCCCC"> definition of what they are so</font>
+
+27
+00:01:33,549 --> 00:01:39,220
+instead here I'm giving you a simplified
+
+28
+00:01:35,890 --> 00:01:42,400
+<font color="#E5E5E5">definition which is</font><font color="#CCCCCC"> generally accepted</font>
+
+29
+00:01:39,220 --> 00:01:47,229
+and it should serve you<font color="#E5E5E5"> well in</font><font color="#CCCCCC"> 99% of</font>
+
+30
+00:01:42,400 --> 00:01:50,650
+<font color="#E5E5E5">the time</font><font color="#CCCCCC"> l value is an object that</font>
+
+31
+00:01:47,229 --> 00:01:54,250
+<font color="#E5E5E5">occupies some identifiable location in</font>
+
+32
+00:01:50,650 --> 00:01:56,979
+memory so the key word here is<font color="#CCCCCC"> it's</font>
+
+33
+00:01:54,250 --> 00:02:00,900
+<font color="#E5E5E5">something in memory not something in the</font>
+
+34
+00:01:56,979 --> 00:02:04,320
+register and<font color="#E5E5E5"> secondly it is it has</font>
+
+35
+00:02:00,900 --> 00:02:08,100
+identifiable<font color="#E5E5E5"> address</font>
+
+36
+00:02:04,320 --> 00:02:11,709
+our value is defined<font color="#E5E5E5"> by exclusion</font><font color="#CCCCCC"> any</font>
+
+37
+00:02:08,100 --> 00:02:17,470
+object that<font color="#E5E5E5"> is not a</font><font color="#CCCCCC"> L value it's our</font>
+
+38
+00:02:11,710 --> 00:02:20,050
+value now let's look at some<font color="#E5E5E5"> L value</font>
+
+39
+00:02:17,470 --> 00:02:25,260
+examples<font color="#E5E5E5"> I have an integer</font>
+
+40
+00:02:20,050 --> 00:02:29,410
+<font color="#E5E5E5">I I is a</font><font color="#CCCCCC"> L value</font><font color="#E5E5E5"> Y it is our</font><font color="#CCCCCC"> L value</font>
+
+41
+00:02:25,260 --> 00:02:32,320
+because I can get its address with<font color="#CCCCCC"> am</font><font color="#E5E5E5"> %</font>
+
+42
+00:02:29,410 --> 00:02:36,760
+and assign the edges to<font color="#CCCCCC"> a</font><font color="#E5E5E5"> integer</font>
+
+43
+00:02:32,320 --> 00:02:39,400
+pointer so<font color="#CCCCCC"> it's edges it not only has</font><font color="#E5E5E5"> a</font>
+
+44
+00:02:36,760 --> 00:02:43,000
+<font color="#E5E5E5">address</font><font color="#CCCCCC"> and it's address is identifiable</font>
+
+45
+00:02:39,400 --> 00:02:46,209
+<font color="#CCCCCC">and that the</font><font color="#E5E5E5"> content of that edges can</font>
+
+46
+00:02:43,000 --> 00:02:51,160
+<font color="#CCCCCC">be modified by</font><font color="#E5E5E5"> assigning</font><font color="#CCCCCC"> I to a</font>
+
+47
+00:02:46,209 --> 00:02:54,010
+different valuable second example is I
+
+48
+00:02:51,160 --> 00:02:59,560
+have a class dog and then I will create
+
+49
+00:02:54,010 --> 00:03:05,290
+<font color="#CCCCCC">a dog D 1 and D 1</font><font color="#E5E5E5"> is a</font><font color="#CCCCCC"> l value of a</font>
+
+50
+00:02:59,560 --> 00:03:09,160
+<font color="#E5E5E5">user-defined the type a class it is fair</font>
+
+51
+00:03:05,290 --> 00:03:14,109
+to<font color="#CCCCCC"> say that most</font><font color="#E5E5E5"> of the variables in C++</font>
+
+52
+00:03:09,160 --> 00:03:17,350
+code are<font color="#CCCCCC"> l values now let's look</font><font color="#E5E5E5"> at some</font>
+
+53
+00:03:14,110 --> 00:03:21,940
+other<font color="#E5E5E5"> value examples I have integer X</font>
+
+54
+00:03:17,350 --> 00:03:27,070
+equal to 2<font color="#E5E5E5"> as we said X is a l value and</font>
+
+55
+00:03:21,940 --> 00:03:31,480
+the<font color="#CCCCCC"> 2 is our</font><font color="#E5E5E5"> value X equal to I plus 2 I</font>
+
+56
+00:03:27,070 --> 00:03:34,870
+plus 2 is our value why are they our
+
+57
+00:03:31,480 --> 00:03:38,440
+values because<font color="#CCCCCC"> if I try</font><font color="#E5E5E5"> to get their</font>
+
+58
+00:03:34,870 --> 00:03:43,540
+edges like this<font color="#CCCCCC"> the compiler will error</font>
+
+59
+00:03:38,440 --> 00:03:48,920
+out and I also cannot assign a different
+
+60
+00:03:43,540 --> 00:03:52,790
+<font color="#E5E5E5">value to them so</font><font color="#CCCCCC"> there are</font><font color="#E5E5E5"> values</font>
+
+61
+00:03:48,920 --> 00:03:57,290
+another example<font color="#CCCCCC"> I have a</font><font color="#E5E5E5"> dog D 1 and D 1</font>
+
+62
+00:03:52,790 --> 00:04:01,760
+equal to<font color="#E5E5E5"> talk and dog is our value of</font>
+
+63
+00:03:57,290 --> 00:04:05,359
+<font color="#CCCCCC">user defined type class now let's look</font>
+
+64
+00:04:01,760 --> 00:04:08,390
+at function I have a function sum which
+
+65
+00:04:05,360 --> 00:04:13,340
+takes an integer x and y and return the
+
+66
+00:04:08,390 --> 00:04:21,440
+sum of<font color="#E5E5E5"> X Y and then I have I equal to</font>
+
+67
+00:04:13,340 --> 00:04:23,720
+<font color="#CCCCCC">sum 3 for some 3/4 is the r-value how in</font>
+
+68
+00:04:21,440 --> 00:04:29,330
+summary what are the<font color="#E5E5E5"> are values in these</font>
+
+69
+00:04:23,720 --> 00:04:38,810
+examples<font color="#E5E5E5"> two is our value I plus</font><font color="#CCCCCC"> two is</font>
+
+70
+00:04:29,330 --> 00:04:43,940
+I value dog<font color="#E5E5E5"> and the Sun and also X plus</font>
+
+71
+00:04:38,810 --> 00:04:47,350
+y is<font color="#E5E5E5"> also our value and what are the L</font>
+
+72
+00:04:43,940 --> 00:04:52,640
+values<font color="#E5E5E5"> X</font><font color="#CCCCCC"> hi</font>
+
+73
+00:04:47,350 --> 00:04:59,690
+<font color="#CCCCCC">t1 that's</font><font color="#E5E5E5"> it</font>
+
+74
+00:04:52,640 --> 00:05:03,200
+<font color="#E5E5E5">oh I have</font><font color="#CCCCCC"> another one P now let's look</font>
+
+75
+00:04:59,690 --> 00:05:06,770
+at reference<font color="#CCCCCC"> I assume you are already</font>
+
+76
+00:05:03,200 --> 00:05:09,860
+<font color="#E5E5E5">familiar with the reference in C++ here</font>
+
+77
+00:05:06,770 --> 00:05:14,330
+I create an integer I and<font color="#E5E5E5"> initialize the</font>
+
+78
+00:05:09,860 --> 00:05:17,150
+integer reference<font color="#CCCCCC"> are with I this</font>
+
+79
+00:05:14,330 --> 00:05:22,430
+reference is<font color="#CCCCCC"> actually should be called L</font>
+
+80
+00:05:17,150 --> 00:05:25,789
+value reference because<font color="#E5E5E5"> R is a reference</font>
+
+81
+00:05:22,430 --> 00:05:28,670
+<font color="#E5E5E5">to our</font><font color="#CCCCCC"> L value</font><font color="#E5E5E5"> I</font>
+
+82
+00:05:25,790 --> 00:05:32,420
+and if<font color="#CCCCCC"> I initialize the reference our</font>
+
+83
+00:05:28,670 --> 00:05:37,700
+ways<font color="#CCCCCC"> are value</font><font color="#E5E5E5"> of</font><font color="#CCCCCC"> five then the compiler</font>
+
+84
+00:05:32,420 --> 00:05:41,380
+will error out and the only<font color="#E5E5E5"> exception</font>
+
+85
+00:05:37,700 --> 00:05:45,880
+for this is if R<font color="#E5E5E5"> is a constant reference</font>
+
+86
+00:05:41,380 --> 00:05:48,800
+<font color="#E5E5E5">then it can be assigned with five</font>
+
+87
+00:05:45,880 --> 00:05:52,490
+although you<font color="#CCCCCC"> should you</font><font color="#E5E5E5"> really should</font>
+
+88
+00:05:48,800 --> 00:05:56,410
+consider this is a shortcut<font color="#E5E5E5"> of two step</font>
+
+89
+00:05:52,490 --> 00:05:59,900
+operation<font color="#CCCCCC"> step</font><font color="#E5E5E5"> one our L value is</font>
+
+90
+00:05:56,410 --> 00:06:03,230
+<font color="#E5E5E5">created with five and step</font><font color="#CCCCCC"> number two</font>
+
+91
+00:05:59,900 --> 00:06:07,820
+the reference<font color="#E5E5E5"> R is initialized with this</font>
+
+92
+00:06:03,230 --> 00:06:10,010
+temporary<font color="#CCCCCC"> l value now let's look at the</font>
+
+93
+00:06:07,820 --> 00:06:12,590
+same idea<font color="#CCCCCC"> with</font><font color="#E5E5E5"> the function I have</font><font color="#CCCCCC"> a</font>
+
+94
+00:06:10,010 --> 00:06:17,300
+function<font color="#CCCCCC"> Square which takes l value</font>
+
+95
+00:06:12,590 --> 00:06:20,479
+reference<font color="#CCCCCC"> X and returns X square when I</font>
+
+96
+00:06:17,300 --> 00:06:24,980
+invoke the function<font color="#E5E5E5"> square I I is the</font>
+
+97
+00:06:20,480 --> 00:06:27,890
+integer and it is okay if I invoke the
+
+98
+00:06:24,980 --> 00:06:31,040
+<font color="#CCCCCC">function square</font><font color="#E5E5E5"> for T then it is an</font>
+
+99
+00:06:27,890 --> 00:06:35,270
+error because<font color="#CCCCCC"> for T is</font><font color="#E5E5E5"> not a l value</font>
+
+100
+00:06:31,040 --> 00:06:39,080
+it's<font color="#CCCCCC"> an R value</font><font color="#E5E5E5"> how can I make the</font>
+
+101
+00:06:35,270 --> 00:06:42,140
+fungus function square for<font color="#E5E5E5"> T work the</font>
+
+102
+00:06:39,080 --> 00:06:45,250
+workaround is I can change the parameter
+
+103
+00:06:42,140 --> 00:06:49,610
+of<font color="#E5E5E5"> the square function into a Const</font>
+
+104
+00:06:45,250 --> 00:06:52,550
+integer reference and as we've seen in
+
+105
+00:06:49,610 --> 00:06:55,340
+<font color="#CCCCCC">previous example a Const individual</font>
+
+106
+00:06:52,550 --> 00:06:58,700
+reference can be<font color="#E5E5E5"> initialized with</font><font color="#CCCCCC"> our</font>
+
+107
+00:06:55,340 --> 00:07:03,880
+<font color="#E5E5E5">value so the square for</font><font color="#CCCCCC"> T will work and</font>
+
+108
+00:06:58,700 --> 00:07:03,880
+the square<font color="#E5E5E5"> I still will work</font>
+
+109
+00:07:03,889 --> 00:07:10,230
+what confuses most<font color="#E5E5E5"> of the people in the</font>
+
+110
+00:07:07,760 --> 00:07:14,130
+transforming between<font color="#CCCCCC"> the L value and our</font>
+
+111
+00:07:10,230 --> 00:07:17,940
+value<font color="#E5E5E5"> an L value can</font><font color="#CCCCCC"> be</font><font color="#E5E5E5"> used to create</font>
+
+112
+00:07:14,130 --> 00:07:22,229
+<font color="#CCCCCC">our value in this example I</font><font color="#E5E5E5"> have a L</font>
+
+113
+00:07:17,940 --> 00:07:27,600
+value<font color="#CCCCCC"> I and I can create our</font><font color="#E5E5E5"> value with</font>
+
+114
+00:07:22,229 --> 00:07:32,669
+I plus 2 and<font color="#CCCCCC"> that second example</font><font color="#E5E5E5"> is in</font>
+
+115
+00:07:27,600 --> 00:07:38,850
+<font color="#E5E5E5">GG X equal to I now what is I is the is</font>
+
+116
+00:07:32,669 --> 00:07:42,450
+it<font color="#E5E5E5"> our value or</font><font color="#CCCCCC"> L value</font><font color="#E5E5E5"> I is obviously</font>
+
+117
+00:07:38,850 --> 00:07:46,229
+<font color="#E5E5E5">our L value because it has edges and I</font>
+
+118
+00:07:42,450 --> 00:07:51,210
+address is identifiable<font color="#E5E5E5"> however in this</font>
+
+119
+00:07:46,229 --> 00:07:55,469
+context I is implicitly transformed into
+
+120
+00:07:51,210 --> 00:07:58,909
+our value so our L value can be
+
+121
+00:07:55,470 --> 00:08:01,830
+implicitly transformed into our value
+
+122
+00:07:58,910 --> 00:08:05,220
+however<font color="#E5E5E5"> the other way around</font><font color="#CCCCCC"> is not</font>
+
+123
+00:08:01,830 --> 00:08:09,150
+valid and our value cannot be implicitly
+
+124
+00:08:05,220 --> 00:08:12,750
+transformed into a<font color="#E5E5E5"> l value and our value</font>
+
+125
+00:08:09,150 --> 00:08:16,320
+should<font color="#CCCCCC"> be explicitly used to create our</font>
+
+126
+00:08:12,750 --> 00:08:19,500
+<font color="#CCCCCC">l value</font><font color="#E5E5E5"> here's an example of using</font><font color="#CCCCCC"> R</font>
+
+127
+00:08:16,320 --> 00:08:24,180
+value<font color="#E5E5E5"> to create our value</font><font color="#CCCCCC"> I have an</font>
+
+128
+00:08:19,500 --> 00:08:25,520
+integer array<font color="#E5E5E5"> V and the V Plus 2 is our</font>
+
+129
+00:08:24,180 --> 00:08:30,060
+<font color="#E5E5E5">R value</font>
+
+130
+00:08:25,520 --> 00:08:33,029
+however the dereference<font color="#E5E5E5"> of V plus 2 is a</font>
+
+131
+00:08:30,060 --> 00:08:35,839
+<font color="#CCCCCC">l value which can be</font><font color="#E5E5E5"> assigned with a</font>
+
+132
+00:08:33,029 --> 00:08:35,838
+different value
+
+133
+00:08:36,480 --> 00:08:41,970
+instead of<font color="#CCCCCC"> continue to talk about what</font>
+
+134
+00:08:39,179 --> 00:08:44,880
+the our values and<font color="#E5E5E5"> our values are let's</font>
+
+135
+00:08:41,970 --> 00:08:47,130
+<font color="#E5E5E5">talk about what they</font><font color="#CCCCCC"> are not</font><font color="#E5E5E5"> there are</font>
+
+136
+00:08:44,880 --> 00:08:51,540
+some<font color="#E5E5E5"> misconception that needs to be</font>
+
+137
+00:08:47,130 --> 00:08:56,340
+<font color="#CCCCCC">cleared up</font><font color="#E5E5E5"> miss concept one function or</font>
+
+138
+00:08:51,540 --> 00:08:58,949
+operator<font color="#CCCCCC"> always yields</font><font color="#E5E5E5"> our values this</font>
+
+139
+00:08:56,340 --> 00:09:01,530
+conclusion<font color="#E5E5E5"> can be</font><font color="#CCCCCC"> easily drawn from the</font>
+
+140
+00:08:58,950 --> 00:09:05,270
+examples of<font color="#CCCCCC"> where that we've seen so far</font>
+
+141
+00:09:01,530 --> 00:09:11,100
+like I equal I plus<font color="#CCCCCC"> three is our value</font>
+
+142
+00:09:05,270 --> 00:09:14,430
+<font color="#E5E5E5">some</font><font color="#CCCCCC"> 3/4 is our value however</font><font color="#E5E5E5"> this</font>
+
+143
+00:09:11,100 --> 00:09:17,550
+<font color="#E5E5E5">conclusion is not right</font><font color="#CCCCCC"> and here is my</font>
+
+144
+00:09:14,430 --> 00:09:20,069
+counter example<font color="#E5E5E5"> I have a function foo</font>
+
+145
+00:09:17,550 --> 00:09:23,310
+<font color="#E5E5E5">which returns an integer reference and</font>
+
+146
+00:09:20,070 --> 00:09:28,860
+in the function<font color="#CCCCCC"> I return the global</font>
+
+147
+00:09:23,310 --> 00:09:31,890
+valuable by reference<font color="#E5E5E5"> so the return</font>
+
+148
+00:09:28,860 --> 00:09:36,090
+value from<font color="#E5E5E5"> the</font><font color="#CCCCCC"> function foo is a</font><font color="#E5E5E5"> l value</font>
+
+149
+00:09:31,890 --> 00:09:40,670
+<font color="#E5E5E5">I can write code foo equal to 15 this</font>
+
+150
+00:09:36,090 --> 00:09:44,460
+will compile some of you may say well
+
+151
+00:09:40,670 --> 00:09:48,569
+<font color="#CCCCCC">this is</font><font color="#E5E5E5"> a</font><font color="#CCCCCC"> weird-looking code</font><font color="#E5E5E5"> I never</font>
+
+152
+00:09:44,460 --> 00:09:52,260
+write code like<font color="#E5E5E5"> this well point</font><font color="#CCCCCC"> taken</font>
+
+153
+00:09:48,570 --> 00:09:56,820
+then how about<font color="#E5E5E5"> this example array 3</font>
+
+154
+00:09:52,260 --> 00:10:00,650
+equal to<font color="#E5E5E5"> 15 in this example I'm invoking</font>
+
+155
+00:09:56,820 --> 00:10:03,860
+<font color="#E5E5E5">operator square bracket on array and</font>
+
+156
+00:10:00,650 --> 00:10:09,390
+operate a square bracket<font color="#E5E5E5"> almost always</font>
+
+157
+00:10:03,860 --> 00:10:14,850
+<font color="#E5E5E5">generates</font><font color="#CCCCCC"> L value</font><font color="#E5E5E5"> misconcept number 2</font>
+
+158
+00:10:09,390 --> 00:10:18,120
+<font color="#E5E5E5">our values are modifiable people usually</font>
+
+159
+00:10:14,850 --> 00:10:22,770
+get this idea<font color="#E5E5E5"> from the</font><font color="#CCCCCC"> laksa definition</font>
+
+160
+00:10:18,120 --> 00:10:25,710
+of our value in<font color="#CCCCCC"> C language in C L value</font>
+
+161
+00:10:22,770 --> 00:10:29,189
+is defined<font color="#E5E5E5"> as a value suitable for</font>
+
+162
+00:10:25,710 --> 00:10:31,709
+<font color="#CCCCCC">left-hand side of assignment</font>
+
+163
+00:10:29,190 --> 00:10:36,800
+however this definition<font color="#E5E5E5"> is no longer</font>
+
+164
+00:10:31,709 --> 00:10:42,000
+true<font color="#E5E5E5"> in C++ because C++</font><font color="#CCCCCC"> has a Const</font><font color="#E5E5E5"> and</font>
+
+165
+00:10:36,800 --> 00:10:47,279
+<font color="#E5E5E5">a Const although is a l value it is not</font>
+
+166
+00:10:42,000 --> 00:10:51,720
+modifiable<font color="#CCCCCC"> misconcept number</font><font color="#E5E5E5"> three our</font>
+
+167
+00:10:47,279 --> 00:10:55,800
+values<font color="#E5E5E5"> are not modifiable this seems to</font>
+
+168
+00:10:51,720 --> 00:10:58,259
+<font color="#CCCCCC">be pretty obvious in</font><font color="#E5E5E5"> our examples</font><font color="#CCCCCC"> I plus</font>
+
+169
+00:10:55,800 --> 00:11:01,889
+<font color="#CCCCCC">three is our value and it's not</font>
+
+170
+00:10:58,259 --> 00:11:04,160
+modifiable<font color="#E5E5E5"> some three four is our value</font>
+
+171
+00:11:01,889 --> 00:11:07,920
+<font color="#E5E5E5">and it's not modifiable</font>
+
+172
+00:11:04,160 --> 00:11:12,079
+however<font color="#E5E5E5"> this conclusion is only true for</font>
+
+173
+00:11:07,920 --> 00:11:15,899
+<font color="#CCCCCC">the</font><font color="#E5E5E5"> built-in types</font><font color="#CCCCCC"> it is not true for</font>
+
+174
+00:11:12,079 --> 00:11:17,790
+<font color="#E5E5E5">user-defined the type or class for</font>
+
+175
+00:11:15,899 --> 00:11:20,759
+<font color="#CCCCCC">example I can call the default</font>
+
+176
+00:11:17,790 --> 00:11:24,379
+<font color="#E5E5E5">constructor of dog to create a dog and</font>
+
+177
+00:11:20,759 --> 00:11:28,110
+then invoke the function<font color="#CCCCCC"> Park on the dog</font>
+
+178
+00:11:24,379 --> 00:11:33,110
+<font color="#E5E5E5">the function Park could change the state</font>
+
+179
+00:11:28,110 --> 00:11:37,949
+of<font color="#CCCCCC"> the stock</font><font color="#E5E5E5"> so this our value dog is</font>
+
+180
+00:11:33,110 --> 00:11:39,870
+modifiable<font color="#CCCCCC"> a summary if you cannot</font>
+
+181
+00:11:37,949 --> 00:11:42,449
+remember everything that<font color="#CCCCCC"> I've talked</font>
+
+182
+00:11:39,870 --> 00:11:45,930
+about<font color="#E5E5E5"> our value and</font><font color="#CCCCCC"> L value please do</font>
+
+183
+00:11:42,449 --> 00:11:49,439
+remember<font color="#E5E5E5"> the summary number</font><font color="#CCCCCC"> one every</font>
+
+184
+00:11:45,930 --> 00:11:53,279
+<font color="#E5E5E5">C++ expression yields either our value</font>
+
+185
+00:11:49,439 --> 00:11:57,029
+or<font color="#CCCCCC"> al value number two if an expression</font>
+
+186
+00:11:53,279 --> 00:12:02,009
+has an identifiable memory address it is
+
+187
+00:11:57,029 --> 00:12:04,230
+a l value<font color="#E5E5E5"> otherwise it's already that's</font>
+
+188
+00:12:02,009 --> 00:12:07,009
+all for today's session<font color="#CCCCCC"> thank you for</font>
+
+189
+00:12:04,230 --> 00:12:07,009
+<font color="#CCCCCC">watching</font><font color="#E5E5E5"> bye bye</font>
+

@@ -1,0 +1,396 @@
+﻿1
+00:00:04,910 --> 00:00:13,110
+hello welcome to C++ advanced<font color="#E5E5E5"> one of C++</font>
+
+2
+00:00:10,170 --> 00:00:16,349
+<font color="#E5E5E5">is a critical feature is operator</font>
+
+3
+00:00:13,110 --> 00:00:18,810
+overload<font color="#E5E5E5"> it can exploit people's</font>
+
+4
+00:00:16,349 --> 00:00:22,740
+intuition<font color="#E5E5E5"> and reduce their learning</font>
+
+5
+00:00:18,810 --> 00:00:25,169
+curve<font color="#CCCCCC"> for new</font><font color="#E5E5E5"> libraries assignment</font>
+
+6
+00:00:22,740 --> 00:00:29,099
+operator is one of the operators that's
+
+7
+00:00:25,170 --> 00:00:31,109
+<font color="#E5E5E5">frequently being overloaded in this</font>
+
+8
+00:00:29,100 --> 00:00:33,750
+session women<font color="#E5E5E5"> don't talk about one</font>
+
+9
+00:00:31,109 --> 00:00:38,850
+pitfall<font color="#E5E5E5"> in implementing assignment</font>
+
+10
+00:00:33,750 --> 00:00:42,600
+operator which is self assignment this
+
+11
+00:00:38,850 --> 00:00:45,540
+<font color="#E5E5E5">is the</font><font color="#CCCCCC"> example of self assignment</font><font color="#E5E5E5"> you</font>
+
+12
+00:00:42,600 --> 00:00:49,530
+may ask<font color="#E5E5E5"> where people really do stupid</font>
+
+13
+00:00:45,540 --> 00:00:52,260
+things<font color="#E5E5E5"> like</font><font color="#CCCCCC"> this no they were not but</font>
+
+14
+00:00:49,530 --> 00:00:57,000
+they may very<font color="#CCCCCC"> well do things like</font><font color="#E5E5E5"> this</font>
+
+15
+00:00:52,260 --> 00:01:01,079
+<font color="#E5E5E5">and this is a self assignment when I and</font>
+
+16
+00:00:57,000 --> 00:01:04,199
+J<font color="#CCCCCC"> are equal that is why we need to</font>
+
+17
+00:01:01,079 --> 00:01:08,160
+handle self-assignment appropriately in
+
+18
+00:01:04,199 --> 00:01:11,280
+our assignment operator<font color="#E5E5E5"> now let's look</font>
+
+19
+00:01:08,160 --> 00:01:15,780
+at our example<font color="#E5E5E5"> we have a class dog and</font>
+
+20
+00:01:11,280 --> 00:01:18,690
+dog<font color="#E5E5E5"> wears colors so this dog has a data</font>
+
+21
+00:01:15,780 --> 00:01:23,729
+member<font color="#CCCCCC"> peak color</font><font color="#E5E5E5"> which is a pointer</font><font color="#CCCCCC"> to</font>
+
+22
+00:01:18,690 --> 00:01:26,880
+a color class and the<font color="#CCCCCC"> dog's</font><font color="#E5E5E5"> assignment</font>
+
+23
+00:01:23,729 --> 00:01:30,929
+operator will copy everything from<font color="#E5E5E5"> the</font>
+
+24
+00:01:26,880 --> 00:01:34,649
+<font color="#E5E5E5">right hand side out to itself and in our</font>
+
+25
+00:01:30,929 --> 00:01:38,640
+case the main thing<font color="#E5E5E5"> to copy over is the</font>
+
+26
+00:01:34,649 --> 00:01:41,819
+<font color="#CCCCCC">P color the natural implementation of</font>
+
+27
+00:01:38,640 --> 00:01:45,330
+that<font color="#E5E5E5"> is I'll first delete my own key</font>
+
+28
+00:01:41,819 --> 00:01:47,610
+color and then I copy constructor a P
+
+29
+00:01:45,330 --> 00:01:49,880
+new<font color="#E5E5E5"> P color from the right hand side of</font>
+
+30
+00:01:47,610 --> 00:01:53,149
+pahala
+
+31
+00:01:49,880 --> 00:01:56,940
+however there's a<font color="#CCCCCC"> problem with this</font>
+
+32
+00:01:53,149 --> 00:02:00,750
+<font color="#CCCCCC">implementation</font><font color="#E5E5E5"> the problem</font><font color="#CCCCCC"> arises when</font>
+
+33
+00:01:56,940 --> 00:02:03,989
+this dog<font color="#E5E5E5"> and right hand side dog are the</font>
+
+34
+00:02:00,750 --> 00:02:05,820
+same dog in other words this is a self
+
+35
+00:02:03,989 --> 00:02:09,330
+<font color="#E5E5E5">assignment</font>
+
+36
+00:02:05,820 --> 00:02:12,480
+if that is<font color="#E5E5E5"> the case when I delete Pecola</font>
+
+37
+00:02:09,330 --> 00:02:17,040
+I'm also deleting a pea color of the
+
+38
+00:02:12,480 --> 00:02:19,440
+<font color="#CCCCCC">right hand</font><font color="#E5E5E5"> side dog then when I copy</font>
+
+39
+00:02:17,040 --> 00:02:22,320
+constructor color from the right hand
+
+40
+00:02:19,440 --> 00:02:26,730
+side<font color="#CCCCCC"> peak</font><font color="#E5E5E5"> color I'm accessing an object</font>
+
+41
+00:02:22,320 --> 00:02:32,340
+that<font color="#E5E5E5"> is deleted and the result could</font><font color="#CCCCCC"> be</font>
+
+42
+00:02:26,730 --> 00:02:36,049
+disastrous<font color="#E5E5E5"> so what's our solution one</font>
+
+43
+00:02:32,340 --> 00:02:41,459
+simple<font color="#CCCCCC"> solution is we can do a check</font><font color="#E5E5E5"> if</font>
+
+44
+00:02:36,050 --> 00:02:51,870
+this dog equal to<font color="#E5E5E5"> the right hand</font><font color="#CCCCCC"> side</font>
+
+45
+00:02:41,459 --> 00:02:55,620
+dog then we<font color="#E5E5E5"> simply return this now we</font>
+
+46
+00:02:51,870 --> 00:02:58,260
+<font color="#E5E5E5">are in a much</font><font color="#CCCCCC"> better</font><font color="#E5E5E5"> situation the copy</font>
+
+47
+00:02:55,620 --> 00:03:00,690
+<font color="#CCCCCC">that deleting angular copy constructing</font>
+
+48
+00:02:58,260 --> 00:03:04,140
+only happens<font color="#E5E5E5"> when this dog and</font><font color="#CCCCCC"> run hands</font>
+
+49
+00:03:00,690 --> 00:03:09,859
+<font color="#E5E5E5">a dog are not the same dog however</font>
+
+50
+00:03:04,140 --> 00:03:09,859
+there's a<font color="#E5E5E5"> stupid problem with this code</font>
+
+51
+00:03:10,220 --> 00:03:16,620
+what happens if the copy constructor of
+
+52
+00:03:14,489 --> 00:03:21,780
+<font color="#E5E5E5">the</font><font color="#CCCCCC"> right</font><font color="#E5E5E5"> hand side dogs</font><font color="#CCCCCC"> Pecola</font>
+
+53
+00:03:16,620 --> 00:03:25,260
+<font color="#E5E5E5">clothes and exception in that</font><font color="#CCCCCC"> case the</font>
+
+54
+00:03:21,780 --> 00:03:29,040
+doc has deleted<font color="#E5E5E5"> its own pee</font><font color="#CCCCCC"> corner</font><font color="#E5E5E5"> but</font>
+
+55
+00:03:25,260 --> 00:03:31,769
+<font color="#E5E5E5">it failed to create a new P</font><font color="#CCCCCC"> collar</font><font color="#E5E5E5"> so</font>
+
+56
+00:03:29,040 --> 00:03:36,030
+the<font color="#E5E5E5"> dog ends up holding a pointer that's</font>
+
+57
+00:03:31,769 --> 00:03:38,970
+pointing to an invalid<font color="#E5E5E5"> object this is a</font>
+
+58
+00:03:36,030 --> 00:03:43,470
+big<font color="#E5E5E5"> problem if the</font><font color="#CCCCCC"> docs client later on</font>
+
+59
+00:03:38,970 --> 00:03:47,010
+wants to use the dog<font color="#E5E5E5"> more and even</font>
+
+60
+00:03:43,470 --> 00:03:49,769
+<font color="#CCCCCC">nobody</font><font color="#E5E5E5"> is using the dog</font><font color="#CCCCCC"> anymore</font><font color="#E5E5E5"> when the</font>
+
+61
+00:03:47,010 --> 00:03:53,040
+dog is destructed<font color="#CCCCCC"> the docs</font><font color="#E5E5E5"> destructor</font>
+
+62
+00:03:49,769 --> 00:03:58,579
+may<font color="#E5E5E5"> want to try to delete the</font><font color="#CCCCCC"> pee color</font>
+
+63
+00:03:53,040 --> 00:04:02,070
+again<font color="#E5E5E5"> and that the result is undefined</font>
+
+64
+00:03:58,579 --> 00:04:05,610
+<font color="#CCCCCC">so it seems what we really want to do is</font>
+
+65
+00:04:02,070 --> 00:04:09,269
+delete<font color="#CCCCCC"> pee color only after the new pee</font>
+
+66
+00:04:05,610 --> 00:04:13,470
+color is created successfully and<font color="#CCCCCC"> to</font>
+
+67
+00:04:09,269 --> 00:04:19,340
+<font color="#E5E5E5">achieve</font><font color="#CCCCCC"> that purpose I need to create a</font>
+
+68
+00:04:13,470 --> 00:04:19,339
+copy<font color="#E5E5E5"> of original key color</font>
+
+69
+00:04:21,440 --> 00:04:32,520
+and then I create a new<font color="#CCCCCC"> P</font><font color="#E5E5E5"> color</font><font color="#CCCCCC"> if that</font>
+
+70
+00:04:28,170 --> 00:04:39,300
+is successful<font color="#CCCCCC"> I'll delete the original P</font>
+
+71
+00:04:32,520 --> 00:04:42,090
+color<font color="#E5E5E5"> now we are safe</font><font color="#CCCCCC"> even</font><font color="#E5E5E5"> if the new</font>
+
+72
+00:04:39,300 --> 00:04:45,720
+operator throws an exception<font color="#E5E5E5"> the</font><font color="#CCCCCC"> dog</font>
+
+73
+00:04:42,090 --> 00:04:50,820
+<font color="#E5E5E5">still holding a pointer</font><font color="#CCCCCC"> that points to a</font>
+
+74
+00:04:45,720 --> 00:04:55,620
+<font color="#E5E5E5">valid color so this gives you a small</font>
+
+75
+00:04:50,820 --> 00:04:59,130
+demo<font color="#E5E5E5"> of writing exception safe code now</font>
+
+76
+00:04:55,620 --> 00:05:01,830
+let's look at<font color="#CCCCCC"> our solution to solution</font>
+
+77
+00:04:59,130 --> 00:05:05,219
+to basically<font color="#CCCCCC"> dedicates</font><font color="#E5E5E5"> the assignment</font>
+
+78
+00:05:01,830 --> 00:05:08,219
+operation<font color="#E5E5E5"> to the color class so I simply</font>
+
+79
+00:05:05,220 --> 00:05:12,030
+copy color<font color="#E5E5E5"> equal to</font><font color="#CCCCCC"> life I'm side P</font>
+
+80
+00:05:08,220 --> 00:05:14,600
+<font color="#E5E5E5">color it will either do a member by</font>
+
+81
+00:05:12,030 --> 00:05:17,909
+member copying of the color class or
+
+82
+00:05:14,600 --> 00:05:22,500
+invoke the color classes overloaded
+
+83
+00:05:17,910 --> 00:05:24,660
+assignment operator one thing to note is
+
+84
+00:05:22,500 --> 00:05:26,760
+I<font color="#CCCCCC"> don't necessarily</font><font color="#E5E5E5"> need to check if</font>
+
+85
+00:05:24,660 --> 00:05:30,000
+this dog<font color="#E5E5E5"> ended the right-hand side of</font>
+
+86
+00:05:26,760 --> 00:05:33,650
+our the same dog<font color="#CCCCCC"> if they are the same I</font>
+
+87
+00:05:30,000 --> 00:05:37,950
+will make a copy of<font color="#E5E5E5"> itself anyway</font>
+
+88
+00:05:33,650 --> 00:05:40,200
+this may incur some one-time cost but
+
+89
+00:05:37,950 --> 00:05:43,080
+since it<font color="#CCCCCC"> doesn't cause any serious</font>
+
+90
+00:05:40,200 --> 00:05:46,560
+<font color="#CCCCCC">trouble I don't want to worry about</font><font color="#E5E5E5"> the</font>
+
+91
+00:05:43,080 --> 00:05:48,659
+wrong time cost now until later my
+
+92
+00:05:46,560 --> 00:05:52,680
+profile that helps me that this is
+
+93
+00:05:48,660 --> 00:05:55,560
+important besides the if statement is
+
+94
+00:05:52,680 --> 00:05:58,290
+not for free it will also<font color="#E5E5E5"> incur some</font>
+
+95
+00:05:55,560 --> 00:06:00,960
+runtime cost so be moving the if
+
+96
+00:05:58,290 --> 00:06:06,600
+statement<font color="#E5E5E5"> will more or less compensate</font>
+
+97
+00:06:00,960 --> 00:06:08,640
+the cost of the self assignment that's
+
+98
+00:06:06,600 --> 00:06:11,510
+all for today's class<font color="#E5E5E5"> thank you for</font>
+
+99
+00:06:08,640 --> 00:06:11,510
+watching<font color="#E5E5E5"> bye bye</font>
+

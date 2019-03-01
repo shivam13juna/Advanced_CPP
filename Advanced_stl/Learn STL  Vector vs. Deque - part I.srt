@@ -1,0 +1,732 @@
+﻿1
+00:00:04,990 --> 00:00:10,370
+hello everyone<font color="#E5E5E5"> today</font><font color="#CCCCCC"> we will</font><font color="#E5E5E5"> talk</font><font color="#CCCCCC"> about</font>
+
+2
+00:00:07,759 --> 00:00:13,550
+vector and<font color="#CCCCCC"> attack which one should be</font>
+
+3
+00:00:10,370 --> 00:00:15,620
+used<font color="#E5E5E5"> vector and the</font><font color="#CCCCCC"> Dec have very</font>
+
+4
+00:00:13,550 --> 00:00:18,830
+similar<font color="#E5E5E5"> interfaces the</font><font color="#CCCCCC"> BIG's the</font>
+
+5
+00:00:15,620 --> 00:00:21,980
+<font color="#CCCCCC">difference on</font><font color="#E5E5E5"> the interface is a vector</font>
+
+6
+00:00:18,830 --> 00:00:25,490
+can<font color="#E5E5E5"> easily grow on one end and that deck</font>
+
+7
+00:00:21,980 --> 00:00:28,880
+can easily grow on both ends other than
+
+8
+00:00:25,490 --> 00:00:31,159
+<font color="#CCCCCC">that they are very</font><font color="#E5E5E5"> similar and because</font>
+
+9
+00:00:28,880 --> 00:00:33,280
+of<font color="#CCCCCC"> their similarity people often have</font>
+
+10
+00:00:31,160 --> 00:00:36,979
+difficulty deciding which one<font color="#CCCCCC"> to use</font>
+
+11
+00:00:33,280 --> 00:00:39,260
+<font color="#E5E5E5">despite the similar interfaces vector</font>
+
+12
+00:00:36,979 --> 00:00:42,199
+and the deck<font color="#E5E5E5"> are actually very different</font>
+
+13
+00:00:39,260 --> 00:00:45,349
+data structures and because of<font color="#E5E5E5"> that</font>
+
+14
+00:00:42,199 --> 00:00:49,519
+<font color="#CCCCCC">difference</font><font color="#E5E5E5"> often</font><font color="#CCCCCC"> time you prefer using</font>
+
+15
+00:00:45,350 --> 00:00:50,330
+<font color="#E5E5E5">one over the other</font><font color="#CCCCCC"> and how</font><font color="#E5E5E5"> to decide</font>
+
+16
+00:00:49,519 --> 00:00:54,799
+<font color="#E5E5E5">which one</font><font color="#CCCCCC"> to use</font>
+
+17
+00:00:50,330 --> 00:00:58,010
+<font color="#E5E5E5">that is today's topic first let's look</font>
+
+18
+00:00:54,799 --> 00:01:02,689
+at<font color="#E5E5E5"> an</font><font color="#CCCCCC"> example of vector we have a vector</font>
+
+19
+00:00:58,010 --> 00:01:04,339
+of<font color="#E5E5E5"> int</font><font color="#CCCCCC"> vac which contains 2 3 4 5 and we</font>
+
+20
+00:01:02,689 --> 00:01:07,100
+know that vector<font color="#E5E5E5"> has a member function</font>
+
+21
+00:01:04,339 --> 00:01:11,240
+called size which indicates<font color="#E5E5E5"> how</font><font color="#CCCCCC"> many</font>
+
+22
+00:01:07,100 --> 00:01:13,729
+items<font color="#E5E5E5"> already in the vector</font><font color="#CCCCCC"> and it also</font>
+
+23
+00:01:11,240 --> 00:01:16,880
+has a mem function called capacity which
+
+24
+00:01:13,730 --> 00:01:20,630
+indicates<font color="#E5E5E5"> how</font><font color="#CCCCCC"> many total</font><font color="#E5E5E5"> items can</font><font color="#CCCCCC"> be</font>
+
+25
+00:01:16,880 --> 00:01:23,860
+inserted in the<font color="#E5E5E5"> vector and let's run it</font>
+
+26
+00:01:20,630 --> 00:01:28,300
+and<font color="#E5E5E5"> see what are these barriers</font>
+
+27
+00:01:23,860 --> 00:01:31,840
+as you see the<font color="#CCCCCC"> VEX</font><font color="#E5E5E5"> size is</font><font color="#CCCCCC"> four and the</font>
+
+28
+00:01:28,300 --> 00:01:34,600
+<font color="#CCCCCC">VEX capacity is also</font><font color="#E5E5E5"> four which means</font>
+
+29
+00:01:31,840 --> 00:01:39,040
+<font color="#CCCCCC">all the memories are fully used by the</font>
+
+30
+00:01:34,600 --> 00:01:43,899
+vector now<font color="#E5E5E5"> I want to insert another item</font>
+
+31
+00:01:39,040 --> 00:01:46,990
+of<font color="#CCCCCC"> six into the</font><font color="#E5E5E5"> vector I push back</font><font color="#CCCCCC"> six</font>
+
+32
+00:01:43,900 --> 00:01:52,690
+and see what's the new size and the
+
+33
+00:01:46,990 --> 00:01:56,350
+capacity as you see after<font color="#CCCCCC"> push back</font><font color="#E5E5E5"> six</font>
+
+34
+00:01:52,690 --> 00:01:58,750
+the new size is<font color="#E5E5E5"> five which makes sense</font>
+
+35
+00:01:56,350 --> 00:02:03,360
+because<font color="#CCCCCC"> now the</font><font color="#E5E5E5"> vector contains five</font>
+
+36
+00:01:58,750 --> 00:02:07,869
+elements but the new capacity<font color="#CCCCCC"> is eight</font>
+
+37
+00:02:03,360 --> 00:02:12,250
+how did this happen let me show you with
+
+38
+00:02:07,869 --> 00:02:15,489
+<font color="#CCCCCC">some pictures at first the vector</font>
+
+39
+00:02:12,250 --> 00:02:19,540
+contains two three four five and both<font color="#CCCCCC"> of</font>
+
+40
+00:02:15,489 --> 00:02:24,130
+excise and capacity are four so all the
+
+41
+00:02:19,540 --> 00:02:27,489
+spaces<font color="#E5E5E5"> are fully occupied now I want to</font>
+
+42
+00:02:24,130 --> 00:02:30,310
+<font color="#CCCCCC">push</font><font color="#E5E5E5"> back another item of six but</font><font color="#CCCCCC"> the</font>
+
+43
+00:02:27,489 --> 00:02:35,190
+<font color="#E5E5E5">vector is four there's no room for me to</font>
+
+44
+00:02:30,310 --> 00:02:35,190
+insert another<font color="#E5E5E5"> item or can the vector do</font>
+
+45
+00:02:35,470 --> 00:02:41,170
+it creates a new array which<font color="#CCCCCC"> has twice</font>
+
+46
+00:02:38,650 --> 00:02:45,060
+the<font color="#E5E5E5"> capacity of the original one and</font>
+
+47
+00:02:41,170 --> 00:02:48,700
+then copy<font color="#E5E5E5"> all the data to the new array</font>
+
+48
+00:02:45,060 --> 00:02:54,580
+now it can easily<font color="#E5E5E5"> insert the new item of</font>
+
+49
+00:02:48,700 --> 00:02:58,119
+<font color="#E5E5E5">six into the new array so now the vector</font>
+
+50
+00:02:54,580 --> 00:03:03,730
+<font color="#E5E5E5">size is</font><font color="#CCCCCC"> five</font><font color="#E5E5E5"> and in fact</font><font color="#CCCCCC"> s capacity is</font>
+
+51
+00:02:58,120 --> 00:03:07,060
+<font color="#CCCCCC">eight as you see a vectors capacity</font>
+
+52
+00:03:03,730 --> 00:03:10,600
+grows exponentially<font color="#CCCCCC"> it grows by certain</font>
+
+53
+00:03:07,060 --> 00:03:12,550
+ratio<font color="#E5E5E5"> in this case this</font><font color="#CCCCCC"> ratio is</font><font color="#E5E5E5"> two but</font>
+
+54
+00:03:10,600 --> 00:03:17,260
+it doesn't have<font color="#CCCCCC"> to be</font><font color="#E5E5E5"> to some</font>
+
+55
+00:03:12,550 --> 00:03:19,570
+implementation use 1.5 as the<font color="#E5E5E5"> ratio now</font>
+
+56
+00:03:17,260 --> 00:03:22,870
+the vector<font color="#E5E5E5"> has a new array which</font>
+
+57
+00:03:19,570 --> 00:03:25,239
+<font color="#CCCCCC">contains all the data</font><font color="#E5E5E5"> remember</font><font color="#CCCCCC"> the new</font>
+
+58
+00:03:22,870 --> 00:03:27,580
+array is a different away from the old
+
+59
+00:03:25,240 --> 00:03:31,990
+array so what will happen<font color="#E5E5E5"> to the old</font>
+
+60
+00:03:27,580 --> 00:03:34,810
+array the old array will be simply
+
+61
+00:03:31,990 --> 00:03:38,410
+deleted and<font color="#CCCCCC"> its space will be released</font>
+
+62
+00:03:34,810 --> 00:03:41,739
+back to<font color="#E5E5E5"> the system so this is how a</font>
+
+63
+00:03:38,410 --> 00:03:46,480
+vector grows<font color="#CCCCCC"> and involved this process</font>
+
+64
+00:03:41,739 --> 00:03:50,500
+of reallocation<font color="#E5E5E5"> and from this we can see</font>
+
+65
+00:03:46,480 --> 00:03:54,160
+some drawbacks of a vector first of all
+
+66
+00:03:50,500 --> 00:03:57,130
+the expensive reallocation<font color="#E5E5E5"> every time a</font>
+
+67
+00:03:54,160 --> 00:04:00,100
+reallocation happens the original data
+
+68
+00:03:57,130 --> 00:04:03,670
+will be copied to<font color="#CCCCCC"> a new location</font><font color="#E5E5E5"> and</font>
+
+69
+00:04:00,100 --> 00:04:07,870
+other originals will be destroyed<font color="#CCCCCC"> that</font>
+
+70
+00:04:03,670 --> 00:04:11,140
+is<font color="#CCCCCC"> a lot of construction and destruction</font>
+
+71
+00:04:07,870 --> 00:04:15,160
+and the second delay a vector requires
+
+72
+00:04:11,140 --> 00:04:18,060
+contiguous memory<font color="#E5E5E5"> imagine I already have</font>
+
+73
+00:04:15,160 --> 00:04:21,250
+<font color="#E5E5E5">ten thousands of data in the vector and</font>
+
+74
+00:04:18,060 --> 00:04:24,340
+when the reallocation happens<font color="#E5E5E5"> I need</font><font color="#CCCCCC"> to</font>
+
+75
+00:04:21,250 --> 00:04:28,540
+allocate<font color="#CCCCCC"> 20,000 data of contiguous</font>
+
+76
+00:04:24,340 --> 00:04:31,150
+<font color="#E5E5E5">memory that could become a big</font><font color="#CCCCCC"> problem</font>
+
+77
+00:04:28,540 --> 00:04:34,960
+especially when the memory is<font color="#CCCCCC"> already</font>
+
+78
+00:04:31,150 --> 00:04:37,659
+heavily fragmented<font color="#E5E5E5"> so this makes a</font>
+
+79
+00:04:34,960 --> 00:04:41,590
+vector exception prone<font color="#E5E5E5"> when the vector</font>
+
+80
+00:04:37,660 --> 00:04:44,560
+size is big now let's see<font color="#E5E5E5"> some more</font>
+
+81
+00:04:41,590 --> 00:04:47,770
+<font color="#CCCCCC">examples of vector</font><font color="#E5E5E5"> I have</font><font color="#CCCCCC"> created a</font>
+
+82
+00:04:44,560 --> 00:04:52,389
+<font color="#CCCCCC">class</font><font color="#E5E5E5"> doc and I have a vector</font><font color="#CCCCCC"> of dog</font>
+
+83
+00:04:47,770 --> 00:04:55,630
+back<font color="#E5E5E5"> which has the size of</font><font color="#CCCCCC"> 6</font><font color="#E5E5E5"> the result</font>
+
+84
+00:04:52,389 --> 00:04:59,260
+of this is<font color="#CCCCCC"> 6 dogs</font><font color="#E5E5E5"> are created with</font>
+
+85
+00:04:55,630 --> 00:05:04,389
+default constructor and<font color="#CCCCCC"> Feud into the</font>
+
+86
+00:04:59,260 --> 00:05:07,719
+<font color="#E5E5E5">vector so if we learn this program it</font>
+
+87
+00:05:04,389 --> 00:05:12,970
+prints out size equal to 6<font color="#E5E5E5"> and capacity</font>
+
+88
+00:05:07,720 --> 00:05:17,380
+is also<font color="#E5E5E5"> 6 now let me create another</font>
+
+89
+00:05:12,970 --> 00:05:21,580
+example example<font color="#CCCCCC"> two I have a</font><font color="#E5E5E5"> vector of</font>
+
+90
+00:05:17,380 --> 00:05:24,880
+dark back<font color="#CCCCCC"> to and since back to is empty</font>
+
+91
+00:05:21,580 --> 00:05:28,890
+so back to the capacity is zero<font color="#CCCCCC"> and</font>
+
+92
+00:05:24,880 --> 00:05:34,840
+<font color="#CCCCCC">vector size is</font><font color="#E5E5E5"> also zero</font><font color="#CCCCCC"> and then I</font>
+
+93
+00:05:28,890 --> 00:05:39,070
+resize back<font color="#E5E5E5"> to</font><font color="#CCCCCC"> to 6 this has the same</font>
+
+94
+00:05:34,840 --> 00:05:41,349
+<font color="#CCCCCC">effect as the example</font><font color="#E5E5E5"> 1 in other words 6</font>
+
+95
+00:05:39,070 --> 00:05:43,840
+dogs are created with default
+
+96
+00:05:41,350 --> 00:05:48,510
+constructor and the field<font color="#E5E5E5"> into the</font>
+
+97
+00:05:43,840 --> 00:05:52,780
+vector<font color="#E5E5E5"> back to so if we run this</font><font color="#CCCCCC"> program</font>
+
+98
+00:05:48,510 --> 00:05:58,389
+both back and back<font color="#CCCCCC"> to has size of 6 and</font>
+
+99
+00:05:52,780 --> 00:05:59,830
+capacity<font color="#CCCCCC"> of 6</font><font color="#E5E5E5"> now let me create example</font>
+
+100
+00:05:58,389 --> 00:06:02,199
+<font color="#E5E5E5">3</font>
+
+101
+00:05:59,830 --> 00:06:07,270
+we have a vector of dark back three<font color="#E5E5E5"> and</font>
+
+102
+00:06:02,199 --> 00:06:09,090
+we call<font color="#E5E5E5"> vac three that</font><font color="#CCCCCC"> reserved</font><font color="#E5E5E5"> six what</font>
+
+103
+00:06:07,270 --> 00:06:15,219
+will this do
+
+104
+00:06:09,090 --> 00:06:21,310
+let's first<font color="#E5E5E5"> run it as you see back three</font>
+
+105
+00:06:15,220 --> 00:06:23,979
+size is<font color="#CCCCCC"> zero</font><font color="#E5E5E5"> and capacity becomes six so</font>
+
+106
+00:06:21,310 --> 00:06:26,440
+the<font color="#E5E5E5"> reserve function increases the</font>
+
+107
+00:06:23,979 --> 00:06:30,490
+capacity of the vector<font color="#E5E5E5"> and doesn't</font>
+
+108
+00:06:26,440 --> 00:06:33,569
+increase<font color="#CCCCCC"> the size</font><font color="#E5E5E5"> of the</font><font color="#CCCCCC"> vector</font><font color="#E5E5E5"> so no</font>
+
+109
+00:06:30,490 --> 00:06:36,969
+<font color="#CCCCCC">tox</font><font color="#E5E5E5"> default constructor will be invoked</font>
+
+110
+00:06:33,569 --> 00:06:37,900
+<font color="#E5E5E5">this provides a</font><font color="#CCCCCC"> very important function</font>
+
+111
+00:06:36,969 --> 00:06:41,469
+to us
+
+112
+00:06:37,900 --> 00:06:44,948
+remember the expensive reallocation<font color="#E5E5E5"> of a</font>
+
+113
+00:06:41,469 --> 00:06:51,219
+vector happens only when the capacity of
+
+114
+00:06:44,949 --> 00:06:54,580
+the vector is<font color="#CCCCCC"> four so if we already</font><font color="#E5E5E5"> have</font>
+
+115
+00:06:51,219 --> 00:06:57,430
+some idea how<font color="#CCCCCC"> many items</font><font color="#E5E5E5"> this vector</font>
+
+116
+00:06:54,580 --> 00:07:01,419
+will<font color="#CCCCCC"> be holding we can reserve</font><font color="#E5E5E5"> that</font>
+
+117
+00:06:57,430 --> 00:07:04,659
+amount of memory<font color="#E5E5E5"> for this factor so that</font>
+
+118
+00:07:01,419 --> 00:07:08,529
+<font color="#CCCCCC">we can avoid the</font><font color="#E5E5E5"> expensive reallocation</font>
+
+119
+00:07:04,659 --> 00:07:10,960
+<font color="#E5E5E5">altogether and that</font><font color="#CCCCCC"> is</font><font color="#E5E5E5"> the next</font><font color="#CCCCCC"> thing</font><font color="#E5E5E5"> I</font>
+
+120
+00:07:08,529 --> 00:07:14,800
+want<font color="#E5E5E5"> to talk about the strategy</font><font color="#CCCCCC"> of</font>
+
+121
+00:07:10,960 --> 00:07:16,930
+minimizing reallocation<font color="#E5E5E5"> if the next</font>
+
+122
+00:07:14,800 --> 00:07:19,990
+<font color="#E5E5E5">number</font><font color="#CCCCCC"> of items that</font><font color="#E5E5E5"> the factor will be</font>
+
+123
+00:07:16,930 --> 00:07:22,719
+<font color="#E5E5E5">using is known</font><font color="#CCCCCC"> you</font><font color="#E5E5E5"> can always use the</font>
+
+124
+00:07:19,990 --> 00:07:26,139
+function<font color="#CCCCCC"> reserve</font><font color="#E5E5E5"> max to reserve that</font>
+
+125
+00:07:22,719 --> 00:07:29,889
+<font color="#E5E5E5">amount of memory space</font><font color="#CCCCCC"> for the vector</font><font color="#E5E5E5"> so</font>
+
+126
+00:07:26,139 --> 00:07:33,759
+<font color="#E5E5E5">that it won't incur any overhead</font><font color="#CCCCCC"> of</font>
+
+127
+00:07:29,889 --> 00:07:37,060
+reallocation however if that<font color="#E5E5E5"> max</font><font color="#CCCCCC"> number</font>
+
+128
+00:07:33,759 --> 00:07:40,210
+<font color="#E5E5E5">of item is not known but you have some</font>
+
+129
+00:07:37,060 --> 00:07:43,509
+rough idea<font color="#E5E5E5"> of when this vector will stop</font>
+
+130
+00:07:40,210 --> 00:07:46,270
+growing<font color="#E5E5E5"> then what we can do is we can</font>
+
+131
+00:07:43,509 --> 00:07:50,139
+<font color="#E5E5E5">preserve as much memory as we can and</font>
+
+132
+00:07:46,270 --> 00:07:54,370
+once all<font color="#E5E5E5"> the</font><font color="#CCCCCC"> data is</font><font color="#E5E5E5"> inserted Kim of the</font>
+
+133
+00:07:50,139 --> 00:07:56,289
+<font color="#CCCCCC">rest of the memory</font><font color="#E5E5E5"> that is unused do you</font>
+
+134
+00:07:54,370 --> 00:08:01,449
+<font color="#E5E5E5">remember how</font><font color="#CCCCCC"> to trim off the unused</font>
+
+135
+00:07:56,289 --> 00:08:05,460
+memory for vector you could use the
+
+136
+00:08:01,449 --> 00:08:08,440
+<font color="#E5E5E5">function shrink to fit for</font><font color="#CCCCCC"> say plus 11</font>
+
+137
+00:08:05,460 --> 00:08:11,609
+for<font color="#CCCCCC"> several files or</font><font color="#E5E5E5"> three you could use</font>
+
+138
+00:08:08,440 --> 00:08:11,610
+the swab<font color="#CCCCCC"> check</font>
+
+139
+00:08:12,810 --> 00:08:20,290
+now let's look at<font color="#CCCCCC"> how the</font><font color="#E5E5E5"> deck works</font>
+
+140
+00:08:16,530 --> 00:08:23,229
+<font color="#CCCCCC">deck looks very</font><font color="#E5E5E5"> similar to a vector but</font>
+
+141
+00:08:20,290 --> 00:08:27,220
+<font color="#CCCCCC">the underlying implementation is very</font>
+
+142
+00:08:23,229 --> 00:08:31,000
+different<font color="#E5E5E5"> a deck stud weighs a</font><font color="#CCCCCC"> fixed</font>
+
+143
+00:08:27,220 --> 00:08:33,760
+<font color="#CCCCCC">size array to hold the data and when</font>
+
+144
+00:08:31,000 --> 00:08:37,510
+this array is<font color="#CCCCCC"> full</font><font color="#E5E5E5"> and there is no more</font>
+
+145
+00:08:33,760 --> 00:08:41,409
+<font color="#CCCCCC">space to push back it allocates</font><font color="#E5E5E5"> another</font>
+
+146
+00:08:37,510 --> 00:08:45,130
+fixed<font color="#CCCCCC"> sized array and similarly if</font>
+
+147
+00:08:41,409 --> 00:08:48,689
+<font color="#E5E5E5">there's no more space to push front it</font>
+
+148
+00:08:45,130 --> 00:08:53,710
+also<font color="#E5E5E5"> allocates another fixed size array</font>
+
+149
+00:08:48,690 --> 00:08:57,160
+<font color="#CCCCCC">before that array so</font><font color="#E5E5E5"> this is how attack</font>
+
+150
+00:08:53,710 --> 00:09:01,180
+grows it grows in both direction and<font color="#E5E5E5"> it</font>
+
+151
+00:08:57,160 --> 00:09:03,910
+closed linearly<font color="#E5E5E5"> with a fixed size it</font>
+
+152
+00:09:01,180 --> 00:09:08,949
+<font color="#E5E5E5">doesn't grow expand exponentially like</font>
+
+153
+00:09:03,910 --> 00:09:12,579
+the vector does so for<font color="#CCCCCC"> tack we have</font>
+
+154
+00:09:08,950 --> 00:09:16,600
+following observation number<font color="#CCCCCC"> one the</font>
+
+155
+00:09:12,580 --> 00:09:19,600
+deck<font color="#E5E5E5"> has no reallocation as the deck</font>
+
+156
+00:09:16,600 --> 00:09:22,690
+grows in both<font color="#E5E5E5"> ends the data of the deck</font>
+
+157
+00:09:19,600 --> 00:09:25,839
+<font color="#E5E5E5">will never be reallocated</font><font color="#CCCCCC"> because the</font>
+
+158
+00:09:22,690 --> 00:09:29,589
+capacity is<font color="#CCCCCC"> four</font><font color="#E5E5E5"> they stay where they</font>
+
+159
+00:09:25,839 --> 00:09:32,410
+<font color="#CCCCCC">are</font><font color="#E5E5E5"> so deck has no function of reserve</font>
+
+160
+00:09:29,589 --> 00:09:37,300
+and the<font color="#CCCCCC"> capacity because deck doesn't</font>
+
+161
+00:09:32,410 --> 00:09:39,670
+<font color="#E5E5E5">need them secondly a deck is generally</font>
+
+162
+00:09:37,300 --> 00:09:42,969
+<font color="#E5E5E5">considered to be slightly slower</font><font color="#CCCCCC"> than a</font>
+
+163
+00:09:39,670 --> 00:09:45,490
+vector<font color="#CCCCCC"> that is because number</font><font color="#E5E5E5"> one deck</font>
+
+164
+00:09:42,970 --> 00:09:49,420
+has a more complex data structure<font color="#E5E5E5"> and</font>
+
+165
+00:09:45,490 --> 00:09:50,950
+all that complexity<font color="#E5E5E5"> comes in with random</font>
+
+166
+00:09:49,420 --> 00:09:54,040
+cost
+
+167
+00:09:50,950 --> 00:09:56,410
+number two since<font color="#E5E5E5"> the data of attack is</font>
+
+168
+00:09:54,040 --> 00:09:59,439
+not sitting<font color="#E5E5E5"> in a contiguous memory</font>
+
+169
+00:09:56,410 --> 00:10:03,310
+memory<font color="#CCCCCC"> chunk</font><font color="#E5E5E5"> a deck will suffer from the</font>
+
+170
+00:09:59,440 --> 00:10:06,910
+problem<font color="#CCCCCC"> of locality a deck will incur</font>
+
+171
+00:10:03,310 --> 00:10:10,599
+more page faults or cache misses<font color="#E5E5E5"> than</font>
+
+172
+00:10:06,910 --> 00:10:13,719
+<font color="#CCCCCC">similarly</font><font color="#E5E5E5"> sized the vector however</font>
+
+173
+00:10:10,600 --> 00:10:16,750
+modern compiler<font color="#E5E5E5"> usually will cast</font><font color="#CCCCCC"> the</font>
+
+174
+00:10:13,720 --> 00:10:19,300
+data of attack together<font color="#E5E5E5"> so that it will</font>
+
+175
+00:10:16,750 --> 00:10:22,449
+suffer less<font color="#CCCCCC"> from the locality problem</font>
+
+176
+00:10:19,300 --> 00:10:26,769
+that is why our deck is only slightly
+
+177
+00:10:22,449 --> 00:10:27,189
+slower<font color="#CCCCCC"> than a vector that's all for</font>
+
+178
+00:10:26,769 --> 00:10:29,079
+today
+
+179
+00:10:27,190 --> 00:10:31,660
+thank<font color="#E5E5E5"> you</font><font color="#CCCCCC"> for watching feel free to</font>
+
+180
+00:10:29,079 --> 00:10:34,180
+<font color="#CCCCCC">subscribe to my channel so when I post</font><font color="#E5E5E5"> a</font>
+
+181
+00:10:31,660 --> 00:10:36,250
+<font color="#CCCCCC">new video</font><font color="#E5E5E5"> you will be</font><font color="#CCCCCC"> updated or you can</font>
+
+182
+00:10:34,180 --> 00:10:39,839
+go<font color="#E5E5E5"> to my channels home page and see</font><font color="#CCCCCC"> what</font>
+
+183
+00:10:36,250 --> 00:10:39,839
+I'm offering<font color="#E5E5E5"> today</font><font color="#CCCCCC"> bye bye</font>
+

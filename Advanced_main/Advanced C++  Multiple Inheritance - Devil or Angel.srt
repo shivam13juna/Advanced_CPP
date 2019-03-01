@@ -1,0 +1,1056 @@
+﻿1
+00:00:05,170 --> 00:00:11,330
+hello everyone today<font color="#CCCCCC"> we</font><font color="#E5E5E5"> are</font><font color="#CCCCCC"> going</font><font color="#E5E5E5"> to</font>
+
+2
+00:00:07,910 --> 00:00:14,750
+talk<font color="#E5E5E5"> about multiple inheritance multiple</font>
+
+3
+00:00:11,330 --> 00:00:18,789
+<font color="#CCCCCC">inheritance is where a class is directly</font>
+
+4
+00:00:14,750 --> 00:00:21,980
+derived<font color="#E5E5E5"> from more than one base classes</font>
+
+5
+00:00:18,789 --> 00:00:24,530
+people have different opinions<font color="#CCCCCC"> with the</font>
+
+6
+00:00:21,980 --> 00:00:27,650
+multiple inheritance<font color="#CCCCCC"> some people says if</font>
+
+7
+00:00:24,530 --> 00:00:31,010
+single<font color="#CCCCCC"> inheritance is good then multiple</font>
+
+8
+00:00:27,650 --> 00:00:33,500
+<font color="#E5E5E5">inheritance must be better and some</font>
+
+9
+00:00:31,010 --> 00:00:36,860
+people say<font color="#E5E5E5"> multiple inheritance brings</font>
+
+10
+00:00:33,500 --> 00:00:39,829
+<font color="#E5E5E5">too much troubles and Saturdays and it</font>
+
+11
+00:00:36,860 --> 00:00:43,250
+the benefits is simply not<font color="#E5E5E5"> worth the</font>
+
+12
+00:00:39,829 --> 00:00:47,000
+<font color="#E5E5E5">trouble in today's video I'm going</font><font color="#CCCCCC"> to</font>
+
+13
+00:00:43,250 --> 00:00:49,579
+show<font color="#E5E5E5"> you all the</font><font color="#CCCCCC"> benefits and Saturdays</font>
+
+14
+00:00:47,000 --> 00:00:52,430
+with multiple<font color="#E5E5E5"> inheritance</font><font color="#CCCCCC"> and in the end</font>
+
+15
+00:00:49,579 --> 00:00:56,300
+<font color="#E5E5E5">I'll lay out my position on this and</font><font color="#CCCCCC"> you</font>
+
+16
+00:00:52,430 --> 00:00:59,120
+decide<font color="#CCCCCC"> for your own</font><font color="#E5E5E5"> position let's look</font>
+
+17
+00:00:56,300 --> 00:01:02,629
+at an<font color="#CCCCCC"> example we</font><font color="#E5E5E5"> have a class input file</font>
+
+18
+00:00:59,120 --> 00:01:06,920
+which opens a file to read<font color="#E5E5E5"> so it has a</font>
+
+19
+00:01:02,629 --> 00:01:09,979
+public<font color="#E5E5E5"> read</font><font color="#CCCCCC"> function we have an</font><font color="#E5E5E5"> output</font>
+
+20
+00:01:06,920 --> 00:01:12,409
+file<font color="#E5E5E5"> class and</font><font color="#CCCCCC"> open</font><font color="#E5E5E5"> the file to write</font>
+
+21
+00:01:09,979 --> 00:01:17,299
+and of course it has a write function
+
+22
+00:01:12,409 --> 00:01:20,810
+and later on<font color="#CCCCCC"> it turns out I need to</font><font color="#E5E5E5"> open</font>
+
+23
+00:01:17,299 --> 00:01:23,630
+<font color="#E5E5E5">a file for both reading</font><font color="#CCCCCC"> and writing</font><font color="#E5E5E5"> and</font>
+
+24
+00:01:20,810 --> 00:01:26,350
+then it makes sense<font color="#CCCCCC"> that</font><font color="#E5E5E5"> we create</font>
+
+25
+00:01:23,630 --> 00:01:29,958
+another class<font color="#E5E5E5"> called</font><font color="#CCCCCC"> IO file which</font>
+
+26
+00:01:26,350 --> 00:01:35,029
+inherits both input file and output file
+
+27
+00:01:29,959 --> 00:01:39,109
+and as a result the<font color="#E5E5E5"> IO file can do both</font>
+
+28
+00:01:35,029 --> 00:01:41,119
+reading and<font color="#E5E5E5"> writing so far so good</font>
+
+29
+00:01:39,109 --> 00:01:45,259
+multiple inheritance has served its
+
+30
+00:01:41,119 --> 00:01:48,529
+purpose now in order<font color="#E5E5E5"> to read a file we</font>
+
+31
+00:01:45,259 --> 00:01:51,200
+must open<font color="#E5E5E5"> the file first so the input</font>
+
+32
+00:01:48,529 --> 00:01:55,999
+file needs another function called open
+
+33
+00:01:51,200 --> 00:01:59,670
+and for the same reason<font color="#E5E5E5"> the output file</font>
+
+34
+00:01:55,999 --> 00:02:02,920
+also<font color="#E5E5E5"> needs a function open</font>
+
+35
+00:01:59,670 --> 00:02:11,140
+now in the main function<font color="#CCCCCC"> I create</font><font color="#E5E5E5"> an</font><font color="#CCCCCC"> i/o</font>
+
+36
+00:02:02,920 --> 00:02:14,170
+file<font color="#E5E5E5"> F and I call F dot open this code</font>
+
+37
+00:02:11,140 --> 00:02:17,488
+will not<font color="#E5E5E5"> compile because the i/o file</font>
+
+38
+00:02:14,170 --> 00:02:21,069
+has<font color="#CCCCCC"> two instance of the open function</font>
+
+39
+00:02:17,489 --> 00:02:23,319
+<font color="#E5E5E5">one open is inherited</font><font color="#CCCCCC"> from</font><font color="#E5E5E5"> input file</font>
+
+40
+00:02:21,069 --> 00:02:26,140
+and another open is inherited<font color="#CCCCCC"> from</font><font color="#E5E5E5"> the</font>
+
+41
+00:02:23,319 --> 00:02:29,440
+output file<font color="#E5E5E5"> so the compiler will issue</font>
+
+42
+00:02:26,140 --> 00:02:34,809
+<font color="#E5E5E5">error saying I don't know which open you</font>
+
+43
+00:02:29,440 --> 00:02:39,329
+want to call and what's<font color="#E5E5E5"> even worse is if</font>
+
+44
+00:02:34,810 --> 00:02:45,130
+the input<font color="#E5E5E5"> file has a private open</font>
+
+45
+00:02:39,330 --> 00:02:49,030
+<font color="#CCCCCC">function now</font><font color="#E5E5E5"> the i/o file has access</font><font color="#CCCCCC"> to</font>
+
+46
+00:02:45,130 --> 00:02:52,239
+only<font color="#CCCCCC"> one</font><font color="#E5E5E5"> function of open so the F dot</font>
+
+47
+00:02:49,030 --> 00:02:56,680
+open should invoke the output files open
+
+48
+00:02:52,239 --> 00:03:01,660
+function<font color="#CCCCCC"> right now this code still will</font>
+
+49
+00:02:56,680 --> 00:03:04,329
+not compile the C++ standard<font color="#E5E5E5"> says before</font>
+
+50
+00:03:01,660 --> 00:03:07,690
+the compiler sees<font color="#E5E5E5"> accessibility</font><font color="#CCCCCC"> of a</font>
+
+51
+00:03:04,329 --> 00:03:10,470
+function it must decide which function
+
+52
+00:03:07,690 --> 00:03:13,450
+is the best match<font color="#CCCCCC"> for the function call</font>
+
+53
+00:03:10,470 --> 00:03:16,239
+<font color="#CCCCCC">so before the compiler see that this</font>
+
+54
+00:03:13,450 --> 00:03:19,298
+hope this open<font color="#CCCCCC"> function is private it</font>
+
+55
+00:03:16,239 --> 00:03:23,290
+must<font color="#E5E5E5"> first determine which open function</font>
+
+56
+00:03:19,299 --> 00:03:25,829
+<font color="#E5E5E5">should be invoked that is why the</font>
+
+57
+00:03:23,290 --> 00:03:30,700
+compiler will<font color="#E5E5E5"> still issue error saying</font>
+
+58
+00:03:25,829 --> 00:03:32,980
+<font color="#E5E5E5">ambiguous code to the open function to</font>
+
+59
+00:03:30,700 --> 00:03:39,940
+open<font color="#CCCCCC"> the file successfully you</font><font color="#E5E5E5"> have to</font>
+
+60
+00:03:32,980 --> 00:03:42,640
+say F dot output file<font color="#E5E5E5"> comma comma open</font>
+
+61
+00:03:39,940 --> 00:03:44,980
+that will<font color="#E5E5E5"> specifically tell the compiler</font>
+
+62
+00:03:42,640 --> 00:03:49,299
+that<font color="#E5E5E5"> you want to use the output</font><font color="#CCCCCC"> files</font>
+
+63
+00:03:44,980 --> 00:03:52,390
+open function<font color="#CCCCCC"> to open the file</font><font color="#E5E5E5"> now you</font>
+
+64
+00:03:49,300 --> 00:03:54,930
+have seen one Saturday with the multiple
+
+65
+00:03:52,390 --> 00:03:58,179
+<font color="#E5E5E5">inheritance and let's see more</font>
+
+66
+00:03:54,930 --> 00:04:01,390
+since both input file and output file
+
+67
+00:03:58,180 --> 00:04:04,480
+have the open<font color="#CCCCCC"> function it makes sense</font>
+
+68
+00:04:01,390 --> 00:04:07,929
+for the input file and<font color="#CCCCCC"> up file to have a</font>
+
+69
+00:04:04,480 --> 00:04:10,739
+common base class<font color="#E5E5E5"> and move the open</font>
+
+70
+00:04:07,930 --> 00:04:16,329
+function<font color="#E5E5E5"> to that common base</font><font color="#CCCCCC"> cast</font><font color="#E5E5E5"> and</font>
+
+71
+00:04:10,740 --> 00:04:18,700
+that<font color="#E5E5E5"> is what we are going to do we have</font>
+
+72
+00:04:16,329 --> 00:04:21,370
+a file class and<font color="#E5E5E5"> that the file have a</font>
+
+73
+00:04:18,700 --> 00:04:24,520
+name of<font color="#CCCCCC"> string and also the open</font>
+
+74
+00:04:21,370 --> 00:04:27,520
+function<font color="#CCCCCC"> and both input file and output</font>
+
+75
+00:04:24,520 --> 00:04:30,520
+file<font color="#E5E5E5"> are derived from file an</font><font color="#CCCCCC"> i/o file</font>
+
+76
+00:04:27,520 --> 00:04:35,289
+is derived<font color="#CCCCCC"> from both input and output</font>
+
+77
+00:04:30,520 --> 00:04:38,560
+file now in the main function<font color="#E5E5E5"> if I call</font>
+
+78
+00:04:35,290 --> 00:04:41,020
+the i/o files open function<font color="#E5E5E5"> it should be</font>
+
+79
+00:04:38,560 --> 00:04:45,880
+<font color="#CCCCCC">okay right because we only have one open</font>
+
+80
+00:04:41,020 --> 00:04:48,190
+function<font color="#E5E5E5"> available and says no the</font>
+
+81
+00:04:45,880 --> 00:04:51,159
+compiler will<font color="#E5E5E5"> still issue an error</font>
+
+82
+00:04:48,190 --> 00:04:54,490
+saying and the<font color="#CCCCCC"> quiz</font><font color="#E5E5E5"> code to open the</font>
+
+83
+00:04:51,160 --> 00:04:57,820
+reason is the input<font color="#E5E5E5"> file will inherit</font><font color="#CCCCCC"> an</font>
+
+84
+00:04:54,490 --> 00:04:59,890
+instance of of open function<font color="#CCCCCC"> and that</font>
+
+85
+00:04:57,820 --> 00:05:03,400
+the output file<font color="#E5E5E5"> also inherited an</font>
+
+86
+00:04:59,890 --> 00:05:06,700
+instance of the open function so the i/o
+
+87
+00:05:03,400 --> 00:05:10,719
+file still ends<font color="#E5E5E5"> up having two instance</font>
+
+88
+00:05:06,700 --> 00:05:13,568
+of open function<font color="#E5E5E5"> one from the input file</font>
+
+89
+00:05:10,720 --> 00:05:15,999
+one from the output file
+
+90
+00:05:13,569 --> 00:05:18,279
+that is why the compiler will<font color="#E5E5E5"> issue our</font>
+
+91
+00:05:15,999 --> 00:05:21,339
+errors in ambiguous<font color="#CCCCCC"> caught with the open</font>
+
+92
+00:05:18,279 --> 00:05:24,159
+function<font color="#E5E5E5"> this is</font><font color="#CCCCCC"> a commonly known as a</font>
+
+93
+00:05:21,339 --> 00:05:26,770
+diamond shade problem because the
+
+94
+00:05:24,159 --> 00:05:31,209
+<font color="#E5E5E5">classes forms a diamond shape of</font>
+
+95
+00:05:26,770 --> 00:05:34,419
+<font color="#E5E5E5">hierarchy the</font><font color="#CCCCCC"> i/o file not only has two</font>
+
+96
+00:05:31,209 --> 00:05:38,709
+instances<font color="#CCCCCC"> of open function</font><font color="#E5E5E5"> it also has</font>
+
+97
+00:05:34,419 --> 00:05:41,490
+two instances of<font color="#E5E5E5"> name and I can assign</font>
+
+98
+00:05:38,709 --> 00:05:47,830
+different value to the two names<font color="#E5E5E5"> for</font>
+
+99
+00:05:41,490 --> 00:05:55,619
+<font color="#CCCCCC">example</font><font color="#E5E5E5"> I can do</font><font color="#CCCCCC"> F dot input file comma</font>
+
+100
+00:05:47,830 --> 00:05:57,369
+comma name equal to<font color="#E5E5E5"> Phi</font><font color="#CCCCCC"> o</font><font color="#E5E5E5"> 1 and F dot</font>
+
+101
+00:05:55,619 --> 00:06:03,699
+output file
+
+102
+00:05:57,369 --> 00:06:06,789
+comma comma name equal<font color="#CCCCCC"> to file 2 so this</font>
+
+103
+00:06:03,699 --> 00:06:10,959
+<font color="#E5E5E5">is a problem why do we need</font><font color="#CCCCCC"> two instance</font>
+
+104
+00:06:06,789 --> 00:06:15,519
+of open and<font color="#E5E5E5"> two instance of name how to</font>
+
+105
+00:06:10,959 --> 00:06:19,959
+fix this<font color="#E5E5E5"> c++ provides a solution called</font>
+
+106
+00:06:15,519 --> 00:06:24,999
+<font color="#E5E5E5">virtual inheritance</font><font color="#CCCCCC"> i can virtually</font>
+
+107
+00:06:19,959 --> 00:06:28,749
+inherit the input file from the file and
+
+108
+00:06:24,999 --> 00:06:32,769
+the virtually inherit output file from
+
+109
+00:06:28,749 --> 00:06:35,379
+file what that means is we<font color="#E5E5E5"> are telling</font>
+
+110
+00:06:32,769 --> 00:06:38,559
+<font color="#E5E5E5">the compiler will only need one</font><font color="#CCCCCC"> instance</font>
+
+111
+00:06:35,379 --> 00:06:40,469
+of<font color="#E5E5E5"> name and one instance of open</font>
+
+112
+00:06:38,559 --> 00:06:45,069
+function<font color="#E5E5E5"> during</font><font color="#CCCCCC"> the</font><font color="#E5E5E5"> process of</font>
+
+113
+00:06:40,469 --> 00:06:49,689
+inheritance<font color="#E5E5E5"> and as a result these two</font>
+
+114
+00:06:45,069 --> 00:06:54,270
+lines of<font color="#E5E5E5"> code will</font><font color="#CCCCCC"> not compile under the</font>
+
+115
+00:06:49,689 --> 00:06:57,430
+<font color="#CCCCCC">F dot open</font><font color="#E5E5E5"> will compile successfully</font>
+
+116
+00:06:54,270 --> 00:07:01,659
+<font color="#E5E5E5">okay the virtual base class is good it</font>
+
+117
+00:06:57,430 --> 00:07:05,310
+solves our problem however it introduces
+
+118
+00:07:01,659 --> 00:07:10,840
+another problem it's a problem<font color="#E5E5E5"> about</font>
+
+119
+00:07:05,310 --> 00:07:13,629
+initialization suppose we have defined a
+
+120
+00:07:10,840 --> 00:07:17,948
+constructor<font color="#E5E5E5"> for file which takes a</font>
+
+121
+00:07:13,629 --> 00:07:20,319
+string<font color="#CCCCCC"> parameter of</font><font color="#E5E5E5"> filename since we</font>
+
+122
+00:07:17,949 --> 00:07:23,590
+have defined<font color="#E5E5E5"> a non-default constructor</font>
+
+123
+00:07:20,319 --> 00:07:26,680
+for file the compiler<font color="#E5E5E5"> will not generate</font>
+
+124
+00:07:23,590 --> 00:07:29,109
+a default constructor for<font color="#E5E5E5"> us which means</font>
+
+125
+00:07:26,680 --> 00:07:32,800
+all the files<font color="#E5E5E5"> children have to</font>
+
+126
+00:07:29,110 --> 00:07:36,699
+explicitly<font color="#E5E5E5"> initialize the file in their</font>
+
+127
+00:07:32,800 --> 00:07:39,370
+constructors<font color="#E5E5E5"> and the i/o file will</font>
+
+128
+00:07:36,699 --> 00:07:44,379
+initialize<font color="#CCCCCC"> both output file and input</font>
+
+129
+00:07:39,370 --> 00:07:48,009
+file this will work out<font color="#E5E5E5"> okay if it is</font><font color="#CCCCCC"> a</font>
+
+130
+00:07:44,379 --> 00:07:51,550
+<font color="#E5E5E5">single</font><font color="#CCCCCC"> inheritance</font><font color="#E5E5E5"> when I create a</font><font color="#CCCCCC"> I or</font>
+
+131
+00:07:48,009 --> 00:07:54,340
+file f io file we will initialize the
+
+132
+00:07:51,550 --> 00:07:58,569
+<font color="#CCCCCC">output file which in turns initialize a</font>
+
+133
+00:07:54,340 --> 00:08:02,020
+file however<font color="#E5E5E5"> this is a problem for</font>
+
+134
+00:07:58,569 --> 00:08:04,509
+<font color="#E5E5E5">multiple inheritance when</font><font color="#CCCCCC"> IO file is</font>
+
+135
+00:08:02,020 --> 00:08:06,990
+derived from<font color="#E5E5E5"> both input file and</font><font color="#CCCCCC"> the</font>
+
+136
+00:08:04,509 --> 00:08:10,419
+output file<font color="#CCCCCC"> it needs to initialize both</font>
+
+137
+00:08:06,990 --> 00:08:15,370
+input file<font color="#E5E5E5"> and output file which in</font>
+
+138
+00:08:10,419 --> 00:08:20,900
+turns<font color="#E5E5E5"> initialize two instance of file</font>
+
+139
+00:08:15,370 --> 00:08:24,470
+that is bad and<font color="#E5E5E5"> C++ provides a solution</font>
+
+140
+00:08:20,900 --> 00:08:28,280
+<font color="#E5E5E5">by defining a rule the rule states that</font>
+
+141
+00:08:24,470 --> 00:08:31,670
+<font color="#E5E5E5">the</font><font color="#CCCCCC"> initialization of the based virtual</font>
+
+142
+00:08:28,280 --> 00:08:35,179
+<font color="#E5E5E5">class is the responsibility of the most</font>
+
+143
+00:08:31,670 --> 00:08:39,950
+derived class in our case the<font color="#E5E5E5"> most</font>
+
+144
+00:08:35,179 --> 00:08:43,159
+derived class is the<font color="#CCCCCC"> IO file so IO file</font>
+
+145
+00:08:39,950 --> 00:08:46,550
+<font color="#E5E5E5">in addition</font><font color="#CCCCCC"> to initializing</font><font color="#E5E5E5"> its direct</font>
+
+146
+00:08:43,159 --> 00:08:55,850
+parents it also needs<font color="#CCCCCC"> to initialize the</font>
+
+147
+00:08:46,550 --> 00:08:58,939
+<font color="#CCCCCC">based virtual</font><font color="#E5E5E5"> class</font><font color="#CCCCCC"> file and these two</font>
+
+148
+00:08:55,850 --> 00:09:03,380
+instance of initialization<font color="#CCCCCC"> are simply</font>
+
+149
+00:08:58,940 --> 00:09:07,100
+ignored<font color="#E5E5E5"> this is the kind of awkward and</font>
+
+150
+00:09:03,380 --> 00:09:09,050
+<font color="#E5E5E5">non-intuitive but we have to live with</font>
+
+151
+00:09:07,100 --> 00:09:12,500
+it<font color="#E5E5E5"> if</font><font color="#CCCCCC"> we will want</font><font color="#E5E5E5"> to use multiple</font>
+
+152
+00:09:09,050 --> 00:09:15,920
+<font color="#E5E5E5">inheritance and this rule applies no</font>
+
+153
+00:09:12,500 --> 00:09:19,640
+<font color="#E5E5E5">matter how far the IO file is from the</font>
+
+154
+00:09:15,920 --> 00:09:23,780
+file in the hierarchy as long<font color="#E5E5E5"> as the IO</font>
+
+155
+00:09:19,640 --> 00:09:26,569
+file is the most derived class<font color="#CCCCCC"> it always</font>
+
+156
+00:09:23,780 --> 00:09:33,050
+bears the responsibility of initializing
+
+157
+00:09:26,570 --> 00:09:35,540
+<font color="#CCCCCC">the virtual base class so if the</font>
+
+158
+00:09:33,050 --> 00:09:39,319
+multiple<font color="#E5E5E5"> inheritance is so difficult to</font>
+
+159
+00:09:35,540 --> 00:09:42,640
+use<font color="#E5E5E5"> why do we have to use it the answer</font>
+
+160
+00:09:39,320 --> 00:09:45,940
+to<font color="#CCCCCC"> that is interface segregation</font>
+
+161
+00:09:42,640 --> 00:09:49,490
+principle the interface segregation
+
+162
+00:09:45,940 --> 00:09:53,180
+principle states that<font color="#E5E5E5"> if an interface is</font>
+
+163
+00:09:49,490 --> 00:09:56,450
+too large<font color="#E5E5E5"> then split the interface into</font>
+
+164
+00:09:53,180 --> 00:09:59,630
+smaller and<font color="#E5E5E5"> most specific ones so</font><font color="#CCCCCC"> that</font>
+
+165
+00:09:56,450 --> 00:10:03,370
+the kinds will only need<font color="#CCCCCC"> to know about</font>
+
+166
+00:09:59,630 --> 00:10:06,350
+the methods<font color="#CCCCCC"> that</font><font color="#E5E5E5"> are of interest to them</font>
+
+167
+00:10:03,370 --> 00:10:10,580
+say I want<font color="#E5E5E5"> to write a program to model a</font>
+
+168
+00:10:06,350 --> 00:10:12,800
+person called<font color="#E5E5E5"> nd nd is a very</font>
+
+169
+00:10:10,580 --> 00:10:15,460
+complicated<font color="#E5E5E5"> person he can do a lot</font><font color="#CCCCCC"> of</font>
+
+170
+00:10:12,800 --> 00:10:19,609
+<font color="#E5E5E5">things you can provide a lot</font><font color="#CCCCCC"> of services</font>
+
+171
+00:10:15,460 --> 00:10:29,240
+<font color="#E5E5E5">so to completely model nd I might end up</font>
+
+172
+00:10:19,610 --> 00:10:31,760
+<font color="#E5E5E5">having a class that</font><font color="#CCCCCC"> has</font><font color="#E5E5E5"> 500</font><font color="#CCCCCC"> api's this</font>
+
+173
+00:10:29,240 --> 00:10:32,420
+will make nd a very difficult<font color="#E5E5E5"> person to</font>
+
+174
+00:10:31,760 --> 00:10:35,480
+deal<font color="#CCCCCC"> with</font>
+
+175
+00:10:32,420 --> 00:10:39,439
+he has<font color="#CCCCCC"> 500 api's how am</font><font color="#E5E5E5"> I supposed to</font>
+
+176
+00:10:35,480 --> 00:10:43,310
+<font color="#E5E5E5">talk</font><font color="#CCCCCC"> to</font><font color="#E5E5E5"> him it turns out it doesn't have</font>
+
+177
+00:10:39,440 --> 00:10:49,580
+to be that<font color="#CCCCCC"> difficult</font><font color="#E5E5E5"> nd is also an</font>
+
+178
+00:10:43,310 --> 00:10:52,969
+engineer the engineer<font color="#E5E5E5"> class provide all</font>
+
+179
+00:10:49,580 --> 00:10:56,600
+<font color="#E5E5E5">the services that the engineer can</font>
+
+180
+00:10:52,970 --> 00:11:01,870
+provide which is a much smaller<font color="#E5E5E5"> number</font>
+
+181
+00:10:56,600 --> 00:11:01,870
+<font color="#CCCCCC">of</font><font color="#E5E5E5"> API say 40 API</font>
+
+182
+00:11:04,800 --> 00:11:17,859
+now<font color="#CCCCCC"> ng is an engineer</font><font color="#E5E5E5"> so we can publicly</font>
+
+183
+00:11:09,610 --> 00:11:21,220
+derived from engineer and I'm a
+
+184
+00:11:17,860 --> 00:11:24,040
+co-worker<font color="#E5E5E5"> for nd so in order to have</font><font color="#CCCCCC"> a</font>
+
+185
+00:11:21,220 --> 00:11:27,160
+happy time<font color="#E5E5E5"> co-working with</font><font color="#CCCCCC"> nd I only</font>
+
+186
+00:11:24,040 --> 00:11:29,769
+need to know<font color="#CCCCCC"> about</font><font color="#E5E5E5"> Andy's engineer api's</font>
+
+187
+00:11:27,160 --> 00:11:33,069
+<font color="#CCCCCC">I don't necessarily need</font><font color="#E5E5E5"> to know about</font>
+
+188
+00:11:29,769 --> 00:11:36,100
+any other<font color="#E5E5E5"> things that nd does in other</font>
+
+189
+00:11:33,070 --> 00:11:38,740
+<font color="#E5E5E5">words</font><font color="#CCCCCC"> I only want to instantiate</font><font color="#E5E5E5"> nd as</font>
+
+190
+00:11:36,100 --> 00:11:43,959
+an engineer and<font color="#E5E5E5"> talk to him through his</font>
+
+191
+00:11:38,740 --> 00:11:47,560
+engineer interface however from<font color="#E5E5E5"> Andy's</font>
+
+192
+00:11:43,959 --> 00:11:52,989
+parents<font color="#E5E5E5"> point of view Andy is also a son</font>
+
+193
+00:11:47,560 --> 00:11:56,229
+<font color="#CCCCCC">and they want</font><font color="#E5E5E5"> to instantiate</font><font color="#CCCCCC"> Andy as a</font>
+
+194
+00:11:52,990 --> 00:12:03,510
+son and talk<font color="#E5E5E5"> to him through his sons</font>
+
+195
+00:11:56,230 --> 00:12:03,510
+interface which<font color="#CCCCCC"> is let's say 50 api's</font>
+
+196
+00:12:03,990 --> 00:12:16,420
+and<font color="#CCCCCC"> Andy is also derived from some class</font>
+
+197
+00:12:11,079 --> 00:12:20,140
+<font color="#CCCCCC">and this list can</font><font color="#E5E5E5"> go on and on as nd</font>
+
+198
+00:12:16,420 --> 00:12:22,269
+place different<font color="#CCCCCC"> role</font><font color="#E5E5E5"> in his life so as</font>
+
+199
+00:12:20,140 --> 00:12:25,089
+you see by applying interface
+
+200
+00:12:22,269 --> 00:12:28,899
+segregation principle we<font color="#E5E5E5"> are making nd a</font>
+
+201
+00:12:25,089 --> 00:12:31,750
+much<font color="#E5E5E5"> easier person</font><font color="#CCCCCC"> to deal with because</font>
+
+202
+00:12:28,899 --> 00:12:34,449
+<font color="#E5E5E5">each end is client only have a smaller</font>
+
+203
+00:12:31,750 --> 00:12:39,130
+and the most<font color="#E5E5E5"> specific interface to know</font>
+
+204
+00:12:34,449 --> 00:12:41,949
+about in<font color="#E5E5E5"> order</font><font color="#CCCCCC"> to talk to nd so you know</font>
+
+205
+00:12:39,130 --> 00:12:44,620
+<font color="#E5E5E5">daily programming if you end up having a</font>
+
+206
+00:12:41,949 --> 00:12:46,750
+class that<font color="#CCCCCC"> has a large number of AP</font><font color="#E5E5E5"> is</font>
+
+207
+00:12:44,620 --> 00:12:49,600
+and that the class is servicing
+
+208
+00:12:46,750 --> 00:12:51,910
+different<font color="#E5E5E5"> group of clients maybe it is</font>
+
+209
+00:12:49,600 --> 00:12:55,810
+time<font color="#E5E5E5"> for you to</font><font color="#CCCCCC"> use</font><font color="#E5E5E5"> interface</font>
+
+210
+00:12:51,910 --> 00:12:58,120
+<font color="#E5E5E5">segregation principle and when using</font>
+
+211
+00:12:55,810 --> 00:13:01,239
+interface segregation principle the
+
+212
+00:12:58,120 --> 00:13:05,620
+multiple inheritance<font color="#E5E5E5"> has a essential</font>
+
+213
+00:13:01,240 --> 00:13:08,470
+essential role to play now<font color="#E5E5E5"> you</font>
+
+214
+00:13:05,620 --> 00:13:11,800
+understand the<font color="#E5E5E5"> importance</font><font color="#CCCCCC"> of multiple</font>
+
+215
+00:13:08,470 --> 00:13:14,589
+inheritance<font color="#E5E5E5"> the question is how can</font><font color="#CCCCCC"> we</font>
+
+216
+00:13:11,800 --> 00:13:16,390
+<font color="#CCCCCC">use multiple</font><font color="#E5E5E5"> inheritance</font><font color="#CCCCCC"> without</font><font color="#E5E5E5"> getting</font>
+
+217
+00:13:14,589 --> 00:13:16,750
+into<font color="#CCCCCC"> all the</font><font color="#E5E5E5"> troubles that we talked</font>
+
+218
+00:13:16,390 --> 00:13:20,170
+about
+
+219
+00:13:16,750 --> 00:13:22,990
+in previous<font color="#E5E5E5"> examples to answer that</font>
+
+220
+00:13:20,170 --> 00:13:27,360
+<font color="#E5E5E5">question</font><font color="#CCCCCC"> that may</font><font color="#E5E5E5"> introduce a new</font>
+
+221
+00:13:22,990 --> 00:13:31,380
+concept<font color="#E5E5E5"> it's called pure</font><font color="#CCCCCC"> abject class</font>
+
+222
+00:13:27,360 --> 00:13:35,440
+C++<font color="#E5E5E5"> standard provides the concept of</font>
+
+223
+00:13:31,380 --> 00:13:38,860
+abstract class<font color="#E5E5E5"> an abstract class is a</font>
+
+224
+00:13:35,440 --> 00:13:43,270
+class that has one or more pure virtual
+
+225
+00:13:38,860 --> 00:13:47,230
+functions<font color="#E5E5E5"> a pure</font><font color="#CCCCCC"> abstract class is a</font>
+
+226
+00:13:43,270 --> 00:13:50,710
+class<font color="#E5E5E5"> that contains</font><font color="#CCCCCC"> only pure virtual</font>
+
+227
+00:13:47,230 --> 00:13:53,950
+functions it has<font color="#E5E5E5"> no data it has</font><font color="#CCCCCC"> no</font>
+
+228
+00:13:50,710 --> 00:13:57,820
+concrete functions<font color="#E5E5E5"> and here is an</font>
+
+229
+00:13:53,950 --> 00:14:01,180
+<font color="#E5E5E5">example of pure abstract classes in a</font>
+
+230
+00:13:57,820 --> 00:14:04,510
+nutshell<font color="#E5E5E5"> a pure fz8 class is a class</font>
+
+231
+00:14:01,180 --> 00:14:07,469
+<font color="#E5E5E5">that has no</font><font color="#CCCCCC"> implementation it</font><font color="#E5E5E5"> only</font>
+
+232
+00:14:04,510 --> 00:14:11,410
+<font color="#E5E5E5">provides interface and provides zero</font>
+
+233
+00:14:07,470 --> 00:14:15,030
+<font color="#CCCCCC">implementation and it turns out all the</font>
+
+234
+00:14:11,410 --> 00:14:15,030
+<font color="#CCCCCC">problems that we've talked about</font>
+
+235
+00:14:15,420 --> 00:14:21,130
+<font color="#CCCCCC">duplication of data duplication of the</font>
+
+236
+00:14:18,310 --> 00:14:24,569
+functions the initialization problems
+
+237
+00:14:21,130 --> 00:14:29,890
+<font color="#E5E5E5">all the</font><font color="#CCCCCC"> problems will be gone if we only</font>
+
+238
+00:14:24,570 --> 00:14:32,200
+derive from pure<font color="#E5E5E5"> object classes if all</font>
+
+239
+00:14:29,890 --> 00:14:36,100
+the base<font color="#E5E5E5"> classes will put file our</font>
+
+240
+00:14:32,200 --> 00:14:40,900
+profile<font color="#E5E5E5"> and file are pure abstract</font>
+
+241
+00:14:36,100 --> 00:14:43,270
+classes<font color="#E5E5E5"> that has no</font><font color="#CCCCCC"> implementation then</font>
+
+242
+00:14:40,900 --> 00:14:45,449
+there is no such<font color="#CCCCCC"> problem as duplicated</font>
+
+243
+00:14:43,270 --> 00:14:48,189
+implementation and initialization
+
+244
+00:14:45,450 --> 00:14:51,339
+<font color="#CCCCCC">because there is nothing to</font><font color="#E5E5E5"> duplicate</font>
+
+245
+00:14:48,190 --> 00:14:53,140
+and nothing to initialize anyway and we
+
+246
+00:14:51,339 --> 00:14:55,050
+don't even need the virtual inheritance
+
+247
+00:14:53,140 --> 00:14:58,630
+anymore
+
+248
+00:14:55,050 --> 00:15:01,750
+so all the<font color="#E5E5E5"> problems are gone but we</font>
+
+249
+00:14:58,630 --> 00:15:04,720
+still have the<font color="#CCCCCC"> benefits of interface</font>
+
+250
+00:15:01,750 --> 00:15:06,540
+<font color="#E5E5E5">interface segregation principle</font>
+
+251
+00:15:04,720 --> 00:15:09,160
+because the<font color="#E5E5E5"> interface segregation</font>
+
+252
+00:15:06,540 --> 00:15:11,740
+principle cares nothing about<font color="#E5E5E5"> the</font>
+
+253
+00:15:09,160 --> 00:15:14,650
+implementation<font color="#CCCCCC"> it only cares about the</font>
+
+254
+00:15:11,740 --> 00:15:18,520
+interface it will work out perfectly
+
+255
+00:15:14,650 --> 00:15:24,340
+<font color="#CCCCCC">fine if engineer and the Sun are pure</font>
+
+256
+00:15:18,520 --> 00:15:27,130
+<font color="#E5E5E5">abject classes summary number one</font>
+
+257
+00:15:24,340 --> 00:15:30,010
+multiple<font color="#E5E5E5"> inheritance</font><font color="#CCCCCC"> is an important</font>
+
+258
+00:15:27,130 --> 00:15:32,700
+technique<font color="#CCCCCC"> to have one example</font><font color="#E5E5E5"> of it is</font>
+
+259
+00:15:30,010 --> 00:15:35,740
+the<font color="#CCCCCC"> interface segregation principle</font>
+
+260
+00:15:32,700 --> 00:15:38,140
+number<font color="#CCCCCC"> two</font><font color="#E5E5E5"> if you</font><font color="#CCCCCC"> are using multiple</font>
+
+261
+00:15:35,740 --> 00:15:42,010
+<font color="#E5E5E5">inheritance</font><font color="#CCCCCC"> it is strongly recommended</font>
+
+262
+00:15:38,140 --> 00:15:45,850
+<font color="#CCCCCC">that you</font><font color="#E5E5E5"> only derive from pure object</font>
+
+263
+00:15:42,010 --> 00:15:49,080
+classes that's all for today thank you
+
+264
+00:15:45,850 --> 00:15:49,080
+<font color="#CCCCCC">for</font><font color="#E5E5E5"> watching bye</font><font color="#CCCCCC"> bye</font>
+

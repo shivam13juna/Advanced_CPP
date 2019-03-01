@@ -1,0 +1,496 @@
+﻿1
+00:00:06,790 --> 00:00:12,230
+hello everyone<font color="#CCCCCC"> in this session we'll</font>
+
+2
+00:00:09,740 --> 00:00:16,070
+talk<font color="#E5E5E5"> about</font><font color="#CCCCCC"> preventing exceptions from</font>
+
+3
+00:00:12,230 --> 00:00:18,640
+<font color="#E5E5E5">leaving destructors exceptions provides</font>
+
+4
+00:00:16,070 --> 00:00:21,260
+a way for<font color="#CCCCCC"> your program to react</font><font color="#E5E5E5"> to</font>
+
+5
+00:00:18,640 --> 00:00:24,500
+exceptional circumstances such as a
+
+6
+00:00:21,260 --> 00:00:27,740
+runtime error<font color="#E5E5E5"> they do that by</font>
+
+7
+00:00:24,500 --> 00:00:29,900
+transferring<font color="#E5E5E5"> the control into a special</font>
+
+8
+00:00:27,740 --> 00:00:32,198
+portion<font color="#CCCCCC"> of the code called exception</font>
+
+9
+00:00:29,900 --> 00:00:34,970
+<font color="#CCCCCC">handling</font>
+
+10
+00:00:32,198 --> 00:00:39,290
+destructors<font color="#CCCCCC"> like any other part of</font><font color="#E5E5E5"> the</font>
+
+11
+00:00:34,970 --> 00:00:42,680
+<font color="#CCCCCC">code</font><font color="#E5E5E5"> they may flow exceptions however</font>
+
+12
+00:00:39,290 --> 00:00:45,379
+<font color="#E5E5E5">you need to</font><font color="#CCCCCC"> be very careful and that</font><font color="#E5E5E5"> the</font>
+
+13
+00:00:42,680 --> 00:00:48,649
+exceptions<font color="#E5E5E5"> thrown by destructors are</font>
+
+14
+00:00:45,380 --> 00:00:50,780
+contained inside of<font color="#CCCCCC"> the disruptors they</font>
+
+15
+00:00:48,649 --> 00:00:55,070
+should not be thrown<font color="#E5E5E5"> out of the</font>
+
+16
+00:00:50,780 --> 00:00:59,239
+destructor to understand why<font color="#E5E5E5"> let's look</font>
+
+17
+00:00:55,070 --> 00:01:02,329
+at some simple example we have a class
+
+18
+00:00:59,239 --> 00:01:05,059
+dog and dog has a<font color="#E5E5E5"> constructor and a</font>
+
+19
+00:01:02,329 --> 00:01:07,490
+destructor<font color="#E5E5E5"> each one of them will print</font>
+
+20
+00:01:05,059 --> 00:01:12,350
+<font color="#CCCCCC">out some message so we know they are</font>
+
+21
+00:01:07,490 --> 00:01:17,060
+executed dog<font color="#E5E5E5"> also have a method called</font>
+
+22
+00:01:12,350 --> 00:01:20,929
+<font color="#CCCCCC">Park in the in the main function M</font><font color="#E5E5E5"> we</font>
+
+23
+00:01:17,060 --> 00:01:24,590
+create two dogs<font color="#CCCCCC"> top</font><font color="#E5E5E5"> one Henry of to Bob</font>
+
+24
+00:01:20,929 --> 00:01:30,200
+<font color="#CCCCCC">and before Henry</font><font color="#E5E5E5"> and Bob can bark a</font>
+
+25
+00:01:24,590 --> 00:01:32,450
+little exception<font color="#CCCCCC"> of 20 is thrown out</font><font color="#E5E5E5"> the</font>
+
+26
+00:01:30,200 --> 00:01:37,910
+exception of 20 will be<font color="#E5E5E5"> caught by the</font>
+
+27
+00:01:32,450 --> 00:01:41,840
+catch block now what will be<font color="#CCCCCC"> the output</font>
+
+28
+00:01:37,910 --> 00:01:46,199
+of this simple<font color="#E5E5E5"> program</font>
+
+29
+00:01:41,840 --> 00:01:48,890
+the output is Henry is born<font color="#E5E5E5"> Henry is</font>
+
+30
+00:01:46,200 --> 00:01:54,030
+born<font color="#E5E5E5"> first because Henry's created first</font>
+
+31
+00:01:48,890 --> 00:01:57,510
+then Bob is born<font color="#E5E5E5"> Bob is destroyed why</font>
+
+32
+00:01:54,030 --> 00:02:01,200
+Bob is destroyed first because Henry and
+
+33
+00:01:57,510 --> 00:02:04,860
+Bob are stored on stack stack is last in
+
+34
+00:02:01,200 --> 00:02:09,090
+first out<font color="#E5E5E5"> because Bob is born last it</font>
+
+35
+00:02:04,860 --> 00:02:13,410
+will<font color="#E5E5E5"> be</font><font color="#CCCCCC"> destroyed</font><font color="#E5E5E5"> first and then Henry</font>
+
+36
+00:02:09,090 --> 00:02:16,080
+<font color="#CCCCCC">is destroyed and tonday is caught the</font>
+
+37
+00:02:13,410 --> 00:02:20,250
+main point<font color="#CCCCCC"> that I want to</font><font color="#E5E5E5"> make with this</font>
+
+38
+00:02:16,080 --> 00:02:24,480
+example is before the exception of<font color="#E5E5E5"> 20 is</font>
+
+39
+00:02:20,250 --> 00:02:26,840
+caught by the catch block<font color="#E5E5E5"> the stack will</font>
+
+40
+00:02:24,480 --> 00:02:29,670
+unwind<font color="#CCCCCC"> and all the</font><font color="#E5E5E5"> local variables</font>
+
+41
+00:02:26,840 --> 00:02:34,230
+<font color="#CCCCCC">inside the try block</font><font color="#E5E5E5"> needs to be</font>
+
+42
+00:02:29,670 --> 00:02:39,570
+destroyed so both Bob and Henry will be
+
+43
+00:02:34,230 --> 00:02:42,630
+<font color="#E5E5E5">destroyed before 20 is caught now having</font>
+
+44
+00:02:39,570 --> 00:02:46,170
+that<font color="#E5E5E5"> in mind that we remove the throw</font>
+
+45
+00:02:42,630 --> 00:02:48,510
+statement<font color="#E5E5E5"> now there will be no</font>
+
+46
+00:02:46,170 --> 00:02:53,010
+exceptions<font color="#CCCCCC"> in the main</font><font color="#E5E5E5"> function</font>
+
+47
+00:02:48,510 --> 00:02:56,239
+however I'll add a flow exception in the
+
+48
+00:02:53,010 --> 00:02:56,239
+<font color="#CCCCCC">dogs destructor</font>
+
+49
+00:02:58,420 --> 00:03:06,670
+let's see what happens when an exception
+
+50
+00:03:00,819 --> 00:03:11,589
+<font color="#E5E5E5">is thrown out of a disrupter the result</font>
+
+51
+00:03:06,670 --> 00:03:15,458
+is a disaster<font color="#E5E5E5"> this program will crash so</font>
+
+52
+00:03:11,590 --> 00:03:18,970
+what happened when the execution<font color="#CCCCCC"> reach</font>
+
+53
+00:03:15,459 --> 00:03:21,840
+the end of the try block<font color="#CCCCCC"> so the stack</font>
+
+54
+00:03:18,970 --> 00:03:25,870
+will<font color="#CCCCCC"> unwind and all the</font><font color="#E5E5E5"> local variables</font>
+
+55
+00:03:21,840 --> 00:03:29,200
+<font color="#CCCCCC">needs</font><font color="#E5E5E5"> to be destroyed so Bob will</font><font color="#CCCCCC"> be</font>
+
+56
+00:03:25,870 --> 00:03:32,410
+destroyed first when<font color="#E5E5E5"> Bob's</font><font color="#CCCCCC"> disrupter</font>
+
+57
+00:03:29,200 --> 00:03:35,980
+executes it throws<font color="#CCCCCC"> exception of plenty</font>
+
+58
+00:03:32,410 --> 00:03:38,950
+as we've<font color="#E5E5E5"> learned from previous</font>
+
+59
+00:03:35,980 --> 00:03:43,268
+experiment before<font color="#E5E5E5"> the exception of</font><font color="#CCCCCC"> tante</font>
+
+60
+00:03:38,950 --> 00:03:47,170
+is caught by the catch block<font color="#E5E5E5"> Henry also</font>
+
+61
+00:03:43,269 --> 00:03:51,160
+<font color="#CCCCCC">needs</font><font color="#E5E5E5"> to</font><font color="#CCCCCC"> be destroyed and Henry's</font>
+
+62
+00:03:47,170 --> 00:03:55,208
+disrupter<font color="#E5E5E5"> also s</font><font color="#CCCCCC"> queued and</font><font color="#E5E5E5"> also</font><font color="#CCCCCC"> through</font>
+
+63
+00:03:51,160 --> 00:03:57,579
+exception so as a<font color="#E5E5E5"> result</font><font color="#CCCCCC"> we'll</font><font color="#E5E5E5"> have two</font>
+
+64
+00:03:55,209 --> 00:04:03,280
+exceptions pending at at the<font color="#E5E5E5"> same time</font>
+
+65
+00:03:57,580 --> 00:04:05,560
+one plumb bob one plumb Henry and C++
+
+66
+00:04:03,280 --> 00:04:08,320
+doesn't like having<font color="#E5E5E5"> work more than one</font>
+
+67
+00:04:05,560 --> 00:04:14,079
+exception pending at at the same<font color="#CCCCCC"> time</font><font color="#E5E5E5"> so</font>
+
+68
+00:04:08,320 --> 00:04:18,358
+it will just<font color="#E5E5E5"> crash this</font><font color="#CCCCCC"> is why we should</font>
+
+69
+00:04:14,079 --> 00:04:22,870
+not flow exception out of a destructor
+
+70
+00:04:18,358 --> 00:04:26,440
+so what's our solution<font color="#E5E5E5"> our</font><font color="#CCCCCC"> solution</font>
+
+71
+00:04:22,870 --> 00:04:28,690
+<font color="#E5E5E5">number one is the destructor</font><font color="#CCCCCC"> swallow's</font>
+
+72
+00:04:26,440 --> 00:04:33,640
+<font color="#E5E5E5">whatever the exceptions that it</font>
+
+73
+00:04:28,690 --> 00:04:36,640
+generates in this example I put all the
+
+74
+00:04:33,640 --> 00:04:40,210
+exception prone code inside a try<font color="#E5E5E5"> block</font>
+
+75
+00:04:36,640 --> 00:04:44,380
+and catch the exception<font color="#E5E5E5"> that I expect</font>
+
+76
+00:04:40,210 --> 00:04:49,020
+you<font color="#CCCCCC"> could also add</font><font color="#E5E5E5"> another catch</font>
+
+77
+00:04:44,380 --> 00:04:49,020
+<font color="#CCCCCC">statement with ellipsis</font>
+
+78
+00:04:50,590 --> 00:04:57,260
+this will prevent any other unknown
+
+79
+00:04:54,440 --> 00:05:01,700
+exception from leaking<font color="#E5E5E5"> out of the</font>
+
+80
+00:04:57,260 --> 00:05:03,500
+destructor<font color="#E5E5E5"> however you need to</font><font color="#CCCCCC"> be very</font>
+
+81
+00:05:01,700 --> 00:05:06,349
+careful about this kind<font color="#E5E5E5"> of catch</font>
+
+82
+00:05:03,500 --> 00:05:08,390
+<font color="#CCCCCC">statement because first of all it's not</font>
+
+83
+00:05:06,350 --> 00:05:11,570
+very useful<font color="#CCCCCC"> it doesn't give you any</font>
+
+84
+00:05:08,390 --> 00:05:14,510
+error message<font color="#E5E5E5"> and secondly sometimes</font>
+
+85
+00:05:11,570 --> 00:05:17,000
+it's<font color="#E5E5E5"> even dangerous</font><font color="#CCCCCC"> because this</font><font color="#E5E5E5"> kind of</font>
+
+86
+00:05:14,510 --> 00:05:21,950
+<font color="#E5E5E5">statement will mask of any kind of</font>
+
+87
+00:05:17,000 --> 00:05:25,690
+exception the downside of this solution
+
+88
+00:05:21,950 --> 00:05:29,539
+<font color="#E5E5E5">is since the exception is swollen by the</font>
+
+89
+00:05:25,690 --> 00:05:32,810
+<font color="#E5E5E5">destructor the tops client will not get</font>
+
+90
+00:05:29,540 --> 00:05:35,870
+the<font color="#E5E5E5"> exception so they will not know what</font>
+
+91
+00:05:32,810 --> 00:05:39,320
+has happened<font color="#CCCCCC"> and to</font><font color="#E5E5E5"> appropriate thing</font><font color="#CCCCCC"> to</font>
+
+92
+00:05:35,870 --> 00:05:42,530
+handle<font color="#E5E5E5"> that this leads us to our second</font>
+
+93
+00:05:39,320 --> 00:05:45,140
+<font color="#CCCCCC">solution which is move the exception</font>
+
+94
+00:05:42,530 --> 00:05:48,799
+prone code to a different function<font color="#CCCCCC"> not</font>
+
+95
+00:05:45,140 --> 00:05:51,770
+<font color="#E5E5E5">in the destructor so the destructor will</font>
+
+96
+00:05:48,800 --> 00:05:54,380
+contain code that is either<font color="#E5E5E5"> exception</font>
+
+97
+00:05:51,770 --> 00:06:00,140
+free<font color="#E5E5E5"> or having very little chance</font><font color="#CCCCCC"> of</font>
+
+98
+00:05:54,380 --> 00:06:03,680
+throwing exception for example in<font color="#E5E5E5"> our</font>
+
+99
+00:06:00,140 --> 00:06:08,300
+<font color="#CCCCCC">docs example</font><font color="#E5E5E5"> I'll remove the exception</font>
+
+100
+00:06:03,680 --> 00:06:13,720
+thrown code in the destructor and add
+
+101
+00:06:08,300 --> 00:06:18,800
+another function called<font color="#E5E5E5"> prepare to</font>
+
+102
+00:06:13,720 --> 00:06:21,440
+destruct<font color="#CCCCCC"> and in this function</font><font color="#E5E5E5"> I'll do a</font>
+
+103
+00:06:18,800 --> 00:06:24,640
+bunch<font color="#E5E5E5"> of different things and it may</font>
+
+104
+00:06:21,440 --> 00:06:24,640
+throw exceptions
+
+105
+00:06:27,190 --> 00:06:35,390
+now<font color="#E5E5E5"> the destructor is exception free and</font>
+
+106
+00:06:31,840 --> 00:06:38,299
+in<font color="#E5E5E5"> the main function before</font><font color="#CCCCCC"> dock</font><font color="#E5E5E5"> one and</font>
+
+107
+00:06:35,390 --> 00:06:51,380
+duck<font color="#E5E5E5"> two gets destroyed they need to</font>
+
+108
+00:06:38,300 --> 00:06:54,470
+call the prepare to destroy function now
+
+109
+00:06:51,380 --> 00:06:58,550
+<font color="#E5E5E5">first of all this program will no longer</font>
+
+110
+00:06:54,470 --> 00:07:01,430
+crash and secondly the<font color="#CCCCCC"> docks client will</font>
+
+111
+00:06:58,550 --> 00:07:04,820
+<font color="#E5E5E5">get the exception and do a</font><font color="#CCCCCC"> properly</font>
+
+112
+00:07:01,430 --> 00:07:08,210
+thing<font color="#CCCCCC"> to handle</font><font color="#E5E5E5"> the exception the</font>
+
+113
+00:07:04,820 --> 00:07:12,469
+downside of this solution<font color="#E5E5E5"> is there o is</font>
+
+114
+00:07:08,210 --> 00:07:17,080
+one additional<font color="#CCCCCC"> API for docs client</font><font color="#E5E5E5"> to</font>
+
+115
+00:07:12,470 --> 00:07:20,300
+call so which solution<font color="#E5E5E5"> should we use</font>
+
+116
+00:07:17,080 --> 00:07:22,760
+solution<font color="#CCCCCC"> number</font><font color="#E5E5E5"> one destructor swallow</font>
+
+117
+00:07:20,300 --> 00:07:25,310
+the exception or solution number<font color="#E5E5E5"> two</font>
+
+118
+00:07:22,760 --> 00:07:29,150
+<font color="#E5E5E5">move the exception prone code to a</font>
+
+119
+00:07:25,310 --> 00:07:31,490
+different function the answer depends on
+
+120
+00:07:29,150 --> 00:07:34,729
+who is the better person<font color="#E5E5E5"> to handle the</font>
+
+121
+00:07:31,490 --> 00:07:38,060
+exception if it is a dog you<font color="#CCCCCC"> saw</font>
+
+122
+00:07:34,730 --> 00:07:43,220
+solution number<font color="#CCCCCC"> one if it is dogs client</font>
+
+123
+00:07:38,060 --> 00:07:46,810
+uses solution number<font color="#E5E5E5"> two that's all for</font>
+
+124
+00:07:43,220 --> 00:07:46,810
+today's session<font color="#CCCCCC"> bye</font><font color="#E5E5E5"> bye</font>
+

@@ -1,0 +1,304 @@
+﻿1
+00:00:05,240 --> 00:00:11,039
+hello everyone today<font color="#CCCCCC"> we'll talk about</font>
+
+2
+00:00:07,859 --> 00:00:14,160
+<font color="#E5E5E5">using virtual destructors in polymorphic</font>
+
+3
+00:00:11,039 --> 00:00:17,519
+base classes let's look at our example
+
+4
+00:00:14,160 --> 00:00:20,880
+<font color="#E5E5E5">we</font><font color="#CCCCCC"> have a</font><font color="#E5E5E5"> cast dog and dogs destructor</font>
+
+5
+00:00:17,519 --> 00:00:23,788
+brings out dog destroyed<font color="#E5E5E5"> yellow dog</font>
+
+6
+00:00:20,880 --> 00:00:25,769
+<font color="#E5E5E5">derived from dog and the yellow dogs</font>
+
+7
+00:00:23,789 --> 00:00:30,119
+destructor prints out<font color="#E5E5E5"> yellow dog</font>
+
+8
+00:00:25,769 --> 00:00:32,790
+<font color="#CCCCCC">destroyed</font><font color="#E5E5E5"> and here I'm</font><font color="#CCCCCC"> using a factory</font>
+
+9
+00:00:30,119 --> 00:00:35,880
+design<font color="#E5E5E5"> pattern I use a dog factory class</font>
+
+10
+00:00:32,790 --> 00:00:40,110
+<font color="#E5E5E5">to be the centralized place of creating</font>
+
+11
+00:00:35,880 --> 00:00:42,780
+dogs and I have a static function<font color="#CCCCCC"> create</font>
+
+12
+00:00:40,110 --> 00:00:46,620
+a yellow dog which creates a yellow dog
+
+13
+00:00:42,780 --> 00:00:49,020
+<font color="#E5E5E5">and</font><font color="#CCCCCC"> you</font><font color="#E5E5E5"> turn it as a tox pointer and it</font>
+
+14
+00:00:46,620 --> 00:00:52,440
+also has other<font color="#CCCCCC"> functions to</font><font color="#E5E5E5"> create other</font>
+
+15
+00:00:49,020 --> 00:00:55,440
+types<font color="#E5E5E5"> of dogs in the main function I</font>
+
+16
+00:00:52,440 --> 00:00:59,489
+have<font color="#CCCCCC"> a dog's pointer P D equal to talk</font>
+
+17
+00:00:55,440 --> 00:01:01,800
+<font color="#E5E5E5">factory create yellow dog and after I've</font>
+
+18
+00:00:59,490 --> 00:01:08,400
+done something with PD<font color="#E5E5E5"> eventually I</font>
+
+19
+00:01:01,800 --> 00:01:13,080
+delete PD let's run the program<font color="#E5E5E5"> as you</font>
+
+20
+00:01:08,400 --> 00:01:17,370
+see when PD gets deleted only the<font color="#CCCCCC"> tox</font>
+
+21
+00:01:13,080 --> 00:01:19,880
+destructor<font color="#E5E5E5"> is called that is very bad</font>
+
+22
+00:01:17,370 --> 00:01:23,220
+because<font color="#CCCCCC"> we have</font><font color="#E5E5E5"> created a yellow dog and</font>
+
+23
+00:01:19,880 --> 00:01:27,270
+in the end only part of the<font color="#E5E5E5"> yellow dog</font>
+
+24
+00:01:23,220 --> 00:01:29,700
+is destroyed we<font color="#E5E5E5"> have to make sure that</font>
+
+25
+00:01:27,270 --> 00:01:34,470
+the yellow dogs<font color="#CCCCCC"> own destructor also</font>
+
+26
+00:01:29,700 --> 00:01:37,880
+needs to<font color="#CCCCCC"> be invoked</font><font color="#E5E5E5"> this is why we need</font>
+
+27
+00:01:34,470 --> 00:01:37,880
+a virtual
+
+28
+00:01:38,310 --> 00:01:49,330
+destructor<font color="#E5E5E5"> for the base classes and now</font>
+
+29
+00:01:43,870 --> 00:01:54,790
+if we<font color="#CCCCCC"> run the program both yellow dog</font>
+
+30
+00:01:49,330 --> 00:01:56,590
+and the dogs destructor<font color="#CCCCCC"> are invoked so</font>
+
+31
+00:01:54,790 --> 00:01:59,740
+the conclusion we<font color="#CCCCCC"> are getting</font><font color="#E5E5E5"> from this</font>
+
+32
+00:01:56,590 --> 00:02:03,190
+example is if the class<font color="#E5E5E5"> is meant to be</font>
+
+33
+00:01:59,740 --> 00:02:05,530
+used in a polymorphic way<font color="#E5E5E5"> such as</font><font color="#CCCCCC"> in</font>
+
+34
+00:02:03,190 --> 00:02:07,990
+<font color="#E5E5E5">this</font><font color="#CCCCCC"> case we are creating a yellow dog</font>
+
+35
+00:02:05,530 --> 00:02:11,140
+and then<font color="#CCCCCC"> castellated</font><font color="#E5E5E5"> into a tox pointer</font>
+
+36
+00:02:07,990 --> 00:02:14,410
+<font color="#E5E5E5">then the base class must have a virtual</font>
+
+37
+00:02:11,140 --> 00:02:20,799
+destructor to ensure that destructors
+
+38
+00:02:14,410 --> 00:02:26,050
+are invoked appropriately if a class<font color="#CCCCCC"> has</font>
+
+39
+00:02:20,800 --> 00:02:29,650
+any sort<font color="#E5E5E5"> of virtual function like a bark</font>
+
+40
+00:02:26,050 --> 00:02:32,739
+function then it is most<font color="#E5E5E5"> likely that</font>
+
+41
+00:02:29,650 --> 00:02:35,890
+<font color="#E5E5E5">this class will be used polymorphically</font>
+
+42
+00:02:32,739 --> 00:02:40,150
+<font color="#E5E5E5">which means most likely it will need a</font>
+
+43
+00:02:35,890 --> 00:02:42,190
+virtual destructor<font color="#E5E5E5"> if for some reason</font>
+
+44
+00:02:40,150 --> 00:02:44,980
+you<font color="#E5E5E5"> really don't want to have a virtual</font>
+
+45
+00:02:42,190 --> 00:02:53,510
+destructor then there is a second way<font color="#CCCCCC"> to</font>
+
+46
+00:02:44,980 --> 00:02:56,089
+do it share the pointer<font color="#CCCCCC"> of dog</font>
+
+47
+00:02:53,510 --> 00:02:58,609
+and the inside<font color="#CCCCCC"> of the create a yellow</font>
+
+48
+00:02:56,090 --> 00:03:10,099
+dot<font color="#E5E5E5"> function I'm going</font><font color="#CCCCCC"> to</font><font color="#E5E5E5"> create a</font>
+
+49
+00:02:58,610 --> 00:03:12,860
+shared pointer of yellow<font color="#E5E5E5"> dog so I create</font>
+
+50
+00:03:10,099 --> 00:03:17,780
+a shared point of yellow dog and then
+
+51
+00:03:12,860 --> 00:03:18,650
+<font color="#CCCCCC">casted into shared pointer of dog in the</font>
+
+52
+00:03:17,780 --> 00:03:29,540
+main<font color="#E5E5E5"> function</font>
+
+53
+00:03:18,650 --> 00:03:31,370
+I do shared<font color="#E5E5E5"> pointer of dog</font><font color="#CCCCCC"> PD and I</font>
+
+54
+00:03:29,540 --> 00:03:33,670
+don't<font color="#E5E5E5"> need to delete the PD anymore</font>
+
+55
+00:03:31,370 --> 00:03:39,319
+because the shared pointer will be
+
+56
+00:03:33,670 --> 00:03:41,659
+responsible<font color="#CCCCCC"> to delete the object</font><font color="#E5E5E5"> and in</font>
+
+57
+00:03:39,319 --> 00:03:45,409
+this case I don't<font color="#E5E5E5"> even need the virtual</font>
+
+58
+00:03:41,659 --> 00:03:49,670
+destructor<font color="#CCCCCC"> and let's run the program</font>
+
+59
+00:03:45,409 --> 00:03:50,388
+again as you see<font color="#E5E5E5"> both yellow dog and</font>
+
+60
+00:03:49,670 --> 00:03:56,238
+dogs
+
+61
+00:03:50,389 --> 00:03:58,699
+destructors<font color="#E5E5E5"> are invoked note</font><font color="#CCCCCC"> that you</font>
+
+62
+00:03:56,239 --> 00:04:01,669
+can only<font color="#E5E5E5"> use the shared pointer to</font>
+
+63
+00:03:58,699 --> 00:04:04,540
+perform this kind<font color="#E5E5E5"> of magic</font><font color="#CCCCCC"> if you are</font>
+
+64
+00:04:01,669 --> 00:04:08,150
+using unique pointer it won't do the<font color="#CCCCCC"> job</font>
+
+65
+00:04:04,540 --> 00:04:13,010
+<font color="#E5E5E5">unique pointer will</font><font color="#CCCCCC"> only invoke the</font><font color="#E5E5E5"> dogs</font>
+
+66
+00:04:08,150 --> 00:04:16,039
+destructor the last thing I want<font color="#E5E5E5"> to</font>
+
+67
+00:04:13,010 --> 00:04:19,608
+point out is all the<font color="#CCCCCC"> classes in st l</font>
+
+68
+00:04:16,039 --> 00:04:21,079
+have no virtual destructor<font color="#E5E5E5"> so you need</font>
+
+69
+00:04:19,608 --> 00:04:24,710
+to be<font color="#E5E5E5"> very careful when you</font><font color="#CCCCCC"> are</font>
+
+70
+00:04:21,079 --> 00:04:27,740
+inheriting<font color="#E5E5E5"> from them one thing you can</font>
+
+71
+00:04:24,710 --> 00:04:30,440
+do is try<font color="#CCCCCC"> to use</font><font color="#E5E5E5"> shared pointer as much</font>
+
+72
+00:04:27,740 --> 00:04:34,560
+as possible<font color="#E5E5E5"> for the classes that is</font>
+
+73
+00:04:30,440 --> 00:04:37,030
+derived from<font color="#E5E5E5"> the STL classes</font>
+
+74
+00:04:34,560 --> 00:04:39,490
+that's all for<font color="#CCCCCC"> the day feel</font><font color="#E5E5E5"> free to</font>
+
+75
+00:04:37,030 --> 00:04:43,559
+subscribe<font color="#E5E5E5"> to</font><font color="#CCCCCC"> my channel and check out</font>
+
+76
+00:04:39,490 --> 00:04:43,560
+<font color="#E5E5E5">the other videos I</font><font color="#CCCCCC"> have bye-bye</font>
+

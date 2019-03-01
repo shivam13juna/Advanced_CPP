@@ -1,0 +1,796 @@
+﻿1
+00:00:06,810 --> 00:00:14,139
+hello everyone<font color="#E5E5E5"> welcome</font><font color="#CCCCCC"> to</font><font color="#E5E5E5"> learning C++</font>
+
+2
+00:00:10,620 --> 00:00:17,830
+today's topic is<font color="#E5E5E5"> user-defined implicit</font>
+
+3
+00:00:14,139 --> 00:00:20,200
+type conversion<font color="#CCCCCC"> in C++ there are two</font>
+
+4
+00:00:17,830 --> 00:00:22,959
+categories of type conversion the
+
+5
+00:00:20,200 --> 00:00:27,160
+standard type conversion and user
+
+6
+00:00:22,960 --> 00:00:30,430
+<font color="#E5E5E5">defined type</font><font color="#CCCCCC"> computed the standard type</font>
+
+7
+00:00:27,160 --> 00:00:33,840
+conversion convert objects between the
+
+8
+00:00:30,430 --> 00:00:38,380
+built-in types<font color="#CCCCCC"> such as</font><font color="#E5E5E5"> an integer float</font>
+
+9
+00:00:33,840 --> 00:00:41,050
+pointer<font color="#CCCCCC"> user-defined the type conversion</font>
+
+10
+00:00:38,380 --> 00:00:45,550
+in<font color="#E5E5E5"> the conversion</font><font color="#CCCCCC"> between two classes or</font>
+
+11
+00:00:41,050 --> 00:00:47,589
+between a class and a<font color="#E5E5E5"> building type both</font>
+
+12
+00:00:45,550 --> 00:00:50,230
+extend the type conversion and the user
+
+13
+00:00:47,590 --> 00:00:54,640
+defined<font color="#CCCCCC"> type conversion can be</font><font color="#E5E5E5"> implicit</font>
+
+14
+00:00:50,230 --> 00:00:56,709
+or explicit<font color="#CCCCCC"> explicitly type of</font>
+
+15
+00:00:54,640 --> 00:01:00,999
+<font color="#E5E5E5">conversion is</font><font color="#CCCCCC"> also called casting and</font>
+
+16
+00:00:56,710 --> 00:01:03,879
+casting itself is another<font color="#E5E5E5"> big topic</font><font color="#CCCCCC"> that</font>
+
+17
+00:01:00,999 --> 00:01:06,640
+deserve a session<font color="#E5E5E5"> of its own so today's</font>
+
+18
+00:01:03,879 --> 00:01:11,920
+session<font color="#E5E5E5"> we're going to</font><font color="#CCCCCC"> focus on implicit</font>
+
+19
+00:01:06,640 --> 00:01:14,530
+type conversion category a implicit
+
+20
+00:01:11,920 --> 00:01:17,860
+<font color="#E5E5E5">standard type conversion this one is</font>
+
+21
+00:01:14,530 --> 00:01:22,170
+relatively<font color="#E5E5E5"> simple let's look at some</font>
+
+22
+00:01:17,860 --> 00:01:26,470
+examples I have<font color="#CCCCCC"> a</font><font color="#E5E5E5"> character C and then I</font>
+
+23
+00:01:22,170 --> 00:01:30,550
+implicitly convert C into<font color="#E5E5E5"> integer I this</font>
+
+24
+00:01:26,470 --> 00:01:33,250
+is called integral<font color="#E5E5E5"> motion I have another</font>
+
+25
+00:01:30,550 --> 00:01:36,820
+integer<font color="#CCCCCC"> 0 and I</font><font color="#E5E5E5"> convert</font><font color="#CCCCCC"> it to a char</font>
+
+26
+00:01:33,250 --> 00:01:40,990
+pointer PC this<font color="#E5E5E5"> is known as a null</font>
+
+27
+00:01:36,820 --> 00:01:45,970
+pointer initialization<font color="#E5E5E5"> implicit type</font>
+
+28
+00:01:40,990 --> 00:01:48,369
+conversion also<font color="#E5E5E5"> can be used in parameter</font>
+
+29
+00:01:45,970 --> 00:01:52,690
+passing<font color="#E5E5E5"> I have a function</font><font color="#CCCCCC"> which takes</font><font color="#E5E5E5"> an</font>
+
+30
+00:01:48,370 --> 00:01:55,960
+integer I and I pass<font color="#E5E5E5"> it a character C</font>
+
+31
+00:01:52,690 --> 00:02:01,050
+and the character C is implicitly
+
+32
+00:01:55,960 --> 00:02:03,639
+converted to integer<font color="#E5E5E5"> last example I have</font>
+
+33
+00:02:01,050 --> 00:02:06,250
+<font color="#CCCCCC">created a yellow dogs pointer and</font>
+
+34
+00:02:03,640 --> 00:02:07,700
+convert<font color="#CCCCCC"> that point into a</font><font color="#E5E5E5"> dog's pointer</font>
+
+35
+00:02:06,250 --> 00:02:10,619
+<font color="#E5E5E5">PD</font>
+
+36
+00:02:07,700 --> 00:02:13,200
+please note this<font color="#CCCCCC"> is not a user-defined</font>
+
+37
+00:02:10,619 --> 00:02:16,740
+<font color="#E5E5E5">type of version because here I only</font>
+
+38
+00:02:13,200 --> 00:02:21,869
+<font color="#E5E5E5">convert the pointers so it's a pointer</font>
+
+39
+00:02:16,740 --> 00:02:24,680
+type of conversion<font color="#E5E5E5"> now let's move on to</font>
+
+40
+00:02:21,870 --> 00:02:28,190
+<font color="#E5E5E5">the main bulk</font><font color="#CCCCCC"> of today's</font><font color="#E5E5E5"> session</font>
+
+41
+00:02:24,680 --> 00:02:33,270
+<font color="#E5E5E5">category C which is implicit</font>
+
+42
+00:02:28,190 --> 00:02:36,450
+<font color="#E5E5E5">user-defined type conversion implicit</font>
+
+43
+00:02:33,270 --> 00:02:39,690
+user-defined type conversion is defined
+
+44
+00:02:36,450 --> 00:02:43,140
+by user and the user usually<font color="#E5E5E5"> defined</font>
+
+45
+00:02:39,690 --> 00:02:45,329
+them inside their own class<font color="#E5E5E5"> there are</font>
+
+46
+00:02:43,140 --> 00:02:48,208
+<font color="#CCCCCC">two methods to define the implicit</font>
+
+47
+00:02:45,330 --> 00:02:51,150
+<font color="#CCCCCC">user-defined type conversion method one</font>
+
+48
+00:02:48,209 --> 00:02:55,260
+is use constructor that<font color="#E5E5E5"> can accept a</font>
+
+49
+00:02:51,150 --> 00:02:58,410
+<font color="#E5E5E5">single parameter what it does is a</font>
+
+50
+00:02:55,260 --> 00:03:02,700
+convert<font color="#E5E5E5"> other types of object into your</font>
+
+51
+00:02:58,410 --> 00:03:05,340
+class method<font color="#E5E5E5"> two is use type conversion</font>
+
+52
+00:03:02,700 --> 00:03:10,649
+function which converts an object of
+
+53
+00:03:05,340 --> 00:03:14,160
+your<font color="#CCCCCC"> car into</font><font color="#E5E5E5"> other types let's look at</font>
+
+54
+00:03:10,650 --> 00:03:16,860
+the example dog<font color="#CCCCCC"> a dog has a constructor</font>
+
+55
+00:03:14,160 --> 00:03:22,049
+<font color="#E5E5E5">which</font><font color="#CCCCCC"> takes a single</font><font color="#E5E5E5"> parameter of a</font>
+
+56
+00:03:16,860 --> 00:03:25,530
+string<font color="#E5E5E5"> it is very important to keep in</font>
+
+57
+00:03:22,050 --> 00:03:27,959
+<font color="#CCCCCC">mind</font><font color="#E5E5E5"> that a constructor</font><font color="#CCCCCC"> that can take a</font>
+
+58
+00:03:25,530 --> 00:03:31,280
+single<font color="#E5E5E5"> parameter is not just a</font>
+
+59
+00:03:27,959 --> 00:03:34,610
+constructor it's a constructor<font color="#E5E5E5"> plus a</font>
+
+60
+00:03:31,280 --> 00:03:39,060
+type converter
+
+61
+00:03:34,610 --> 00:03:43,230
+so<font color="#E5E5E5"> um in this case said it converts a</font>
+
+62
+00:03:39,060 --> 00:03:46,230
+string into<font color="#CCCCCC"> a dog</font><font color="#E5E5E5"> so if all you want is</font>
+
+63
+00:03:43,230 --> 00:03:49,109
+<font color="#CCCCCC">to</font><font color="#E5E5E5"> define a constructor and you don't</font>
+
+64
+00:03:46,230 --> 00:03:54,929
+care anything about type conversion it
+
+65
+00:03:49,110 --> 00:03:57,750
+is<font color="#CCCCCC"> a good practice to put explicit in</font>
+
+66
+00:03:54,930 --> 00:04:00,420
+front of your constructor<font color="#E5E5E5"> and this way</font>
+
+67
+00:03:57,750 --> 00:04:04,920
+you<font color="#CCCCCC"> tells construct</font><font color="#E5E5E5"> helps compiler that</font>
+
+68
+00:04:00,420 --> 00:04:10,048
+this is constructor<font color="#CCCCCC"> plus explicit type</font>
+
+69
+00:04:04,920 --> 00:04:14,238
+converter<font color="#E5E5E5"> so this</font><font color="#CCCCCC"> way</font><font color="#E5E5E5"> it can help you to</font>
+
+70
+00:04:10,049 --> 00:04:18,239
+<font color="#E5E5E5">avoid inadvertent type conversion and</font>
+
+71
+00:04:14,239 --> 00:04:21,168
+without the without<font color="#E5E5E5"> the explicit keyword</font>
+
+72
+00:04:18,238 --> 00:04:24,450
+you<font color="#CCCCCC"> tell compiler</font><font color="#E5E5E5"> that this is a</font>
+
+73
+00:04:21,168 --> 00:04:29,609
+constructor<font color="#E5E5E5"> plus a explicit converter</font>
+
+74
+00:04:24,450 --> 00:04:36,270
+<font color="#E5E5E5">plus</font><font color="#CCCCCC"> a implicit</font><font color="#E5E5E5"> converter so keep that</font>
+
+75
+00:04:29,610 --> 00:04:39,300
+in<font color="#E5E5E5"> mind because now</font><font color="#CCCCCC"> we have a</font><font color="#E5E5E5"> type</font>
+
+76
+00:04:36,270 --> 00:04:41,400
+conversion from string to<font color="#CCCCCC"> a dog</font><font color="#E5E5E5"> in the</font>
+
+77
+00:04:39,300 --> 00:04:43,770
+main<font color="#CCCCCC"> function I create a</font><font color="#E5E5E5"> stream table</font>
+
+78
+00:04:41,400 --> 00:04:47,820
+name and then convert the<font color="#CCCCCC"> table name</font>
+
+79
+00:04:43,770 --> 00:04:52,109
+into a dog<font color="#E5E5E5"> and the print</font><font color="#CCCCCC"> out my name is</font>
+
+80
+00:04:47,820 --> 00:04:54,960
+Bob now suppose I<font color="#CCCCCC"> use the</font><font color="#E5E5E5"> function get</font>
+
+81
+00:04:52,110 --> 00:04:57,870
+name a lot and I'm<font color="#E5E5E5"> really tired of</font>
+
+82
+00:04:54,960 --> 00:05:01,979
+<font color="#E5E5E5">typing of this function I want to remove</font>
+
+83
+00:04:57,870 --> 00:05:04,110
+this function to simplify my<font color="#E5E5E5"> code what</font>
+
+84
+00:05:01,979 --> 00:05:08,630
+this mean is<font color="#E5E5E5"> I need a mechanism to</font>
+
+85
+00:05:04,110 --> 00:05:11,789
+<font color="#E5E5E5">convert a dog into a</font><font color="#CCCCCC"> string</font><font color="#E5E5E5"> and</font>
+
+86
+00:05:08,630 --> 00:05:14,370
+<font color="#E5E5E5">converting an object of my class into</font>
+
+87
+00:05:11,789 --> 00:05:20,250
+other type<font color="#CCCCCC"> I need to I needed a method</font>
+
+88
+00:05:14,370 --> 00:05:24,680
+<font color="#CCCCCC">to use</font><font color="#E5E5E5"> type conversion function so I'm</font>
+
+89
+00:05:20,250 --> 00:05:24,680
+defining a type conversion function here
+
+90
+00:05:37,279 --> 00:05:44,329
+and I don't<font color="#E5E5E5"> need the cat named function</font>
+
+91
+00:05:39,799 --> 00:05:48,109
+anymore<font color="#E5E5E5"> now this code will compile</font>
+
+92
+00:05:44,329 --> 00:05:51,739
+<font color="#CCCCCC">outcome it</font><font color="#E5E5E5"> will convert</font><font color="#CCCCCC"> doc one</font><font color="#E5E5E5"> into a</font>
+
+93
+00:05:48,109 --> 00:05:57,049
+string which is<font color="#E5E5E5"> the dog's name and the</font>
+
+94
+00:05:51,739 --> 00:06:01,429
+output<font color="#CCCCCC"> again is my name is Bob</font><font color="#E5E5E5"> now this</font>
+
+95
+00:05:57,049 --> 00:06:08,628
+code is very flexible<font color="#CCCCCC"> I can define</font><font color="#E5E5E5"> a</font>
+
+96
+00:06:01,429 --> 00:06:12,049
+string<font color="#E5E5E5"> dog to equal to dog</font><font color="#CCCCCC"> long</font><font color="#E5E5E5"> this</font>
+
+97
+00:06:08,629 --> 00:06:14,929
+will also work<font color="#E5E5E5"> it will convert</font><font color="#CCCCCC"> that wire</font>
+
+98
+00:06:12,049 --> 00:06:18,769
+into a stream dub<font color="#CCCCCC"> too</font><font color="#E5E5E5"> but it this kind</font>
+
+99
+00:06:14,929 --> 00:06:21,289
+<font color="#E5E5E5">of flexibility really good for me</font><font color="#CCCCCC"> if you</font>
+
+100
+00:06:18,769 --> 00:06:24,469
+look at<font color="#E5E5E5"> this code they it seems</font><font color="#CCCCCC"> what I</font>
+
+101
+00:06:21,289 --> 00:06:27,589
+intend to do is copy<font color="#E5E5E5"> a dog one into</font>
+
+102
+00:06:24,469 --> 00:06:30,349
+another<font color="#E5E5E5"> doctor</font><font color="#CCCCCC"> too but I accidentally</font>
+
+103
+00:06:27,589 --> 00:06:35,239
+<font color="#E5E5E5">use the string instead of dog for dog</font>
+
+104
+00:06:30,349 --> 00:06:38,089
+<font color="#CCCCCC">two which is of</font><font color="#E5E5E5"> course a bug and my type</font>
+
+105
+00:06:35,239 --> 00:06:42,919
+conversion function becomes a cup up for
+
+106
+00:06:38,089 --> 00:06:46,369
+my bug so this leads to an important
+
+107
+00:06:42,919 --> 00:06:48,438
+design principle<font color="#CCCCCC"> when we define our</font>
+
+108
+00:06:46,369 --> 00:06:50,839
+software API interface
+
+109
+00:06:48,439 --> 00:06:54,159
+we want to make<font color="#CCCCCC"> sure our interface is</font>
+
+110
+00:06:50,839 --> 00:06:59,179
+<font color="#E5E5E5">easy to use correctly and how to use</font>
+
+111
+00:06:54,159 --> 00:07:02,360
+incorrectly here by defining<font color="#E5E5E5"> too many</font>
+
+112
+00:06:59,179 --> 00:07:06,768
+<font color="#E5E5E5">implicitly type conversion</font><font color="#CCCCCC"> I'm making my</font>
+
+113
+00:07:02,360 --> 00:07:08,769
+interface easy to<font color="#E5E5E5"> use incorrectly which</font>
+
+114
+00:07:06,769 --> 00:07:11,809
+is not good
+
+115
+00:07:08,769 --> 00:07:15,699
+some people claim<font color="#CCCCCC"> that</font><font color="#E5E5E5"> type conversion</font>
+
+116
+00:07:11,809 --> 00:07:19,069
+function should be avoid altogether
+
+117
+00:07:15,699 --> 00:07:21,319
+<font color="#CCCCCC">personally I believe type combo</font><font color="#E5E5E5"> in</font>
+
+118
+00:07:19,069 --> 00:07:24,589
+procedure type conversion so you have
+
+119
+00:07:21,319 --> 00:07:27,699
+its place in C++<font color="#E5E5E5"> however there are a few</font>
+
+120
+00:07:24,589 --> 00:07:31,059
+<font color="#CCCCCC">two guidelines that we need to follow</font>
+
+121
+00:07:27,699 --> 00:07:36,469
+<font color="#E5E5E5">number one we should avoid defining</font>
+
+122
+00:07:31,059 --> 00:07:40,159
+seemingly unexpected conversion and here
+
+123
+00:07:36,469 --> 00:07:43,940
+convert a stream to a dog is apparently
+
+124
+00:07:40,159 --> 00:07:46,909
+a<font color="#E5E5E5"> seemingly unexpected conversion</font>
+
+125
+00:07:43,940 --> 00:07:51,290
+another one is avoid defining<font color="#CCCCCC"> two-way</font>
+
+126
+00:07:46,910 --> 00:07:53,990
+<font color="#CCCCCC">impressive</font><font color="#E5E5E5"> type conversion</font><font color="#CCCCCC"> if you've</font>
+
+127
+00:07:51,290 --> 00:07:57,740
+defined<font color="#E5E5E5"> an</font><font color="#CCCCCC"> implicit</font><font color="#E5E5E5"> type</font><font color="#CCCCCC"> conversion</font><font color="#E5E5E5"> from</font>
+
+128
+00:07:53,990 --> 00:08:00,620
+type<font color="#CCCCCC"> A to type of B you probably don't</font>
+
+129
+00:07:57,740 --> 00:08:08,780
+want<font color="#CCCCCC"> to</font><font color="#E5E5E5"> define</font><font color="#CCCCCC"> another conversion</font><font color="#E5E5E5"> run</font>
+
+130
+00:08:00,620 --> 00:08:10,960
+type beat<font color="#E5E5E5"> type</font><font color="#CCCCCC"> a</font><font color="#E5E5E5"> and here by making our</font>
+
+131
+00:08:08,780 --> 00:08:15,260
+interface hard we use incorrectly
+
+132
+00:08:10,960 --> 00:08:18,440
+<font color="#E5E5E5">ideally if if the code is used</font>
+
+133
+00:08:15,260 --> 00:08:21,530
+incorrectly<font color="#CCCCCC"> it should not compile and if</font>
+
+134
+00:08:18,440 --> 00:08:25,190
+the code compiles that means it's using
+
+135
+00:08:21,530 --> 00:08:27,590
+the interface<font color="#E5E5E5"> correctly and of course</font>
+
+136
+00:08:25,190 --> 00:08:31,610
+this is the<font color="#E5E5E5"> ideal goal and not always</font>
+
+137
+00:08:27,590 --> 00:08:33,709
+<font color="#E5E5E5">achievable implicit the type</font><font color="#CCCCCC"> of</font>
+
+138
+00:08:31,610 --> 00:08:37,039
+conversion<font color="#E5E5E5"> is particularly useful when</font>
+
+139
+00:08:33,710 --> 00:08:40,400
+<font color="#CCCCCC">creating a numerical type of class such</font>
+
+140
+00:08:37,039 --> 00:08:42,199
+as<font color="#E5E5E5"> a rational class you know will rush</font>
+
+141
+00:08:40,400 --> 00:08:44,840
+in the class example<font color="#E5E5E5"> we have the</font>
+
+142
+00:08:42,200 --> 00:08:47,240
+rational constructor which takes two
+
+143
+00:08:44,840 --> 00:08:50,960
+parameters<font color="#CCCCCC"> one numerator and one</font>
+
+144
+00:08:47,240 --> 00:08:53,600
+denominator since both parameter can
+
+145
+00:08:50,960 --> 00:08:56,840
+have default value this constructor can
+
+146
+00:08:53,600 --> 00:09:00,290
+with can work with a single parameter<font color="#CCCCCC"> a</font>
+
+147
+00:08:56,840 --> 00:09:02,930
+numerator<font color="#E5E5E5"> and since this constructor</font>
+
+148
+00:09:00,290 --> 00:09:06,680
+doesn't have a explicit keyword in front
+
+149
+00:09:02,930 --> 00:09:09,859
+of it<font color="#CCCCCC"> so that which means this one is a</font>
+
+150
+00:09:06,680 --> 00:09:12,800
+constructor<font color="#E5E5E5"> plus</font><font color="#CCCCCC"> a explicit type</font>
+
+151
+00:09:09,860 --> 00:09:18,170
+converter<font color="#CCCCCC"> plus an implicit type</font>
+
+152
+00:09:12,800 --> 00:09:21,439
+converter<font color="#E5E5E5"> and now in the main function</font><font color="#CCCCCC"> I</font>
+
+153
+00:09:18,170 --> 00:09:25,579
+converts an integer 23 into a rational
+
+154
+00:09:21,440 --> 00:09:28,850
+<font color="#CCCCCC">and</font><font color="#E5E5E5"> assign to</font><font color="#CCCCCC"> r1</font><font color="#E5E5E5"> and second line I</font>
+
+155
+00:09:25,580 --> 00:09:32,420
+convert integer<font color="#E5E5E5"> 2 into another rational</font>
+
+156
+00:09:28,850 --> 00:09:36,260
+and multiplied to add<font color="#CCCCCC"> one and assign the</font>
+
+157
+00:09:32,420 --> 00:09:43,839
+result to r2<font color="#E5E5E5"> this is great but I want</font>
+
+158
+00:09:36,260 --> 00:09:47,240
+more<font color="#E5E5E5"> I have a rational r3 equal to three</font>
+
+159
+00:09:43,840 --> 00:09:50,430
+terms of our
+
+160
+00:09:47,240 --> 00:09:53,430
+when the compiler<font color="#E5E5E5"> see this code because</font>
+
+161
+00:09:50,430 --> 00:09:56,280
+<font color="#E5E5E5">the first parameter</font><font color="#CCCCCC"> 3</font><font color="#E5E5E5"> is an integer it</font>
+
+162
+00:09:53,430 --> 00:09:59,520
+will<font color="#E5E5E5"> find the global operator multiply</font>
+
+163
+00:09:56,280 --> 00:10:05,270
+and then convert our<font color="#E5E5E5"> one into an integer</font>
+
+164
+00:09:59,520 --> 00:10:07,590
+and<font color="#E5E5E5"> then multiplied to our</font><font color="#CCCCCC"> 3 into 3 and</font>
+
+165
+00:10:05,270 --> 00:10:09,960
+<font color="#E5E5E5">apparently we</font><font color="#CCCCCC"> don't have a type</font>
+
+166
+00:10:07,590 --> 00:10:13,550
+conversion that converts a rational into
+
+167
+00:10:09,960 --> 00:10:19,580
+an integer<font color="#CCCCCC"> so this code will not compile</font>
+
+168
+00:10:13,550 --> 00:10:19,579
+so let's define<font color="#CCCCCC"> a conversion for that</font>
+
+169
+00:10:23,300 --> 00:10:26,300
+integer
+
+170
+00:10:29,730 --> 00:10:37,260
+turn new do not
+
+171
+00:10:40,350 --> 00:10:47,220
+now we have a type conversion from
+
+172
+00:10:43,070 --> 00:10:51,890
+rational<font color="#E5E5E5"> to an integer</font><font color="#CCCCCC"> so this line of</font>
+
+173
+00:10:47,220 --> 00:10:56,790
+code will<font color="#CCCCCC"> work however this line code</font>
+
+174
+00:10:51,890 --> 00:11:00,000
+stopped working why is that when the
+
+175
+00:10:56,790 --> 00:11:02,160
+compiler look at the operate multiply<font color="#E5E5E5"> it</font>
+
+176
+00:11:00,000 --> 00:11:06,480
+actually find out<font color="#E5E5E5"> that there</font><font color="#CCCCCC"> are</font><font color="#E5E5E5"> two</font>
+
+177
+00:11:02,160 --> 00:11:09,719
+ways<font color="#CCCCCC"> to interpret</font><font color="#E5E5E5"> the multiply number</font>
+
+178
+00:11:06,480 --> 00:11:12,240
+one is same as before use the operator
+
+179
+00:11:09,720 --> 00:11:16,350
+<font color="#E5E5E5">multiply defined inside of the rational</font>
+
+180
+00:11:12,240 --> 00:11:20,400
+class<font color="#E5E5E5"> and</font><font color="#CCCCCC"> num number</font><font color="#E5E5E5"> two it can also</font>
+
+181
+00:11:16,350 --> 00:11:23,580
+convert our<font color="#E5E5E5"> one into an integer and</font><font color="#CCCCCC"> then</font>
+
+182
+00:11:20,400 --> 00:11:26,970
+use the global<font color="#E5E5E5"> operate multiply for</font>
+
+183
+00:11:23,580 --> 00:11:30,960
+integer<font color="#E5E5E5"> to multiply the two integer</font>
+
+184
+00:11:26,970 --> 00:11:35,160
+together so we ended up<font color="#CCCCCC"> having an</font>
+
+185
+00:11:30,960 --> 00:11:38,280
+ambiguity<font color="#E5E5E5"> this confirms to our design</font>
+
+186
+00:11:35,160 --> 00:11:41,310
+guideline that<font color="#CCCCCC"> a</font><font color="#E5E5E5"> one-way</font><font color="#CCCCCC"> implicitly type</font>
+
+187
+00:11:38,280 --> 00:11:46,170
+conversion is preferred over<font color="#E5E5E5"> a two-way</font>
+
+188
+00:11:41,310 --> 00:11:49,410
+implicit type conversion now you may say
+
+189
+00:11:46,170 --> 00:11:53,939
+I really<font color="#CCCCCC"> want both lines of code to work</font>
+
+190
+00:11:49,410 --> 00:11:56,670
+<font color="#CCCCCC">is there a</font><font color="#E5E5E5"> better approach</font><font color="#CCCCCC"> for me</font><font color="#E5E5E5"> yes</font>
+
+191
+00:11:53,940 --> 00:11:59,400
+there there<font color="#E5E5E5"> is a better approach you</font>
+
+192
+00:11:56,670 --> 00:12:04,280
+<font color="#E5E5E5">could use a non-member operate multiply</font>
+
+193
+00:11:59,400 --> 00:12:07,350
+that multiply two rationals<font color="#E5E5E5"> together and</font>
+
+194
+00:12:04,280 --> 00:12:14,430
+that things we have that we could remove
+
+195
+00:12:07,350 --> 00:12:18,860
+the member rationals member multiply as
+
+196
+00:12:14,430 --> 00:12:23,439
+well as the type conversion function
+
+197
+00:12:18,860 --> 00:12:26,570
+and now both lines of code will work
+
+198
+00:12:23,440 --> 00:12:29,500
+that's all for today<font color="#E5E5E5"> hope</font><font color="#CCCCCC"> you enjoy the</font>
+
+199
+00:12:26,570 --> 00:12:29,500
+video<font color="#CCCCCC"> bye</font><font color="#E5E5E5"> bye</font>
+

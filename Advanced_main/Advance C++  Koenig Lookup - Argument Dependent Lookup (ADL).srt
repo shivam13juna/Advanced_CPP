@@ -1,0 +1,684 @@
+﻿1
+00:00:05,220 --> 00:00:12,730
+hello everyone<font color="#CCCCCC"> today we are going to</font>
+
+2
+00:00:07,930 --> 00:00:15,790
+talk about<font color="#CCCCCC"> K Niki look up what is</font><font color="#E5E5E5"> it say</font>
+
+3
+00:00:12,730 --> 00:00:20,290
+we have a<font color="#CCCCCC"> namespace</font><font color="#E5E5E5"> a and inside a we</font>
+
+4
+00:00:15,790 --> 00:00:23,680
+defined a struct<font color="#E5E5E5"> X and the function G in</font>
+
+5
+00:00:20,290 --> 00:00:28,450
+the main function<font color="#CCCCCC"> I defined a x1 of X</font>
+
+6
+00:00:23,680 --> 00:00:32,049
+and then invoke<font color="#CCCCCC"> G X 1 this code will</font>
+
+7
+00:00:28,450 --> 00:00:33,600
+print out calling a<font color="#CCCCCC"> : column G</font><font color="#E5E5E5"> there's</font>
+
+8
+00:00:32,049 --> 00:00:37,599
+no question about that
+
+9
+00:00:33,600 --> 00:00:43,870
+however if<font color="#E5E5E5"> I remove a column column and</font>
+
+10
+00:00:37,600 --> 00:00:46,090
+only calling G X 1<font color="#E5E5E5"> what will happen you</font>
+
+11
+00:00:43,870 --> 00:00:48,730
+may expect that<font color="#E5E5E5"> the compiler will</font><font color="#CCCCCC"> error</font>
+
+12
+00:00:46,090 --> 00:00:51,400
+out<font color="#E5E5E5"> saying cannot find a</font><font color="#CCCCCC"> function called</font>
+
+13
+00:00:48,730 --> 00:00:56,290
+G because the function G is<font color="#CCCCCC"> only defined</font>
+
+14
+00:00:51,400 --> 00:00:59,290
+<font color="#CCCCCC">inside the namespace a however this code</font>
+
+15
+00:00:56,290 --> 00:01:02,339
+will<font color="#CCCCCC"> not only compile it will still</font>
+
+16
+00:00:59,290 --> 00:01:06,280
+print out<font color="#E5E5E5"> calling it a column column G</font>
+
+17
+00:01:02,340 --> 00:01:09,130
+it turns out when<font color="#CCCCCC"> the compiler see the</font>
+
+18
+00:01:06,280 --> 00:01:11,560
+function G it will not only search the
+
+19
+00:01:09,130 --> 00:01:14,229
+function G in the current scope and the
+
+20
+00:01:11,560 --> 00:01:16,360
+global scope<font color="#E5E5E5"> it will</font><font color="#CCCCCC"> also search the</font>
+
+21
+00:01:14,229 --> 00:01:20,950
+function in the scope where<font color="#E5E5E5"> its</font>
+
+22
+00:01:16,360 --> 00:01:25,360
+parameter type is<font color="#E5E5E5"> defined in this case</font>
+
+23
+00:01:20,950 --> 00:01:29,200
+the type of<font color="#E5E5E5"> its parameter is X and X is</font>
+
+24
+00:01:25,360 --> 00:01:31,360
+defined<font color="#E5E5E5"> in namespace</font><font color="#CCCCCC"> a so the compiler</font>
+
+25
+00:01:29,200 --> 00:01:34,960
+<font color="#E5E5E5">will search the G function in the</font>
+
+26
+00:01:31,360 --> 00:01:40,710
+<font color="#E5E5E5">namespace a that is how this G function</font>
+
+27
+00:01:34,960 --> 00:01:47,070
+<font color="#CCCCCC">is found this is a called chaining</font>
+
+28
+00:01:40,710 --> 00:01:52,759
+lookup or argument<font color="#CCCCCC"> dependant</font>
+
+29
+00:01:47,070 --> 00:01:55,919
+lookup<font color="#CCCCCC"> ADL</font>
+
+30
+00:01:52,760 --> 00:02:00,119
+when can you<font color="#E5E5E5"> look up we have increased</font>
+
+31
+00:01:55,920 --> 00:02:03,150
+the<font color="#E5E5E5"> function name search scope so if I</font>
+
+32
+00:02:00,119 --> 00:02:07,409
+have another function<font color="#E5E5E5"> it's a global</font>
+
+33
+00:02:03,150 --> 00:02:10,020
+<font color="#CCCCCC">function also called</font><font color="#E5E5E5"> G this code will</font>
+
+34
+00:02:07,409 --> 00:02:12,690
+<font color="#CCCCCC">not compile because</font><font color="#E5E5E5"> there are two G</font>
+
+35
+00:02:10,020 --> 00:02:18,920
+function<font color="#E5E5E5"> visible inside the</font><font color="#CCCCCC"> main</font>
+
+36
+00:02:12,690 --> 00:02:22,680
+function example<font color="#CCCCCC"> two we</font><font color="#E5E5E5"> have a class C</font>
+
+37
+00:02:18,920 --> 00:02:23,630
+now C is a class it's<font color="#E5E5E5"> not a namespace</font>
+
+38
+00:02:22,680 --> 00:02:27,480
+anymore
+
+39
+00:02:23,630 --> 00:02:31,350
+inside the see we have a struct<font color="#E5E5E5"> Y and a</font>
+
+40
+00:02:27,480 --> 00:02:36,209
+static function H in the main function<font color="#CCCCCC"> I</font>
+
+41
+00:02:31,350 --> 00:02:39,390
+<font color="#CCCCCC">defined a</font><font color="#E5E5E5"> Y and call H Y this will print</font>
+
+42
+00:02:36,209 --> 00:02:40,670
+out<font color="#CCCCCC"> calling c colon column H there's no</font>
+
+43
+00:02:39,390 --> 00:02:44,069
+question about that
+
+44
+00:02:40,670 --> 00:02:48,869
+<font color="#E5E5E5">however if I'll remove</font><font color="#CCCCCC"> C column column</font>
+
+45
+00:02:44,069 --> 00:02:51,149
+<font color="#E5E5E5">what will happen since we have</font><font color="#CCCCCC"> clinic</font>
+
+46
+00:02:48,870 --> 00:02:53,760
+<font color="#E5E5E5">lookup when the compiler see the</font>
+
+47
+00:02:51,150 --> 00:02:56,340
+function H it was<font color="#E5E5E5"> searched the function</font>
+
+48
+00:02:53,760 --> 00:02:59,489
+in the scope<font color="#E5E5E5"> where the type of</font><font color="#CCCCCC"> its</font>
+
+49
+00:02:56,340 --> 00:03:04,829
+parameter is defined<font color="#E5E5E5"> so it was searched</font>
+
+50
+00:02:59,489 --> 00:03:07,440
+inside C and find H right no actually
+
+51
+00:03:04,829 --> 00:03:10,950
+the clinic lookup only applies<font color="#E5E5E5"> to</font>
+
+52
+00:03:07,440 --> 00:03:18,650
+namespace<font color="#E5E5E5"> it cannot reach its tentacles</font>
+
+53
+00:03:10,950 --> 00:03:18,649
+into a class so this is an error
+
+54
+00:03:19,870 --> 00:03:26,629
+example<font color="#CCCCCC"> three now we have two</font><font color="#E5E5E5"> namespaces</font>
+
+55
+00:03:23,629 --> 00:03:30,768
+namespace a same<font color="#E5E5E5"> as before has the</font>
+
+56
+00:03:26,629 --> 00:03:34,578
+<font color="#E5E5E5">struct X and the function G namespace</font>
+
+57
+00:03:30,769 --> 00:03:39,579
+see also has a function<font color="#E5E5E5"> G in the</font>
+
+58
+00:03:34,579 --> 00:03:42,290
+function J<font color="#E5E5E5"> I created</font><font color="#CCCCCC"> at X and called GX</font>
+
+59
+00:03:39,579 --> 00:03:48,290
+<font color="#E5E5E5">the main function will invoke</font><font color="#CCCCCC"> the</font>
+
+60
+00:03:42,290 --> 00:03:52,459
+function J what will happen<font color="#E5E5E5"> this code</font>
+
+61
+00:03:48,290 --> 00:03:55,239
+will<font color="#CCCCCC"> not compile when the compiler try</font>
+
+62
+00:03:52,459 --> 00:03:58,120
+to resolve the function call of G it
+
+63
+00:03:55,239 --> 00:04:01,819
+definitely can see this function<font color="#E5E5E5"> G</font>
+
+64
+00:03:58,120 --> 00:04:05,750
+however<font color="#E5E5E5"> because of the clinic lookup it</font>
+
+65
+00:04:01,819 --> 00:04:07,659
+can also see this<font color="#E5E5E5"> function of G so the</font>
+
+66
+00:04:05,750 --> 00:04:12,709
+<font color="#E5E5E5">compiler doesn't know which one</font><font color="#CCCCCC"> to call</font>
+
+67
+00:04:07,659 --> 00:04:16,399
+<font color="#E5E5E5">it's an ambiguous</font><font color="#CCCCCC"> code to function G now</font>
+
+68
+00:04:12,709 --> 00:04:18,880
+if I change see from a<font color="#CCCCCC"> namespace to a</font>
+
+69
+00:04:16,399 --> 00:04:18,880
+class
+
+70
+00:04:25,800 --> 00:04:33,040
+now what will<font color="#CCCCCC"> happen this code will</font>
+
+71
+00:04:29,950 --> 00:04:37,659
+compile and print out calling<font color="#E5E5E5"> C column</font>
+
+72
+00:04:33,040 --> 00:04:40,750
+column G<font color="#E5E5E5"> why because when the compiler</font>
+
+73
+00:04:37,660 --> 00:04:46,360
+tries to find function G it will first
+
+74
+00:04:40,750 --> 00:04:48,820
+search it<font color="#E5E5E5"> inside Class C and if the</font>
+
+75
+00:04:46,360 --> 00:04:53,230
+<font color="#E5E5E5">function G is found it will stop</font>
+
+76
+00:04:48,820 --> 00:04:55,990
+searching<font color="#E5E5E5"> only</font><font color="#CCCCCC"> when the G is not found</font>
+
+77
+00:04:53,230 --> 00:04:58,390
+inside<font color="#CCCCCC"> of</font><font color="#E5E5E5"> the</font><font color="#CCCCCC"> class</font><font color="#E5E5E5"> C the compiler will</font>
+
+78
+00:04:55,990 --> 00:05:03,460
+look at the global scope and the use
+
+79
+00:04:58,390 --> 00:05:06,729
+<font color="#CCCCCC">Kanak lookup</font><font color="#E5E5E5"> so if this function is not</font>
+
+80
+00:05:03,460 --> 00:05:10,120
+defined inside<font color="#CCCCCC"> of the Class C this code</font>
+
+81
+00:05:06,730 --> 00:05:14,919
+will<font color="#E5E5E5"> still compile but</font><font color="#CCCCCC"> print</font><font color="#E5E5E5"> out calling</font>
+
+82
+00:05:10,120 --> 00:05:18,370
+a column column G so the conclusion we
+
+83
+00:05:14,919 --> 00:05:20,620
+can draw from<font color="#CCCCCC"> this example is the class</font>
+
+84
+00:05:18,370 --> 00:05:23,200
+member functions are<font color="#CCCCCC"> more tightly bound</font>
+
+85
+00:05:20,620 --> 00:05:27,610
+<font color="#E5E5E5">with each other than with any other</font>
+
+86
+00:05:23,200 --> 00:05:36,610
+functions now let's see we have another
+
+87
+00:05:27,610 --> 00:05:40,200
+<font color="#CCCCCC">class</font><font color="#E5E5E5"> B and this G function is being</font>
+
+88
+00:05:36,610 --> 00:05:40,200
+moved to be
+
+89
+00:05:42,470 --> 00:05:51,110
+and Class C is publicly derived from<font color="#E5E5E5"> B</font>
+
+90
+00:05:47,140 --> 00:05:54,919
+now what will<font color="#CCCCCC"> happen this code will</font>
+
+91
+00:05:51,110 --> 00:06:00,350
+compile and print out calling B<font color="#CCCCCC"> colon</font>
+
+92
+00:05:54,920 --> 00:06:02,870
+column G so the conclusion is a member
+
+93
+00:06:00,350 --> 00:06:06,200
+function<font color="#E5E5E5"> from parent class also has a</font>
+
+94
+00:06:02,870 --> 00:06:11,270
+higher priority<font color="#E5E5E5"> than any outside the</font>
+
+95
+00:06:06,200 --> 00:06:13,760
+function<font color="#E5E5E5"> name hiding last time we've</font>
+
+96
+00:06:11,270 --> 00:06:15,560
+talked about<font color="#E5E5E5"> name hiding for classes and</font>
+
+97
+00:06:13,760 --> 00:06:18,590
+today<font color="#E5E5E5"> we're going to talk</font><font color="#CCCCCC"> about the name</font>
+
+98
+00:06:15,560 --> 00:06:21,560
+hiding for namespaces we have a
+
+99
+00:06:18,590 --> 00:06:23,150
+<font color="#E5E5E5">namespace a and inside a we have a G</font>
+
+100
+00:06:21,560 --> 00:06:27,110
+<font color="#E5E5E5">function which takes an integer</font>
+
+101
+00:06:23,150 --> 00:06:28,039
+<font color="#CCCCCC">parameter and inside a there's an STD</font>
+
+102
+00:06:27,110 --> 00:06:31,640
+namespace
+
+103
+00:06:28,040 --> 00:06:35,030
+<font color="#CCCCCC">see see also has a G function</font><font color="#E5E5E5"> but this G</font>
+
+104
+00:06:31,640 --> 00:06:39,620
+function<font color="#E5E5E5"> has no parameter and the j</font>
+
+105
+00:06:35,030 --> 00:06:43,340
+function<font color="#E5E5E5"> invokes</font><font color="#CCCCCC"> g8 and ultimately the J</font>
+
+106
+00:06:39,620 --> 00:06:47,570
+<font color="#E5E5E5">function is invoked you may expect when</font>
+
+107
+00:06:43,340 --> 00:06:50,419
+the compiler<font color="#CCCCCC"> cg8 it should invoke this G</font>
+
+108
+00:06:47,570 --> 00:06:53,240
+<font color="#CCCCCC">function because they are all</font><font color="#E5E5E5"> under the</font>
+
+109
+00:06:50,419 --> 00:06:55,010
+umbrella<font color="#CCCCCC"> of</font><font color="#E5E5E5"> namespace a so this G</font>
+
+110
+00:06:53,240 --> 00:07:00,770
+function<font color="#E5E5E5"> should</font><font color="#CCCCCC"> be visible inside</font>
+
+111
+00:06:55,010 --> 00:07:03,440
+namespace<font color="#E5E5E5"> C but actually it is</font><font color="#CCCCCC"> not this</font>
+
+112
+00:07:00,770 --> 00:07:06,650
+<font color="#E5E5E5">code will not compile because this G</font>
+
+113
+00:07:03,440 --> 00:07:08,890
+function<font color="#E5E5E5"> is shadowed by C's on G</font>
+
+114
+00:07:06,650 --> 00:07:13,299
+function<font color="#CCCCCC"> even though they have different</font>
+
+115
+00:07:08,890 --> 00:07:16,840
+parameter signature this is<font color="#E5E5E5"> named hiding</font>
+
+116
+00:07:13,300 --> 00:07:21,820
+remember how to overcome name<font color="#E5E5E5"> heidi</font>
+
+117
+00:07:16,840 --> 00:07:21,820
+using the using<font color="#E5E5E5"> declaration</font>
+
+118
+00:07:24,380 --> 00:07:32,640
+now this code will compile so far<font color="#E5E5E5"> this</font>
+
+119
+00:07:29,940 --> 00:07:35,130
+example is very<font color="#E5E5E5"> similar to the classic</font>
+
+120
+00:07:32,640 --> 00:07:37,830
+example of<font color="#CCCCCC"> name hiding that we've talked</font>
+
+121
+00:07:35,130 --> 00:07:40,980
+about<font color="#CCCCCC"> last</font><font color="#E5E5E5"> time now let me bring</font>
+
+122
+00:07:37,830 --> 00:07:46,950
+something<font color="#E5E5E5"> different let's say</font><font color="#CCCCCC"> the a has</font>
+
+123
+00:07:40,980 --> 00:07:50,040
+a struct<font color="#E5E5E5"> X and G is taking X as a</font>
+
+124
+00:07:46,950 --> 00:07:57,000
+<font color="#CCCCCC">parameter</font><font color="#E5E5E5"> and let's remove the using</font>
+
+125
+00:07:50,040 --> 00:07:59,790
+declaration<font color="#E5E5E5"> and define X X G X now</font>
+
+126
+00:07:57,000 --> 00:08:02,790
+according<font color="#CCCCCC"> to the</font><font color="#E5E5E5"> name hiding law this G</font>
+
+127
+00:07:59,790 --> 00:08:05,970
+function<font color="#E5E5E5"> will be hidden by</font><font color="#CCCCCC"> C's on G</font>
+
+128
+00:08:02,790 --> 00:08:10,410
+<font color="#CCCCCC">function so this code will not compile</font>
+
+129
+00:08:05,970 --> 00:08:15,570
+<font color="#E5E5E5">right run this code will compile and</font>
+
+130
+00:08:10,410 --> 00:08:18,900
+print out calling a G it is true that
+
+131
+00:08:15,570 --> 00:08:21,450
+<font color="#E5E5E5">this G function will be hidden biases on</font>
+
+132
+00:08:18,900 --> 00:08:24,210
+G function<font color="#E5E5E5"> according to the name hiding</font>
+
+133
+00:08:21,450 --> 00:08:27,920
+<font color="#E5E5E5">rule however</font><font color="#CCCCCC"> there's</font><font color="#E5E5E5"> another</font><font color="#CCCCCC"> rule</font><font color="#E5E5E5"> that</font>
+
+134
+00:08:24,210 --> 00:08:30,930
+<font color="#E5E5E5">kicks in which is the technique look up</font>
+
+135
+00:08:27,920 --> 00:08:34,200
+with<font color="#CCCCCC"> kenick look up</font><font color="#E5E5E5"> the compiler will</font>
+
+136
+00:08:30,930 --> 00:08:39,750
+look for the G function in<font color="#CCCCCC"> thus in the</font>
+
+137
+00:08:34,200 --> 00:08:42,000
+space where<font color="#E5E5E5"> X is defined so this code</font>
+
+138
+00:08:39,750 --> 00:08:45,390
+will compile even though we don't<font color="#CCCCCC"> have</font>
+
+139
+00:08:42,000 --> 00:08:48,740
+<font color="#CCCCCC">the using</font><font color="#E5E5E5"> declaration this is something</font>
+
+140
+00:08:45,390 --> 00:08:52,800
+<font color="#E5E5E5">different from the</font><font color="#CCCCCC"> classic example</font><font color="#E5E5E5"> a</font>
+
+141
+00:08:48,740 --> 00:08:55,620
+summary of name<font color="#CCCCCC"> lookup sequence when</font>
+
+142
+00:08:52,800 --> 00:08:57,870
+working with namespaces a compiler will
+
+143
+00:08:55,620 --> 00:09:01,620
+first such a name under<font color="#E5E5E5"> current scope</font>
+
+144
+00:08:57,870 --> 00:09:04,440
+<font color="#E5E5E5">then go to next enclosed scope and then</font>
+
+145
+00:09:01,620 --> 00:09:07,170
+next<font color="#E5E5E5"> enclosed scope until finally it</font>
+
+146
+00:09:04,440 --> 00:09:08,440
+goes to the global scope<font color="#E5E5E5"> to search the</font>
+
+147
+00:09:07,170 --> 00:09:11,290
+name
+
+148
+00:09:08,440 --> 00:09:13,750
+and when working with classes the
+
+149
+00:09:11,290 --> 00:09:16,389
+<font color="#CCCCCC">compatible first search in current class</font>
+
+150
+00:09:13,750 --> 00:09:19,300
+scope<font color="#E5E5E5"> and then parent class scope and</font>
+
+151
+00:09:16,389 --> 00:09:24,009
+then<font color="#E5E5E5"> grandparent scope and finally go to</font>
+
+152
+00:09:19,300 --> 00:09:27,189
+the<font color="#E5E5E5"> global scope name hiding will happen</font>
+
+153
+00:09:24,009 --> 00:09:29,500
+when a higher priority scope defines a
+
+154
+00:09:27,189 --> 00:09:33,910
+function<font color="#CCCCCC"> with the same</font><font color="#E5E5E5"> name</font><font color="#CCCCCC"> as a</font>
+
+155
+00:09:29,500 --> 00:09:36,339
+function in the lower priority scope to
+
+156
+00:09:33,910 --> 00:09:38,860
+override the sequence of name lookup or
+
+157
+00:09:36,339 --> 00:09:42,069
+to<font color="#E5E5E5"> bring some hidden name back to</font>
+
+158
+00:09:38,860 --> 00:09:44,470
+current<font color="#E5E5E5"> scope with namespaces there are</font>
+
+159
+00:09:42,069 --> 00:09:47,860
+two way to do it<font color="#CCCCCC"> one is with qualifier</font>
+
+160
+00:09:44,470 --> 00:09:51,220
+or using declaration another one is
+
+161
+00:09:47,860 --> 00:09:53,259
+using<font color="#CCCCCC"> connect lookup with classes</font>
+
+162
+00:09:51,220 --> 00:09:56,439
+there's only one way to<font color="#E5E5E5"> do it which is</font>
+
+163
+00:09:53,259 --> 00:09:59,579
+<font color="#E5E5E5">the qualifier or using integration you</font>
+
+164
+00:09:56,439 --> 00:10:02,500
+cannot use<font color="#E5E5E5"> connect look up for classes</font>
+
+165
+00:09:59,579 --> 00:10:04,420
+<font color="#E5E5E5">thank you for watching subscribe</font><font color="#CCCCCC"> to my</font>
+
+166
+00:10:02,500 --> 00:10:07,029
+channel so<font color="#E5E5E5"> you</font><font color="#CCCCCC"> will be updated when I</font>
+
+167
+00:10:04,420 --> 00:10:08,740
+post a new<font color="#E5E5E5"> video or you can go</font><font color="#CCCCCC"> to my</font>
+
+168
+00:10:07,029 --> 00:10:11,410
+<font color="#E5E5E5">channels home page and click</font><font color="#CCCCCC"> on</font>
+
+169
+00:10:08,740 --> 00:10:12,069
+playlists<font color="#E5E5E5"> to see other videos that</font><font color="#CCCCCC"> are</font>
+
+170
+00:10:11,410 --> 00:10:14,730
+<font color="#E5E5E5">more free</font>
+
+171
+00:10:12,069 --> 00:10:14,729
+<font color="#E5E5E5">bye bye</font>
+

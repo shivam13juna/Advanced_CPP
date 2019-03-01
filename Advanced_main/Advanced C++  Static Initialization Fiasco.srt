@@ -1,0 +1,472 @@
+﻿1
+00:00:05,300 --> 00:00:10,889
+hello everyone today<font color="#CCCCCC"> we</font><font color="#E5E5E5"> will talk</font><font color="#CCCCCC"> about</font>
+
+2
+00:00:07,980 --> 00:00:13,769
+static initialization<font color="#CCCCCC"> Fiasco problem</font>
+
+3
+00:00:10,889 --> 00:00:17,160
+which is a<font color="#E5E5E5"> subtle problem that can crash</font>
+
+4
+00:00:13,769 --> 00:00:20,009
+<font color="#CCCCCC">your program</font><font color="#E5E5E5"> we'll talk about how this</font>
+
+5
+00:00:17,160 --> 00:00:24,210
+crash can be introduced and what's the
+
+6
+00:00:20,010 --> 00:00:26,670
+common solution to<font color="#CCCCCC"> this problem let's</font>
+
+7
+00:00:24,210 --> 00:00:31,380
+look at our example<font color="#E5E5E5"> we</font><font color="#CCCCCC"> have two</font><font color="#E5E5E5"> classes</font>
+
+8
+00:00:26,670 --> 00:00:34,470
+cat and dog<font color="#E5E5E5"> let's first look at the</font>
+
+9
+00:00:31,380 --> 00:00:36,360
+header file of the dog<font color="#E5E5E5"> bulk has a</font>
+
+10
+00:00:34,470 --> 00:00:39,750
+private the data member which<font color="#E5E5E5"> is the</font>
+
+11
+00:00:36,360 --> 00:00:42,899
+name<font color="#CCCCCC"> of the dog</font><font color="#E5E5E5"> and it also has a bark</font>
+
+12
+00:00:39,750 --> 00:00:48,600
+function and a constructor<font color="#E5E5E5"> that takes a</font>
+
+13
+00:00:42,899 --> 00:00:51,739
+<font color="#CCCCCC">string as parameter the back</font><font color="#E5E5E5"> function of</font>
+
+14
+00:00:48,600 --> 00:00:55,230
+the dog prints out dog<font color="#E5E5E5"> rules</font><font color="#CCCCCC"> my name is</font>
+
+15
+00:00:51,739 --> 00:00:58,288
+name and the constructor of<font color="#E5E5E5"> the dog</font>
+
+16
+00:00:55,230 --> 00:01:00,660
+<font color="#CCCCCC">brings out</font><font color="#E5E5E5"> constructing dog and then</font>
+
+17
+00:00:58,289 --> 00:01:04,860
+assign the name to the private<font color="#CCCCCC"> the data</font>
+
+18
+00:01:00,660 --> 00:01:08,130
+member of<font color="#E5E5E5"> name the cat class is very</font>
+
+19
+00:01:04,860 --> 00:01:10,800
+similar<font color="#E5E5E5"> to the dog class except that</font>
+
+20
+00:01:08,130 --> 00:01:15,149
+instead<font color="#E5E5E5"> of having a back</font><font color="#CCCCCC"> function it has</font>
+
+21
+00:01:10,800 --> 00:01:17,610
+a<font color="#E5E5E5"> mere function and that the print out</font>
+
+22
+00:01:15,149 --> 00:01:22,580
+messages<font color="#E5E5E5"> are slightly</font><font color="#CCCCCC"> different</font><font color="#E5E5E5"> it</font>
+
+23
+00:01:17,610 --> 00:01:25,380
+prints out<font color="#CCCCCC"> kettle's</font><font color="#E5E5E5"> constructing cat in</font>
+
+24
+00:01:22,580 --> 00:01:29,099
+the main<font color="#CCCCCC"> function I create a global</font>
+
+25
+00:01:25,380 --> 00:01:32,640
+<font color="#E5E5E5">variable</font><font color="#CCCCCC"> D which is a dog</font><font color="#E5E5E5"> with the name</font>
+
+26
+00:01:29,099 --> 00:01:39,060
+of<font color="#E5E5E5"> gunner and inside the main function</font><font color="#CCCCCC"> I</font>
+
+27
+00:01:32,640 --> 00:01:42,090
+<font color="#E5E5E5">call</font><font color="#CCCCCC"> d</font><font color="#E5E5E5"> dot Park let's run the program it</font>
+
+28
+00:01:39,060 --> 00:01:42,539
+prints out constructing dog gunner<font color="#E5E5E5"> dr.</font>
+
+29
+00:01:42,090 --> 00:01:46,910
+<font color="#CCCCCC">rules</font>
+
+30
+00:01:42,539 --> 00:01:46,910
+my name is<font color="#CCCCCC"> gunner</font><font color="#E5E5E5"> so far so good</font>
+
+31
+00:01:47,729 --> 00:01:56,500
+now let's say I want to<font color="#E5E5E5"> create another</font>
+
+32
+00:01:52,259 --> 00:02:03,429
+global variable<font color="#E5E5E5"> it's a cat</font><font color="#CCCCCC"> see with</font><font color="#E5E5E5"> the</font>
+
+33
+00:01:56,500 --> 00:02:09,538
+name of<font color="#E5E5E5"> smokey</font><font color="#CCCCCC"> and inside the talks</font>
+
+34
+00:02:03,429 --> 00:02:09,539
+constructor<font color="#CCCCCC"> I'm going to call</font><font color="#E5E5E5"> C dot</font><font color="#CCCCCC"> meal</font>
+
+35
+00:02:10,080 --> 00:02:17,950
+<font color="#E5E5E5">now we have two global variables</font><font color="#CCCCCC"> one is</font>
+
+36
+00:02:13,510 --> 00:02:21,340
+the cat<font color="#CCCCCC"> C and another</font><font color="#E5E5E5"> one is the top D</font>
+
+37
+00:02:17,950 --> 00:02:25,410
+<font color="#E5E5E5">and since they</font><font color="#CCCCCC"> are in different source</font>
+
+38
+00:02:21,340 --> 00:02:28,810
+file<font color="#CCCCCC"> the order of the initialization</font><font color="#E5E5E5"> is</font>
+
+39
+00:02:25,410 --> 00:02:32,380
+undefined<font color="#CCCCCC"> in other words whether the</font><font color="#E5E5E5"> D</font>
+
+40
+00:02:28,810 --> 00:02:37,650
+will be<font color="#E5E5E5"> constructed before C or C</font>
+
+41
+00:02:32,380 --> 00:02:37,650
+<font color="#E5E5E5">constructed before D is undefined</font>
+
+42
+00:02:37,890 --> 00:02:45,640
+this will cause<font color="#E5E5E5"> a big</font><font color="#CCCCCC"> problem</font><font color="#E5E5E5"> because</font>
+
+43
+00:02:42,610 --> 00:02:50,950
+<font color="#CCCCCC">when we construct D</font><font color="#E5E5E5"> this constructor</font>
+
+44
+00:02:45,640 --> 00:02:54,608
+will call C dot<font color="#CCCCCC"> meal</font><font color="#E5E5E5"> so at this point if</font>
+
+45
+00:02:50,950 --> 00:02:58,569
+C is already<font color="#E5E5E5"> constructed then we are</font>
+
+46
+00:02:54,609 --> 00:03:03,639
+fine<font color="#E5E5E5"> if C is not constructed then the</font>
+
+47
+00:02:58,569 --> 00:03:08,888
+program<font color="#CCCCCC"> will crash so in other words if</font>
+
+48
+00:03:03,639 --> 00:03:12,100
+<font color="#E5E5E5">D is constructed after</font><font color="#CCCCCC"> C then the</font>
+
+49
+00:03:08,889 --> 00:03:17,680
+program will live if C is constructed
+
+50
+00:03:12,100 --> 00:03:21,959
+after<font color="#E5E5E5"> D then the program will die so our</font>
+
+51
+00:03:17,680 --> 00:03:25,769
+<font color="#E5E5E5">program has a 50 by 50 chance of dying</font>
+
+52
+00:03:21,959 --> 00:03:25,769
+<font color="#CCCCCC">now let's run the program</font>
+
+53
+00:03:27,349 --> 00:03:36,089
+<font color="#CCCCCC">aha this</font><font color="#E5E5E5"> actually runs okay which means</font>
+
+54
+00:03:30,599 --> 00:03:40,488
+<font color="#CCCCCC">the cat is constructed before</font><font color="#E5E5E5"> the dog so</font>
+
+55
+00:03:36,090 --> 00:03:46,769
+if we comment this out<font color="#E5E5E5"> and in the</font><font color="#CCCCCC"> cats</font>
+
+56
+00:03:40,489 --> 00:03:52,410
+<font color="#E5E5E5">constructor we call</font><font color="#CCCCCC"> e dot bark and we</font>
+
+57
+00:03:46,769 --> 00:03:56,640
+also need to<font color="#CCCCCC"> extern dog D because D is</font>
+
+58
+00:03:52,410 --> 00:03:59,250
+<font color="#CCCCCC">defined in another</font><font color="#E5E5E5"> source file now this</font>
+
+59
+00:03:56,640 --> 00:04:01,920
+<font color="#E5E5E5">program should crash because we know</font>
+
+60
+00:03:59,250 --> 00:04:02,489
+that<font color="#E5E5E5"> the cat is constructed before the</font>
+
+61
+00:04:01,920 --> 00:04:06,929
+dog
+
+62
+00:04:02,489 --> 00:04:09,930
+so when we call<font color="#CCCCCC"> d</font><font color="#E5E5E5"> dot</font><font color="#CCCCCC"> park</font><font color="#E5E5E5"> the talk D is</font>
+
+63
+00:04:06,930 --> 00:04:14,060
+not constructed yet<font color="#E5E5E5"> so this program</font>
+
+64
+00:04:09,930 --> 00:04:14,060
+<font color="#E5E5E5">should crash let's run it</font>
+
+65
+00:04:16,709 --> 00:04:24,210
+as you see the<font color="#E5E5E5"> program crashed so how do</font>
+
+66
+00:04:21,269 --> 00:04:26,970
+we<font color="#E5E5E5"> solve this problem there are</font>
+
+67
+00:04:24,210 --> 00:04:29,909
+different ways<font color="#CCCCCC"> to solve this problem</font><font color="#E5E5E5"> but</font>
+
+68
+00:04:26,970 --> 00:04:34,169
+the most commonly<font color="#E5E5E5"> used</font><font color="#CCCCCC"> is the singleton</font>
+
+69
+00:04:29,910 --> 00:04:37,800
+<font color="#E5E5E5">design pattern</font><font color="#CCCCCC"> I have created</font><font color="#E5E5E5"> another</font>
+
+70
+00:04:34,169 --> 00:04:41,729
+class<font color="#E5E5E5"> singleton and that the singleton</font>
+
+71
+00:04:37,800 --> 00:04:45,780
+has a<font color="#E5E5E5"> docks pointer PD</font><font color="#CCCCCC"> a cat pointer PC</font>
+
+72
+00:04:41,729 --> 00:04:50,610
+a destructor a get dark function and a
+
+73
+00:04:45,780 --> 00:04:55,520
+get<font color="#E5E5E5"> cat function in the singleton source</font>
+
+74
+00:04:50,610 --> 00:04:58,830
+file<font color="#E5E5E5"> both PD and PC are initialized to 0</font>
+
+75
+00:04:55,520 --> 00:05:02,580
+the get<font color="#CCCCCC"> dock function will check if PD</font>
+
+76
+00:04:58,830 --> 00:05:06,840
+is<font color="#CCCCCC"> 0</font><font color="#E5E5E5"> if a PD is 0 it create a new dog</font>
+
+77
+00:05:02,580 --> 00:05:08,580
+gulnur<font color="#CCCCCC"> under</font><font color="#E5E5E5"> loop 10 PD and next time</font>
+
+78
+00:05:06,840 --> 00:05:11,280
+when that gets<font color="#CCCCCC"> up function is called</font>
+
+79
+00:05:08,580 --> 00:05:15,240
+<font color="#CCCCCC">wood it will not create</font><font color="#E5E5E5"> a new</font><font color="#CCCCCC"> dog it</font>
+
+80
+00:05:11,280 --> 00:05:27,138
+will return<font color="#E5E5E5"> the</font><font color="#CCCCCC"> same dog PD this</font><font color="#E5E5E5"> is</font>
+
+81
+00:05:15,240 --> 00:05:27,139
+called initialize upon first usage<font color="#E5E5E5"> EDM</font>
+
+82
+00:05:27,550 --> 00:05:33,699
+the same thing for<font color="#E5E5E5"> the cat the cat will</font>
+
+83
+00:05:30,729 --> 00:05:38,139
+be<font color="#E5E5E5"> initialized only when it needs</font><font color="#CCCCCC"> to be</font>
+
+84
+00:05:33,699 --> 00:05:41,349
+used<font color="#E5E5E5"> now I don't need any global</font>
+
+85
+00:05:38,139 --> 00:05:44,560
+<font color="#E5E5E5">variable of cat or dog whenever I need a</font>
+
+86
+00:05:41,349 --> 00:05:47,409
+dog<font color="#CCCCCC"> I call the get dog function and when</font>
+
+87
+00:05:44,560 --> 00:05:50,620
+I<font color="#CCCCCC"> need a cat I call the get cat function</font>
+
+88
+00:05:47,409 --> 00:05:54,550
+and there will only be one dog of<font color="#E5E5E5"> Ghana</font>
+
+89
+00:05:50,620 --> 00:05:56,620
+<font color="#CCCCCC">and one cat of</font><font color="#E5E5E5"> smokey available so in</font>
+
+90
+00:05:54,550 --> 00:06:01,319
+the main function<font color="#CCCCCC"> let's remove the</font>
+
+91
+00:05:56,620 --> 00:06:12,009
+global variables and the let's say<font color="#E5E5E5"> I'll</font>
+
+92
+00:06:01,319 --> 00:06:18,099
+single term get cat<font color="#CCCCCC"> Neil</font><font color="#E5E5E5"> and in the cat</font>
+
+93
+00:06:12,009 --> 00:06:26,789
+constructor<font color="#E5E5E5"> let me move this and I'll</font>
+
+94
+00:06:18,099 --> 00:06:26,789
+call<font color="#E5E5E5"> single</font><font color="#CCCCCC"> term get dark</font>
+
+95
+00:06:27,500 --> 00:06:33,650
+<font color="#CCCCCC">bark</font><font color="#E5E5E5"> and we don't need any global</font>
+
+96
+00:06:32,060 --> 00:06:36,290
+<font color="#CCCCCC">valuable cat</font><font color="#E5E5E5"> anymore</font>
+
+97
+00:06:33,650 --> 00:06:42,880
+we should always call get cat<font color="#E5E5E5"> when we</font>
+
+98
+00:06:36,290 --> 00:06:48,500
+need a cat now let's run<font color="#E5E5E5"> the</font><font color="#CCCCCC"> program so</font>
+
+99
+00:06:42,880 --> 00:06:51,110
+<font color="#CCCCCC">the program finished</font><font color="#E5E5E5"> without</font><font color="#CCCCCC"> a crash the</font>
+
+100
+00:06:48,500 --> 00:06:54,410
+<font color="#E5E5E5">program should not crash because both</font>
+
+101
+00:06:51,110 --> 00:06:58,730
+dog<font color="#CCCCCC"> and cat will be created whenever</font>
+
+102
+00:06:54,410 --> 00:07:02,780
+they are<font color="#CCCCCC"> needed and note that the</font>
+
+103
+00:06:58,730 --> 00:07:03,680
+<font color="#CCCCCC">singleton</font><font color="#E5E5E5"> has a destructor if PD and PC</font>
+
+104
+00:07:02,780 --> 00:07:06,950
+are not<font color="#CCCCCC"> zero</font>
+
+105
+00:07:03,680 --> 00:07:11,900
+<font color="#E5E5E5">they will be</font><font color="#CCCCCC"> deleted and</font><font color="#E5E5E5"> then we assign</font>
+
+106
+00:07:06,950 --> 00:07:15,020
+<font color="#E5E5E5">them to zero so to make sure</font><font color="#CCCCCC"> that both</font>
+
+107
+00:07:11,900 --> 00:07:21,489
+<font color="#E5E5E5">the</font><font color="#CCCCCC"> dog and cat will be</font><font color="#E5E5E5"> deleted we only</font>
+
+108
+00:07:15,020 --> 00:07:24,650
+need to create<font color="#E5E5E5"> a singleton instance of s</font>
+
+109
+00:07:21,490 --> 00:07:28,010
+when s goes out<font color="#CCCCCC"> of scope</font><font color="#E5E5E5"> it will</font>
+
+110
+00:07:24,650 --> 00:07:30,310
+automatically delete either dog or the
+
+111
+00:07:28,010 --> 00:07:33,680
+cat<font color="#CCCCCC"> or both</font>
+
+112
+00:07:30,310 --> 00:07:36,800
+so both dog and<font color="#E5E5E5"> cat will</font><font color="#CCCCCC"> be</font><font color="#E5E5E5"> constructed</font>
+
+113
+00:07:33,680 --> 00:07:40,270
+<font color="#E5E5E5">and it deleted only if they are used if</font>
+
+114
+00:07:36,800 --> 00:07:43,280
+they are not used nothing<font color="#CCCCCC"> will</font><font color="#E5E5E5"> happen</font>
+
+115
+00:07:40,270 --> 00:07:47,000
+this is the beauty<font color="#CCCCCC"> of singleton design</font>
+
+116
+00:07:43,280 --> 00:07:49,760
+pattern that's<font color="#E5E5E5"> all for</font><font color="#CCCCCC"> today</font><font color="#E5E5E5"> feel free</font>
+
+117
+00:07:47,000 --> 00:07:53,800
+<font color="#CCCCCC">to subscribe</font><font color="#E5E5E5"> to</font><font color="#CCCCCC"> my channel and check out</font>
+
+118
+00:07:49,760 --> 00:07:53,800
+the other videos I<font color="#CCCCCC"> have bye-bye</font>
+
